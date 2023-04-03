@@ -1,42 +1,53 @@
 const http = require('http');
+const mysql = require('mysql');
+const path = require('path');
+const url = require('url');
+const fs = require('fs').promises;
+
+const db = mysql.createConnection({
+  host     : '127.0.0.1',
+  user     : 'root',
+  password : 'xxia1215@@',
+  database : 'user'
+});
+db.connect();
 
 
+// class user {
+//   constructor(id, password, name, email){
+//     this.id = id;
+//     this.password = password;
+//     this.name = name ;
+//     this.email = email;
 
-const server = http.createServer((req,res)=>{
+//   }
+// }
 
-  const html = `<!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-  </head>
-  <body>
-    <p>login</p>
-    <form action="/main.js">
-	<p>
-		<strong>아이디</strong>
-		<input type="text" name="name" value="아이디 입력">
-	</p>
-	<p>
-		<strong>비밀번호</strong>
-		<input type="password" name="password" value="비밀번호 입력">
-	</p>
-  <p>
-		<input type="submit" value="제출">
-	</p>
-  </form>
-  </body>
-  </html>
-  `
-  res.statusCode= 200;
-  res.end(html);
+const server = http.createServer(async(req,res)=>{
+try {
+  const data = await fs.readFile('./server.html');
+  res.writeHead(200, {'Content-Type':'text/html; charset=utf-8'});
+  res.end(data);
+} catch(err){
+  console.log(err);
+  res.writeHead(500, {'Content-Type':'text/plain; charset=utf-8'});
+  res.end(err.message);
+}
+
+
+  // const path = url.parse(req.url, true).pathname;
+  // const id = url.parse(req.url, true).query.id;
+
+
+  // db.query(`select * from users`, function(err,users){
+  //   console.log(users);
+  // })
+  
+  
 });
 
-
 server.listen(3000,'localhost',()=>{
-  console.log('ok');
+  console.log('3000port');
 })
 
 
