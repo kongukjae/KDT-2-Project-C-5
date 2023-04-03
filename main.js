@@ -24,10 +24,30 @@ db.connect();
 // }
 
 const server = http.createServer(async(req,res)=>{
-try {
-  const data = await fs.readFile('./server.html');
-  res.writeHead(200, {'Content-Type':'text/html; charset=utf-8'});
-  res.end(data);
+  try {
+    console.log(req.method, req.url);
+
+      if(req.method === 'GET' && req.url==='/'){ 
+        const data =await fs.readFile(path.join(__dirname,'first.html'));
+        console.log(__dirname);
+        res.writeHead(200, {'Content-Type':'text/html; charset=utf-8'});
+        return res.end(data);
+
+        }
+        // else if(req.method === 'GET' && req.url==='/login'){ 
+        //   const data = await fs.readFile(path.join(__dirname,'login.html'));
+        //   res.writeHead(200, {'Content-Type':'text/html; charset=utf-8'});
+        //   return res.end(data);
+         else if(req.method === 'POST' && req.url==='/login'){ 
+          const data = await fs.readFile(path.join(__dirname,'login.html'));
+          res.writeHead(200, {'Content-Type':'text/html; charset=utf-8'});
+          return res.end(data);
+  
+        }else if(req.method === 'GET' && req.url==='/signup'){
+          const data = await fs.readFile(path.join(__dirname,'sign.html'));
+          res.writeHead(200, {'Content-Type':'text/html; charset=utf-8'});
+          return res.end(data);
+      }
 } catch(err){
   console.log(err);
   res.writeHead(500, {'Content-Type':'text/plain; charset=utf-8'});
@@ -44,9 +64,7 @@ try {
   // })
   
   
-});
-
-server.listen(3000,'localhost',()=>{
+}).listen(3000,'localhost',()=>{
   console.log('3000port');
 })
 
