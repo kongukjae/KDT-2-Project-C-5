@@ -7,19 +7,13 @@
   <title>Document</title>
 </head>
 <body>
-  <p>login</p>
-  <form action="/main.js" method="POST">
-<p>
-  <strong>아이디</strong>
-  <input type="text" name="name" value="아이디 입력">
-</p>
-<p>
-  <strong>비밀번호</strong>
-  <input type="password" name="password" value="비밀번호 입력">
-</p>
-<p>
-  <input type="submit" value="제출">
-</p>
+  <form action="/login" method="POST">
+    <label for="username">ID:</label>
+    <input type="text" id="username" name="username"><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password"><br>
+    <input type="submit" value="Log In">
+  </form>
 </form>
 </body>
 </html>
