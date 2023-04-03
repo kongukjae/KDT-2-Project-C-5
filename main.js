@@ -4,13 +4,13 @@ const path = require('path');
 const url = require('url');
 const fs = require('fs').promises;
 
-const db = mysql.createConnection({
-  host     : '127.0.0.1',
-  user     : 'root',
-  password : 'xxia1215@@',
-  database : 'user'
-});
-db.connect();
+// const db = mysql.createConnection({
+//   host     : '127.0.0.1',
+//   user     : 'root',
+//   password : 'xxia1215@@',
+//   database : 'user'
+// });
+// db.connect();
 
 
 // class user {
@@ -34,11 +34,8 @@ const server = http.createServer(async(req,res)=>{
         return res.end(data);
 
         }
-        // else if(req.method === 'GET' && req.url==='/login'){ 
-        //   const data = await fs.readFile(path.join(__dirname,'login.html'));
-        //   res.writeHead(200, {'Content-Type':'text/html; charset=utf-8'});
-        //   return res.end(data);
-         else if(req.method === 'POST' && req.url==='/login'){ 
+        
+        else if(req.method === 'GET' && req.url==='/login'){ 
           const data = await fs.readFile(path.join(__dirname,'login.html'));
           res.writeHead(200, {'Content-Type':'text/html; charset=utf-8'});
           return res.end(data);
@@ -64,7 +61,8 @@ const server = http.createServer(async(req,res)=>{
   // })
   
   
-}).listen(3000,'localhost',()=>{
+})
+server.listen(3000,'localhost',()=>{
   console.log('3000port');
 })
 
