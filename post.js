@@ -2,15 +2,28 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const qs = require('querystring');
-const user = require('./user');
-// const connection = mysql.createServer({
-//   host:'127.0.0.1',
-//   user:'root',
-//   password:'xxia1215@@',
-//   database:'user'
-// });
-// connection.connect()
-//사용자 이름 , 암호 저장
+const mysql = require('mysql');
+const connection = mysql.createConnection({
+  host     : '127.0.0.1',
+  user     : 'root',
+  password : 'Xxia1215@@',
+  database : 'MYTEST'
+});
+
+connection.connect();
+
+//임의의 데이터테이블 조회하기
+connection.query('SELECT * FROM test01', function (error, results, fields) {
+  if (error) {
+    console.log(error);
+  }
+  console.log(results);
+});
+ 
+connection.end();
+
+
+// 사용자 이름 , 암호 저장
 const users = {
   'username': 'password',
   'jieun':'xxia1215@@'
@@ -58,7 +71,7 @@ const server = http.createServer((req, res) => {
   }
 });
 
-
 server.listen(3000,'localhost',()=>{
   console.log('3000port');
 })
+
