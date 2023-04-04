@@ -19,17 +19,13 @@ connection.query('SELECT * FROM test01', function (error, results, fields) {
   }
   console.log(results);
 });
- 
-connection.end();
 
 
 // 사용자 이름 , 암호 저장
 const users = {
-  'username': 'password',
-  'jieun':'xxia1215@@'
+  'username': 'jieun',
+  'useremail': 'jieun@gmail.com'
 };
-
-
 
 const server = http.createServer((req, res) => {
   const { method, url } = req;
@@ -54,9 +50,8 @@ const server = http.createServer((req, res) => {
         body += chunk.toString();
       });
       req.on('end', () => {
-        const { username, password } = qs.parse(body);
-
-        if (users[username] && users[password] === 'password') {
+        const post = qs.parse(body);
+        if (users[`username`] === post[`username`] && users[`useremail`] === post[`password`]) {
           res.writeHead(200, { 'Content-Type': 'text/plain' });
           res.end('Login!');
         } else {
