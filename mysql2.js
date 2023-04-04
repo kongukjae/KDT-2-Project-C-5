@@ -2,28 +2,22 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const qs = require('querystring');
-const user = require('./user');
 const mysql = require('mysql');
 const connection = mysql.createConnection({
-  host:'127.0.0.1',
-  user:'root',
-  email:'Xxia1215@@',
-  database:'MYTEST'
+  host     : '127.0.0.1',
+  user     : 'root',
+  password : 'Xxia1215@@',
+  database : 'MYTEST'
 });
-connection.connect()
-// 사용자 이름 , 암호 저장
+
+connection.connect();
+
+
 const users = {
-  'username': 'email',
-  'jieun':'hannah_a@naver.com'
+  'name':'jieun',
+  'email':'jieun@gmail.com'
 };
-connection.query('SELECT * FROM test01', function (error, results, fields) {
-  if (error) {
-    console.log(error);
-  }
-  console.log(results);
-});
- 
-connection.end();
+
 
 const server = http.createServer((req, res) => {
   const { method, url } = req;
@@ -40,30 +34,29 @@ const server = http.createServer((req, res) => {
         }
       });
     }
-    //로그인 폼에서 전송버튼을 누르면 post 방식으로 요청이 전송
-  } else if (method === 'POST') {
+//로그인 폼에서 전송버튼을 누르면 post 방식으로 요청이 전송
+// POST 요청에서 사용자 이름과 암호 확인
+
+} else if (method === 'POST') {
     if (url === '/login') {
       let body = '';
       req.on('data', (chunk) => {
         body += chunk.toString();
       });
       req.on('end', () => {
-        const {username, email } = qs.parse(body);
-        // const sql = `INSERT INTO test01 (name, email) VALUES ('${name}', '${email}')`;
-        // connection.query(sql, (err, result) => {
-        // if (err) throw err;
-        // console.log('User saved successfully!');
-        });
-        if (users[username] && users[email] === 'email') {
+        // const { username, email } = qs.parse(body);
+        const {name, email} = qs.parse(body);
+
+        if (users[name] && users[name] === email) {
+        // if (users[username] && users[email] === 'email') {
           res.writeHead(200, { 'Content-Type': 'text/plain' });
           res.end('Login!');
         } else {
           res.writeHead(401, { 'Content-Type': 'text/plain' });
           res.end("doesn't match");
         }
-      // });
+      });
     }
-
   } else {
     res.writeHead(405, { 'Content-Type': 'text/plain' });
     res.end();
@@ -72,5 +65,14 @@ const server = http.createServer((req, res) => {
 
 server.listen(3000,'localhost',()=>{
   console.log('3000port');
-})
+});
+
+
+
+
+
+
+
+
+
 
