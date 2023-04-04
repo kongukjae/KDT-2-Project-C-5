@@ -2,18 +2,25 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const qs = require('querystring');
-
+const user = require('./user');
+// const connection = mysql.createServer({
+//   host:'127.0.0.1',
+//   user:'root',
+//   password:'xxia1215@@',
+//   database:'user'
+// });
+// connection.connect()
 //사용자 이름 , 암호 저장
 const users = {
-  // 'username': 'password',
+  'username': 'password',
   'jieun':'xxia1215@@'
 };
+
+
 
 const server = http.createServer((req, res) => {
   const { method, url } = req;
   // 이렇게 하면 들어오는 요청 개체에서 method 및 속성이 추출됨
-
-
   if (method === 'GET') {
     if (url === '/') {
       fs.readFile(path.join(__dirname, 'login.html'), (err, data) => {
@@ -36,7 +43,7 @@ const server = http.createServer((req, res) => {
       req.on('end', () => {
         const { username, password } = qs.parse(body);
 
-        if (users['jieun'] && users['jieun'] === 'xxia1215@@') {
+        if (users[username] && users[password] === 'password') {
           res.writeHead(200, { 'Content-Type': 'text/plain' });
           res.end('Login!');
         } else {
