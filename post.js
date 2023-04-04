@@ -32,7 +32,7 @@ const server = http.createServer((req, res) => {
   // 이렇게 하면 들어오는 요청 개체에서 method 및 속성이 추출됨
   if (method === 'GET') {
     if (url === '/') {
-      fs.readFile(path.join(__dirname, 'login.html'), (err, data) => {
+      fs.readFile(path.join(__dirname, '/rayout/login.html'), (err, data) => {
         if (err) {
           res.writeHead(500, { 'Content-Type': 'text/plain' });
           res.end('Error');
