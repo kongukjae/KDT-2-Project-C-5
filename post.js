@@ -2,7 +2,8 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const qs = require('querystring');
-const mysql = require('mysql');
+//const mysql = require('mysql');
+/*
 const connection = mysql.createConnection({
   host     : '127.0.0.1',
   user     : 'root',
@@ -22,7 +23,7 @@ connection.query('SELECT * FROM test01', function (error, results, fields) {
  
 connection.end();
 
-
+*/
 // 사용자 이름 , 암호 저장
 const users = {
   'username': 'password',
@@ -54,9 +55,9 @@ const server = http.createServer((req, res) => {
         body += chunk.toString();
       });
       req.on('end', () => {
-        const { username, password } = qs.parse(body);
+        const tempuser = qs.parse(body);
 
-        if (users[username] && users[password] === 'password') {
+        if (users[`username`] === tempuser['username'] && users[`jieun`] === tempuser['password']) {
           res.writeHead(200, { 'Content-Type': 'text/plain' });
           res.end('Login!');
         } else {
