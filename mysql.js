@@ -1,3 +1,4 @@
+const http = require('http');
 const mysql= require('mysql');
 const connection = mysql.createConnection({
   host     : '127.0.0.1',
@@ -18,6 +19,10 @@ connection.connect();
  
 // connection.end();
 
+
+
+
+
 // 사용자 이름과 암호를 저장하는 함수
 function saveUser(username, email) {
   const sql = `INSERT INTO test01 (name, email) VALUES ('${username}', '${email}')`;
@@ -37,7 +42,7 @@ function getUser(username, callback) {
 }
 
 // 사용자 추가
-saveUser('jieun', 'jieun@naver.com');
+saveUser('jieun2', 'jieun');
 
 // 사용자 가져오기
 getUser('jieun', (result) => {
