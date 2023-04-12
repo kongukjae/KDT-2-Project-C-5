@@ -17,6 +17,7 @@
         justify-content: center;
         align-items: center;
         margin: 50px auto;
+        transition: background-color 1s ease-in-out;
       }
       #logo h1 {
         font-family: Arial, sans-serif;
@@ -56,9 +57,9 @@
       window.addEventListener("load", function() {
         setTimeout(function() {
           document.getElementById("text").style.opacity = "1";
+          document.getElementById("logo").style.backgroundColor = "gray";
         }, 2000);
       });
     </script>
   </body>
 </html>
-
