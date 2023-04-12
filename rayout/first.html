@@ -20,15 +20,15 @@
       }
       #logo h1 {
         font-family: Arial, sans-serif;
-        font-size: 72px;
+        font-size: 60px;
         font-weight: bold;
-        color: #fd5f00;
+        color: #000000;
         margin: 0;
-        opacity: 0;
+        opacity: 1;
       }
       #text {
         font-family: Arial, sans-serif;
-        font-size: 24px;
+        font-size: 30px;
         font-weight: bold;
         color: #333333;
         margin-left: -30px;
@@ -37,7 +37,7 @@
       }
       @keyframes slideIn {
         from {
-          margin-left: -200px;
+          margin-left: -100px;
           opacity: 0;
         }
         to {
@@ -50,12 +50,12 @@
   <body>
     <div id="logo">
       <h1>B</h1>
-      <div id="text">Bookstagram</div>
+      <div id="text">ookstagram</div>
     </div>
     <script>
       window.addEventListener("load", function() {
         setTimeout(function() {
-          document.getElementById("logo").classList.add("loaded");
+          document.getElementById("text").style.opacity = "1";
         }, 2000);
       });
     </script>
