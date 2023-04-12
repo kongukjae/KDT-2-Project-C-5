@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <title>BOOKSTAGRAM</title>
     <style>
@@ -22,14 +22,43 @@
         font-family: Arial, sans-serif;
         font-size: 72px;
         font-weight: bold;
-        color: #000000;
+        color: #fd5f00;
         margin: 0;
+        opacity: 0;
+      }
+      #text {
+        font-family: Arial, sans-serif;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333333;
+        margin-left: -30px;
+        opacity: 0;
+        animation: slideIn 0.5s ease-in-out 2s forwards;
+      }
+      @keyframes slideIn {
+        from {
+          margin-left: -200px;
+          opacity: 0;
+        }
+        to {
+          margin-left: 0;
+          opacity: 1;
+        }
       }
     </style>
   </head>
   <body>
     <div id="logo">
       <h1>B</h1>
+      <div id="text">Bookstagram</div>
     </div>
+    <script>
+      window.addEventListener("load", function() {
+        setTimeout(function() {
+          document.getElementById("logo").classList.add("loaded");
+        }, 2000);
+      });
+    </script>
   </body>
 </html>
+
