@@ -1,11 +1,6 @@
-import React from "react";
-
-const App = () => {
-  return (
-    <div>
-      <h1>Hello, React!</h1>
-    </div>
-  );
-};
+function App() {
+  const name = "리액트";
+  return <div className="react">{name}</div>;
+}
 
 export default App;
