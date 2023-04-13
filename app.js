@@ -6,6 +6,6 @@ export default function App(){
     return(
 
         // <List></List>
-        <h1>hello</h1>
+        <h1>Welcome to React</h1>
     )
 }
