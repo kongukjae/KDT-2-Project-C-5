@@ -5,6 +5,7 @@ const path = require("path");
 const server = http.createServer((req, res) => {
   // 정적 파일 요청 처리
   if (req.url.startsWith("/dist")) {
+    //url이 /dist 로 시작하는 경우
     const filePath = path.join(__dirname, req.url);
     const readStream = fs.createReadStream(filePath);
     readStream.pipe(res);
@@ -30,6 +31,7 @@ const server = http.createServer((req, res) => {
 
   if (!ext) {
     filePath += ".html";
+    //확장자명이 없는 경우 .html추가
   }
 
   fs.readFile(filePath, (err, content) => {
@@ -40,6 +42,7 @@ const server = http.createServer((req, res) => {
           (err, content) => {
             res.writeHead(404, { "Content-Type": "text/html" });
             res.end(content, "utf8");
+            //파일을 읽고 res통해 전달
           }
         );
       } else {
@@ -53,5 +56,5 @@ const server = http.createServer((req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
