@@ -1,5 +1,5 @@
-// import React from "react";
-// import "./App.css";
+import React from "react";
+import "./App.css";
 
 // function App() {
 //   const name = "Bookstagram";
@@ -8,9 +8,10 @@
 
 // export default App;
 
-import Component from "./component";
+import MyComponet from "./Mycomponent";
+
 const App = () => {
-  return <Component name="안녕디지몬" />;
+  return <MyComponet />;
 };
 
 export default App;
