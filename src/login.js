@@ -1,6 +1,7 @@
 import React from 'react';
 
 const login = () => {
+  // input 스타일 객체 지정
   const inputStyle = {
     width: '150%',
     height: '54px',
