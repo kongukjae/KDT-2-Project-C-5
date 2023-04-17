@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(63, 133, 212);
+
+  display: flex;
+}
+
+#root {
+  background-color: #fff;
+  width: 390px;
+  height: 843px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 시작 페이지 */
+#start-logo {
+  font-size: 30px;
+}

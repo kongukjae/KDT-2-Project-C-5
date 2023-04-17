@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createRoot } from 'react-dom/client'
-// import './index.css'
+import StartPage from './startScreen';
+import './index.css'
 
 
 const App = () => {
-  return <div>hi</div>;
+  return <StartPage/>;
 };
 
 createRoot(document.getElementById('root')).render(<App />);
