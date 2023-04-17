@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   padding: 0;
@@ -37,7 +40,7 @@ body {
 }
 /* ID, PWD 입력란 */
 #login-page > div:nth-child(2) {
-  height: 35%;
+  height: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,11 +56,35 @@ body {
   border: 1px solid #D9D9D9;
   border-radius: 20px;
 }
-/* 회원가입 및 계정 찾기 */
 #login-page > div:nth-child(4) {
+  width: 80%;
+  height: 2px;
+  margin-top: 30px;
+  background-color: black;
+}
+/* 회원가입 및 계정 찾기 */
+#login-page > div:nth-child(5) {
   height: 45%;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+#login-page > div:nth-child(5) >div:nth-child(1),
+#login-page > div:nth-child(5) >div:nth-child(2),
+#login-page > div:nth-child(5) >div:nth-child(3)
+{
+  margin-top: 2px;
+  width: 110%;
+  height: 43px;
+  font-size: 20px;
+  color: #FFFFFF;
+  text-align: center;
+  background-color: #D9D9D9;
+  border: 1px solid #D9D9D9;
+  border-radius: 20px;
+}
+#login-page > div:nth-child(5) > p {
+  
 }
