@@ -10,7 +10,7 @@
 
 import Component from "./component";
 const App = () => {
-  return <Component />;
+  return <Component name="안녕디지몬" />;
 };
 
 export default App;
