@@ -11,7 +11,6 @@ import "./App.css";
 import MyComponet from "./Mycomponent";
 
 const App = () => {
-  return <MyComponet>리엑트</MyComponet>;
+  return <MyComponet name={3}>리엑트</MyComponet>;
 };
-
 export default App;
