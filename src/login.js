@@ -12,6 +12,9 @@ const login = () => {
           <input type="password" placeholder='password를 입력하세요' name='password'></input>
         </form>
       </div>
+
+      <div>login</div>
+      
       <div>
         <div>sign up with google</div>
         <div>sign up with apple account</div>
