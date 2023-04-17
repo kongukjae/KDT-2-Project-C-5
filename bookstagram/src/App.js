@@ -2,11 +2,8 @@ import React from "react";
 import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Bookstagram</h1>
-    </div>
-  );
+  const name = "Bookstagram";
+  return <div className="logo">{name}</div>;
 }
 
 export default App;
