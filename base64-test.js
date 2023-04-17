@@ -9,3 +9,27 @@ for(let i = 0; i < 5; i++){
 }
 //제대로 저장되었는지 테스트.
 console.log(pwdBox);
+
+//5개의 base64로 인코딩된 문자열을 저장하는 배열
+let base64Box = [];
+for(let i = 0; i < 5; i++){
+  //pwdBox의 매 인덱스마다 문자열을 받아 base64로 변환 후, 이를 base64Box에 push.
+    base64Box.push(atob(pwdBox[i]));
+}
+//제대로 인코딩되어 저장되었는지 테스트.
+console.log(base64Box);
+
+console.log(pwdBox[0].length);
+console.log(pwdBox[1].length);
+console.log(pwdBox[2].length);
+console.log(pwdBox[3].length);
+console.log(pwdBox[4].length);
+
+
+console.log(base64Box[0].length);
+console.log(base64Box[1].length);
+console.log(base64Box[2].length);
+console.log(base64Box[3].length);
+console.log(base64Box[4].length);
+console.log(typeof(base64Box[0]));
+console.log(atob("ThisIsSpart").length);
