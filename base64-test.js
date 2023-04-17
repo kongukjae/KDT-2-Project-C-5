@@ -45,5 +45,13 @@ console.log(btoa("AbCdEfGhI").length);
 
 for(let i = 0; i < base64Box.length; i++){
   //문제 확인! atob는 base64에서 latin code로 바꾸는 구문이었다!
-  //이 문제를 해결하기위해 위의 구문을 변경하기로 한다.
+  //이 문제를 해결하기위해 위의 구문을 변경하기로 한다. - 완료!
+  
+  //테스트 구문, 만일 base64를 atob로 디코딩할 경우, 이전 문자와 일치할 것인가?
+  if(pwdBox[i] === atob(base64Box[i])){
+    console.log(`base64Box[${i}]을 디코딩하면 ${atob(base64Box[i])}가 된다.`)
+    console.log(`pwdBox[${i}]의 문자열과 base64로 인코딩된 base64Box[${i}]는 일치한다.`)
+  }else {
+    console.log(`pwdBox[${i}]의 문자열과 base64로 인코딩된 base64Box[${i}]는 불일치혀`)
+  }
 }
