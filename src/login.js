@@ -22,12 +22,12 @@ const login = () => {
           <div><input type="password" placeholder='password를 입력하세요' name='password' style={inputStyle}></input></div>
         </form>
       </div>
-      <div>login</div>
+      <button type='submit'>login</button>
       <div></div>
       <div>
-        <div>sign up with google</div>
-        <div>sign up with apple account</div>
-        <div>sign up</div>
+        <button>sign up with google</button>
+        <button>sign up with apple account</button>
+        <button>sign up</button>
         <p>forgot account?</p>
       </div>
     </div>

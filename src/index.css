@@ -47,16 +47,23 @@ body {
   margin-left: -90px;
 }
 /* 로그인 버튼 */
-#login-page > div:nth-child(3) {
+#login-page > button {
   width: 128px;
   height: 37px;
   font-size: 20px;
   color: #FFFFFF;
   text-align: center;
   background-color: #D9D9D9;
+  transition: 0.5s;
   border: 1px solid #D9D9D9;
   border-radius: 20px;
   margin-top: 10px;
+}
+#login-page > button:hover {
+  background-color: rgb(143, 143, 143);
+}
+#login-page > button:active {
+  background-color: #fff;
 }
 /* 중간 실선 부분 */
 #login-page > div:nth-child(4) {
@@ -75,9 +82,9 @@ body {
   align-items: center;
 }
 /* sign up with google ~ sign up */
-#login-page > div:nth-child(5) >div:nth-child(1),
-#login-page > div:nth-child(5) >div:nth-child(2),
-#login-page > div:nth-child(5) >div:nth-child(3)
+#login-page > div:nth-child(5) >button:nth-child(1),
+#login-page > div:nth-child(5) >button:nth-child(2),
+#login-page > div:nth-child(5) >button:nth-child(3)
 {
   margin-top: 2px;
   width: 110%;
@@ -86,8 +93,19 @@ body {
   color: #FFFFFF;
   text-align: center;
   background-color: #D9D9D9;
+  transition: 0.5s;
   border: 1px solid #D9D9D9;
   border-radius: 20px;
+}
+#login-page > div:nth-child(5) >button:nth-child(1):hover,
+#login-page > div:nth-child(5) >button:nth-child(2):hover,
+#login-page > div:nth-child(5) >button:nth-child(3):hover {
+  background-color: rgb(143, 143, 143);
+}
+#login-page > div:nth-child(5) >button:nth-child(1):active,
+#login-page > div:nth-child(5) >button:nth-child(2):active,
+#login-page > div:nth-child(5) >button:nth-child(3):active {
+  background-color: #fff;
 }
 /* forgot account? */
 #login-page > div:nth-child(5) > p {
