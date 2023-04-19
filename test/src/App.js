@@ -5,7 +5,7 @@ import LoginPage from "./LoginPage";
 // import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 function App() {
-  const [loggedIn, setLoggedIn] = React.useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const handleLogin = () => {
     setLoggedIn(true);
