@@ -8,9 +8,10 @@ import "./App.css";
 
 // export default App;
 
-import MyComponet from "./Mycomponent";
+// import MyComponet from "./Mycomponent";
+import Counter from "./count";
 
 const App = () => {
-  return <MyComponet favoriteNumber={1}>리액트</MyComponet>;
+  return <Counter />;
 };
 export default App;
