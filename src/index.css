@@ -81,7 +81,7 @@ body {
   justify-content: flex-start;
   align-items: center;
 }
-/* sign up with google ~ sign up */
+/* sign up with google ~ sign up 버튼*/
 #login-page > div:nth-child(5) >button:nth-child(1),
 #login-page > div:nth-child(5) >button:nth-child(2),
 #login-page > div:nth-child(5) >button:nth-child(3)
