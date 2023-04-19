@@ -1,9 +1,20 @@
-const http=require('http');
-
+import http from 'http';
+import fs from 'fs';
 
 const server=http.createServer(function(req,res){
-  res.writeHead()
-  
-
+    if(req.method === "GET"){
+        if(req.url === "/"){
+            res.writeHead(200, {'Content-Type':'text/html'});
+            res.write(fs.readFileSync("./src/index.html", "utf8"));
+            res.end();
+        }
+    }
 })
 
+server.listen(4090, err=>{
+    if(err){
+        console.log(`${err}에러가 발생하였습니다.`)
+    } else {
+        console.log('포트 4090으로 연결되었습니다.')
+    }
+})
