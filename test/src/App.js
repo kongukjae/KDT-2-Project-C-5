@@ -18,6 +18,10 @@ function App() {
     setLoggedIn(true);
     history.push("/login");
   };
+
+  const handleBack = () => {
+    history.goBack();
+  };
   return (
     <div className="App">
       {loggedIn ? (
