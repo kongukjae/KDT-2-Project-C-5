@@ -15,7 +15,7 @@ const login = () => {
     <div id='login-page'>
       <div>BOOK STAGRAM</div>
       <div>
-        <form>
+        <form method='POST'>
           <p><b>ID</b></p>
           {/* form이 서버에 제출될 때 'name'속성 값은 해당 입력 필드의 값을 나타내는 키(key) 역할을 한다. 입력된 값은 이 키(key)와 함께 서버로 전송된다.*/}
           <div><input type="text" placeholder='ID를 입력하세요' name='id' style={inputStyle}></input></div>
