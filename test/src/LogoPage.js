@@ -1,14 +1,11 @@
-import React from "react";
-import logo from "./logo.svg";
-
 function LogoPage(props) {
   const handleClick = () => {
     props.handleLogin();
   };
 
   return (
-    <div className="logo-page">
-      <img src={logo} className="logo" alt="logo" />
+    <div className="LogoPage" onClick={handleClick}>
+      <h1>Logo Page</h1>
     </div>
   );
 }
