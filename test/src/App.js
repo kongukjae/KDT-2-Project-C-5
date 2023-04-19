@@ -1,14 +1,8 @@
 import React, { useState } from "react";
-
 import "./App.css";
 import LogoPage from "./LogoPage";
 import LoginPage from "./LoginPage";
-import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  useHistory,
-} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
@@ -16,21 +10,30 @@ function App() {
 
   const handleLogin = () => {
     setLoggedIn(true);
-    history.push("/login");
   };
 
   const handleBack = () => {
     history.goBack();
   };
+
   return (
     <div className="App">
-      {loggedIn ? (
-        <LoginPage handleLogin={handleLogin} />
-      ) : (
-        <>
-          <LogoPage handleLogin={handleLogin} />
-        </>
-      )}
+      <Router>
+        {loggedIn ? (
+          <Switch>
+            <Route path="/">
+              <LoginPage handleLogin={handleLogin} />
+            </Route>
+          </Switch>
+        ) : (
+          <Switch>
+            <Route path="/">
+              <LogoPage handleLogin={handleLogin} />
+            </Route>
+          </Switch>
+        )}
+      </Router>
+      {loggedIn && <button onClick={handleBack}>Go back</button>}
     </div>
   );
 }

@@ -1,3 +1,5 @@
+import React from "react";
+
 function LogoPage(props) {
   const handleClick = () => {
     props.handleLogin();
