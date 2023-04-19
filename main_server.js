@@ -2,10 +2,16 @@ import http from 'http';
 import fs from 'fs';
 
 const server=http.createServer(function(req,res){
+    console.log(req.url);
     if(req.method === "GET"){
         if(req.url === "/"){
             res.writeHead(200, {'Content-Type':'text/html'});
             res.write(fs.readFileSync("./src/index.html", "utf8"));
+            res.end();
+        }
+        if(req.url === "/signupForm.js"){
+            res.writeHead(200, {'Content-Type':'text/javascript'});
+            res.write(fs.readFileSync("./src/signupForm.js","utf8"));
             res.end();
         }
     }
