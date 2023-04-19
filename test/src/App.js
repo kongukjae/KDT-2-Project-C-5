@@ -4,15 +4,14 @@ import LogoPage from "./LogoPage";
 import LoginPage from "./LoginPage";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  // LoginPage 또는 logoPage를 렌더링
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  const handleLogin = () => {
+    setLoggedIn(true);
+  };
   return (
     <div className="App">
-      {isLoggedIn ? (
-        <LogoPage setIsLoggedIn={setIsLoggedIn} />
-      ) : (
-        <LoginPage setIsLoggedIn={setIsLoggedIn} />
-      )}
+      {loggedIn ? <LoginPage /> : <LogoPage handleLogin={handleLogin} />}
     </div>
   );
 }
