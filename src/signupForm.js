@@ -1,6 +1,5 @@
-function signupForm(){
-  return 
-  `<h1>북스타그램</h1>
+function signupFormData(){
+  return `<h1>북스타그램</h1>
   <form>
     <label>
       ID:
@@ -13,3 +12,10 @@ function signupForm(){
     <button type="submit">로그인</button>
   </form>`
 }
+function signupForm(){
+  const root = window.document.getElementById('root');
+  console.log(root);
+  root.innerHTML = signupFormData();
+}
+export default signupForm;
+signupForm();
