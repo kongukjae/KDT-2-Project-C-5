@@ -17,8 +17,9 @@
   },
   "homepage": "https://github.com/kongukjae/KDT-2-Project-C-5/tree/main#readme",
   "dependencies": {
+    "mariadb": "^3.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
-  "type":"module"
+  "type": "module"
 }
