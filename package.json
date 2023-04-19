@@ -1,0 +1,23 @@
+{
+  "name": "project-c",
+  "version": "1.0.0",
+  "description": "bookstagram",
+  "main": "main_server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kongukjae/KDT-2-Project-C-5.git#main"
+  },
+  "author": "SDSU",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kongukjae/KDT-2-Project-C-5/issues"
+  },
+  "homepage": "https://github.com/kongukjae/KDT-2-Project-C-5/tree/main#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
