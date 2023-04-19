@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/kongukjae/KDT-2-Project-C-5/tree/main#readme",
   "dependencies": {
+    "global": "^4.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
