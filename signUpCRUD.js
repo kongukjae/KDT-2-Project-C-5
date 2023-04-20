@@ -2,10 +2,11 @@
 function createUser(uid, pwd, uEmail, uName){
   return `INSERT INTO userinfo ( \`user-id\`, \`user-pwd\`, \`user-email\`, \`user-name\`) VALUES ('${uid}', '${pwd}', '${uEmail}', '${uName}')`;
 }
-// UserInfo에서 uid를 기준으로 사용자 정보를 출력하는 Query문
+// UserInfo에서 모든 유저를 가져오는 Query문
 function readAll(){
   return`SELECT * FROM userinfo`;
 }
+// UserInfo에서 uid를 기준으로 사용자 정보를 출력하는 Query문
 function readUser(uid){
   return `SELECT * FROM userinfo WHERE \`user-id\`='${uid}'`;
 }
@@ -26,4 +27,4 @@ function deleteUser(uid){
   return `DELETE FROM userinfo WHERE \`user-id\`='${uid}'`;
 }
 // 모듈로 export할시 default로 나가는 함수들 구문
-export default {createUser, readUser, updatePassword, updateEmail, updateName, deleteUser};
+export default {createUser, readAll, readUser, updatePassword, updateEmail, updateName, deleteUser};
