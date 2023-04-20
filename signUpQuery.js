@@ -1,4 +1,3 @@
-
 /**
  * UserInfo에 사용자를 추가하는 Query문. 사용자 정보를 UserInfo에 추가하는 쿼리문을 반환한다.
  * @param {*} uid 유저 아이디
@@ -18,6 +17,7 @@
 function readAll(){
   return`SELECT * FROM userinfo`;
 }
+
 /**
  * UserInfo에서 uid를 기준으로 사용자 정보를 출력하는 Query문
  * @param {*} uid 유저 아이디. 검색용
@@ -26,6 +26,7 @@ function readAll(){
 function readUser(uid){
   return `SELECT * FROM userinfo WHERE \`user-id\`='${uid}'`;
 }
+
 // 
 /**
  * UserInfo에서 uid를 기준으로 해당 사용자의 패스워드를 업데이트하는 Query문
@@ -36,6 +37,7 @@ function readUser(uid){
 function updatePassword(uid, pwd){
   return `UPDATE userinfo SET pwd = '${pwd}' WHERE \`user-id\` = '${uid}'`;
 }
+
 /**
  * UserInfo에서 uid를 기준으로 해당 사용자의 Email을 업데이트하는 Query문
  * @param {*} uid 유저 아이디, 검색용
@@ -45,6 +47,7 @@ function updatePassword(uid, pwd){
 function updateEmail(uid, uEmail){
   return `UPDATE userinfo SET \`user-email\` = '${uEmail} WHERE \`user-id\` = '${uid}'`;
 }
+
 /**
  * UserInfo에서 uid를 기준으로 해당 사용자의 닉네임을 업데이트하는 Query문
  * @param {*} uid 유저 아이디, 검색용
@@ -54,6 +57,7 @@ function updateEmail(uid, uEmail){
 function updateName(uid, uName){
   return `UPDATE userinfo SET \`user-name\` = '${uName} WHERE \`user-id\` = '${uid}'`;
 }
+
 /**
  * UserInfo에서 사용자를 삭제하는 Query문
  * @param {*} uid 삭제할 유저의 아이디.
@@ -62,5 +66,6 @@ function updateName(uid, uName){
 function deleteUser(uid){
   return `DELETE FROM userinfo WHERE \`user-id\`='${uid}'`;
 }
+
 // 모듈로 export할시 default로 나가는 함수들 구문
 export default {createUser, readAll, readUser, updatePassword, updateEmail, updateName, deleteUser};
