@@ -2,6 +2,7 @@ import mariadb from 'mariadb';
 import fs from 'fs';
 import CRUD from './signUpCRUD.js';
 
+//밖으로 옮겨 모듈화 작업을 시작함.
 export default async function SQLConnection() {
   //createPool - 서버연동, 이것이 없으면 DB에 접근이 불가능하다.
   const pool = mariadb.createPool({host :"localhost", user: "bookstargram", password:'qwe123', port:"3306", database:'bookstargram', connectionLimit: 5});
