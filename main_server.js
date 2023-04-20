@@ -2,6 +2,7 @@ import http from 'http';
 import fs from 'fs';
 import bookstargramConnect from './mariadb.js';
 import signUpQuery from './signUpQuery.js';
+import { startTransition } from 'react';
 
 console.log(bookstargramConnect(signUpQuery.readAll()));
 const server=http.createServer(function(req,res){
@@ -18,6 +19,12 @@ const server=http.createServer(function(req,res){
             res.write(fs.readFileSync("./src/signupForm.js","utf8"));
             res.end();
         }
+        if(req.url.startsWith("/login")){
+            
+        }
+    }
+    if(req.method === "POST"){
+
     }
 })
 
