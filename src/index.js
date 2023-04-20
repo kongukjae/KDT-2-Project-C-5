@@ -1,6 +1,9 @@
+import React from "react";
+import ReactDOM from "react-dom";
+
 function App() {
-  const name = "리액트";
+  const name = "헬로우 리액트 감옥";
   return <div className="react">{name}</div>;
 }
 
-export default App;
+ReactDOM.render(<App />, document.getElementById("root"));
