@@ -1,7 +1,9 @@
 import http from 'http';
 import fs from 'fs';
-import bookstargramConnect from './mariadb';
+import bookstargramConnect from './mariadb.js';
+import signUpQuery from './signUpQuery.js';
 
+console.log(bookstargramConnect(signUpQuery.readAll()));
 const server=http.createServer(function(req,res){
     console.log(req.url);
     if(req.method === "GET"){
@@ -9,6 +11,7 @@ const server=http.createServer(function(req,res){
             res.writeHead(200, {'Content-Type':'text/html'});
             res.write(fs.readFileSync("./src/index.html", "utf8"));
             res.end();
+            
         }
         if(req.url === "/signupForm.js"){
             res.writeHead(200, {'Content-Type':'text/javascript'});
