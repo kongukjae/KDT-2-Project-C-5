@@ -2,7 +2,7 @@
   "name": "project-c",
   "version": "1.0.0",
   "description": "bookstagram",
-  "main": "main.js",
+  "main": "main_server.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "test": "echo \"Error: no test specified\" && exit 1"

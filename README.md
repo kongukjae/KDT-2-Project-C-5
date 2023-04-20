@@ -10,10 +10,12 @@ Project C 개발 사전 협의
 -자바스크립트
 -SQL
 
+
 프론트 엔드
 -react
 -react dom
 -babel
+
 
 백 엔드
 -nodejs
@@ -21,7 +23,6 @@ Project C 개발 사전 협의
 
 
 @참여자
-
 -김동주
 -이재권
 -정지은
