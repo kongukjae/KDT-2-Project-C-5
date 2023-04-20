@@ -1,6 +1,6 @@
 import mariadb from 'mariadb';
 import fs from 'fs';
-import CRUD from './signUpCRUD.js';
+
 //실험적 기능이기에 fs을 사용하기로 함. 
 //import poolSet from './dist/SQL' assert {type: "json"};
 
