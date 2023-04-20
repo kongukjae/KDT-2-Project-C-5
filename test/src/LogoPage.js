@@ -70,9 +70,14 @@ import React from "react";
 import logo from "./logo.svg";
 
 function LogoPage(props) {
+  const handleGoBack = () => {
+    window.history.back();
+  };
+
   return (
     <div className="logo-page">
       <img src={logo} alt="logo" onClick={props.onClick} />
+      <button onClick={handleGoBack}>Go Back</button>
     </div>
   );
 }
