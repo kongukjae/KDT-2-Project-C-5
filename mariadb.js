@@ -5,7 +5,7 @@ import CRUD from './signUpCRUD.js';
 //import poolSet from './dist/SQL' assert {type: "json"};
 
 //모듈화 작업을 시작함.
-export default async function SQLConnection() {
+export default async function bookstargramConnect(func) {
   
   // dist의 SQL에서 mariadb용 pool 세팅을 가져옴.
   const poolSet = JSON.parse(fs.readFileSync("./dist/SQL.json", "utf8"));
@@ -16,7 +16,7 @@ export default async function SQLConnection() {
   try {
     conn = await pool.getConnection();
     //await conn.query(`insert into htmltest(html_text) values ('${htmldata}')`);
-    const res = await conn.query(`select * from userinfo`);
+    const res = await conn.query(func);
     console.log(res);
 
   } finally {
@@ -32,4 +32,5 @@ export default async function SQLConnection() {
 // Pool 세팅 SQL로 옮기고 fs로 파일 읽어오기. 되는지 테스트
 //console.log(poolSet);
 
-SQLConnection();
+//테스트 구문
+//bookstargramConnect(CRUD.readAll());
