@@ -17,5 +17,4 @@ function signupForm(){
   console.log(root);
   root.innerHTML = signupFormData();
 }
-export default signupForm;
 signupForm();
