@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createRoot } from 'react-dom/client'
+import { createRoot } from 'react-dom/client';
 import StartPage from './startScreen';
 import Login from './login';
-import LoginPage from './loginPage'
+import LoginPage from './loginPage';
 import SignUpPage from './signUp';
 import Router from './router';
-import './index.css'
+import './index.css';
 
 
 const App = () => {
-  return <LoginPage/>;
+  return <Login/>;
 };
 
 createRoot(document.getElementById('root')).render(<App />);
