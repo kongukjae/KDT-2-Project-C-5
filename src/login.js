@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const login = () => {
   // input 스타일 객체 지정
@@ -10,7 +10,6 @@ const login = () => {
     borderRadius: '20px',
     textAlign: 'center'
   }
-
   return (
     <div id='login-page'>
       <div>BOOK STAGRAM</div>

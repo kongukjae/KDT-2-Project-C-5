@@ -8,7 +8,7 @@ import './index.css'
 
 
 const App = () => {
-  return <Router/>;
+  return <LoginPage/>;
 };
 
 createRoot(document.getElementById('root')).render(<App />);
