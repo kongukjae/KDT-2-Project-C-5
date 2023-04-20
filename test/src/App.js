@@ -11,6 +11,10 @@ function App() {
     setLoggedIn(true);
   };
   //handleLogin 함수는 loggedIn 상태를 업데이트하는 데 사용. 클릭될 때 호출된다.
+
+  const handleGoBack = () => {
+    setLoggedIn(false);
+  };
   return (
     <div className="App">
       {loggedIn ? (
