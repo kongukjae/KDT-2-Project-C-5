@@ -1,8 +1,11 @@
 // UserInfo에 사용자를 추가하는 Query문
 function createUser(uid, pwd, uEmail, uName){
-  return `INSERT INTO userinfo ( 'user-id', 'user-pwd', 'user-email', 'user-name') VALUES ('${uid}', '${pwd}', '${uEmail}', '${uName}')`;
+  return `INSERT INTO userinfo ( \`user-id\`, \`user-pwd\`, \`user-email\`, \`user-name\`) VALUES ('${uid}', '${pwd}', '${uEmail}', '${uName}')`;
 }
 // UserInfo에서 uid를 기준으로 사용자 정보를 출력하는 Query문
+function readAll(){
+  return`SELECT * FROM userinfo`;
+}
 function readUser(uid){
   return `SELECT * FROM userinfo WHERE \`user-id\`='${uid}'`;
 }
