@@ -2,9 +2,8 @@ import http from 'http';
 import fs from 'fs';
 import bookstargramConnect from './mariadb.js';
 import signUpQuery from './signUpQuery.js';
-import { startTransition } from 'react';
 
-console.log(bookstargramConnect(signUpQuery.readAll()));
+bookstargramConnect(signUpQuery.readAll()).then(res=>{console.log(res)});
 const server=http.createServer(function(req,res){
     console.log(req.url);
     if(req.method === "GET"){
