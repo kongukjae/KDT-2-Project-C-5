@@ -1,6 +1,6 @@
 function signupFormData(){
   return `<h1>북스타그램</h1>
-  <form>
+  <form method="GET" action="/login">
     <label>
       ID:
       <input type="text" name="id" />
