@@ -5,6 +5,7 @@ module.exports = {
   //초기진입파일
   output: {
     filename: "bundle.js",
+    //번들링된 파일
     path: path.resolve(__dirname, "dist"),
   },
   module: {
