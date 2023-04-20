@@ -8,14 +8,7 @@ import CRUD from './signUpCRUD.js';
 export default async function SQLConnection() {
   
   // dist의 SQL에서 mariadb용 pool 세팅을 가져옴.
-  const poolSet = "";
-  fs.readFile("./dist/SQL.json", "utf8",(err,data)=>{
-    if(err){
-      console.error(`${err}가 발생했습니다.`, err);
-    } else {
-      poolSet = data;
-    }
-  });
+  const poolSet = JSON.parse(fs.readFileSync("./dist/SQL.json", "utf8"));
   console.log(poolSet);
   // createPool - 서버연동, 이것이 없으면 DB에 접근이 불가능하다.
   const pool = mariadb.createPool(poolSet.mariadb);
