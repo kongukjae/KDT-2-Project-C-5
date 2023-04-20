@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       {loggedIn ? (
-        <LoginPage handleLogin={handleLogin} />
+        <LoginPage onGoBack={handleGoBack} />
       ) : (
         <>
           <LogoPage onClick={handleLogin} />
