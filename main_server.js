@@ -4,20 +4,21 @@ import fs from "fs";
 const server = http.createServer((request, response) => {
     const file = fs.readFileSync("./index.html", "utf8");
     const jsFile=fs.readFileSync("./render.js","utf8");
+    const webpack= fs.readFileSync("./dist/main.js", "utf8");
     if (request.method === "GET") {
-        if(req.url === "/"){
-            res.writeHead(200, {'Content-Type':'text/html'});
-            res.write(file);
-            res.end();
+        if(request.url === "/"){
+            response.writeHead(200, {'Content-Type':'text/html'});
+            response.write(file);
+            response.end();
             
         }
-        if(req.url === "/render.js"){
-            res.writeHead(200, {'Content-Type':'text/javascript'});
-            res.write(jsFile);
-            res.end();
+        if(request.url === "/main.js"){
+            response.writeHead(200, {'Content-Type':'text/javascript'});
+            response.write(webpack);
+            response.end();
         }
     }
-    if(req.method === "POST"){
+    if(request.method === "POST"){
 
     }
 });
