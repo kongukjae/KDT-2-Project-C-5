@@ -3,9 +3,8 @@ import fs from "fs";
 
 const server = http.createServer((request, response) => {
     const file = fs.readFileSync("./index.html", "utf8");
-    const jsFile=fs.readFileSync("./render.js","utf8");
     if (request.method === "GET") {
-    
+        
     }
     
 });
