@@ -1,4 +1,10 @@
-{
+{ "scripts": {
+  "start": "webpack --mode development --watch"
+},
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.4",

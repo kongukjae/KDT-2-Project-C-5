@@ -12,7 +12,10 @@ module.exports = {
         test: /\.js$/, // .js 확장자를 가진 파일에 대해서
         exclude: /node_modules/, // node_modules 폴더는 제외하고
         use: {
-          loader: "babel-loader", // babel-loader를 사용한다
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"],
+          },
         },
       },
     ],
