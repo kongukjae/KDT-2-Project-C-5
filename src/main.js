@@ -6,11 +6,12 @@ import Login from './login';
 import LoginPage from './loginPage';
 import SignUpPage from './signUp';
 import Router from './router';
+import InputProfilePic from '../components/InputProfilePic';
 import './index.css';
 
 
 const App = () => {
-  return <LoginPage/>;
+  return <InputProfilePic/>;
 };
 
 createRoot(document.getElementById('root')).render(<App />);
