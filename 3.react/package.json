@@ -1,0 +1,25 @@
+{
+  "name": "kdt-2-project-c-5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kongukjae/KDT-2-Project-C-5.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kongukjae/KDT-2-Project-C-5/issues"
+  },
+  "homepage": "https://github.com/kongukjae/KDT-2-Project-C-5#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "type": "module"
+}
