@@ -1,4 +1,6 @@
 import bookstargramConnect from './mariadb.js';
 import signUpQuery from './signUpQuery.js'
 
-console.log(bookstargramConnect(signUpQuery.readAll()));
+bookstargramConnect(signUpQuery.readAll())
+.then(result=>{console.log(result);
+process.exit()})
