@@ -10,6 +10,7 @@ module.exports = {
     path: path.join(__dirname, '/dist'),
     filename: 'startPage.js'
   },
+  mode: "development",
   // 웹팩이 모듈을 로드하는 방법을 설정
   module: {
     // 보통 파일 확장자별 로더를 지정하여 적용한다.
