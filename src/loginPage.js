@@ -1,5 +1,5 @@
 import React from 'react';
-import BookStagramTopLogo from '../components/BookStagramTopLogo.jsx';
+import BookStagramTopLogo from '../components/BookStagramTopLogo';
 import InputId from '../components/InputId';
 import InputPwd from '../components/InputPwd';
 import ButtonLogin from '../components/ButtonLogin';
