@@ -99,3 +99,12 @@ body{
 <input type="week"> -->
 </body>
 </html>
+<script>
+  fetch('http://localhost:3000/', {
+    method: 'POST'
+  }).then(response => {
+    return response.text();
+  }).then(data => {
+    console.log(data); // signup.html 파일 내용을 출력
+  });
+</script>
