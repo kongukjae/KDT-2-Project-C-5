@@ -8,9 +8,10 @@ export default function App(){
 
         //받은 이벤트의 타겟, submit된 데이터(id, password)를 form으로 저장하는 구문
         const form = event.target;
+        //해당 타겟을 FormData 형식으로 변환, 저장하는 구문.
         const formData = new FormData(form);
+        //fetch로 서버에 데이터를 보내는 구문.
         fetch("/login", {method: form.method, body: formData})
-        console.log(form.method);
     }
 
     return(
