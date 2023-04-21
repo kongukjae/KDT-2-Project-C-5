@@ -1,18 +1,18 @@
 import React from 'react';
 import BookStagramTopLogo from '../components/BookStagramTopLogo';
-// import InputId from '../components/InputId';
-// import InputPwd from '../components/InputPwd';
-// import ButtonLogin from '../components/ButtonLogin';
-// import ButtonSignUpWithGoogle from '../components/ButtonSignUpWithGoogle';
-// import ButtonSignUpWithAppleAccount from '../components/ButtonSignUpWithAppleAccount';
-// import ButtonSignUp from '../components/ButtonSignUp';
-// import ForgotAccount from '../components/ForgotAccount';
+import InputId from '../components/InputId';
+import InputPwd from '../components/InputPwd';
+import ButtonLogin from '../components/ButtonLogin';
+import ButtonSignUpWithGoogle from '../components/ButtonSignUpWithGoogle';
+import ButtonSignUpWithAppleAccount from '../components/ButtonSignUpWithAppleAccount';
+import ButtonSignUp from '../components/ButtonSignUp';
+import ForgotAccount from '../components/ForgotAccount';
 
 const loginPage = () => {
   return (
     <div>
       <BookStagramTopLogo/>
-      {/* <div>
+      <div>
         <form>
           <InputId/>
           <InputPwd/>
@@ -26,7 +26,7 @@ const loginPage = () => {
         <ButtonSignUpWithAppleAccount/>
         <ButtonSignUp/>
         <ForgotAccount/>
-      </div> */}
+      </div>
     </div>
   );
 };

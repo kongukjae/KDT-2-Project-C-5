@@ -10,7 +10,7 @@ import './index.css';
 
 
 const App = () => {
-  return <Login/>;
+  return <LoginPage/>;
 };
 
 createRoot(document.getElementById('root')).render(<App />);
