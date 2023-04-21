@@ -17,8 +17,10 @@
   },
   "homepage": "https://github.com/kongukjae/KDT-2-Project-C-5/tree/main#readme",
   "dependencies": {
+    "css-loader": "^6.7.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "style-loader": "^3.3.2"
   },
   "type": "module",
   "devDependencies": {
