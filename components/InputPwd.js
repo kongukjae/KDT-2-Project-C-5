@@ -3,7 +3,7 @@ import React from 'react';
 
 const InputPwd = () => {
   const LoginSignUpInputStyle = {
-    width: '150%',
+    width: '100%',
     height: '54px',
     backgroundColor: '#D9D9D9',
     border: '1px solid #D9D9D9',

@@ -1,18 +1,26 @@
 import React from 'react';
 
 const InputProfilePic = () => {
+  const LoginSignUpInputStyle = {
+    width: '50%',
+    height: '120px',
+    backgroundColor: '#D9D9D9',
+    border: '1px solid #D9D9D9',
+    borderRadius: '50%',
+    textAlign: 'center',
+  }
+
+  const ProfilePicStyle = {
+    width: '100%',
+    height: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center'
+  }
   return (
-    <div>
-      <div>
-        BOOK STAGRAM
-      </div>
-      <div>프로필 사진 등록</div>
-      <div>ID 입력 란</div>
-      <div>email 입력 란</div>
-      <div>user name 입력 란</div>
-      <div>pwd 입력 란</div>
-      <div>pwd check 입력 란</div>
-      <div>submit</div>
+    <div style={ProfilePicStyle}>
+          {/* form이 서버에 제출될 때 'name'속성 값은 해당 입력 필드의 값을 나타내는 키(key) 역할을 한다. 입력된 값은 이 키(key)와 함께 서버로 전송된다.*/}
+          <div><input type="file" name='profile' style={LoginSignUpInputStyle}></input></div>
     </div>
   );
 };
