@@ -31,4 +31,5 @@ const html = `
 
 <input type="submit" value="submit">
 </form>`;
-export default html;
+// export default html;
+module.exports = html;
