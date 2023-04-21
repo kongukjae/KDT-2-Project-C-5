@@ -1,5 +1,6 @@
 import http from "http";
 import fs from "fs";
+import queryString from 'querystring';
 
 const server = http.createServer((request, response) => {
     const file = fs.readFileSync("./index.html", "utf8");
@@ -20,7 +21,14 @@ const server = http.createServer((request, response) => {
     }
     if(request.method === "POST"){
         if(request.url === "/login"){
-            console.log("POST가 읽혔습니다!")
+            request.on('data', loginForm=>{
+                for(let array in loginForm.entries()){
+                    console.log(array[0]);
+                    console.log(array[1]);
+                }
+                //console.log(data.password);
+
+            })
         }
     }
 });
