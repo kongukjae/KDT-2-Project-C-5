@@ -1,8 +1,9 @@
 import React from "react";
 
 export default function App(){
+    //form이 submit되는 이벤트를 캐치, 이때 해당 이벤트를 event 매개변수로 받고 진행함.
     function handleSubmit(event) {
-        //기본 공백이 입력되는걸 방지하기 위한 구문.
+        //새창을 여는 기본 설정을 방지하는 구문.
         event.preventDefault();
 
         //받은 이벤트의 타겟, submit된 데이터(id, password)를 form으로 저장하는 구문
