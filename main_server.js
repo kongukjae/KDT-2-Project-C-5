@@ -19,7 +19,9 @@ const server = http.createServer((request, response) => {
         }
     }
     if(request.method === "POST"){
-
+        if(request.url === "/login"){
+            console.log("POST가 읽혔습니다!")
+        }
     }
 });
 
