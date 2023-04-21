@@ -1,5 +1,5 @@
 { "scripts": {
-  "start": "webpack --mode development --watch"
+  "start": "node src/index.js"
 },
   "dependencies": {
     "react": "^18.2.0",
