@@ -4,6 +4,7 @@
   "description": "bookstagram",
   "main": "main_server.js",
   "scripts": {
+    "run":"webpack ",
     "start": "webpack-dev-server --mode development --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
