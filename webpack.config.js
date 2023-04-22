@@ -1,8 +1,9 @@
 import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import path from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = path.dirname(__filename);
+// const __dirname = path.resolve();
 
 export default {
   mode: 'development',
@@ -10,7 +11,10 @@ export default {
   output: {
     path: `${__dirname}/dist`,
     filename: '[name].js',
+    // path: path.resolve(__dirname, 'dist'),
+    // filename: 'bundle.js',
   },
+  
   module: {
     rules: [
       {
@@ -20,8 +24,10 @@ export default {
           loader: 'babel-loader',
           options: {
             babelrc: true,
-            
           },
+          resolve:{
+            extensions:['.js','.jsx']
+          }
         },
       },
     ],
