@@ -59,7 +59,7 @@ const navBarStyle = {
   display: 'flex',
   flexDirection: 'row',
   justifyContent: 'space-evenly',
-  listStyleType: 'none'
+  listStyleType: 'none',
 };
 
 const NavBar = () => {

@@ -117,3 +117,7 @@ body {
 .myBtn:active {
   background-color: #fff;
 }
+
+li {
+  margin-right: 5px;
+}
