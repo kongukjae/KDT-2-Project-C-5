@@ -6,11 +6,12 @@ import Login from './login';
 import LoginPage from './loginPage';
 import SignUpPage from './signUp';
 import Router from './router';
+import MainFeed from './mainFeed';
 import './index.css';
 
 
 const App = () => {
-  return <SignUpPage/>;
+  return <MainFeed/>;
 };
 
 createRoot(document.getElementById('root')).render(<App />);
