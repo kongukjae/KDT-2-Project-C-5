@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import Search from "./Search";
+import SearchResult from "./SearchResult";
+import TextInput from "./TextInput";
 
 function App() {
+  const [searchText, setSearchText] = useState("");
+  const [searchResult, setSearchResult] = useState([]);
+
+  const handleSearchChange = (e) => {
+    setSearchText(e.target.value);
+  };
+
+  const handleSearchSubmit = (e) => {
+    e.preventDefault();
+    // TODO: 검색 기능 구현
+  };
+
+  const handleTextChange = (e) => {
+    // TODO: 텍스트 입력 처리
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <SearchResult items={searchResult} />
+      <TextInput value={searchText} onChange={handleTextChange} />
+      <Search
+        value={searchText}
+        onChange={handleSearchChange}
+        onSubmit={handleSearchSubmit}
+      />
     </div>
   );
 }
