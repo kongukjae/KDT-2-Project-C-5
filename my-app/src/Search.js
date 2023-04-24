@@ -4,7 +4,7 @@ function Search({ value, onChange, onSubmit }) {
   return (
     <form onSubmit={onSubmit}>
       <input type="text" value={value} onChange={onChange} />
-      <button type="submit">검색</button>
+      <button type="submit">Q</button>
     </form>
   );
 }
