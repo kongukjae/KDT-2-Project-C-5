@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import MainFeed from '../src/mainFeed';
 
 const Page1 = () => <div>Page 1</div>;
@@ -19,21 +19,20 @@ const NavBar = () => {
 
   return (
     <div>
-      <div style={navbarStyle}>
-        <div><Link to="/">tap1</Link></div>
-        <div><Link to="/page1">tap2</Link></div>
-        <div><Link to="/page2">tap3</Link></div>
-        <div><Link to="/page3">tap4</Link></div>
-        <div><Link to="/page4">tap5</Link></div>
-      </div>
-
-      <BrowserRouter>
+      <BrowserRouter basename="/myapp">
+        <div style={navbarStyle}>
+          <div><Link to="/">tap1</Link></div>
+          <div><Link to="/page1">tap2</Link></div>
+          <div><Link to="/page2">tap3</Link></div>
+          <div><Link to="/page3">tap4</Link></div>
+          <div><Link to="/page4">tap5</Link></div>
+        </div>
         <Routes>
-          <Route exact path="/" component={<MainFeed/>} />
-          <Route path="/page1" component={Page1} />
-          <Route path="/page2" component={Page2} />
-          <Route path="/page3" component={Page3} />
-          <Route path="/page4" component={Page4} />
+          <Route exact path="/" element={<MainFeed />} />
+          <Route path="/page1" element={<Page1 />} />
+          <Route path="/page2" element={<Page2 />} />
+          <Route path="/page3" element={<Page3 />} />
+          <Route path="/page4" element={<Page4 />} />
         </Routes>
       </BrowserRouter>
     </div>
