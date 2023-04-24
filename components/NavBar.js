@@ -60,6 +60,7 @@ const navBarStyle = {
   flexDirection: 'row',
   justifyContent: 'space-evenly',
   listStyleType: 'none',
+  padding: '0'
 };
 
 const NavBar = () => {

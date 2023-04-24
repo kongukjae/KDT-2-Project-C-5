@@ -120,4 +120,6 @@ body {
 
 li {
   margin-right: 5px;
+  display: flex;
+  justify-content: space-around;
 }
