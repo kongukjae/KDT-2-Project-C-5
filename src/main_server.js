@@ -23,9 +23,9 @@ const server=http.createServer(function(req,res){
 
             
         }
-        if(req.url === "/signupForm.js"){
+        if(req.url === "/signinForm.js"){
             res.writeHead(200, {'Content-Type':'text/javascript'});
-            res.write(fs.readFileSync("../src/signUpForm.js","utf8"));
+            res.write(fs.readFileSync("../src/signinForm.js","utf8"));
             res.end();
         }
         
