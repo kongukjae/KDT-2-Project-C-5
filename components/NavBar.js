@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import MainFeed from '../src/mainFeed';
+import Login from '../src/login';
 
 const Page1 = () => <div>Page 1</div>;
 const Page2 = () => <div>Page 2</div>;
@@ -29,7 +30,7 @@ const NavBar = () => {
         </div>
         <Routes>
           <Route exact path="/" element={<MainFeed />} />
-          <Route path="/page1" element={<Page1 />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/page2" element={<Page2 />} />
           <Route path="/page3" element={<Page3 />} />
           <Route path="/page4" element={<Page4 />} />

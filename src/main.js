@@ -11,7 +11,7 @@ import './index.css';
 
 
 const App = () => {
-  return <Router/>;
+  return <MainFeed/>;
 };
 
 createRoot(document.getElementById('root')).render(<App />);
