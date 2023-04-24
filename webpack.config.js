@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 // 웹팩 설정
 module.exports = {
   // 진입점 설정
-  entry: "./src/app.js",
+  entry: "./src/render.js",
   // 빌드 결과물의 경로와 파일명 설정
   output: {
     path: path.join(__dirname, "/dist"),
