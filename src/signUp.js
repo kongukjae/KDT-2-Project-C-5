@@ -6,6 +6,7 @@ import ButtonSubmit from '../components/ButtonSubmit';
 import InputEmail from '../components/InputEmail';
 import InputUserName from '../components/InputUserName';
 import InputProfilePic from '../components/InputProfilePic';
+import InputPwdCheck from '../components/InputPwdCheck';
 import './index.css';
 
 
@@ -18,7 +19,7 @@ const signUp = () => {
       <InputEmail/>
       <InputUserName/>
       <InputPwd/>
-      <div>pwd check 입력 란</div>
+      <InputPwdCheck/>
       <ButtonSubmit/>
     </div>
   );

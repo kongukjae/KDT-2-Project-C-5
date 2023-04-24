@@ -5,7 +5,7 @@ import InputPwd from './InputPwd';
 const InputPwdCheck = () => {
   return (
     <div>
-      
+      pwd check 란
     </div>
   );
 };

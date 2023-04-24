@@ -1,7 +1,7 @@
 // ! input 컴포넌트 조립 시 <form></form> 안에 넣어주는 거 잊지말자!
 import React from 'react';
 
-const InputPwd = () => {
+const InputPwd = ({ label, value, onChange }) => {
   const LoginSignUpInputStyle = {
     width: '100%',
     height: '54px',
@@ -13,7 +13,10 @@ const InputPwd = () => {
   return (
     <div>
       <p><b>password</b></p>
-          <div><input type="password" placeholder='password를 입력하세요' name='password' style={LoginSignUpInputStyle}></input></div>
+      <div>
+        <label htmlFor='password'>{label}</label>
+        <input type="password" id='password' placeholder='password를 입력하세요' name='password' value={value} onChange={onChange} style={LoginSignUpInputStyle}></input>
+      </div>
     </div>
   );
 };
