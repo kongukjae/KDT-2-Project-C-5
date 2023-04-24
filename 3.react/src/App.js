@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div>
-      <h1>회원가입</h1>
+      <h1>Bookstagram</h1>
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="photo">사진:</label>
