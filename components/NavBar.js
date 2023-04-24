@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainFeed from '../src/mainFeed';
 
 const Page1 = () => <div>Page 1</div>;
@@ -27,13 +27,15 @@ const NavBar = () => {
         <div><Link to="/page4">tap5</Link></div>
       </div>
 
-      <Switch>
-        <Route exact path="/" component={<MainFeed/>} />
-        <Route path="/page1" component={Page1} />
-        <Route path="/page2" component={Page2} />
-        <Route path="/page3" component={Page3} />
-        <Route path="/page4" component={Page4} />
-      </Switch>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" component={<MainFeed/>} />
+          <Route path="/page1" component={Page1} />
+          <Route path="/page2" component={Page2} />
+          <Route path="/page3" component={Page3} />
+          <Route path="/page4" component={Page4} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 };
