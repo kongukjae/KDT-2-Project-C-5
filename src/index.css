@@ -112,3 +112,8 @@ body {
   text-decoration: underline;
   color: #D9D9D9;
 }
+
+/* 리액트 컴포넌트 객체용 스타일링 */
+.myBtn:active {
+  background-color: #fff;
+}

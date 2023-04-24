@@ -6,6 +6,8 @@ import ButtonSubmit from '../components/ButtonSubmit';
 import InputEmail from '../components/InputEmail';
 import InputUserName from '../components/InputUserName';
 import InputProfilePic from '../components/InputProfilePic';
+import './index.css';
+
 
 const signUp = () => {
   return (
