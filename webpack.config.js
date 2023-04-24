@@ -11,6 +11,10 @@ module.exports = {
     path: path.join(__dirname, '/dist'),
     filename: 'index_bundle.js'
   },
+  // 새로고침 없이 URL 경로가 변경되어도 새로운 컴포넌트를 랜더링 하고 화면을 갱신하기 위하여 설정
+  devServer: {
+    historyApiFallback: true
+  },
   // 웹팩이 모듈을 로드하는 방법을 설정
   module: {
     // 보통 파일 확장자별 로더를 지정하여 적용한다.
