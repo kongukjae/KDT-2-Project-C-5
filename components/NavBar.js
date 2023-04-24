@@ -18,15 +18,21 @@ const NavBar = () => {
     border: '1px solid black'
   };
 
+  const linkStyle = {
+    color: 'black',
+    textDecoration: 'none',
+    marginRight: '10px'
+  };
+
   return (
     <div>
       <BrowserRouter basename="/myapp">
         <div style={navbarStyle}>
-          <div><Link to="/">tap1</Link></div>
-          <div><Link to="/page1">tap2</Link></div>
-          <div><Link to="/page2">tap3</Link></div>
-          <div><Link to="/page3">tap4</Link></div>
-          <div><Link to="/page4">tap5</Link></div>
+          <Link to="/" style={linkStyle}>tap1</Link>
+          <Link to="/login" style={linkStyle}>tap2</Link>
+          <Link to="/page2" style={linkStyle}>tap3</Link>
+          <Link to="/page3" style={linkStyle}>tap4</Link>
+          <Link to="/page4" style={linkStyle}>tap5</Link>
         </div>
         <Routes>
           <Route exact path="/" element={<MainFeed />} />
