@@ -1,5 +1,5 @@
 import React from "react";
-
+import Tag from "../components/tag.js"
 export default function FavorTag() {
   
     return(
@@ -13,24 +13,24 @@ export default function FavorTag() {
         </thead>
         <tbody>
           <tr>
-            <td>#시</td>
-            <td>#소설</td>
-            <td>#희곡</td>
+            <td><Tag name="#시"></Tag></td>
+            <td><Tag name="#소설"></Tag></td>
+            <td><Tag name="#희곡"></Tag></td>
           </tr>
           <tr>
-            <td>#시</td>
-            <td>#소설</td>
-            <td>#희곡</td>
+            <td><Tag name="#시"></Tag></td>
+            <td><Tag name="#소설"></Tag></td>
+            <td><Tag name="#희곡"></Tag></td>
           </tr>
           <tr>
-            <td>#시</td>
-            <td>#소설</td>
-            <td>#희곡</td>
+            <td><Tag name="#시"></Tag></td>
+            <td><Tag name="#소설"></Tag></td>
+            <td><Tag name="#희곡"></Tag></td>
           </tr>
           <tr>
-            <td>#시</td>
-            <td>#소설</td>
-            <td>#희곡</td>
+            <td><Tag name="#시"></Tag></td>
+            <td><Tag name="#소설"></Tag></td>
+            <td><Tag name="#희곡"></Tag></td>
           </tr>
         </tbody>
       </table>
@@ -42,24 +42,24 @@ export default function FavorTag() {
         </thead>
         <tbody>
           <tr>
-            <td>#여행</td>
-            <td>#운동</td>
-            <td>#예술</td>
+            <td><Tag name="#여행"></Tag></td>
+            <td><Tag name="#운동"></Tag></td>
+            <td><Tag name="#예술"></Tag></td>
           </tr>
           <tr>
-            <td>#여행</td>
-            <td>#운동</td>
-            <td>#예술</td>
+            <td><Tag name="#여행"></Tag></td>
+            <td><Tag name="#운동"></Tag></td>
+            <td><Tag name="#예술"></Tag></td>
           </tr>
           <tr>
-            <td>#여행</td>
-            <td>#운동</td>
-            <td>#예술</td>
+            <td><Tag name="#여행"></Tag></td>
+            <td><Tag name="#운동"></Tag></td>
+            <td><Tag name="#예술"></Tag></td>
           </tr>
           <tr>
-            <td>#여행</td>
-            <td>#운동</td>
-            <td>#예술</td>
+            <td><Tag name="#여행"></Tag></td>
+            <td><Tag name="#운동"></Tag></td>
+            <td><Tag name="#예술"></Tag></td>
           </tr>
         </tbody>
       </table>
