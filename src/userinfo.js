@@ -1,4 +1,5 @@
-function userInfoTableData(userInfoData){
+//받은 사용자 데이터를 표 형식 HTML 엘리먼트로 마크업 하는 구문.
+export default function userInfoTableData(userInfoData){
   let table = `<table>
     <thead>
       <tr>
@@ -7,19 +8,19 @@ function userInfoTableData(userInfoData){
         <th>사용자 암호</th>
         <th>사용자 Email</th>
         <th>사용자 닉네임</th>
-      </tr>
+        </tr>
     </thead>
     <tbody>
     `;
-
+  //존재하는 인덱스만큼 반복한다.
   userInfoData.forEach(obj=>{
     table += `  <tr>
-      <th>${obj['id']}</th>
-      <th>${obj['user-id']}</th>
-      <th>${obj['user-pwd']}</th>
-      <th>${obj['user-email']}</th>
-      <th>${obj['user-name']}</th>
-    </tr>
+        <th>${obj['id']}</th>
+        <th>${obj['user-id']}</th>
+        <th>${obj['user-pwd']}</th>
+        <th>${obj['user-email']}</th>
+        <th>${obj['user-name']}</th>
+      </tr>
     `;
   })
   table += `</tbody>
@@ -29,5 +30,4 @@ function userInfoTableData(userInfoData){
 function userInfoTable(userInfoData){
   const users = window.document.getElementById('users');
   users.innerHTML = userInfoTableData(userInfoData);
-}
-userInfoTable();
+};

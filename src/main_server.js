@@ -2,20 +2,30 @@ import http from 'http';
 import fs from 'fs';
 import bookstargramConnect from './mariadb.js';
 import signUpQuery from './signUpQuery.js';
+import userInfo from './userinfo.js';
 
 const server=http.createServer(function(req,res){
     console.log(req.url);
     if(req.method === "GET"){
+        //index_test용
         if(req.url === "/"){
             res.writeHead(200, {'Content-Type':'text/html'});
-            res.write(fs.readFileSync("./src/index.html", "utf8"));
-            bookstargramConnect(signUpQuery.readAll()).then(res=>{console.log(res)});
-            res.end();
+            let htmlData = fs.readFileSync("../src/index_test.html", "utf8");
+            let userData = "";
+            bookstargramConnect(signUpQuery.readAll())
+            .then(result=>{
+                userData = userInfo(result);
+                htmlData = htmlData.replace(`{{{user}}}`, userData);
+                console.log(htmlData);
+                res.write(htmlData);
+                res.end();
+            })
+
             
         }
         if(req.url === "/signupForm.js"){
             res.writeHead(200, {'Content-Type':'text/javascript'});
-            res.write(fs.readFileSync("./src/render.js","utf8"));
+            res.write(fs.readFileSync("../src/signUpForm.js","utf8"));
             res.end();
         }
         
