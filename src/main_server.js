@@ -3,27 +3,27 @@ import fs from 'fs';
 import bookstargramConnect from './mariadb.js';
 import signUpQuery from './signUpQuery.js';
 
-bookstargramConnect(signUpQuery.readAll()).then(res=>{console.log(res)});
 const server=http.createServer(function(req,res){
     console.log(req.url);
     if(req.method === "GET"){
         if(req.url === "/"){
             res.writeHead(200, {'Content-Type':'text/html'});
             res.write(fs.readFileSync("./src/index.html", "utf8"));
+            bookstargramConnect(signUpQuery.readAll()).then(res=>{console.log(res)});
             res.end();
             
         }
         if(req.url === "/signupForm.js"){
             res.writeHead(200, {'Content-Type':'text/javascript'});
-            res.write(fs.readFileSync("./src/signupForm.js","utf8"));
+            res.write(fs.readFileSync("./src/render.js","utf8"));
             res.end();
         }
+        
+    }
+    if(req.method === "POST"){
         if(req.url.startsWith("/login")){
             
         }
-    }
-    if(req.method === "POST"){
-
     }
 })
 

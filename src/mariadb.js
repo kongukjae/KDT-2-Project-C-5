@@ -1,7 +1,6 @@
 import mariadb from 'mariadb';
 import fs from 'fs';
-
-//실험적 기능이기에 fs을 사용하기로 함. 
+//assert {type:"json"}은 실험적 기능이라 하기에 fs을 사용하기로 함. 
 //import poolSet from './dist/SQL' assert {type: "json"};
 
 //모듈화 작업을 시작함.
@@ -32,12 +31,3 @@ export default async function bookstargramConnect(query) {
     } 
   }
 }
-
-// 모듈 signupCRUD CRUD로 저장후, 적용되는지 테스트
-//console.log(CRUD.createUser("dgchoi", "abc123", "dgchoi@email.com", "dgchoi"));
-
-// Pool 세팅 SQL로 옮기고 fs로 파일 읽어오기. 되는지 테스트
-//console.log(poolSet);
-
-//테스트 구문
-//bookstargramConnect(CRUD.readAll());
