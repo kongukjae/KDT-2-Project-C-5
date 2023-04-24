@@ -14,7 +14,9 @@ export default {
     // path: path.resolve(__dirname, 'dist'),
     // filename: 'bundle.js',
   },
-  
+  resolve:{
+    extensions:['.js','.jsx']
+  },
   module: {
     rules: [
       {
@@ -25,9 +27,7 @@ export default {
           options: {
             babelrc: true,
           },
-          resolve:{
-            extensions:['.js','.jsx']
-          }
+          
         },
       },
     ],
