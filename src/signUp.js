@@ -18,7 +18,7 @@ const signUp = () => {
       <InputId/>
       <InputEmail/>
       <InputUserName/>
-      <InputPwd/>
+      {/* <InputPwd/> */}
       <InputPwdCheck/>
       <ButtonSubmit/>
     </div>

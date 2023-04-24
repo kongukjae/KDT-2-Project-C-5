@@ -19,7 +19,8 @@ const ButtonSubmit = () => {
     backgroundColor: isHovered ? 'rgb(143, 143, 143)':'#D9D9D9',
     border: '1px solid #D9D9D9',
     borderRadius: '20px',
-    textAlign: 'center'
+    textAlign: 'center',
+    marginTop: '10px'
   }
   return (
     <div>

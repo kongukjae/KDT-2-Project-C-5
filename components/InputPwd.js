@@ -12,7 +12,7 @@ const InputPwd = ({ label, value, onChange }) => {
   }
   return (
     <div>
-      <p><b>password</b></p>
+      {/* <p><b>password</b></p> */}
       <div>
         <label htmlFor='password'>{label}</label>
         <input type="password" id='password' placeholder='password를 입력하세요' name='password' value={value} onChange={onChange} style={LoginSignUpInputStyle}></input>
