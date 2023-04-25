@@ -14,30 +14,31 @@ const navBarStyle = {
   padding: '0'
 };
 
-const Page1 = () => <h1>page 1</h1>;
-const Page2 = () => <h1>page 2</h1>;
-const Page3 = () => <h1>page 3</h1>;
-const Page4 = () => <h1>page 4</h1>;
-const Page5 = () => <h1>page 5</h1>;
+// 테스트를 위한 임시 코드
+const Page1 = () => <h1>실시간, 인기 리뷰 피드</h1>;
+const Page2 = () => <h1>챌린지 피드</h1>;
+const Page3 = () => <h1>글작성 피드</h1>;
+const Page4 = () => <h1>검색 피드</h1>;
+const Page5 = () => <h1>내 정보 피드</h1>;
 
 const NavBar = () => {
   return (
     <nav>
       <ul style={navBarStyle}>
         <li>
-          <Link to="/">MainFeedContents</Link>
+          <Link to="/">인기/실시간 피드</Link>
         </li>
         <li>
-          <Link to="/page2">page2</Link>
+          <Link to="/page2">챌린지</Link>
         </li>
         <li>
-          <Link to="/page3">page3</Link>
+          <Link to="/page3">글작성</Link>
         </li>
         <li>
-          <Link to="/page4">page4</Link>
+          <Link to="/page4">검색</Link>
         </li>
         <li>
-          <Link to="/page5">page5</Link>
+          <Link to="/page5">내정보</Link>
         </li>
       </ul>
     </nav>

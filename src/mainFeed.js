@@ -15,9 +15,9 @@ const mainFeed = () => {
         <BookStagramTopLogo/>
         <Hamburger/>
       </header>
-      <main>
-        
-      </main>
+
+      {/* main 컨텐츠 부분은 NavBar 컴포넌트에서 담당한다. */}
+
       <footer>
         <NavBar/>
       </footer>
