@@ -4,7 +4,7 @@ import React from 'react';
 function ProfileStatus() {
   return (
     <div>
-      <p>.statusMessage</p>
+      <p>나는 능이버섯이다</p>
     </div>
   );
 }
