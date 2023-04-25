@@ -9,10 +9,13 @@ import Router from './router';
 import MainFeed from './mainFeed';
 import NavBar from '../components/NavBar';
 import './index.css';
+import Mypage from './mypage';
 
 
 const App = () => {
-  return <NavBar/>;
+  return <Mypage/>;
 };
 
 createRoot(document.getElementById('root')).render(<App />);
+
+export default main;

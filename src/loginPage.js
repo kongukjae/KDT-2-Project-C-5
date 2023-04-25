@@ -7,6 +7,7 @@ import ButtonSignUpWithGoogle from '../components/ButtonSignUpWithGoogle';
 import ButtonSignUpWithAppleAccount from '../components/ButtonSignUpWithAppleAccount';
 import ButtonSignUp from '../components/ButtonSignUp';
 import ForgotAccount from '../components/ForgotAccount';
+import mypage from './mypage';
 
 const loginPage = () => {
   return (
@@ -26,6 +27,7 @@ const loginPage = () => {
         <ButtonSignUpWithAppleAccount/>
         <ButtonSignUp/>
         <ForgotAccount/>
+        <mypage/>
       </div>
     </div>
   );
