@@ -19,7 +19,8 @@ const mainFeed = () => {
         <MainFeedContents/>
       </main>
       <footer>
-        
+        <h2>네비게이션 바 부분</h2>
+        <NavBar/>
       </footer>
     </div>
   );

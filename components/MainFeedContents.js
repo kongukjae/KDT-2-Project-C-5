@@ -23,8 +23,8 @@ const MainFeedContents = () => {
     <div>
       <header>
         {/* 인기 리뷰, 실시간 리뷰 클릭 시 상태 변환 */}
-        <div onClick={onClickPopular}>인기 리뷰</div>
-        <div onClick={onClickLive}>실시간 리뷰</div>
+        <div onClick={onClickPopular}><b>인기 리뷰</b></div>
+        <div onClick={onClickLive}><b>실시간 리뷰</b></div>
       </header>
 
       <main>

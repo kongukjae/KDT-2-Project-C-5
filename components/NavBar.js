@@ -63,18 +63,30 @@ const navBarStyle = {
   padding: '0'
 };
 
+const Page1 = () => <h1>page 1</h1>;
+const Page2 = () => <h1>page 2</h1>;
+const Page3 = () => <h1>page 3</h1>;
+const Page4 = () => <h1>page 4</h1>;
+const Page5 = () => <h1>page 5</h1>;
+
 const NavBar = () => {
   return (
     <nav>
       <ul style={navBarStyle}>
         <li>
-          <Link to="/">StartScreen</Link>
+          <Link to="/">page1</Link>
         </li>
         <li>
-          <Link to="/login">LoginPage</Link>
+          <Link to="/page2">page2</Link>
         </li>
         <li>
-          <Link to="/mainfeed">MainFeed</Link>
+          <Link to="/page3">page3</Link>
+        </li>
+        <li>
+          <Link to="/page4">page4</Link>
+        </li>
+        <li>
+          <Link to="/page5">page5</Link>
         </li>
       </ul>
     </nav>
@@ -86,9 +98,11 @@ const App = () => {
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<StartScreen />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/mainfeed" element={<MainFeed />} />
+          <Route path="/" element={<Page1/>} />
+          <Route path="/page2" element={<Page2 />} />
+          <Route path="/page3" element={<Page3 />} />
+          <Route path="/page4" element={<Page4 />} />
+          <Route path="/page5" element={<Page5 />} />
         </Routes>
         <div>
           <NavBar />
