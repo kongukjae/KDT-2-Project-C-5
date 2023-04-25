@@ -4,11 +4,15 @@ import PostInput from "../components/PostInput";
 
 function ReviewPage() {
   return (
-    <div>
-      <div className={styles.reviewPage}></div>
-      <div className={styles.reviewContainer}></div>
-      {/* 리뷰 컴포넌트들 */}
+    <div className="container">
+      <image />
       <Search />
+      <div>
+        <p>책제목:</p>
+      </div>
+      <div>
+        <p>저자:</p>
+      </div>
       <PostInput />
     </div>
   );

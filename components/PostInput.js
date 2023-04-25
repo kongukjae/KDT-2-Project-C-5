@@ -24,7 +24,7 @@ function PostInput({ onSave }) {
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="title">
-          3줄 요약 리뷰
+          3줄리뷰
           <br />
         </label>
         <input
@@ -36,7 +36,7 @@ function PostInput({ onSave }) {
       </div>
       <div>
         <label htmlFor="content">
-          긴 글 리뷰
+          긴글리뷰
           <br />
         </label>
         <textarea
