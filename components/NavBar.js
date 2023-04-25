@@ -1,9 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import StartScreen from '../src/startScreen';
-import LoginPage from '../src/login';
-import MainFeed from '../src/mainFeed';
 import MainFeedContents from './MainFeedContents';
 
 const navBarStyle = {
@@ -26,7 +23,7 @@ const NavBar = () => {
     <nav>
       <ul style={navBarStyle}>
         <li>
-          <Link to="/">인기/실시간 피드</Link>
+          <Link to="/">인기/실시간</Link>
         </li>
         <li>
           <Link to="/page2">챌린지</Link>
