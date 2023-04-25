@@ -4,8 +4,13 @@
   "description": "bookstagram",
   "main": "main_server.js",
   "scripts": {
+<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/render.js"
+=======
+    "start": "webpack-dev-server --mode development --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+>>>>>>> issue11-1
   },
   "repository": {
     "type": "git",
@@ -18,6 +23,7 @@
   },
   "homepage": "https://github.com/kongukjae/KDT-2-Project-C-5/tree/main#readme",
   "dependencies": {
+<<<<<<< HEAD
     "@babel/preset-env": "^7.21.4",
     "babel-loader": "^9.1.2",
     "react": "^18.2.0",
@@ -29,5 +35,23 @@
   "devDependencies": {
     "@babel/core": "^7.21.4",
     "@babel/preset-react": "^7.18.6"
+=======
+    "graceful-fs": "^4.2.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.10.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-react": "^7.18.6",
+    "babel-loader": "^9.1.2",
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.1",
+    "style-loader": "^3.3.2",
+    "webpack": "^5.79.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.13.3"
+>>>>>>> issue11-1
   }
 }
