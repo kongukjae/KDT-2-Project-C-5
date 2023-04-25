@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import Search from "../components/Search";
-import SearchResult from "../components/SearchResult";
-import TextInput from "../components/TextInput";
 import PostInput from "../components/PostInput";
 
-const ReviewPage = () => {
+function ReviewPage() {
   return (
     <div>
-      <h1>ReviewPage</h1>
+      <div className={styles.reviewPage}></div>
+      <div className={styles.reviewContainer}></div>
+      {/* 리뷰 컴포넌트들 */}
       <Search />
       <PostInput />
     </div>
   );
-};
+}
 
 export default ReviewPage;
