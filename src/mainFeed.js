@@ -16,10 +16,9 @@ const mainFeed = () => {
         <Hamburger/>
       </header>
       <main>
-        <MainFeedContents/>
+        
       </main>
       <footer>
-        <h2>네비게이션 바 부분</h2>
         <NavBar/>
       </footer>
     </div>
