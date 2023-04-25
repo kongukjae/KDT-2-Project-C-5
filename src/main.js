@@ -12,7 +12,7 @@ import './index.css';
 
 
 const App = () => {
-  return <NavBar/>;
+  return <MainFeed/>;
 };
 
 createRoot(document.getElementById('root')).render(<App />);
