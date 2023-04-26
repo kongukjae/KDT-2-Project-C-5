@@ -41,15 +41,19 @@
 
 // export default Autocomplete;
 import React, { useState, useEffect } from "react";
+//리엑트 모듈에서 useEffect 훅을 불러옴
 
 function Autocomplete(props) {
   const { value, onChange, onSubmit } = props;
+  //props에서 value, onChange, onSubmit 값을 추출하여 변수로 할당
   const [searchResults, setSearchResults] = useState([]);
+  //초기값 설정
 
   // 검색 결과가 업데이트될 때마다 콘솔에 검색 결과를 출력
   useEffect(() => {
     console.log(searchResults);
   }, [searchResults]);
+  //searchResults 상태변수가 업데이트 될때마다 콘솔 출력
 
   useEffect(() => {
     // 검색어에 대한 결과를 가져오는 함수
@@ -59,13 +63,18 @@ function Autocomplete(props) {
       setSearchResults(results);
     };
 
+    // fetchSearchResults() 함수를 호출하여 검색 결과를 가져와 setSearchResults() 함수를 사용하여 searchResults 상태 변수를 업데이트
+
     if (value !== "") {
       fetchSearchResults();
     } else {
       setSearchResults([]);
     }
   }, [value]);
-
+  //색어가 빈 문자열일 경우, searchResults 상태 변수를 빈 배열([])로 업데이트
+  //검색창과 검색 결과 목록
+  //검색버튼
+  //searchResults 배열을 map() 함수를 사용하여 순회하면서 검색 결과를 <li> 태그로 감싸 출력
   return (
     <form onSubmit={onSubmit}>
       <input type="text" value={value} onChange={onChange} />
