@@ -10,9 +10,10 @@ import MainFeed from "./mainFeed";
 import NavBar from "../components/NavBar";
 import "./index.css";
 import ReviewPage from "./ReviewPage";
+import Book_review_feed from "./Book_review_feed";
 
 const App = () => {
-  return <book_review_feed />;
+  return <Book_review_feed />;
 };
 
 createRoot(document.getElementById("root")).render(<App />);
