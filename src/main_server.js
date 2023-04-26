@@ -1,11 +1,18 @@
 import http from 'http';
 import fs from 'fs';
+import url from 'url';
+import path from 'path';
 
+const __filename = url.fileURLToPath(import.meta.url);
+const __rootname = path.dirname(__filename);
+const indexPath = url.fileURLToPath("./src/index.html");
+      console.log(indexPath)
 const server = http.createServer((req,res)=>{
   if(req.method === "GET"){
     if(req.url === "/"){
+      
       res.writeHead(200, {"Content-Type":"text/html"})
-      res.write(fs.readFileSync("../src/index.html", "utf8"));
+      res.write(fs.readFileSync(`../src/index.html`, "utf8"));
       res.end();
     }
     if(req.url === "/startPage.js"){
@@ -17,6 +24,9 @@ const server = http.createServer((req,res)=>{
   }
   
 })
+
+console.log(__dirname);
+console.log(__filename);
 
 server.listen(3000, err=> {
   if(err){
