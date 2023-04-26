@@ -3,9 +3,7 @@ import React from 'react';
 
 function ProfileStatus() {
   return (
-    <div>
-      <p>나는 능이버섯이다</p>
-    </div>
+    <div>나는 능이버섯이다</div>
   );
 }
 

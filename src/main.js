@@ -9,6 +9,7 @@ import Router from './router';
 import MainFeed from './mainFeed';
 import NavBar from '../components/NavBar';
 import './index.css';
+import './mypage.css';
 import Mypage from './mypage';
 
 
