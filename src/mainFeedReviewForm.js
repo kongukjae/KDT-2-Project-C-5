@@ -1,4 +1,5 @@
 import React from 'react';
+// 임시 css 속성의 크기는 figma 목업 사이즈를 참조하였다.
 // 전체 리뷰 container 박스 임시 css
 const conStyle = {
   width: '357px',
@@ -28,6 +29,7 @@ const mainFeedReviewForm = () => {
         책 표지
       </div>
       <div style={reviewStyle}>
+        {/* 사진, 닉네임은 마이페이지 및 상대방 프로필에서 글 목록에 사용 시 삭제하여 재사용한다. */}
         <div>사진, 닉네임</div>
         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin arcu metus, posuere
         </div>
