@@ -5,5 +5,6 @@ import path from 'path';
 
 console.log(path.__dirname)
 console.log(path.__filename);
-const fileURLone = pathToFileURL("./src/index.html");
-console.log(fileURLone)
+const fileURLone = pathToFileURL(".");
+console.log(fileURLone);
+console.log(import.meta.url);
