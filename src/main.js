@@ -12,7 +12,7 @@ import "./index.css";
 import ReviewPage from "./ReviewPage";
 
 const App = () => {
-  return <ReviewPage />;
+  return <book_review_feed />;
 };
 
 createRoot(document.getElementById("root")).render(<App />);
