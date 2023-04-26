@@ -1,4 +1,5 @@
 import React from "react";
+import Bookinfo from "../components/Bookinfo";
 
 const Book_review_feed = () => {
   return (
@@ -7,6 +8,7 @@ const Book_review_feed = () => {
       <div>이름</div>
       <div>구독중</div>
       <div>알람</div>
+      <Bookinfo />
     </div>
   );
 };
