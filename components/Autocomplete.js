@@ -49,11 +49,10 @@ function Autocomplete(props) {
   const [searchResults, setSearchResults] = useState([]);
   //초기값 설정
 
-  // 검색 결과가 업데이트될 때마다 콘솔에 검색 결과를 출력
-  useEffect(() => {
-    console.log(searchResults);
-  }, [searchResults]);
-  //searchResults 상태변수가 업데이트 될때마다 콘솔 출력
+  // // 검색 결과가 업데이트될 때마다 콘솔에 검색 결과를 출력
+  // useEffect(() => {
+  //   console.log(searchResults);
+  // }, [searchResults]);
 
   useEffect(() => {
     // 검색어에 대한 결과를 가져오는 함수
@@ -71,6 +70,8 @@ function Autocomplete(props) {
       setSearchResults([]);
     }
   }, [value]);
+  console.log(searchResults);
+
   //색어가 빈 문자열일 경우, searchResults 상태 변수를 빈 배열([])로 업데이트
   //검색창과 검색 결과 목록
   //검색버튼
@@ -78,11 +79,6 @@ function Autocomplete(props) {
   return (
     <form onSubmit={onSubmit}>
       <input type="text" value={value} onChange={onChange} />
-      <ul>
-        {searchResults.map((result) => (
-          <li key={result.id}>{result.title}</li>
-        ))}
-      </ul>
       <button type="submit">검색</button>
     </form>
   );
