@@ -31,7 +31,7 @@ function Search(props) {
   return (
     <form onSubmit={onSubmit}>
       <AutoComplete
-        suggestions={["apple", "banana", "cherry", "durian"]}
+        suggestions={["소설", "자기 계발", "과학", "역사"]}
         inputValue={inputValue}
         onInputChange={handleInputChange}
       />
