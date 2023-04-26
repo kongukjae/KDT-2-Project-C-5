@@ -8,6 +8,8 @@ const Book_review_feed = () => {
     <div>
       <FeedTopBar />
       <Bookinfo />
+      <div>11view</div>
+      <div>1시간 전</div>
       <BookDescription />
     </div>
   );
