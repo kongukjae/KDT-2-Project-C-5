@@ -18,6 +18,20 @@ const tapStyle = {
 }
 
 const FollowerFollowing = () => {
+  // 구독인, 구독자 클릭 시 색상 변경
+  const [isHoverd, setIsHovered] = useState(false);
+
+  const handleMouseIn = () => {
+    setIsHovered(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovered(false);
+  };
+
+  const textStyle = {
+    color: isHoverd ? 'grey' : 'black'
+  }
 
   const [follower, setFollower] = useState('');
   const [following, setFollowing] = useState('');
@@ -35,8 +49,8 @@ const FollowerFollowing = () => {
   return (
     <div>
       <div style={tapStyle}>
-        <div onClick={onClickFollower}><b>구독인</b></div>
-        <div onClick={onClickFollowing}><b>구독자</b></div>
+        <div style={textStyle} onMouseEnter={handleMouseIn} onMouseLeave={handleMouseOut} onClick={onClickFollower}><b>구독인</b></div>
+        <div style={textStyle} onMouseEnter={handleMouseIn} onMouseLeave={handleMouseOut} onClick={onClickFollowing}><b>구독자</b></div>
       </div>
       <div>
         {follower}
