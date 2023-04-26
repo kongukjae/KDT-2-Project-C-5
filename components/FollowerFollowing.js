@@ -38,7 +38,10 @@ const FollowerFollowing = () => {
         <div onClick={onClickFollower}><b>구독인</b></div>
         <div onClick={onClickFollowing}><b>구독자</b></div>
       </div>
-      
+      <div>
+        {follower}
+        {following}
+      </div>
       <div style={ListStyle}>
         <ImgUserPicture/>
         <UserName/>
