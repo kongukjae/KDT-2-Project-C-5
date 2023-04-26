@@ -19,7 +19,7 @@ const bookStyle = {
 // 책 오른쪽 사진, 닉네임, 리뷰글 부분 임시 css
 const reviewStyle = {
   width: '213px',
-  height: '138px'
+  height: '92px'
 }
 
 const mainFeedReviewForm = () => {
@@ -33,6 +33,8 @@ const mainFeedReviewForm = () => {
         <div>사진, 닉네임</div>
         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin arcu metus, posuere
         </div>
+        <br></br>
+        <div>1시간 전, 1.8k ♥</div>
       </div>
     </div>
   );
