@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import Autocomplete from "../components/Autocomplete";
 import PostInput from "../components/PostInput";
+import Search from "../components/Search";
 
 function ReviewPage() {
   return (
     <div className="container">
-      <Autocomplete />
+      <Search />
       <div>
         <p>책제목:</p>
       </div>
