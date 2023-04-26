@@ -1,14 +1,14 @@
 import React from "react";
 import Bookinfo from "../components/Bookinfo";
+import BookDescription from "../components/BookDescription";
+import FeedTopBar from "../components/FeedTopBar";
 
 const Book_review_feed = () => {
   return (
-    <div style={{ display: "flex" }}>
-      <div>사진</div>
-      <div>이름</div>
-      <div>구독중</div>
-      <div>알람</div>
+    <div>
+      <FeedTopBar />
       <Bookinfo />
+      <BookDescription />
     </div>
   );
 };
