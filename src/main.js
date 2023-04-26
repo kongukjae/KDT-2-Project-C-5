@@ -29,14 +29,19 @@ import MainFeed from "./mainFeed";
 import NavBar from "../components/NavBar";
 import "./index.css";
 import ReviewPage from "./ReviewPage";
+import Book_review_feed from "./Book_review_feed";
 
 const App = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
   return <ReviewPage />;
 >>>>>>> 6de1ff8d (검색,피드작성 폼작성)
 =======
   return <book_review_feed />;
 >>>>>>> bc20f1e5 (main.js에 import)
+=======
+  return <Book_review_feed />;
+>>>>>>> 65d90995 (<div style={{ display: flex }}>)
 };
 
 createRoot(document.getElementById("root")).render(<App />);
