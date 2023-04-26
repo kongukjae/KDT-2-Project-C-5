@@ -8,4 +8,4 @@ const ImgUserPicture = () => {
   );
 };
 
-export default ImgUserPicture;사진
+export default ImgUserPicture;

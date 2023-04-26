@@ -10,11 +10,12 @@ import MainFeed from './mainFeed';
 import NavBar from '../components/NavBar';
 import MainFeedReviewForm from './mainFeedReviewForm';
 import ButtonCancle from '../components/ButtonCancle';
+import FollowerFollowing from '../components/FollowerFollowing';
 import './index.css';
 
 
 const App = () => {
-  return <ButtonCancle/>;
+  return <FollowerFollowing/>;
 };
 
 createRoot(document.getElementById('root')).render(<App />);
