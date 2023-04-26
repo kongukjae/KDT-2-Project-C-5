@@ -1,13 +1,22 @@
 import React from 'react';
 
+const conStyle = {
+  width: '357px',
+  height: '155px',
+  display: 'flex',
+  flexDirection: 'row',
+  justifyContent: 'space-around'
+}
+
 const mainFeedReviewForm = () => {
   return (
-    <div>
+    <div style={conStyle}>
       <div>
         책 표지 부분
       </div>
       <div>
-        사진, 닉네임, 3줄리뷰 부분
+        <div>사진, 닉네임</div>
+        <div>3줄리뷰 부분</div>
       </div>
     </div>
   );
