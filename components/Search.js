@@ -27,18 +27,42 @@ function Search(props) {
   const handleInputChange = (value) => {
     setInputValue(value);
   };
+  const handleSelect = (selectedValue) => {
+    setInputValue(selectedValue);
+    onSubmit();
+  };
 
+  //   return (
+  //     <form onSubmit={onSubmit}>
+  //       <AutoComplete
+  //         suggestions={["소설", "자기 계발", "과학", "역사"]}
+  //         inputValue={inputValue}
+  //         onInputChange={handleInputChange}
+  //       />
+  //       <input type="text" value={value} onChange={onChange} />
+  //       <button type="submit">검색</button>
+  //     </form>
+  //   );
+  // }
   return (
     <form onSubmit={onSubmit}>
-      <AutoComplete
-        suggestions={["소설", "자기 계발", "과학", "역사"]}
-        inputValue={inputValue}
-        onInputChange={handleInputChange}
+      <div>검색된 책 사진 </div>
+      <div style={{ display: "flex" }}>
+        <AutoComplete
+          suggestions={["소설", "자기 계발", "과학", "역사"]}
+          inputValue={inputValue}
+          onInputChange={handleInputChange}
+          onSelect={handleSelect}
+        />
+        <button type="submit">검색</button>
+      </div>
+      <input
+        type="text"
+        value={value}
+        onChange={onChange}
+        style={{ display: "none" }}
       />
-      <input type="text" value={value} onChange={onChange} />
-      <button type="submit">검색</button>
     </form>
   );
 }
-
 export default Search;
