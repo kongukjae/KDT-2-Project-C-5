@@ -56,12 +56,6 @@ function Search(props) {
         />
         <button type="submit">검색</button>
       </div>
-      <input
-        type="text"
-        value={value}
-        onChange={onChange}
-        style={{ display: "none" }}
-      />
     </form>
   );
 }
