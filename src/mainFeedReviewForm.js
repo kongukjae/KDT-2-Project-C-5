@@ -33,7 +33,7 @@ const mainFeedReviewForm = () => {
         <div>사진, 닉네임</div>
         <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin arcu metus, posuere
         </div>
-        <br></br>
+        <br/>
         <div>1시간 전, 1.8k ♥</div>
       </div>
     </div>
