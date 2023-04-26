@@ -31,8 +31,12 @@ import "./index.css";
 import ReviewPage from "./ReviewPage";
 
 const App = () => {
+<<<<<<< HEAD
   return <ReviewPage />;
 >>>>>>> 6de1ff8d (검색,피드작성 폼작성)
+=======
+  return <book_review_feed />;
+>>>>>>> bc20f1e5 (main.js에 import)
 };
 
 createRoot(document.getElementById("root")).render(<App />);
