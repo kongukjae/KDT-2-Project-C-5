@@ -1,0 +1,1 @@
+(()=>{"use strict";var e=t(require("react-dom")),r=t(require("react"));function t(e){return e&&e.__esModule?e:{default:e}}t(require("./app")),e.default.render(r.default.createElement("h1",null,"hello"),document.getElementById("root"))})();
