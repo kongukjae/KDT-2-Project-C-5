@@ -1,6 +1,7 @@
 import React from "react";
 import BookStagramTopLogo from "../components/BookStagramTopLogo";
 import HambergerMenu from "../components/HambergerMenu";
+import Notification from "../components/NotificationTab";
 
 const TopMenu = () => {
   const menuItems = [
