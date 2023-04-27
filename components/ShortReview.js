@@ -4,28 +4,19 @@ import React from "react";
 import FeedTopBar from "../components/FeedTopBar.js"
 // 책 정보
 import BookInfo from "../components/BookInfo.js"
-// 긴 리뷰글
-import UploadTime from "../components/UploadTime.js"
+// 짧은 리뷰글
 export default function LongReview() {
 
   return (
     <div>
-      <FeedTopBar />
+      
       <BookInfo />
       <div>
-        <p>긴 리뷰글 컨테이너</p>
-
-        <div>
-          <span>조회기록</span>
-          <UploadTime />
-        </div>
-
-        <div>사용자 리뷰</div>
+        <p>짧은 리뷰글 컨테이너(최소 3개)</p>
+        <FeedTopBar />
+        <div>사용자 한줄 리뷰</div>
         
         <div>
-          <button>저장 또는 공유하기</button>
-          <span>좋아요 갯수</span>
-          <span>아이콘</span>
         </div>
       </div>
     </div>
