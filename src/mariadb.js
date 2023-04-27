@@ -1,5 +1,12 @@
 import mariadb from 'mariadb';
 import fs from 'fs';
+
+import path from "path";
+import url from "url";
+// main_server.js의 절대경로를 path형태로 받아오는 구문(사용하는 컴퓨터마다 폴더 위치가 다르니 상대경로로 추적해야 한다.)
+const currentPath = url.fileURLToPath(import.meta.url);
+// main_server 파일이 있는 위치를 기준으로 '..'(상위폴더) 경로를 써서 root 폴더 경로를 지정하는 구문. /src 상위폴더가 root이기에 가능한 방법
+const rootPath = path.normalize(currentPath + "\\..")
 //assert {type:"json"}은 실험적 기능이라 하기에 fs을 사용하기로 함. 
 //import poolSet from './dist/SQL' assert {type: "json"};
 
@@ -12,7 +19,7 @@ import fs from 'fs';
 export default async function bookstargramConnect(query) {
   let res;
   // dist의 SQL에서 mariadb용 pool 세팅을 가져옴.
-  const poolSet = JSON.parse(fs.readFileSync("../dist/SQL.json", "utf8"));
+  const poolSet = JSON.parse(fs.readFileSync(path.join(rootPath,"../dist/SQL.json"), "utf8"));
   // createPool - 서버연동, 이것이 없으면 DB에 접근이 불가능하다.
   const pool = mariadb.createPool(poolSet.mariadb);
   let conn;
