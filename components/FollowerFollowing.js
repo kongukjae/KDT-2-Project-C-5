@@ -1,14 +1,6 @@
 import React, { useState } from 'react';
-import ImgUserPicture from './ImgUserPicture'
-import UserName from './UserName'
-import ButtonCancle from './ButtonCancle';
-
-const ListStyle = {
-  width: '357px',
-  height: '631px',
-  display: 'flex',
-  justifyContent: 'space-around'
-}
+import FollowerList from './FollowerList';
+import FollowingList from './FollowingList';
 
 const tapStyle = {
   width: '390px',
@@ -33,33 +25,35 @@ const FollowerFollowing = () => {
     color: isHoverd ? 'grey' : 'black'
   }
   // 조건부 렌더링 시도 중
-  const [follower, setFollower] = useState(()=>{<ImgUserPicture/>});
-  const [following, setFollowing] = useState('');
+  const [follower, setFollower] = useState(()=> <FollowerList/>);
+  const [following, setFollowing] = useState(null);
 
   const onClickFollower = () => {
-    setFollower('follower 목록');
+    setFollower(<FollowerList/>);
     setFollowing('');
   };
 
   const onClickFollowing = () => {
-    setFollowing('following 목록');
+    setFollowing(<FollowingList/>);
     setFollower('');
   };
-
+  const handleClickFollower = () => {
+    setIsHovered(true);
+    onClickFollower();
+  }
+  const handleClickFollowing = () => {
+    setIsHovered(true);
+    onClickFollower();
+  }
   return (
     <div>
       <div style={tapStyle}>
-        <div style={textStyle} onMouseEnter={handleMouseIn} onMouseLeave={handleMouseOut} onClick={onClickFollower}><b>구독인</b></div>
+        <div style={textStyle} onMouseEnter={handleMouseIn} onMouseLeave={handleMouseOut} onClick={handleClickFollower}><b>구독인</b></div>
         <div onClick={onClickFollowing}><b>구독자</b></div>
       </div>
       <div>
         {follower}
         {following}
-      </div>
-      <div style={ListStyle}>
-        <ImgUserPicture/>
-        <UserName/>
-        <ButtonCancle/>
       </div>
     </div>
   );
