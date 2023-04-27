@@ -1,0 +1,11 @@
+.bookshelf-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bookshelf-book {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: #ccc;
+}
