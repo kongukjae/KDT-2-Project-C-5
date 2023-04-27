@@ -22,9 +22,7 @@ const server=http.createServer(function(req,res){
             // 비동기 함수이기에 결과값을 아래 .then()을 사용하는 방식으로 리턴값을 꺼내서 쓰면 된다. 단 Promise로 비동기적으로 실행되기에 write() 및 end()는 이 then 안 콜백에서 사용해야 한다.
             bookstargramConnect(signUpQuery.readAll())
             .then(result=>{
-                userData = userInfo(result);
-                htmlData = htmlData.replace(`{{{user}}}`, userData);
-                console.log(htmlData);
+                console.log(result);
                 res.write(htmlData);
                 res.end();
             })
