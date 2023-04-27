@@ -1,13 +1,24 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-const Page1 = () => <h1>알림창</h1>;
+const LinkIcon = () => {
+  return (
+    <div>
+      <Link to="/">📃</Link>
+    </div>
+  );
+};
 
 const Notification = () => {
-  return;
-  <div>
-    <Link to="/">📃</Link>
-  </div>;
+  return (
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/" element={<LinkIcon />} />
+        </Routes>
+      </Router>
+    </div>
+  );
 };
 
 export default Notification;
