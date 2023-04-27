@@ -2,21 +2,45 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import NoticePage from "./NoticePage";
 
-//내가 이동할 페이지
-const NoticePage = () => {
+// const Notification = () => {
+//   return (
+//     <div>
+//       <Link to="/NoticePage">📃</Link>
+//     </div>
+//   );
+// };
+
+// const App = () =>
+// return(
+//   <div>
+//   <Router>
+//         <Routes>
+//           <Route path="/NoticePage" element={<NoticePage />} />
+
+//         </Routes>
+//   </div>
+// );
+// };
+
+// export default App;
+
+import { Link } from "react-router-dom";
+import React from "react";
+import NoticePage from "./NoticePage";
+
+const NotificationTab = () => {
   return (
     <div>
-      <div>알림창페이지</div>
+      <h2>Notifications</h2>
+      <ul>
+        <li>
+          <Link to="/noticePge" element={<NoticePage />}>
+            Notice
+          </Link>
+        </li>
+      </ul>
     </div>
   );
 };
 
-const Notification = () => {
-  return (
-    <div>
-      <Link to="/Noticepage">📃</Link>
-    </div>
-  );
-};
-
-export default Notification;
+export default NotificationTab;
