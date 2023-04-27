@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 // 메뉴 아이템 컴포넌트
+// props로 전달받은 label과 onClick 함수를 사용하여 하나의 메뉴 아이템을 렌더링한다.
+// 이렇게 렌더링된 메뉴 아이템은 사용자가 클릭하면 onClick 함수를 실행함.
 function MenuItem(props) {
   return <li onClick={props.onClick}>{props.label}</li>;
 }
