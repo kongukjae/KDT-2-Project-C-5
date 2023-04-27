@@ -2,7 +2,6 @@ import http from 'http';
 import fs from 'fs';
 import bookstargramConnect from './mariadb.js';
 import signUpQuery from './signUpQuery.js';
-import userInfo from './userinfo.js';
 import path from "path";
 import url from "url";
 // main_server.js의 절대경로를 path형태로 받아오는 구문(사용하는 컴퓨터마다 폴더 위치가 다르니 상대경로로 추적해야 한다.)
