@@ -23,7 +23,6 @@ const server=http.createServer(function(req,res){
             .then(result=>{
                 userData = userInfo(result);
                 htmlData = htmlData.replace(`{{{user}}}`, userData);
-                console.log(htmlData);
                 res.write(htmlData);
                 res.end();
             })
@@ -32,7 +31,7 @@ const server=http.createServer(function(req,res){
         }
         if(req.url === "/signinForm.js"){
             res.writeHead(200, {'Content-Type':'text/javascript'});
-            res.write(fs.readFileSync(path.join(rootPath,"../dist/signinForm.js"),"utf8"));
+            res.write(fs.readFileSync(path.join(rootPath,"../src/signinForm.js"),"utf8"));
             res.end();
         }
         
