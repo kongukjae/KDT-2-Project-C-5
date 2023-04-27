@@ -16,7 +16,7 @@ const TopMenu = () => {
 
   return (
     <div style={{ display: "flex" }}>
-      <div>📃</div>
+      <Notification />
       <BookStagramTopLogo />
       <HambergerMenu items={menuItems} />
     </div>
