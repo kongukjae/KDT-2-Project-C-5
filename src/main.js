@@ -30,8 +30,10 @@ import NavBar from "../components/NavBar";
 import "./index.css";
 import ReviewPage from "./ReviewPage";
 import BookReviewFeed from "./BookReviewFeed";
+import TopMenu from "./TopMenu";
 
 const App = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -46,6 +48,9 @@ const App = () => {
 =======
   return <BookReviewFeed />;
 >>>>>>> f69bbdda (issue16/BookReviewFeed책정보와 긴글리뷰)
+=======
+  return <TopMenu />;
+>>>>>>> a29e54e0 (HamVergerMenu.js생성)
 };
 
 createRoot(document.getElementById("root")).render(<App />);
