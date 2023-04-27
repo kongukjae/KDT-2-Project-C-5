@@ -27,6 +27,7 @@ const loginPage = () => {
         <ButtonSignUpWithAppleAccount/>
         <ButtonSignUp/>
         <ForgotAccount/>
+
       </div>
     </div>
   );
