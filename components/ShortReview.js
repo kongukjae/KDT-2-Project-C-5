@@ -5,7 +5,8 @@ import BookInfo from "../components/BookInfo.js"
 // 짧은 리뷰글 피드
 import ShortReviewFeed from "../components/ShortReviewFeed.js"
 
-export default function LongReview() {
+//짧은 글 리뷰라고 이름 변경.
+export default function ShortReview() {
 
   return (
     <div>
