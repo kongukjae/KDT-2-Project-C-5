@@ -1,14 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import MainFeedContents from './MainFeedContents';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import MainFeedContents from "./MainFeedContents";
+import ReviewPage from "../src/ReviewPage";
 
 const navBarStyle = {
-  display: 'flex',
-  flexDirection: 'row',
-  justifyContent: 'space-evenly',
-  listStyleType: 'none',
-  padding: '0'
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-evenly",
+  listStyleType: "none",
+  padding: "0",
 };
 
 // 테스트를 위한 임시 코드
@@ -47,9 +48,9 @@ const App = () => {
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<MainFeedContents/>} />
+          <Route path="/" element={<MainFeedContents />} />
           <Route path="/page2" element={<Page2 />} />
-          <Route path="/page3" element={<Page3 />} />
+          <Route path="/page3" element={<ReviewPage />} />
           <Route path="/page4" element={<Page4 />} />
           <Route path="/page5" element={<Page5 />} />
         </Routes>
@@ -58,7 +59,6 @@ const App = () => {
         </div>
       </Router>
     </div>
-    
   );
 };
 
