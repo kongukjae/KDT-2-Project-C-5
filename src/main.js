@@ -12,11 +12,12 @@ import "./index.css";
 import ReviewPage from "./ReviewPage";
 import BookReviewFeed from "./BookReviewFeed";
 import TopMenu from "./TopMenu";
+import FollowerFollowing from '../components/FollowerFollowing';
 
 const App = () => {
   return (
     <div>
-      <NavBar />
+      <NavBar/>
     </div>
   );
 };

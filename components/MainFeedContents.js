@@ -12,7 +12,11 @@ const headerStyle = {
 
 const navStyle = {
   display: 'flex',
-  justifyContent: 'space-around'
+  justifyContent: 'space-around',
+}
+
+const tabStyle = {
+  cursor: 'pointer'
 }
 
 const MainFeedContents = () => {
@@ -43,8 +47,8 @@ const MainFeedContents = () => {
       </header> */}
       <nav style={navStyle}>
         {/* 인기 리뷰, 실시간 리뷰 클릭 시 상태 변환 */}
-        <div onClick={onClickPopular}><b>인기 리뷰</b></div>
-        <div onClick={onClickLive}><b>실시간 리뷰</b></div>
+        <div style={tabStyle} onClick={onClickPopular}><b>인기 리뷰</b></div>
+        <div style={tabStyle} onClick={onClickLive}><b>실시간 리뷰</b></div>
       </nav>
 
       <main>
