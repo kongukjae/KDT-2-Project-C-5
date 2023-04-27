@@ -4,7 +4,7 @@ import BookDescription from "../components/BookDescription";
 import FeedTopBar from "../components/FeedTopBar";
 import UploadTime from "../components/UploadTime";
 
-const Book_review_feed = () => {
+const BookReviewFeed = () => {
   return (
     <div>
       <FeedTopBar />
@@ -15,4 +15,4 @@ const Book_review_feed = () => {
   );
 };
 
-export default Book_review_feed;
+export default BookReviewFeed;
