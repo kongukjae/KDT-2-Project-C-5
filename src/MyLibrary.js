@@ -10,7 +10,7 @@ import BookList from '../components/MyLibrary-component/BookList';
 function MyLibrary() {
   const [books, setBooks] = useState([]);
 /* 
-  // Bookshelf 컴포넌트에서 사용할 함수
+    Bookshelf 컴포넌트에서 사용할 함수
   function addBook(book) {
     setBooks([...books, book]);
   } */
@@ -18,10 +18,10 @@ function MyLibrary() {
   return (
     <div>
       <BookStagramTopLogo/>
-      <h2>내 서제</h2>
+      <h2>내 서재</h2>
       <MyLibraryTarget />
-      <BookCounter count={books.length} />
-      <Bookshelf onAddBook={addBook} />
+      <BookCounter />
+      <Bookshelf />
       <BookList books={books} />
     </div>
   );

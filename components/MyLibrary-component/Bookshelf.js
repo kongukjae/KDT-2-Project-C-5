@@ -5,40 +5,22 @@
  */
 
 
+import React, { useState } from 'react';
 
-import BookCounter from '../components/MyLibrary-component/BookCounter';
-import Book from '../components/MyLibrary-component/Book';
-/* 
+import BookCounter from './BookCounter';
+import Book from './Book';
+
 function Bookshelf(props) {
-  const [title, setTitle] = useState('');
-
-  // Submit 버튼 클릭 시 책 추가
-  function handleSubmit(e) {
-    e.preventDefault();
-    const book = { title };
-    props.onAddBook(book);
-    setTitle('');
-  }
-
   return (
     <div>
-      <h2>Bookshelf</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={title}
-          onChange={(e) => setTitle(e.target.value)}
-          placeholder="Enter a book title"
-        />
-        <button type="submit">Add book</button>
-      </form>
+      <h2>서재</h2>
     </div>
   );
 }
 
 export default Bookshelf;
- */
 
+/* 
 import React, { useState } from 'react';
 import './Bookshelf.css';
 
@@ -76,4 +58,4 @@ function Bookshelf(props) {
   );
 }
 
-export default Bookshelf;
+export default Bookshelf; */

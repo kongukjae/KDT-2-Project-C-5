@@ -9,7 +9,7 @@ import React from 'react';
 function BookList(props) {
   return (
     <div>
-      <h2>Books read so far:</h2>
+      <h2>읽은 책</h2>
       <ul>
         {props.books.map((book, index) => (
           <li key={index}>{book.title}</li>
