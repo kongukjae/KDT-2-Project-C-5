@@ -16,6 +16,7 @@ import './index.css';
 
 
 const App = () => {
+<<<<<<< HEAD
   return <LoginPage/>;
 =======
 =======
@@ -34,6 +35,10 @@ import "./index.css";
 import ReviewPage from "./ReviewPage";
 import BookReviewFeed from "./BookReviewFeed";
 import TopMenu from "./TopMenu";
+=======
+  return <NavBar/>;
+};
+>>>>>>> a1295a47 (메인 페이지에 인기, 실시간 리뷰 콘텐츠 조립)
 
 const App = () => {
 <<<<<<< HEAD
