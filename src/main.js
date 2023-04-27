@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createRoot } from 'react-dom/client';
@@ -17,6 +18,8 @@ import './index.css';
 const App = () => {
   return <LoginPage/>;
 =======
+=======
+>>>>>>> 70295106 (NavBer.js <Route path=/page3 element={<ReviewPage />} />)
 import React from "react";
 import ReactDOM from "react-dom";
 import { createRoot } from "react-dom/client";
@@ -24,7 +27,7 @@ import StartPage from "./startScreen";
 import Login from "./login";
 import LoginPage from "./loginPage";
 import SignUpPage from "./signUp";
-import Router from "./router";
+import Router from "../components/router";
 import MainFeed from "./mainFeed";
 import NavBar from "../components/NavBar";
 import "./index.css";
@@ -33,6 +36,7 @@ import BookReviewFeed from "./BookReviewFeed";
 import TopMenu from "./TopMenu";
 
 const App = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -51,6 +55,13 @@ const App = () => {
 =======
   return <TopMenu />;
 >>>>>>> a29e54e0 (HamVergerMenu.js생성)
+=======
+  return (
+    <div>
+      <TopMenu />
+      <NavBar />
+    </div>
+  );
+>>>>>>> 70295106 (NavBer.js <Route path=/page3 element={<ReviewPage />} />)
 };
-
 createRoot(document.getElementById("root")).render(<App />);
