@@ -11,45 +11,40 @@ const tapStyle = {
 
 const FollowerFollowing = () => {
   // 구독인, 구독자 클릭 시 색상 변경
-  const [isHoverd, setIsHovered] = useState(false);
-
-  const handleMouseIn = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHovered(false);
-  };
-
-  const textStyle = {
-    color: isHoverd ? 'grey' : 'black'
+  const [selectedTab, setSelectedTab] = useState('follower');
+  // 마우스 클릭 시 grey
+  const handleMouseClick = (tab) => {
+    setSelectedTab(tab);
   }
-  // 조건부 렌더링 시도 중
+
+  const textStyle = (tab) => {
+    return {
+      color: selectedTab === tab ? 'grey' : 'black',
+      cursor: 'pointer'
+    }
+  }
+
+  // 구독인, 구독자 list 상태를 변경하기 위한 구문
   const [follower, setFollower] = useState(()=> <FollowerList/>);
   const [following, setFollowing] = useState(null);
-
+  // 구독인 누를 시 구독인 리스트 나오게 하고, 구독자 리스트는 없애기
   const onClickFollower = () => {
     setFollower(<FollowerList/>);
-    setFollowing('');
+    setFollowing(null);
+    handleMouseClick('follower');
   };
-
+  // 구독자 누를 시 구독자 리스트 나오게 하고, 구독인 리스트는 없애기
   const onClickFollowing = () => {
     setFollowing(<FollowingList/>);
-    setFollower('');
+    setFollower(null);
+    handleMouseClick('following');
   };
-  const handleClickFollower = () => {
-    setIsHovered(true);
-    onClickFollower();
-  }
-  const handleClickFollowing = () => {
-    setIsHovered(true);
-    onClickFollower();
-  }
+
   return (
     <div>
       <div style={tapStyle}>
-        <div style={textStyle} onMouseEnter={handleMouseIn} onMouseLeave={handleMouseOut} onClick={handleClickFollower}><b>구독인</b></div>
-        <div onClick={onClickFollowing}><b>구독자</b></div>
+        <div style={textStyle('follower')} onClick={onClickFollower}><b>구독인</b></div>
+        <div style={textStyle('following')} onClick={onClickFollowing}><b>구독자</b></div>
       </div>
       <div>
         {follower}
