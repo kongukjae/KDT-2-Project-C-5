@@ -8,10 +8,10 @@ import TopMenu from "../src/TopMenu";
 const navBarStyle = {
   display: "flex",
   flexDirection: "row",
-  justifyContent: "space-evenly",
+  justifyContent: "space-between",
   listStyleType: "none",
   padding: "0",
-  margin: '0'
+  margin: '0',
 };
 
 // 테스트를 위한 임시 코드
