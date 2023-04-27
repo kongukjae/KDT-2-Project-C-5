@@ -15,6 +15,7 @@ const loginPage = () => {
       <div>
         <form>
           <InputId/>
+          <p><b>password</b></p>
           <InputPwd/>
         </form>
       </div>
