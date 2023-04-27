@@ -8,7 +8,7 @@ import ProfileStatus from '../components/mypage-component/ProfileStatus';
 import MyPosts from '../components/mypage-component/MyPosts';
 import ProfileSettings from '../components/mypage-component/ProfileSettings';
 import ProfileName from '../components/mypage-component/ProfileName';
-import MyLibrary from './MyLibrary';
+import MyLibrary from './mylibrary';
 
 function MyPage() {
   return (

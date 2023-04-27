@@ -3,10 +3,10 @@
  */
 import React from 'react';
 
-function BookCounter(props) {
+function BookCounter() {
   return (
     <div>
-      <p>Number of books read: {props.count}</p>
+      <p>읽은 책수 </p>
     </div>
   );
 }
