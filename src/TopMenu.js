@@ -2,6 +2,11 @@ import React from "react";
 import BookStagramTopLogo from "../components/BookStagramTopLogo";
 import HambergerMenu from "../components/HambergerMenu";
 
+const headerStyle = {
+  display: 'flex',
+  justifyContent: 'space-around'
+}
+
 const TopMenu = () => {
   const menuItems = [
     { label: "계정설정", onClick: () => alert("페이지전환") },
@@ -14,7 +19,7 @@ const TopMenu = () => {
   ];
 
   return (
-    <div style={{ display: "flex" }}>
+    <div style={headerStyle}>
       <div>📃</div>
       <BookStagramTopLogo />
       <HambergerMenu items={menuItems} />

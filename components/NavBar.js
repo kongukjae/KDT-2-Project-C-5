@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import MainFeedContents from "./MainFeedContents";
 import ReviewPage from "../src/ReviewPage";
+import TopMenu from "../src/TopMenu";
 
 const navBarStyle = {
   display: "flex",
@@ -47,6 +48,7 @@ const App = () => {
   return (
     <div>
       <Router>
+      <TopMenu/>
         <Routes>
           <Route path="/" element={<MainFeedContents />} />
           <Route path="/page2" element={<Page2 />} />

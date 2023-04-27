@@ -16,7 +16,6 @@ import TopMenu from "./TopMenu";
 const App = () => {
   return (
     <div>
-      <TopMenu />
       <NavBar />
     </div>
   );

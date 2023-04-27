@@ -36,11 +36,11 @@ const MainFeedContents = () => {
 
   return (
     <div>
-      <header style={headerStyle}>
+      {/* <header style={headerStyle}>
         <AlarmForm/>
         <BookStagramTopLogo/>
         <Hamburger/>
-      </header>
+      </header> */}
       <nav style={navStyle}>
         {/* 인기 리뷰, 실시간 리뷰 클릭 시 상태 변환 */}
         <div onClick={onClickPopular}><b>인기 리뷰</b></div>
