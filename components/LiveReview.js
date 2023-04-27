@@ -1,5 +1,5 @@
 import React from 'react';
-import MainFeedReviewForm from './mainFeedReviewForm';
+import MainFeedReviewForm from './MainFeedReviewForm';
 
 const LiveReview = () => {
   return (
