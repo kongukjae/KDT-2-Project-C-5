@@ -9,11 +9,12 @@ import Router from './router';
 import NavBar from '../components/NavBar';
 import './index.css';
 import Mypage from './mypage';
+import Mylibrary from './mylibrary';
 
 
 const App = () => {
-  return <Mypage/>;
-  /* return <NavBar/> */
+  return <Mylibrary/>;
+  /*  <NavBar/> Mypage */
 };
 
 createRoot(document.getElementById('root')).render(<App />);

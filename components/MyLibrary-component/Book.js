@@ -6,7 +6,7 @@ import React from 'react';
 function Book() {
   return (
     <div>
-      <p>쌓이는 책</p>
+      <p>55</p>
     </div>
   );
 }

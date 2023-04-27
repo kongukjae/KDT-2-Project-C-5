@@ -9,7 +9,7 @@ import ProfileStatus from '../components/mypage-component/ProfileStatus';
 import MyPosts from '../components/mypage-component/MyPosts';
 import ProfileSettings from '../components/mypage-component/ProfileSettings';
 import ProfileName from '../components/mypage-component/ProfileName';
-import MyLibrary from '././mylibrary';
+import MyLibrary from './mylibrary';
 
 
 function MyPage() {
@@ -25,22 +25,10 @@ function MyPage() {
         <MyPosts/>
         <ProfileSettings />
         <MyStories/>
-        <li>
-        <Link to="/mylibrary">mylibrary</Link>
-        </li>
 
 
     </div>
   );
 }
-const App = () => {
-  return (
-    <div>
-        <Routes>
-          <Route path="/mylibrary" element={<MyLibrary />} />
-        </Routes>
-    </div>
-    
-  );
-};
+
 export default MyPage;

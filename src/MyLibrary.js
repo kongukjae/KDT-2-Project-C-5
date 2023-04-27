@@ -14,15 +14,19 @@ function MyLibrary() {
   function addBook(book) {
     setBooks([...books, book]);
   } */
+  const style = {
+    border : '1px solid black'
+
+  }
 
   return (
     <div>
       <BookStagramTopLogo/>
-      <h2>내 서재</h2>
+      <h2 style ={style}>내 서재</h2>
       <MyLibraryTarget />
       <BookCounter />
       <Bookshelf />
-      <BookList books={books} />
+      <BookList />
     </div>
   );
 }
