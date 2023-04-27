@@ -11,9 +11,10 @@ import NavBar from "../components/NavBar";
 import "./index.css";
 import ReviewPage from "./ReviewPage";
 import BookReviewFeed from "./BookReviewFeed";
+import TopMenu from "./TopMenu";
 
 const App = () => {
-  return <BookReviewFeed />;
+  return <TopMenu />;
 };
 
 createRoot(document.getElementById("root")).render(<App />);
