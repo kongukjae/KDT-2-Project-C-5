@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-const LinkIcon = () => {
+const Page1 = () => {
   return (
     <div>
-      <Link to="/">📃</Link>
+      <div>📃</div>
     </div>
   );
 };
@@ -14,7 +14,7 @@ const Notification = () => {
     <div>
       <Router>
         <Routes>
-          <Route path="/" element={<LinkIcon />} />
+          <Route path="/" element={<Page1 />} />
         </Routes>
       </Router>
     </div>
