@@ -32,8 +32,8 @@ const FollowerFollowing = () => {
   const textStyle = {
     color: isHoverd ? 'grey' : 'black'
   }
-
-  const [follower, setFollower] = useState('');
+  // 조건부 렌더링 시도 중
+  const [follower, setFollower] = useState(()=>{<ImgUserPicture/>});
   const [following, setFollowing] = useState('');
 
   const onClickFollower = () => {
@@ -50,7 +50,7 @@ const FollowerFollowing = () => {
     <div>
       <div style={tapStyle}>
         <div style={textStyle} onMouseEnter={handleMouseIn} onMouseLeave={handleMouseOut} onClick={onClickFollower}><b>구독인</b></div>
-        <div style={textStyle} onMouseEnter={handleMouseIn} onMouseLeave={handleMouseOut} onClick={onClickFollowing}><b>구독자</b></div>
+        <div onClick={onClickFollowing}><b>구독자</b></div>
       </div>
       <div>
         {follower}
