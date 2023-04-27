@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import BookStagramTopLogo from './BookStagramTopLogo';
 import FollowerList from './FollowerList';
 import FollowingList from './FollowingList';
 
@@ -6,7 +7,7 @@ const tapStyle = {
   width: '390px',
   height: '45px',
   display: 'flex',
-  justifyContent: 'space-around'
+  justifyContent: 'space-around',
 }
 
 const FollowerFollowing = () => {
@@ -42,6 +43,7 @@ const FollowerFollowing = () => {
 
   return (
     <div>
+      <header><BookStagramTopLogo/></header>
       <div style={tapStyle}>
         <div style={textStyle('follower')} onClick={onClickFollower}><b>구독인</b></div>
         <div style={textStyle('following')} onClick={onClickFollowing}><b>구독자</b></div>
