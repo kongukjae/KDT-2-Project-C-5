@@ -11,6 +11,9 @@ export default function LongReview() {
     <div>
       <BookInfo />
       <ShortReviewFeed />
+      <ShortReviewFeed />
+      <ShortReviewFeed />
+      <ShortReviewFeed />
     </div>
   )
 }
