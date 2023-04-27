@@ -9,7 +9,8 @@ const conStyle = {
   flexDirection: 'row',
   justifyContent: 'space-around',
   border: '1px solid black',
-  borderRadius: '10px'
+  borderRadius: '10px',
+  marginBottom: '37px'
 }
 // 책 표지 임시 css
 const bookStyle = {
