@@ -3,6 +3,12 @@ import fs from 'fs';
 import bookstargramConnect from './mariadb.js';
 import signUpQuery from './signUpQuery.js';
 import userInfo from './userinfo.js';
+import path from "path";
+import url from "url";
+// main_server.js의 절대경로를 path형태로 받아오는 구문(사용하는 컴퓨터마다 폴더 위치가 다르니 상대경로로 추적해야 한다.)
+const currentPath = url.fileURLToPath(import.meta.url);
+// main_server 파일이 있는 위치를 기준으로 '..'(상위폴더) 경로를 써서 root 폴더 경로를 지정하는 구문. /src 상위폴더가 root이기에 가능한 방법
+const rootPath = path.normalize(currentPath + "\\..")
 
 const server=http.createServer(function(req,res){
     console.log(req.url);
@@ -10,7 +16,8 @@ const server=http.createServer(function(req,res){
         //index_test용
         if(req.url === "/"){
             res.writeHead(200, {'Content-Type':'text/html'});
-            let htmlData = fs.readFileSync("../src/index_test.html", "utf8");
+            //파악된 rootPath의 절대경로를 기준으로 다른 파일 경로 지정하기.
+            let htmlData = fs.readFileSync(path.join(rootPath, "../src/index_test.html"), "utf8");
             let userData = "";
             bookstargramConnect(signUpQuery.readAll())
             .then(result=>{
@@ -25,7 +32,7 @@ const server=http.createServer(function(req,res){
         }
         if(req.url === "/signinForm.js"){
             res.writeHead(200, {'Content-Type':'text/javascript'});
-            res.write(fs.readFileSync("../src/signinForm.js","utf8"));
+            res.write(fs.readFileSync(path.join(rootPath,"../dist/signinForm.js"),"utf8"));
             res.end();
         }
         
