@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import './index.css';
-import BookStagramTopLogo from '../components/BookStagramTopLogo';
 import Counter from '../components/mypage-component/Counter';
 import MyStories from '../components/mypage-component/MyStories';
 import ProfilePicture from '../components/mypage-component/ProfilePicture';
@@ -15,7 +14,6 @@ import MyLibrary from './mylibrary';
 function MyPage() {
   return (
     <div>
-      <BookStagramTopLogo/>
         <ProfilePicture/>
         <ProfileStatus/>
         <ProfileName/>
@@ -25,10 +23,28 @@ function MyPage() {
         <MyPosts/>
         <ProfileSettings />
         <MyStories/>
-
+        <li>
+          <Link to="/MyLibrary">내서재</Link>
+        </li>
 
     </div>
   );
 }
+
+const App = () => {
+  return (
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/MyLibrary" element={<MyLibrary/>} />
+        </Routes>
+        <div>
+          <NavBar />
+        </div>
+      </Router>
+    </div>
+  );
+};
+
 
 export default MyPage;

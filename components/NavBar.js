@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import MainFeedContents from "./MainFeedContents";
 import ReviewPage from "../src/ReviewPage";
+import MyPage from "../src/mypage";
 
 const navBarStyle = {
   display: "flex",
@@ -36,7 +37,7 @@ const NavBar = () => {
           <Link to="/page4">검색</Link>
         </li>
         <li>
-          <Link to="/page5">내정보</Link>
+          <Link to="/MyPage">내정보</Link>
         </li>
       </ul>
     </nav>
@@ -52,7 +53,7 @@ const App = () => {
           <Route path="/page2" element={<Page2 />} />
           <Route path="/page3" element={<ReviewPage />} />
           <Route path="/page4" element={<Page4 />} />
-          <Route path="/page5" element={<Page5 />} />
+          <Route path="/MyPage" element={<MyPage />} />
         </Routes>
         <div>
           <NavBar />

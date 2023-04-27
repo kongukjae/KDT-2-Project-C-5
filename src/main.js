@@ -21,7 +21,6 @@ const App = () => {
     <div>
       <TopMenu />
       <NavBar />
-      <Mylibrary/>;
       {/* <NavBar/> Mypage  */}
     </div>
   );
