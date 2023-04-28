@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AlarmForm from '../src/AlarmForm';
 import BookStagramTopLogo from './BookStagramTopLogo';
 import HambergerMenu from './HambergerMenu';
 import ImgUserPicture from './ImgUserPicture';
 import UserName from './UserName';
-import AlarmPicture from './AlarmPicture';
+import AlarmOnPicture from './AlarmOnPicture';
+import AlarmOffPicture from './AlarmOffPicture';
 
 const conStyle = {
   display: 'flex',
@@ -25,6 +26,15 @@ const mainStyle = {
 }
 
 const AlarmSetting = () => {
+  // 알람 버튼 하나로 누를 때마다 끄고 켜지는 로직을 생각해보자..
+  // 상태 반전이니 true false 생각
+  const [alarmOn, setAlarmOn] = useState(true)
+  
+  const handleAlarmToggle = () => {
+    // 현재 알람 상태를 반전시켜준다.
+    setAlarmOn(!alarmOn)
+  }
+
   return (
     <div style={conStyle}>
       <header style={headerStyle}>
@@ -38,7 +48,8 @@ const AlarmSetting = () => {
       <main style={mainStyle}>
         <ImgUserPicture/>
         <UserName/>
-        <AlarmPicture/>
+        {/* 삼항연산자를 사용하여 true, false 시 조건 사용 */}
+        <div onClick={handleAlarmToggle}>{alarmOn ? <AlarmOnPicture/>:<AlarmOffPicture/>}</div>
       </main>
       
     </div>

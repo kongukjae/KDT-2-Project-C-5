@@ -13,7 +13,7 @@ import ReviewPage from "./ReviewPage";
 import BookReviewFeed from "./BookReviewFeed";
 import TopMenu from "./TopMenu";
 import FollowerFollowing from '../components/FollowerFollowing';
-import AlarmPicture from "../components/AlarmPicture";
+import AlarmPicture from "../components/AlarmOnPicture";
 import AlarmSetting from "../components/AlarmSetting";
 
 const App = () => {
