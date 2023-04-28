@@ -1,9 +1,5 @@
-import ReactDOM from "react-dom";
+import {render} from "react-dom/client";
 import React from "react";
-import App from "./app";
+import LoginPage from "./loginPage";
 
-
-ReactDOM.render(
-    <h1>hello</h1>,
-    document.getElementById("root")
-);
+render(<LoginPage />,document.getElementById('root'));
