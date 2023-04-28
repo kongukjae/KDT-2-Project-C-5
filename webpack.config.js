@@ -1,5 +1,6 @@
 import { fileURLToPath } from 'url';
 import path from 'path';
+import HtmlWebpackPlugin from "html-webpack-plugin"
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -37,6 +38,7 @@ export default {
         },
       },
       {
+<<<<<<< HEAD
         test: /\.m?js$/,
         type: "javascript/auto"
       },
@@ -47,6 +49,8 @@ export default {
         }
       },
       {
+=======
+>>>>>>> 69f8ca6e (added webpack config)
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
       }
