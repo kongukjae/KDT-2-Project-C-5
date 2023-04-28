@@ -13,11 +13,13 @@ import ReviewPage from "./ReviewPage";
 import BookReviewFeed from "./BookReviewFeed";
 import TopMenu from "./TopMenu";
 import FollowerFollowing from '../components/FollowerFollowing';
+import AlarmPicture from "../components/AlarmPicture";
+import AlarmSetting from "../components/AlarmSetting";
 
 const App = () => {
   return (
     <div>
-      <FollowerFollowing/>
+      <AlarmSetting/>
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import AlarmForm from './alarmForm';
+import AlarmForm from './AlarmForm';
 import BookStagramTopLogo from '../components/BookStagramTopLogo';
 import Hamburger from '../components/Hamburger';
 import NavBar from '../components/NavBar';
