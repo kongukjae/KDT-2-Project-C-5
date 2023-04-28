@@ -24,23 +24,22 @@ import NoticePage from "./NoticePage";
 
 // export default App;
 
-import { Link } from "react-router-dom";
-import React from "react";
-import NoticePage from "./NoticePage";
+// import React from "react";
+// import NoticePage from "./NoticePage";
 
-const NotificationTab = () => {
-  return (
-    <div>
-      <h2>Notifications</h2>
-      <ul>
-        <li>
-          <Link to="/noticePge" element={<NoticePage />}>
-            Notice
-          </Link>
-        </li>
-      </ul>
-    </div>
-  );
-};
+// const NotificationTab = () => {
+//   return (
+//     <div>
+//       <h2>Notifications</h2>
+//       <ul>
+//         <li>
+//           <Link to="/noticePge" element={<NoticePage />}>
+//             Notice
+//           </Link>
+//         </li>
+//       </ul>
+//     </div>
+//   );
+// };
 
-export default NotificationTab;
+// export default NotificationTab;

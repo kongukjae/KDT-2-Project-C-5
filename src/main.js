@@ -35,10 +35,14 @@ import "./index.css";
 import ReviewPage from "./ReviewPage";
 import BookReviewFeed from "./BookReviewFeed";
 import TopMenu from "./TopMenu";
+<<<<<<< HEAD
 =======
   return <NavBar/>;
 };
 >>>>>>> a1295a47 (메인 페이지에 인기, 실시간 리뷰 콘텐츠 조립)
+=======
+import Notification from "../components/NotificationTab";
+>>>>>>> 1b802b03 (알림-> 알림페이지 전환하기)
 
 const App = () => {
 <<<<<<< HEAD
@@ -63,8 +67,7 @@ const App = () => {
 =======
   return (
     <div>
-      <TopMenu />
-      <NavBar />
+      <Notification />
     </div>
   );
 >>>>>>> 70295106 (NavBer.js <Route path=/page3 element={<ReviewPage />} />)
