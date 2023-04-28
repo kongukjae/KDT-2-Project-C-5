@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import React from "react";
+// import NoticePage from "./NoticePage";
 
 function NotificationTab() {
   return (
