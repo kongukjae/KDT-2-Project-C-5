@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-function Notification() {
+function NotificationTab() {
   return (
     <div>
       <Link to="/NoticePage">
@@ -10,4 +10,4 @@ function Notification() {
   );
 }
 
-export default Notification;
+export default NotificationTab;
