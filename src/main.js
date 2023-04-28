@@ -12,12 +12,12 @@ import "./index.css";
 import ReviewPage from "./ReviewPage";
 import BookReviewFeed from "./BookReviewFeed";
 import TopMenu from "./TopMenu";
-import Notification from "../components/NotificationTab";
+import NotificationTab from "../components/NotificationTab";
 
 const App = () => {
   return (
     <div>
-      <TopMenu />
+      <NotificationTab />
     </div>
   );
 };
