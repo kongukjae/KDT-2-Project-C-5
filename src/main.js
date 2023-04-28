@@ -67,7 +67,7 @@ const App = () => {
 =======
   return (
     <div>
-      <Notification />
+      <TopMenu />
     </div>
   );
 >>>>>>> 70295106 (NavBer.js <Route path=/page3 element={<ReviewPage />} />)

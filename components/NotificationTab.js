@@ -16,7 +16,7 @@ const App = () => {
     <div>
       <Router>
         <Routes>
-          <Route path="/page" element={<MainFeedContents />} />
+          <Route path="/page" element={<NoticePage />} />
         </Routes>
         <div>
           <Notification />
