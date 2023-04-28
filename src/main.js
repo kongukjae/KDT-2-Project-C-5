@@ -17,7 +17,7 @@ import Notification from "../components/NotificationTab";
 const App = () => {
   return (
     <div>
-      <Notification />
+      <TopMenu />
     </div>
   );
 };
