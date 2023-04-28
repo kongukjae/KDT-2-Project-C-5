@@ -1,7 +1,32 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import MainFeedContents from "./MainFeedContents";
 import NoticePage from "./NoticePage";
 
+const Notification = () => {
+  return (
+    <div>
+      <Link to="/page">📃</Link>
+    </div>
+  );
+};
+
+const App = () => {
+  return (
+    <div>
+      <Router>
+        <Routes>
+          <Route path="/page" element={<MainFeedContents />} />
+        </Routes>
+        <div>
+          <Notification />
+        </div>
+      </Router>
+    </div>
+  );
+};
+
+export default App;
 // const Notification = () => {
 //   return (
 //     <div>
