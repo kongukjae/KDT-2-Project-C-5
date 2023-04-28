@@ -12,6 +12,7 @@ const navBarStyle = {
   listStyleType: "none",
   padding: "0",
   margin: '0',
+  marginTop: '50px'
 };
 
 // 테스트를 위한 임시 코드

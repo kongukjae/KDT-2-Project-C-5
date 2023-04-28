@@ -2,7 +2,7 @@ import React from 'react';
 import MainFeedReviewForm from './mainFeedReviewForm';
 
 const formOneStyle = {
-  backgroundColor: '#B195B1',
+  backgroundColor: '#C86C6C',
   border: '1px solid black',
   borderRadius: '10px',
   backgroundClip: 'padding-box',
@@ -16,7 +16,7 @@ const formTwoStyle = {
   marginBottom: '20px'
 }
 const formThreeStyle = {
-  backgroundColor: '#C86C6C',
+  backgroundColor: '#B195B1',
   border: '1px solid black',
   borderRadius: '10px',
   backgroundClip: 'padding-box',

@@ -19,6 +19,10 @@ const tabStyle = {
   cursor: 'pointer'
 }
 
+const conStyle = {
+  backgroundColor: '#D9D9D9'
+}
+
 const MainFeedContents = () => {
 
   const [popularReview, setPopularReview] = useState(<PopularReview/>);
@@ -39,7 +43,7 @@ const MainFeedContents = () => {
   };
 
   return (
-    <div>
+    <div style={conStyle}>
       {/* <header style={headerStyle}>
         <AlarmForm/>
         <BookStagramTopLogo/>
