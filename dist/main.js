@@ -1,1 +1,1 @@
-(()=>{"use strict";var e=t(require("react-dom")),r=t(require("react"));function t(e){return e&&e.__esModule?e:{default:e}}t(require("./app")),e.default.render(r.default.createElement("h1",null,"hello"),document.getElementById("root"))})();
+(()=>{"use strict";var e=require("react-dom/client"),r=u(require("react")),t=u(require("./loginPage"));function u(e){return e&&e.__esModule?e:{default:e}}(0,e.render)(r.default.createElement(t.default,null),document.getElementById("root"))})();
