@@ -17,7 +17,7 @@ import FollowerFollowing from '../components/FollowerFollowing';
 const App = () => {
   return (
     <div>
-      <NavBar/>
+      <FollowerFollowing/>
     </div>
   );
 };
