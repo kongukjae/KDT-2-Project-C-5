@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PopularReview from './PopularReview';
 import LiveReview from './LiveReview';
 import BookStagramTopLogo from './BookStagramTopLogo';
-import AlarmForm from '../src/AlarmForm';
+import AlarmForm from './AlarmForm';
 import Hamburger from './Hamburger';
 
 const headerStyle = {

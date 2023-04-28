@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import AlarmForm from '../src/AlarmForm';
-import BookStagramTopLogo from './BookStagramTopLogo';
-import HambergerMenu from './HambergerMenu';
-import ImgUserPicture from './ImgUserPicture';
-import UserName from './UserName';
-import AlarmOnPicture from './AlarmOnPicture';
-import AlarmOffPicture from './AlarmOffPicture';
+import AlarmForm from '../components/AlarmForm';
+import BookStagramTopLogo from '../components/BookStagramTopLogo';
+import HambergerMenu from '../components/HambergerMenu';
+import ImgUserPicture from '../components/ImgUserPicture';
+import UserName from '../components/UserName';
+import AlarmOnPicture from '../components/AlarmOnPicture';
+import AlarmOffPicture from '../components/AlarmOffPicture';
 
 const conStyle = {
   display: 'flex',
