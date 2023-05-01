@@ -1,7 +1,7 @@
 // .jsx 파일을 .js 파일로 변환하여 웹팩이 읽을 수 있도록 설정해주는 부분
 {
     "presets": [
-        "@babel/preset-env", 
+        "@babel/preset-env",
         "@babel/preset-react"
     ]
 }
