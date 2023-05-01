@@ -1,15 +1,17 @@
-import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
-// import NoticePage from "./NoticePage";
+import NoticePage from "./NoticePage";
+import TopMenu from "../src/TopMenu";
 
-function NotificationTab() {
+function App() {
   return (
-    <div>
-      <Link to="/NoticePage">
-        <button>📃</button>
-      </Link>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<TopMenu />} />
+        <Route path="/NoticePage" element={<NoticePage />} />
+      </Routes>
+    </Router>
   );
 }
 
-export default NotificationTab;
+export default App;

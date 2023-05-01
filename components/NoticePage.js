@@ -1,18 +1,17 @@
-import { Route, Switch } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
-function NoticePage() {
+
+function App() {
   return (
-    <div>
-      <Switch>
-        <Route exact path="/">
-          <HomePage />
-        </Route>
-        <Route path="/NoticePage">
-          <NewPage />
-        </Route>
-      </Switch>
+    <div className=" App">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<TestHome />} />
+          <Route path="test" element={<Test />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
 
-export default NoticePage;
+export default APP;
