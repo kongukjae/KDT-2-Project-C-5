@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { createRoot } from 'react-dom/client';
 import StartPage from './startScreen';
-import Login from './login';
 import LoginPage from './loginPage';
 // import SignUpPage from './signUp';
 // import Router from '../components/router';
