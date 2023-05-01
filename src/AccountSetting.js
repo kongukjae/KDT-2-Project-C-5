@@ -4,7 +4,9 @@ import InputEmail from '../components/InputEmail';
 import InputPwdCheck from '../components/InputPwdCheck';
 import ButtonSubmit from '../components/ButtonSubmit';
 
-
+const submitStyle = {
+  width: '100px'
+}
 
 const AccountSetting = () => {
   return (
@@ -13,7 +15,7 @@ const AccountSetting = () => {
       <main>
         <InputEmail/>
         <InputPwdCheck/>
-        <ButtonSubmit/>
+        <div style={submitStyle}><ButtonSubmit/></div>
       </main>
     </div>
   );

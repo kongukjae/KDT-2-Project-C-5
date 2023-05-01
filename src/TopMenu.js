@@ -1,21 +1,37 @@
 import React from "react";
 import BookStagramTopLogo from "../components/BookStagramTopLogo";
 import HambergerMenu from "../components/HambergerMenu";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+// 계정설정 컴포넌트
+import AccountSetting from "./AccountSetting";
+// 알림설정 컴포넌트
+import AlarmSetting from "../components/AlarmSetting";
+// 관심친구 컴포넌트
+import FollowerFollowing from "./FollowerFollowing";
+// 차단목록 컴포넌트
+import BlockedUser from "./BlockedUser";
+
 
 const headerStyle = {
   display: 'flex',
   justifyContent: 'space-around'
 }
+// 임시 태그 설정 컴포넌트
+const Page1 = () => <h1>태그설정</h1>;
+// 임시 구매하기 컴포넌트
+const Page2 = () => <h1>구매하기</h1>;
+// 임시 로그아웃 컴포넌트
+const Page3 = () => <h1>로그아웃</h1>;
 
 const TopMenu = () => {
   const menuItems = [
-    { label: "계정설정", onClick: () => alert("페이지전환") },
-    { label: "알림설정", onClick: () => alert("페이지전환") },
-    { label: "관심친구", onClick: () => alert("페이지전환") },
-    { label: "태그설정", onClick: () => alert("페이지전환") },
-    { label: "차단목록", onClick: () => alert("페이지전환") },
-    { label: "구매하기", onClick: () => alert("페이지전환") },
-    { label: "로그아웃", onClick: () => alert("페이지전환") },
+    { label: "계정설정" },
+    { label: "알림설정" },
+    { label: "관심친구" },
+    { label: "태그설정" },
+    { label: "차단목록" },
+    { label: "구매하기" },
+    { label: "로그아웃" },
   ];
 
   return (

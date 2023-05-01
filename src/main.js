@@ -15,11 +15,12 @@ import FollowerFollowing from './FollowerFollowing';
 import AlarmSetting from "../components/AlarmSetting";
 import BlockedUser from "./BlockedUser";
 import AccountSetting from "./AccountSetting";
+import TopMenu from "./TopMenu";
 
 const App = () => {
   return (
     <div>
-      <AccountSetting/>
+      <TopMenu/>
     </div>
   );
 };
