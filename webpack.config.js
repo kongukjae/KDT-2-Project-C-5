@@ -17,6 +17,7 @@ export default {
   },
   resolve:{
 <<<<<<< HEAD
+<<<<<<< HEAD
     extensions: ['.js', '.jsx'],
   },
   
@@ -24,6 +25,10 @@ export default {
     extensions:['.js','.jsx']
   },
 >>>>>>> 9bdef277 (fixed and build successed)
+=======
+    extensions: ['.js', '.jsx'],
+  },
+>>>>>>> c59f030d (change)
   module: {
     rules: [
       {
@@ -37,6 +42,19 @@ export default {
           
         },
       },
+<<<<<<< HEAD
+=======
+      {
+        test: /\.m?js$/,
+        type: "javascript/auto"
+      },
+      {
+        test: /\.m?js$/,
+        resolve: {
+          fullySpecified: false
+        }
+      },
+>>>>>>> c59f030d (change)
       {
 <<<<<<< HEAD
         test: /\.m?js$/,
