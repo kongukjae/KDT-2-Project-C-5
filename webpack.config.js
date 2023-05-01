@@ -8,12 +8,15 @@ const __dirname = path.dirname(__filename);
 
 export default {
   mode: 'development',
-  entry: './src/render.js',
+  entry: './src/main.js',
   output: {
     path: `${__dirname}/dist`,
     filename: 'main.js',
     // path: path.resolve(__dirname, 'dist'),
     // filename: 'bundle.js',
+  },
+  resolve:{
+    extensions: ['.js', '.jsx'],
   },
   module: {
     rules: [
@@ -28,7 +31,16 @@ export default {
           
         },
       },
-      
+      {
+        test: /\.m?js$/,
+        type: "javascript/auto"
+      },
+      {
+        test: /\.m?js$/,
+        resolve: {
+          fullySpecified: false
+        }
+      },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
