@@ -13,12 +13,12 @@ import ReviewPage from "./ReviewPage";
 import BookReviewFeed from "./BookReviewFeed";
 import FollowerFollowing from './FollowerFollowing';
 import AlarmSetting from "../components/AlarmSetting";
-import BlockedList from "./BlockedList";
+import BlockedUser from "./BlockedUser";
 
 const App = () => {
   return (
     <div>
-      <BlockedList/>
+      <BlockedUser/>
     </div>
   );
 };
