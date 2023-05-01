@@ -11,7 +11,7 @@ export default {
   entry: './src/render.js',
   output: {
     path: `${__dirname}/dist`,
-    filename: '[name].js',
+    filename: 'main.js',
     // path: path.resolve(__dirname, 'dist'),
     // filename: 'bundle.js',
   },
