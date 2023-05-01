@@ -10,6 +10,106 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./components/BookStagramTopLogo.js":
+/*!******************************************!*\
+  !*** ./components/BookStagramTopLogo.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar BookStagramTopLogo = function BookStagramTopLogo() {\n  var LogoStyle = {\n    fontSize: '30px',\n    height: '10%',\n    display: 'flex',\n    justifyContent: 'center',\n    alignItems: 'center',\n    marginBottom: '50px'\n  };\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", {\n    style: LogoStyle\n  }, \"BOOK STAGRAM\");\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BookStagramTopLogo);\n\n//# sourceURL=webpack://project-c/./components/BookStagramTopLogo.js?");
+
+/***/ }),
+
+/***/ "./components/ButtonLogin.js":
+/*!***********************************!*\
+  !*** ./components/ButtonLogin.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar ButtonLogin = function ButtonLogin() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"button\", {\n    type: \"submit\"\n  }, \"login\"));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ButtonLogin);\n\n//# sourceURL=webpack://project-c/./components/ButtonLogin.js?");
+
+/***/ }),
+
+/***/ "./components/ButtonSignUp.js":
+/*!************************************!*\
+  !*** ./components/ButtonSignUp.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar ButtonSignUp = function ButtonSignUp() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"button\", null, \"sign up\"));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ButtonSignUp);\n\n//# sourceURL=webpack://project-c/./components/ButtonSignUp.js?");
+
+/***/ }),
+
+/***/ "./components/ButtonSignUpWithAppleAccount.js":
+/*!****************************************************!*\
+  !*** ./components/ButtonSignUpWithAppleAccount.js ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar ButtonSignUpWithAppleAccount = function ButtonSignUpWithAppleAccount() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"button\", null, \"sign up with apple account\"));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ButtonSignUpWithAppleAccount);\n\n//# sourceURL=webpack://project-c/./components/ButtonSignUpWithAppleAccount.js?");
+
+/***/ }),
+
+/***/ "./components/ButtonSignUpWithGoogle.js":
+/*!**********************************************!*\
+  !*** ./components/ButtonSignUpWithGoogle.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar ButtonSignUpWithGoogle = function ButtonSignUpWithGoogle() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"button\", null, \"sign up with google\"));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ButtonSignUpWithGoogle);\n\n//# sourceURL=webpack://project-c/./components/ButtonSignUpWithGoogle.js?");
+
+/***/ }),
+
+/***/ "./components/ForgotAccount.js":
+/*!*************************************!*\
+  !*** ./components/ForgotAccount.js ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nvar ForgotAccount = function ForgotAccount() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"a\", {\n    href: \"\"\n  }, \"forgot account?\"));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ForgotAccount);\n\n//# sourceURL=webpack://project-c/./components/ForgotAccount.js?");
+
+/***/ }),
+
+/***/ "./components/InputId.js":
+/*!*******************************!*\
+  !*** ./components/InputId.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n// ! input 컴포넌트 조립 시 <form></form> 안에 넣어주는 거 잊지말자!\n\nvar InputId = function InputId() {\n  var LoginSignUpInputStyle = {\n    width: '100%',\n    height: '54px',\n    backgroundColor: '#D9D9D9',\n    border: '1px solid #D9D9D9',\n    borderRadius: '20px',\n    textAlign: 'center'\n  };\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"b\", null, \"ID\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"input\", {\n    type: \"text\",\n    placeholder: \"ID\\uB97C \\uC785\\uB825\\uD558\\uC138\\uC694\",\n    name: \"id\",\n    style: LoginSignUpInputStyle\n  })));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InputId);\n\n//# sourceURL=webpack://project-c/./components/InputId.js?");
+
+/***/ }),
+
+/***/ "./components/InputPwd.js":
+/*!********************************!*\
+  !*** ./components/InputPwd.js ***!
+  \********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n// ! input 컴포넌트 조립 시 <form></form> 안에 넣어주는 거 잊지말자!\n\nvar InputPwd = function InputPwd(_ref) {\n  var label = _ref.label,\n    value = _ref.value,\n    onChange = _ref.onChange;\n  var LoginSignUpInputStyle = {\n    width: '100%',\n    height: '54px',\n    backgroundColor: '#D9D9D9',\n    border: '1px solid #D9D9D9',\n    borderRadius: '20px',\n    textAlign: 'center'\n  };\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"label\", {\n    htmlFor: \"password\"\n  }, label), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"input\", {\n    type: \"password\",\n    id: \"password\",\n    placeholder: \"password\\uB97C \\uC785\\uB825\\uD558\\uC138\\uC694\",\n    name: \"password\",\n    value: value,\n    onChange: onChange,\n    style: LoginSignUpInputStyle\n  })));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InputPwd);\n\n//# sourceURL=webpack://project-c/./components/InputPwd.js?");
+
+/***/ }),
+
+/***/ "./src/loginPage.js":
+/*!**************************!*\
+  !*** ./src/loginPage.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _components_BookStagramTopLogo_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/BookStagramTopLogo.js */ \"./components/BookStagramTopLogo.js\");\n/* harmony import */ var _components_InputId_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/InputId.js */ \"./components/InputId.js\");\n/* harmony import */ var _components_InputPwd_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/InputPwd.js */ \"./components/InputPwd.js\");\n/* harmony import */ var _components_ButtonLogin_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/ButtonLogin.js */ \"./components/ButtonLogin.js\");\n/* harmony import */ var _components_ButtonSignUpWithGoogle_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ButtonSignUpWithGoogle.js */ \"./components/ButtonSignUpWithGoogle.js\");\n/* harmony import */ var _components_ButtonSignUpWithAppleAccount_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ButtonSignUpWithAppleAccount.js */ \"./components/ButtonSignUpWithAppleAccount.js\");\n/* harmony import */ var _components_ButtonSignUp_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ButtonSignUp.js */ \"./components/ButtonSignUp.js\");\n/* harmony import */ var _components_ForgotAccount_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/ForgotAccount.js */ \"./components/ForgotAccount.js\");\n\n\n\n\n\n\n\n\n\nvar loginPage = function loginPage() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_BookStagramTopLogo_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"form\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_InputId_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"p\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"b\", null, \"password\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_InputPwd_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_ButtonLogin_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_ButtonSignUpWithGoogle_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_ButtonSignUpWithAppleAccount_js__WEBPACK_IMPORTED_MODULE_6__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_ButtonSignUp_js__WEBPACK_IMPORTED_MODULE_7__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_ForgotAccount_js__WEBPACK_IMPORTED_MODULE_8__[\"default\"], null)));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loginPage);\n\n//# sourceURL=webpack://project-c/./src/loginPage.js?");
+
+/***/ }),
+
+/***/ "./src/render.js":
+/*!***********************!*\
+  !*** ./src/render.js ***!
+  \***********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _loginPage_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./loginPage.js */ \"./src/loginPage.js\");\n\n\n\nvar root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__.createRoot)(document.getElementById('root'));\nroot.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement(_loginPage_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null));\n\n//# sourceURL=webpack://project-c/./src/render.js?");
+
+/***/ }),
+
 /***/ "./node_modules/react-dom/cjs/react-dom.development.js":
 /*!*************************************************************!*\
   !*** ./node_modules/react-dom/cjs/react-dom.development.js ***!
@@ -78,106 +178,6 @@ eval("/**\r\n * @license React\r\n * scheduler.development.js\r\n *\r\n * Copyri
 
 eval("\r\n\r\nif (false) {} else {\r\n  module.exports = __webpack_require__(/*! ./cjs/scheduler.development.js */ \"./node_modules/scheduler/cjs/scheduler.development.js\");\r\n}\r\n\n\n//# sourceURL=webpack://project-c/./node_modules/scheduler/index.js?");
 
-/***/ }),
-
-/***/ "./components/BookStagramTopLogo.js":
-/*!******************************************!*\
-  !*** ./components/BookStagramTopLogo.js ***!
-  \******************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar BookStagramTopLogo = function BookStagramTopLogo() {\n  var LogoStyle = {\n    fontSize: '30px',\n    height: '10%',\n    display: 'flex',\n    justifyContent: 'center',\n    alignItems: 'center',\n    marginBottom: '50px'\n  };\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", {\n    style: LogoStyle\n  }, \"BOOK STAGRAM\");\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BookStagramTopLogo);\n\n//# sourceURL=webpack://project-c/./components/BookStagramTopLogo.js?");
-
-/***/ }),
-
-/***/ "./components/ButtonLogin.js":
-/*!***********************************!*\
-  !*** ./components/ButtonLogin.js ***!
-  \***********************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar ButtonLogin = function ButtonLogin() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"button\", {\n    type: \"submit\"\n  }, \"login\"));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ButtonLogin);\n\n//# sourceURL=webpack://project-c/./components/ButtonLogin.js?");
-
-/***/ }),
-
-/***/ "./components/ButtonSignUp.js":
-/*!************************************!*\
-  !*** ./components/ButtonSignUp.js ***!
-  \************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar ButtonSignUp = function ButtonSignUp() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"button\", null, \"sign up\"));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ButtonSignUp);\n\n//# sourceURL=webpack://project-c/./components/ButtonSignUp.js?");
-
-/***/ }),
-
-/***/ "./components/ButtonSignUpWithAppleAccount.js":
-/*!****************************************************!*\
-  !*** ./components/ButtonSignUpWithAppleAccount.js ***!
-  \****************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar ButtonSignUpWithAppleAccount = function ButtonSignUpWithAppleAccount() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"button\", null, \"sign up with apple account\"));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ButtonSignUpWithAppleAccount);\n\n//# sourceURL=webpack://project-c/./components/ButtonSignUpWithAppleAccount.js?");
-
-/***/ }),
-
-/***/ "./components/ButtonSignUpWithGoogle.js":
-/*!**********************************************!*\
-  !*** ./components/ButtonSignUpWithGoogle.js ***!
-  \**********************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar ButtonSignUpWithGoogle = function ButtonSignUpWithGoogle() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"button\", null, \"sign up with google\"));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ButtonSignUpWithGoogle);\n\n//# sourceURL=webpack://project-c/./components/ButtonSignUpWithGoogle.js?");
-
-/***/ }),
-
-/***/ "./components/ForgotAccount.js":
-/*!*************************************!*\
-  !*** ./components/ForgotAccount.js ***!
-  \*************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n\nvar ForgotAccount = function ForgotAccount() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"a\", {\n    href: \"\"\n  }, \"forgot account?\"));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ForgotAccount);\n\n//# sourceURL=webpack://project-c/./components/ForgotAccount.js?");
-
-/***/ }),
-
-/***/ "./components/InputId.js":
-/*!*******************************!*\
-  !*** ./components/InputId.js ***!
-  \*******************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n// ! input 컴포넌트 조립 시 <form></form> 안에 넣어주는 거 잊지말자!\n\nvar InputId = function InputId() {\n  var LoginSignUpInputStyle = {\n    width: '100%',\n    height: '54px',\n    backgroundColor: '#D9D9D9',\n    border: '1px solid #D9D9D9',\n    borderRadius: '20px',\n    textAlign: 'center'\n  };\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"p\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"b\", null, \"ID\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", {\n    type: \"text\",\n    placeholder: \"ID\\uB97C \\uC785\\uB825\\uD558\\uC138\\uC694\",\n    name: \"id\",\n    style: LoginSignUpInputStyle\n  })));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InputId);\n\n//# sourceURL=webpack://project-c/./components/InputId.js?");
-
-/***/ }),
-
-/***/ "./components/InputPwd.js":
-/*!********************************!*\
-  !*** ./components/InputPwd.js ***!
-  \********************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n// ! input 컴포넌트 조립 시 <form></form> 안에 넣어주는 거 잊지말자!\n\nvar InputPwd = function InputPwd(_ref) {\n  var label = _ref.label,\n    value = _ref.value,\n    onChange = _ref.onChange;\n  var LoginSignUpInputStyle = {\n    width: '100%',\n    height: '54px',\n    backgroundColor: '#D9D9D9',\n    border: '1px solid #D9D9D9',\n    borderRadius: '20px',\n    textAlign: 'center'\n  };\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"label\", {\n    htmlFor: \"password\"\n  }, label), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"input\", {\n    type: \"password\",\n    id: \"password\",\n    placeholder: \"password\\uB97C \\uC785\\uB825\\uD558\\uC138\\uC694\",\n    name: \"password\",\n    value: value,\n    onChange: onChange,\n    style: LoginSignUpInputStyle\n  })));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InputPwd);\n\n//# sourceURL=webpack://project-c/./components/InputPwd.js?");
-
-/***/ }),
-
-/***/ "./src/loginPage.js":
-/*!**************************!*\
-  !*** ./src/loginPage.js ***!
-  \**************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _components_BookStagramTopLogo_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/BookStagramTopLogo.js */ \"./components/BookStagramTopLogo.js\");\n/* harmony import */ var _components_InputId_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/InputId.js */ \"./components/InputId.js\");\n/* harmony import */ var _components_InputPwd_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/InputPwd.js */ \"./components/InputPwd.js\");\n/* harmony import */ var _components_ButtonLogin_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/ButtonLogin.js */ \"./components/ButtonLogin.js\");\n/* harmony import */ var _components_ButtonSignUpWithGoogle_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ButtonSignUpWithGoogle.js */ \"./components/ButtonSignUpWithGoogle.js\");\n/* harmony import */ var _components_ButtonSignUpWithAppleAccount_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ButtonSignUpWithAppleAccount.js */ \"./components/ButtonSignUpWithAppleAccount.js\");\n/* harmony import */ var _components_ButtonSignUp_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ButtonSignUp.js */ \"./components/ButtonSignUp.js\");\n/* harmony import */ var _components_ForgotAccount_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/ForgotAccount.js */ \"./components/ForgotAccount.js\");\n\n\n\n\n\n\n\n\n\nvar loginPage = function loginPage() {\n  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_BookStagramTopLogo_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"form\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_InputId_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"p\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"b\", null, \"password\")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_InputPwd_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"], null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_ButtonLogin_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(\"div\", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_ButtonSignUpWithGoogle_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_ButtonSignUpWithAppleAccount_js__WEBPACK_IMPORTED_MODULE_6__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_ButtonSignUp_js__WEBPACK_IMPORTED_MODULE_7__[\"default\"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_ForgotAccount_js__WEBPACK_IMPORTED_MODULE_8__[\"default\"], null)));\n};\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (loginPage);\n\n//# sourceURL=webpack://project-c/./src/loginPage.js?");
-
-/***/ }),
-
-/***/ "./src/render.js":
-/*!***********************!*\
-  !*** ./src/render.js ***!
-  \***********************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var _loginPage_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./loginPage.js */ \"./src/loginPage.js\");\n\n\n\nvar root = (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__.createRoot)(document.getElementById('root'));\nroot.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1__.createElement(_loginPage_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"], null));\n\n//# sourceURL=webpack://project-c/./src/render.js?");
-
 /***/ })
 
 /******/ 	});
@@ -210,6 +210,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
