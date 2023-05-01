@@ -2,4 +2,6 @@ import ReactDOM from "react-dom";
 import React from "react";
 // import LoginPage from "./loginPage";
 
-ReactDOM.render(<h1>hello</h1>,document.getElementById('root'));
+const app = React.createElement("div",null,"hello");
+const root = document.getElementById("root");
+ReactDOM.render(app,root);
