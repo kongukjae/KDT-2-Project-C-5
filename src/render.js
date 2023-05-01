@@ -1,5 +1,8 @@
-import {render} from "react-dom/client";
+import {createRoot} from "react-dom/client";
 import React from "react";
-import LoginPage from "./loginPage";
+import LoginPage from "./loginPage.js";
 
-render(<LoginPage />,document.getElementById('root'));
+
+const root = createRoot(document.getElementById('root'))
+
+root.render(<LoginPage />);
