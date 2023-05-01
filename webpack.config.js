@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 export default {
   mode: 'development',
-  entry: './src/render.js',
+  entry: './src/main.js',
   output: {
     path: `${__dirname}/dist`,
     filename: 'main.js',
@@ -31,6 +31,19 @@ export default {
           
         },
       },
+<<<<<<< HEAD
+=======
+      {
+        test: /\.m?js$/,
+        type: "javascript/auto"
+      },
+      {
+        test: /\.m?js$/,
+        resolve: {
+          fullySpecified: false
+        }
+      },
+>>>>>>> c59f030d (change)
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
