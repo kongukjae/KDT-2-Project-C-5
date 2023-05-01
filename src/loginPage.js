@@ -1,12 +1,12 @@
 import React from 'react';
-import BookStagramTopLogo from '../components/BookStagramTopLogo';
-import InputId from '../components/InputId';
-import InputPwd from '../components/InputPwd';
-import ButtonLogin from '../components/ButtonLogin';
-import ButtonSignUpWithGoogle from '../components/ButtonSignUpWithGoogle';
-import ButtonSignUpWithAppleAccount from '../components/ButtonSignUpWithAppleAccount';
-import ButtonSignUp from '../components/ButtonSignUp';
-import ForgotAccount from '../components/ForgotAccount';
+import BookStagramTopLogo from '../components/BookStagramTopLogo.js';
+import InputId from '../components/InputId.js';
+import InputPwd from '../components/InputPwd.js';
+import ButtonLogin from '../components/ButtonLogin.js';
+import ButtonSignUpWithGoogle from '../components/ButtonSignUpWithGoogle.js';
+import ButtonSignUpWithAppleAccount from '../components/ButtonSignUpWithAppleAccount.js';
+import ButtonSignUp from '../components/ButtonSignUp.js';
+import ForgotAccount from '../components/ForgotAccount.js';
 
 const loginPage = () => {
   return (
