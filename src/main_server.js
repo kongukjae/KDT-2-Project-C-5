@@ -17,6 +17,7 @@ const server = http.createServer(function (req, res) {
 });
 
     console.log(req.url);
+    console.log(req.method);
     if(req.url === "/" && req.method === "GET") {
         const html=fs.readFileSync("../dist/index.html");
         res.writeHead(200,{"Content-Type":"text/html"})
@@ -35,4 +36,9 @@ const server = http.createServer(function (req, res) {
 
 server.listen(3000,()=>{
     console.log("서버 열림");
+<<<<<<< HEAD
 })
+=======
+
+})
+>>>>>>> bfed6057 (req.method 확인 중)
