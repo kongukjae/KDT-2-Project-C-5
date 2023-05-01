@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 node_modules/
 
 #node_modules 파일 절대 깃 리모트에 푸시하지 말것
+=======
+node_modules/
+>>>>>>> f2cc5161 (added .gitignore)
