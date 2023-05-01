@@ -14,11 +14,12 @@ import BookReviewFeed from "./BookReviewFeed";
 import FollowerFollowing from './FollowerFollowing';
 import AlarmSetting from "../components/AlarmSetting";
 import BlockedUser from "./BlockedUser";
+import AccountSetting from "./AccountSetting";
 
 const App = () => {
   return (
     <div>
-      <BlockedUser/>
+      <AccountSetting/>
     </div>
   );
 };
