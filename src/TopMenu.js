@@ -1,7 +1,9 @@
 import React from "react";
+import { Link, Route, Routes } from "react-router-dom";
 import BookStagramTopLogo from "../components/BookStagramTopLogo";
 import HambergerMenu from "../components/HambergerMenu";
 import Notification from "../components/NotificationTab";
+
 const TopMenu = () => {
   const menuItems = [
     { label: "계정설정", onClick: () => alert("페이지전환") },
@@ -15,7 +17,7 @@ const TopMenu = () => {
 
   return (
     <div style={{ display: "flex" }}>
-      <Notification />
+      <div>알림</div>
       <BookStagramTopLogo />
       <HambergerMenu items={menuItems} />
     </div>

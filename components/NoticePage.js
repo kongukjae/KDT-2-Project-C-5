@@ -1,17 +1,9 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import React from "react";
-
-function App() {
+function NoticePage() {
   return (
-    <div className=" App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<TestHome />} />
-          <Route path="test" element={<Test />} />
-        </Routes>
-      </BrowserRouter>
+    <div>
+      <h1>Home</h1>
     </div>
   );
 }
 
-export default APP;
+export default NoticePage;
