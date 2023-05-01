@@ -23,9 +23,8 @@ const server = http.createServer(function (req, res) {
         res.writeHead(200,{"Content-Type":"text/html"})
         res.end(html);     
     }
-    // res.writeHead(200,{"Content-Type":"text/html"})
-    // res.end(html);
-    if(res.url==="/main.js" && req.method==="GET"){
+    
+    if(req.url==="/main.js" && req.method==="GET"){
         console.log("main.js if문 실행");
         const js=fs.readFileSync("../dist/main.js");
         res.writeHead(200,{"Content-Type":"text/javascript"});
