@@ -7,8 +7,6 @@
         "@babel/preset-env",
         "@babel/preset-react"
     ]
-   
-
 }
 
 >>>>>>> 6bfe0ccf (fixed webpack problem)
