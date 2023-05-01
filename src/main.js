@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createRoot } from 'react-dom/client';
-import StartPage from './startScreen';
-import Login from './login';
-import LoginPage from './loginPage';
+import StartPage from './startScreen.js';
+import Login from './login.js';
+import LoginPage from './loginPage.js';
 // import SignUpPage from './signUp';
 // import Router from '../components/router';
 // import MainFeed from './mainFeed';
