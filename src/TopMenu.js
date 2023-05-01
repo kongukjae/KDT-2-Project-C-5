@@ -25,13 +25,13 @@ const Page3 = () => <h1>로그아웃</h1>;
 
 const TopMenu = () => {
   const menuItems = [
-    { label: "계정설정" },
-    { label: "알림설정" },
-    { label: "관심친구" },
-    { label: "태그설정" },
-    { label: "차단목록" },
-    { label: "구매하기" },
-    { label: "로그아웃" },
+    { label: "계정설정", path: "/accountsetting" },
+    { label: "알림설정", path: "/alarmsetting" },
+    { label: "관심친구", path: "/followerfollowing" },
+    { label: "태그설정", path: "/tagsetting" },
+    { label: "차단목록", path: "/blockedusers" },
+    { label: "구매하기", path: "/purchase" },
+    { label: "로그아웃", path: "/logout" },
   ];
 
   return (
