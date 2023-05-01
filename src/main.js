@@ -11,15 +11,14 @@ import NavBar from "../components/NavBar";
 import "./index.css";
 import ReviewPage from "./ReviewPage";
 import BookReviewFeed from "./BookReviewFeed";
-import TopMenu from "./TopMenu";
-import FollowerFollowing from '../components/FollowerFollowing';
-import AlarmPicture from "../components/AlarmOnPicture";
-import AlarmSetting from "./AlarmSetting";
+import FollowerFollowing from './FollowerFollowing';
+import AlarmSetting from "../components/AlarmSetting";
+import BlockedList from "./BlockedList";
 
 const App = () => {
   return (
     <div>
-      <FollowerFollowing/>
+      <BlockedList/>
     </div>
   );
 };

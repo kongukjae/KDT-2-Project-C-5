@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import BookStagramTopLogo from './BookStagramTopLogo';
-import FollowerList from './FollowerList';
-import FollowingList from './FollowingList';
+import TopMenu from './TopMenu';
+import FollowerList from '../components/FollowerList';
+import FollowingList from '../components/FollowingList';
 
 const tapStyle = {
   width: '390px',
@@ -43,7 +43,7 @@ const FollowerFollowing = () => {
 
   return (
     <div>
-      <header><BookStagramTopLogo/></header>
+      <header><TopMenu/></header>
       <div style={tapStyle}>
         <div style={textStyle('follower')} onClick={onClickFollower}><b>구독인</b></div>
         <div style={textStyle('following')} onClick={onClickFollowing}><b>구독자</b></div>
