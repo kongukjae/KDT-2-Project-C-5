@@ -33,7 +33,7 @@ const loginPage = () => {
         if (!response.ok) {
           throw new Error('Login failed');
         }
-        
+        // 서버 응답 데이터를 JSON 형태로 파싱하여 변환
         return response.json();
       })
       .then(data => {
