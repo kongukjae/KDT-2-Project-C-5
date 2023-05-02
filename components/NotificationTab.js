@@ -34,11 +34,7 @@ import NoticePage from "./NoticePage";
 // }
 
 // export default NotificationTab;
-<<<<<<< HEAD
-function NotificationTab() {
-=======
 function Notification() {
->>>>>>> origin/issue18-2
   return (
     <Router>
       <Routes>
@@ -48,8 +44,5 @@ function Notification() {
     </Router>
   );
 }
-<<<<<<< HEAD
-export default NotificationTab;
-=======
+
 export default Notification;
->>>>>>> origin/issue18-2
