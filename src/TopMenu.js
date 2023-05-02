@@ -35,22 +35,29 @@ const TopMenu = () => {
   ];
 
   return (
-    <Router>
+    <div>
+      {/* <Router>
+        <div style={headerStyle}>
+          <div>📃</div>
+          <BookStagramTopLogo />
+          <HambergerMenu items={menuItems} />
+        </div>
+        <Routes>
+          <Route path="/accountsetting" element={<AccountSetting/>}/>
+          <Route path="/alarmsetting" element={<AlarmSetting/>}/>
+          <Route path="/followerfollowing" element={<FollowerFollowing/>}/>
+          <Route path="/tagsetting" element={<Page1/>}/>
+          <Route path="/blockedusers" element={<BlockedUser/>}/>
+          <Route path="/purchase" element={<Page2/>}/>
+          <Route path="/logout" element={<Page3/>}/>
+        </Routes>
+      </Router> */}
       <div style={headerStyle}>
-        <div>📃</div>
-        <BookStagramTopLogo />
-        <HambergerMenu items={menuItems} />
-      </div>
-      <Routes>
-        <Route path="/accountsetting" element={<AccountSetting/>}/>
-        <Route path="/alarmsetting" element={<AlarmSetting/>}/>
-        <Route path="/followerfollowing" element={<FollowerFollowing/>}/>
-        <Route path="/tagsetting" element={<Page1/>}/>
-        <Route path="/blockedusers" element={<BlockedUser/>}/>
-        <Route path="/purchase" element={<Page2/>}/>
-        <Route path="/logout" element={<Page3/>}/>
-      </Routes>
-    </Router>
+          <div>📃</div>
+          <BookStagramTopLogo />
+          <HambergerMenu items={menuItems} />
+        </div>
+    </div>
     
   );
 };
