@@ -36,7 +36,7 @@ const TopMenu = () => {
 
   return (
     <div>
-      <Router>
+      {/* <Router>
         <div style={headerStyle}>
           <div>📃</div>
           <BookStagramTopLogo />
@@ -51,7 +51,12 @@ const TopMenu = () => {
           <Route path="/purchase" element={<Page2/>}/>
           <Route path="/logout" element={<Page3/>}/>
         </Routes>
-      </Router>
+      </Router> */}
+      <div style={headerStyle}>
+          <div>📃</div>
+          <BookStagramTopLogo />
+          <HambergerMenu items={menuItems} />
+        </div>
     </div>
     
   );

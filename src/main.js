@@ -20,7 +20,7 @@ import TopMenu from "./TopMenu";
 const App = () => {
   return (
     <div>
-      <LoginPage/>
+      <NavBar/>
     </div>
   );
 };
