@@ -11,11 +11,6 @@ const headerStyle = {
 const mainFeed = () => {
   return (
     <div>
-      <header style={headerStyle}>
-        <AlarmForm/>
-        <BookStagramTopLogo/>
-        <Hamburger/>
-      </header>
 
       {/* main 컨텐츠 부분은 NavBar 컴포넌트에서 담당한다. */}
 
