@@ -23,12 +23,13 @@ const loginPage = () => {
   return (
     <div>
       <BookStagramTopLogo/>
+      <form method="POST" onSubmit={handleSubmit}>
       <div>
-        <form onSubmit={handleSubmit}>
+        
           <InputId/>
           <p><b>password</b></p>
           <InputPwd/>
-        </form>
+        
       </div>
       <ButtonLogin/>
       
@@ -39,6 +40,7 @@ const loginPage = () => {
         <ButtonSignUp/>
         <ForgotAccount/>
       </div>
+      </form>
     </div>
   );
 };
