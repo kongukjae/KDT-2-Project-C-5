@@ -18,7 +18,10 @@ const loginPage = () => {
     event.preventDefault();
     
     const requestBody = { id, pwd };
-    
+    console.log(event.target);
+    const form = event.target;
+    const formData = new FormData(form);
+    console.log(formData);
     fetch('/login', {
       // HTTP 요청 메서드 지정
       method: 'POST',
