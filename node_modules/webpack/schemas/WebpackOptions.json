@@ -3162,6 +3162,10 @@
         "hotUpdateMainFilename": {
           "$ref": "#/definitions/HotUpdateMainFilename"
         },
+        "ignoreBrowserWarnings": {
+          "description": "Ignore warnings in the browser.",
+          "type": "boolean"
+        },
         "iife": {
           "$ref": "#/definitions/Iife"
         },
@@ -3363,6 +3367,10 @@
         },
         "hotUpdateMainFilename": {
           "$ref": "#/definitions/HotUpdateMainFilename"
+        },
+        "ignoreBrowserWarnings": {
+          "description": "Ignore warnings in the browser.",
+          "type": "boolean"
         },
         "iife": {
           "$ref": "#/definitions/Iife"
@@ -4713,6 +4721,10 @@
           "description": "Add errors count.",
           "type": "boolean"
         },
+        "errorsSpace": {
+          "description": "Space to display errors (value is in number of lines).",
+          "type": "number"
+        },
         "exclude": {
           "description": "Please use excludeModules instead.",
           "cli": {
@@ -4945,6 +4957,10 @@
               "$ref": "#/definitions/WarningFilterTypes"
             }
           ]
+        },
+        "warningsSpace": {
+          "description": "Space to display warnings (value is in number of lines).",
+          "type": "number"
         }
       }
     },
