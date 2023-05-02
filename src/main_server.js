@@ -22,7 +22,7 @@ const server=http.createServer(function(req,res){
     
     if(req.url==="/main.js" && req.method==="GET"){
         console.log("main.js if문 실행");
-        const js=fs.readFileSync("../dist/main.js");
+        const js=fs.readFileSync(path.join(__rootname,"dist","main.js"));
         res.writeHead(200,{"Content-Type":"text/javascript"});
         res.end(js);
     }
