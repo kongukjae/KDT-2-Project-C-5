@@ -3,6 +3,7 @@ import fs from "fs";
 //import formidable from 'formidable';
 import path from "path";
 import url, { fileURLToPath } from "url";
+import formidable from "formidable";
 
 
 // const html=fs.readFileSync("../dist/index.html");
@@ -28,7 +29,7 @@ const server=http.createServer(function(req,res){
     }
     
     if(req.method==="POST"){
-        if(request.url === "/login"){
+        if(req.url === "/login"){
             //기본 POST타입 HTML 요청의 body 데이터 가져올때의 구문.
             // request.on('data', loginForm=>{
             //     let formdata = loginForm.toString();
