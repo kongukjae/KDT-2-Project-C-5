@@ -4,7 +4,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(63, 133, 212);
+  background-color: rgb(3, 63, 21);
 
   display: flex;
 }
@@ -122,4 +122,41 @@ li {
   margin-right: 5px;
   display: flex;
   justify-content: space-around;
+}
+
+/* 라뷰 페이지 */
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.form-group button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.form-group button[type="submit"]:hover {
+  background-color: #0069d9;
 }
