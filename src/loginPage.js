@@ -18,10 +18,11 @@ const loginPage = () => {
     event.preventDefault();
     
     const requestBody = { id, pwd };
-    console.log(event.target);
-    const form = event.target;
-    const formData = new FormData(form);
-    console.log(formData);
+    console.log(requestBody);
+    
+    // const form = event.target;
+    // const formData = new FormData(form);
+    // console.log(formData);
     fetch('/login', {
       // HTTP 요청 메서드 지정
       method: 'POST',
@@ -41,6 +42,7 @@ const loginPage = () => {
       })
       .then(data => {
         // 로그인 성공 처리
+        console.log('login succeeded', data);
       })
       .catch(error => {
         console.error(error);
@@ -53,9 +55,9 @@ const loginPage = () => {
       <BookStagramTopLogo/>
       <div>
         <form onSubmit={handleLogin}>
-          <InputId/>
+          <InputId value={id} onChange={(e)=> setId(e.target.value)}/>
           <p><b>password</b></p>
-          <InputPwd/>
+          <InputPwd value={pwd} onChange={(e)=> setPwd(e.target.value)}/>
           <ButtonLogin/>
         </form>
       </div>
