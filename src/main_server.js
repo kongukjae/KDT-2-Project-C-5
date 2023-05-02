@@ -1,16 +1,21 @@
-import http from "http"
-import fs from "fs"
-import formidable from 'formidable';
+import http from "http";
+import fs from "fs";
+//import formidable from 'formidable';
+import path from "path";
+import url, { fileURLToPath } from "url";
 
 
 // const html=fs.readFileSync("../dist/index.html");
 // const js=fs.readFileSync("../dist/main.js")
+const __srcname = path.dirname(fileURLToPath(import.meta.url));
+const __rootname = path.join(__srcname, "..");
+console.log(__rootname);
 const server=http.createServer(function(req,res){
 
     console.log(req.url);
     console.log(req.method);
     if(req.url === "/" && req.method === "GET") {
-        const html=fs.readFileSync("../dist/index.html");
+        const html=fs.readFileSync(path.join(__rootname,"dist","index.html"));
         res.writeHead(200,{"Content-Type":"text/html"})
         res.end(html);     
     }
