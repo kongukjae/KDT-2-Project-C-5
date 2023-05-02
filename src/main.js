@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { createRoot } from 'react-dom/client';
@@ -21,6 +22,8 @@ const App = () => {
 =======
 =======
 >>>>>>> 70295106 (NavBer.js <Route path=/page3 element={<ReviewPage />} />)
+=======
+>>>>>>> 438fa23c (main.js충돌)
 import React from "react";
 import ReactDOM from "react-dom";
 import { createRoot } from "react-dom/client";
@@ -46,7 +49,10 @@ import Notification from "../components/NotificationTab";
 >>>>>>> 1b802b03 (알림-> 알림페이지 전환하기)
 =======
 import NotificationTab from "../components/NotificationTab";
+<<<<<<< HEAD
 >>>>>>> 278ad7d4 (main.js <NotificationTab /> 랜더가 안됨)
+=======
+>>>>>>> 438fa23c (main.js충돌)
 
 const App = () => {
 <<<<<<< HEAD
