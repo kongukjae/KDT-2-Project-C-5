@@ -1,6 +1,6 @@
 {
   "mariadb" : {
-    "host" :"192.168.0.139",
+    "host" :"192.168.100.67",
     "user": "bookstargram",
     "password":"qwe123",
     "port":"3306",
