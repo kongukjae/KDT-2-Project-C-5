@@ -25,19 +25,20 @@ const App = () => {
 =======
 >>>>>>> 438fa23c (main.js충돌)
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import { createRoot } from "react-dom/client";
-import StartPage from "./startScreen";
-import Login from "./login";
-import LoginPage from "./loginPage";
-import SignUpPage from "./signUp";
-import Router from "../components/router";
-import MainFeed from "./mainFeed";
-import NavBar from "../components/NavBar";
+// import StartPage from "./startScreen";
+// import Login from "./login";
+// import LoginPage from "./loginPage";
+// import SignUpPage from "./signUp";
+// import Router from "../components/router";
+// import MainFeed from "./mainFeed";
+// import NavBar from "../components/NavBar";
 import "./index.css";
-import ReviewPage from "./ReviewPage";
-import BookReviewFeed from "./BookReviewFeed";
+// import ReviewPage from "./ReviewPage";
+// import BookReviewFeed from "./BookReviewFeed";
 import TopMenu from "./TopMenu";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -53,6 +54,9 @@ import NotificationTab from "../components/NotificationTab";
 >>>>>>> 278ad7d4 (main.js <NotificationTab /> 랜더가 안됨)
 =======
 >>>>>>> 438fa23c (main.js충돌)
+=======
+// import NotificationTab from "../components/NotificationTab";
+>>>>>>> ea2640f5 (main작업환경 통합 완료)
 
 const App = () => {
 <<<<<<< HEAD
