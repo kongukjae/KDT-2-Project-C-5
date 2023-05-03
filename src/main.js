@@ -17,12 +17,12 @@ import TopMenu from "./TopMenu";
 
 import React from "react";
 import { createRoot } from "react-dom/client";
-// import Test from "../components/Test";
+import Test from "../components/Test";
 
 const App = () => {
   return (
     <div>
-      <TopMenu />
+      <Test />
     </div>
   );
 };
