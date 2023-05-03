@@ -16,7 +16,7 @@ const rootPath = path.join(currentPath, "\\..")
  * @param {*} query DB로 보낼 쿼리문, 문자열.
  * @returns 응답 내용을 담은 Promise 객체. `.then(res=>{})`을 써서 사용 위치에서 해당 내용을 다루면 되나, 지역변수로 끝나기에 응답내용을 다루려면 해당 res=>{} 안에서 작성해야한다.
  */
-export default async function bookstargramConnect(query) {
+export default async function sendQuery(query) {
   let res;
   // dist의 SQL에서 mariadb용 pool 세팅을 가져옴.
   const poolSet = JSON.parse(fs.readFileSync(path.join(rootPath,"../dist/SQL.json"), "utf8"));
