@@ -9,7 +9,7 @@ import "./index.css";
 const App = () => {
   return (
     
-    
+    <NavBar></NavBar>
 
   );
 };
