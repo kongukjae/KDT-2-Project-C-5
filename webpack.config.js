@@ -15,9 +15,14 @@ export default {
     // filename: 'bundle.js',
   },
   resolve:{
+<<<<<<< HEAD
     extensions: ['.js', '.jsx'],
   },
   
+=======
+    extensions:['.js','.jsx']
+  },
+>>>>>>> 9bdef277 (fixed and build successed)
   module: {
     rules: [
       {
@@ -28,9 +33,7 @@ export default {
           options: {
             babelrc: true,
           },
-          resolve:{
-            extensions:['.js','.jsx']
-          }
+          
         },
       },
       {
