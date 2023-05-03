@@ -6,7 +6,7 @@ import LoginPage from './loginPage';
 // import SignUpPage from './signUp';
 // import Router from '../components/router';
 // import MainFeed from './mainFeed';
-// import NavBar from '../components/NavBar';
+import NavBar from '../components/NavBar';
 // import MainFeedReviewForm from '../components/mainFeedReviewForm';
 // import ButtonCancle from '../components/ButtonCancle';
 // import FollowerFollowing from '../components/FollowerFollowing';
