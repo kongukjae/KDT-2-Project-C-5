@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import MainFeedContents from "./MainFeedContents";
 import ReviewPage from "../src/ReviewPage";
-import TopMenu from "../src/TopMenu";
+import TopMenu from "./TopMenu";
 
 const navBarStyle = {
   display: "flex",

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TopMenu from '../src/TopMenu';
+import TopMenu from './TopMenu';
 import ImgUserPicture from './ImgUserPicture';
 import UserName from './UserName';
 import AlarmOnPicture from './AlarmOnPicture';
