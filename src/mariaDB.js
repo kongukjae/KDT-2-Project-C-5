@@ -7,15 +7,15 @@ async function main() {
       host: "localhost",
       user: "root",
       password: "xxia1215@@",
-      database: "login",
+      database: "bookstagram",
     });
-    const rows = await conn.query("SELECT * FROM user");
+    const rows = await conn.query("SELECT * FROM userinfo");
     console.log(rows);
   } catch (err) {
     throw err;
   } finally {
     if (conn) {
-      conn.end("연결성공");
+      conn.end();
     }
   }
 }
