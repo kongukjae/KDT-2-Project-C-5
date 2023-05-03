@@ -19,6 +19,11 @@ const server=http.createServer(function(req,res){
         res.writeHead(200,{"Content-Type":"text/javascript"});
         res.end(js);
     }
+    
+    if(req.url==="/src/img/star.png"&&req.method==="GET"){
+        const starImg=fs.readFileSync("./img/star.png");
+        res.end(starImg);
+    }
 
 })
 
