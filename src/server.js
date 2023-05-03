@@ -47,14 +47,14 @@ const server = http.createServer(function (req, res) {
           console.error(err);
           return;
         }
-        const username = fields.username;
+        const id = fields.id;
         const password = fields.password;
 
-        console.log(`username: ${username}, password: ${password}`);
+        console.log(`id: ${id}, password: ${password}`);
 
         // DB에서 해당 사용자의 정보를 조회하여 비밀번호를 비교하고 로그인 여부를 결정한다.
         connection.query(
-          `SELECT * FROM users WHERE username='${username}'`,
+          `SELECT * FROM users WHERE id='${id}'`,
           (error, results) => {
             if (error) {
               console.error(error);
