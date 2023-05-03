@@ -31,8 +31,6 @@ export default {
           
         },
       },
-<<<<<<< HEAD
-=======
       {
         test: /\.m?js$/,
         type: "javascript/auto"
@@ -43,7 +41,6 @@ export default {
           fullySpecified: false
         }
       },
->>>>>>> c59f030d (change)
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
