@@ -13,5 +13,13 @@ connection.connect((err) => {
     console.error("error connecting: " + err.stack);
     return;
   }
-  console.log("connected as id " + connection.threadId);
+  console.log("연결 성공");
+});
+
+connection.query("SELECT * FROM user", (error, results, fields) => {
+  if (error) {
+    console.error("데이터베이스 조회 실패: " + error.stack);
+    return;
+  }
+  console.log(results);
 });
