@@ -14,7 +14,10 @@ import './index.css';
 
 
 const App = () => {
-  return <LoginPage/>;
+  return (
+    <div>
+      <NavBar/>
+    </div>
+  );
 };
-
-createRoot(document.getElementById('root')).render(<App />);
+createRoot(document.getElementById("root")).render(<App />);
