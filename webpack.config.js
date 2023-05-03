@@ -16,11 +16,8 @@ export default {
     // filename: 'bundle.js',
   },
   resolve:{
-<<<<<<< HEAD
-    extensions: ['.js', '.jsx'],
-=======
+
     extensions:['.js','.jsx']
->>>>>>> 0bbcf6781f68dc5a7e1be06cf83286d30776fc68
   },
   module: {
     rules: [
