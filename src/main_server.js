@@ -28,7 +28,8 @@ const server = http.createServer(function (req, res) {
             req.on("data", chunk=>{
                 const data = JSON.parse(chunk);
                 console.log(data);
-                sendQuery(`SELECT * FROM userinfo WHERE \`user-id\`=\`${data.id}\``)
+                console.log(typeof data.id)
+                sendQuery(`SELECT * FROM \`bookstargram\`.\`userinfo\` WHERE \`user-id\`= '${data.id}'`)
                 .then(result=>{
                     if(result){
                         if(result[0][`user-pwd`] === data.pwd){
