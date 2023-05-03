@@ -15,9 +15,12 @@ export default {
     // path: path.resolve(__dirname, 'dist'),
     // filename: 'bundle.js',
   },
+<<<<<<< HEAD
   resolve:{
     extensions: ['.js', '.jsx'],
   },
+=======
+>>>>>>> 31cbcd77 (asd)
   module: {
     rules: [
       {
@@ -31,6 +34,7 @@ export default {
           
         },
       },
+      
       {
         test: /\.m?js$/,
         type: "javascript/auto"

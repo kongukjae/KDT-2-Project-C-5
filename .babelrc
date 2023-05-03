@@ -4,6 +4,12 @@
     "presets": [
         "@babel/preset-env",
         "@babel/preset-react"
+<<<<<<< HEAD
     ]
+=======
+    ],
+   
+
+>>>>>>> 31cbcd77 (asd)
 }
 
