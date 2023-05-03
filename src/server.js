@@ -60,45 +60,50 @@ const server = http.createServer(function (req, res) {
         //3.
         const { "user-id": id, "user-pwd": password } = fields;
         console.log(`id: ${id}, password: ${password}`);
-
-        // DB에서 해당 사용자의 정보를 조회하여 비밀번호를 비교하고 로그인 여부를 결정한다.
-        connection.query(
-          `SELECT * FROM usersinfo WHERE user-id='${id}'`,
-          (error, results) => {
-            if (error) {
-              console.error(error);
-              res.statusCode = 500;
-              res.end("Internal Server Error");
-              return;
-            }
-
-            if (results.length === 0) {
-              // 사용자 정보가 없는 경우
-              console.log("User not found");
-              res.statusCode = 401;
-              res.end("Unauthorized");
-              return;
-            }
-
-            // 사용자 정보가 있는 경우, 비밀번호를 비교하여 로그인 여부를 결정한다.
-            const user = results[0];
-            if (user.password !== password) {
-              console.log("Invalid password");
-              res.statusCode = 401;
-              res.end("Unauthorized");
-              return;
-            }
-
-            // 로그인 성공
-            console.log("Login success");
-            res.statusCode = 200;
-            res.end("Login success");
-          }
-        );
       });
     }
   }
 });
+
+// DB에서 해당 사용자의 정보를 조회하여 비밀번호를 비교하고 로그인 여부를 결정한다.
+//         connection.query(
+//           `SELECT * FROM usersinfo WHERE user-id='${id}'`,
+//           (error, results) => {
+//             if (error) {
+//               console.error(error);
+//               res.statusCode = 500;
+//               res.end("Internal Server Error");
+//               return;
+//             }
+
+//             if (results.length === 0) {
+//               // 사용자 정보가 없는 경우
+//               console.log("User not found");
+//               res.statusCode = 401;
+//               res.end("Unauthorized");
+//               return;
+//             }
+
+//             // 사용자 정보가 있는 경우, 비밀번호를 비교하여 로그인 여부를 결정한다.
+//             const user = results[0];
+//             if (user.password !== password) {
+//               console.log("Invalid password");
+//               res.statusCode = 401;
+//               res.end("Unauthorized");
+//               return;
+//             }
+
+//             // 로그인 성공
+
+//             console.log("Login success");
+//             res.statusCode = 200;
+//             res.end("Login success");
+//           }
+//         );
+//       });
+//     }
+//   }
+// });
 
 server.listen(3000, () => {
   console.log("서버 열림");
