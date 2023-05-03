@@ -45,7 +45,7 @@ const loginPage = () => {
         console.log('login succeeded', data);
       })
       .catch(error => {
-        console.error(error);
+        console.error('error!!!', error);
         // 로그인 실패 처리
       });
   };
