@@ -1,6 +1,6 @@
 import http from "http";
 import fs from "fs";
-//import formidable from 'formidable';
+import formidable from "formidable";
 import path from "path";
 import url, { fileURLToPath } from "url";
 
@@ -37,6 +37,7 @@ const server = http.createServer(function (req, res) {
       // parse할때 파싱할 request와 err, fields를 콜백함수 매개변수로 두고 콜백에서 다룰 수 있게 해준다.
       // err - 에러가 났을때 해당 Error가 담기는 매개변수
       // fields - req, request의 payload, body를 확인하고 객체로 변환하여 매개변수 field에 저장한다.
+
       formidable({ multiples: true }).parse(req, (err, fields) => {
         if (err) {
           console.error(err, err);
