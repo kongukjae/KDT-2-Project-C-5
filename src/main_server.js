@@ -67,7 +67,7 @@ const server = http.createServer(function (req, res) {
       const { id, pwd } = querystring.parse(body);
       const conn = await pool.getConnection();
       const rows = await conn.query(
-        "SELECT * FROM userinfo WHERE user-id=? AND user-pwd=?",
+        "SELECT * FROM userinfo WHERE `user-id`=? AND `user-pwd`=?",
         [id, pwd]
       );
       conn.release();
