@@ -8,9 +8,7 @@ import "./index.css";
 
 const App = () => {
   return (
-    <div>
-      <NavBar/>
-    </div>
+    
   );
 };
 createRoot(document.getElementById("root")).render(<App />);
