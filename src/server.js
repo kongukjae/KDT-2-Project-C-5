@@ -54,7 +54,7 @@ const server = http.createServer(function (req, res) {
 
         // DB에서 해당 사용자의 정보를 조회하여 비밀번호를 비교하고 로그인 여부를 결정한다.
         connection.query(
-          `SELECT * FROM users WHERE id='${id}'`,
+          `SELECT * FROM users WHERE name='${id}'`,
           (error, results) => {
             if (error) {
               console.error(error);
