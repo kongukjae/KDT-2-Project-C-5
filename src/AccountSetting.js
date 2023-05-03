@@ -11,7 +11,7 @@ const submitStyle = {
 const AccountSetting = () => {
   return (
     <div>
-      <header><TopMenu/></header>
+      {/* <header><TopMenu/></header> */}
       <main>
         <InputEmail/>
         <InputPwdCheck/>

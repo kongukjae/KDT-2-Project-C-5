@@ -10,7 +10,7 @@ const conStyle = {
 const BlockedUser = () => {
   return (
     <div style={conStyle}>
-      <header><TopMenu/></header>
+      {/* <header><TopMenu/></header> */}
       <div><BlockedList/></div>
     </div>
   );
