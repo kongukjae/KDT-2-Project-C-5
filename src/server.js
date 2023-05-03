@@ -49,14 +49,21 @@ const server = http.createServer(function (req, res) {
           console.error(err);
           return;
         }
-        const id = `fields.user-id`;
-        const password = `fields.user-pwd`;
-
+        //1.
+        // const id = `fields.user-id`;
+        // const password = `fields.user-pwd`;
+        // console.log(`id: ${id}, password: ${password}`);
+        //2.
+        // const id = fields["user-id"];
+        // const password = fields["user-pwd"];
+        // console.log(`id: ${id}, password: ${password}`);
+        //3.
+        const { "user-id": id, "user-pwd": password } = fields;
         console.log(`id: ${id}, password: ${password}`);
 
         // DB에서 해당 사용자의 정보를 조회하여 비밀번호를 비교하고 로그인 여부를 결정한다.
         connection.query(
-          `SELECT * FROM users WHERE user-id='${id}'`,
+          `SELECT * FROM usersinfo WHERE user-id='${id}'`,
           (error, results) => {
             if (error) {
               console.error(error);
