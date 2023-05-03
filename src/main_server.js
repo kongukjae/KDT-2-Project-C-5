@@ -26,4 +26,8 @@ const server=http.createServer(function(req,res){
 server.listen(3000,()=>{
     console.log("서버 열림");
 
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> 0bbcf6781f68dc5a7e1be06cf83286d30776fc68
