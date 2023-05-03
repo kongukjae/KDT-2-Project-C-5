@@ -1,23 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
-
-import NavBar from "./NavBar";
-import Logo from "./startScreen"
-import LoginPage from "./loginPage";
-import SignUp from "./signUp";
-import AccountSetting from "./AccountSetting";
-import BlockedUser from "./BlockedUser";
-import FollowerFollowing from "./FollowerFollowing";
-import ReviewPage from "./ReviewPage";
-import MainFeed from "./mainFeed";
-
-
+import NavBar from "../components/NavBar";
 import "./index.css";
-
-
-
 
 
 const App = () => {
