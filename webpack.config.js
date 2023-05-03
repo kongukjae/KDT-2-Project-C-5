@@ -1,6 +1,5 @@
 import { fileURLToPath } from 'url';
 import path from 'path';
-import HtmlWebpackPlugin from "html-webpack-plugin"
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -18,6 +17,7 @@ export default {
   resolve:{
     extensions: ['.js', '.jsx'],
   },
+  
   module: {
     rules: [
       {
@@ -28,7 +28,9 @@ export default {
           options: {
             babelrc: true,
           },
-          
+          resolve:{
+            extensions:['.js','.jsx']
+          }
         },
       },
       {
