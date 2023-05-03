@@ -35,9 +35,9 @@ const AlarmSetting = () => {
 
   return (
     <div style={conStyle}>
-      <header style={headerStyle}>
+      {/* <header style={headerStyle}>
         <TopMenu/>
-      </header>
+      </header> */}
       <nav>
         알림 설정
       </nav>
