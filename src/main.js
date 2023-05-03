@@ -1,5 +1,5 @@
 // import React from "react";
-// // import ReactDOM from "react-dom";
+import ReactDOM from "react-dom";
 // import { createRoot } from "react-dom/client";
 // import StartPage from "./startScreen";
 // import Login from "./login";
@@ -11,29 +11,18 @@
 // import "./index.css";
 // import ReviewPage from "./ReviewPage";
 // import BookReviewFeed from "./BookReviewFeed";
-// import TopMenu from "./TopMenu";
+import TopMenu from "./TopMenu";
 // import NotificationTab from "../components/NotificationTab";
 // import Test from "../components/Test";
 
-// const App = () => {
-//   return (
-//     <div>
-//       <Test />
-//     </div>
-//   );
-// };
-// createRoot(document.getElementById("root")).render(<App />);
-
-// export default About;
-
 import React from "react";
 import { createRoot } from "react-dom/client";
-import Test from "../components/Test";
+// import Test from "../components/Test";
 
 const App = () => {
   return (
     <div>
-      <Test />
+      <TopMenu />
     </div>
   );
 };
