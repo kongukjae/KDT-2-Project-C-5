@@ -15,12 +15,12 @@ import FollowerFollowing from './FollowerFollowing';
 import AlarmSetting from "../components/AlarmSetting";
 import BlockedUser from "./BlockedUser";
 import AccountSetting from "./AccountSetting";
-import TopMenu from "./TopMenu";
+import TopMenu from "../components/TopMenu";
 
 const App = () => {
   return (
     <div>
-      <LoginPage/>
+      <NavBar/>
     </div>
   );
 };
