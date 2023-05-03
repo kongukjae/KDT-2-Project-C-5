@@ -1,6 +1,6 @@
 import http from "http"
 import fs from "fs"
-import qs from "querystring"
+import sendQuery from "./mariadb.js"
 
 
 // const html=fs.readFileSync("../dist/index.html");
@@ -28,6 +28,14 @@ const server = http.createServer(function (req, res) {
             req.on("data", chunk=>{
                 const data = JSON.parse(chunk);
                 console.log(data);
+                sendQuery(`SELECT * FROM userinfo WHERE \`user-id\`=\`${data.id}\``)
+                .then(result=>{
+                    if(result){
+                        if(result[0][`user-pwd`] === data.pwd){
+                            console.log("Login Success!")
+                        }
+                    }
+                })
             })
     }
 
