@@ -24,6 +24,8 @@ connection.connect((err) => {
   console.log("DB 연결 성공");
 });
 
+//연결 성공
+
 const server = http.createServer(function (req, res) {
   console.log(req.url);
   console.log(req.method);
@@ -47,8 +49,8 @@ const server = http.createServer(function (req, res) {
           console.error(err);
           return;
         }
-        const id = fields.user - id;
-        const password = fields.user - pwd;
+        const id = `fields.user-id`;
+        const password = `fields.user-pwd`;
 
         console.log(`id: ${id}, password: ${password}`);
 
