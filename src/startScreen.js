@@ -1,13 +1,14 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
+import React, {useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
+import signUp from './signUp';
 
 const logo = () => {
 
-  const history = useHistory();
+  const nav=useNavigate();
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      history.push('/signUp');
+      nav('/login')
     }, 3000);
     return () => clearTimeout(timer);
   }, []);

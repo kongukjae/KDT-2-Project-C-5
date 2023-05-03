@@ -1,4 +1,5 @@
 import React from 'react';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
 import BookStagramTopLogo from '../components/BookStagramTopLogo';
 import InputId from '../components/InputId';
 import InputPwd from '../components/InputPwd';
@@ -12,6 +13,7 @@ import './index.css';
 
 const signUp = () => {
   return (
+    
     <div>
       <BookStagramTopLogo/>
       <InputProfilePic/>
