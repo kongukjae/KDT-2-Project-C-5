@@ -17,7 +17,12 @@ import MainFeed from "./mainFeed";
 import "./index.css";
 
 
-
+// 테스트를 위한 임시 코드
+const Page1 = () => <h1>실시간, 인기 리뷰 피드</h1>;
+const Page2 = () => <h1>챌린지 피드</h1>;
+const Page3 = () => <h1>글작성 피드</h1>;
+const Page4 = () => <h1>검색 피드</h1>;
+const Page5 = () => <h1>내 정보 피드</h1>;
 
 
 const App = () => {
@@ -33,7 +38,9 @@ const App = () => {
         <Route path="/mainFeed" element={<NavBar/>} />
         <Route path="/followerSetting" element={<FollowerFollowing/>}/>
         <Route path="/review" element={<ReviewPage/>}/>
-
+        
+        
+        
       </Routes>
     
     </Router>   
