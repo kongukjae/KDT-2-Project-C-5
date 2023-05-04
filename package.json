@@ -20,11 +20,13 @@
   },
   "homepage": "https://github.com/kongukjae/KDT-2-Project-C-5/tree/main#readme",
   "dependencies": {
+    
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.10.0"
   },
   "devDependencies": {
+    "file-loader": "^6.2.0",
     "@babel/cli": "^7.21.0",
     "@babel/core": "^7.21.4",
     "@babel/preset-env": "^7.21.4",

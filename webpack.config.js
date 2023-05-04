@@ -16,9 +16,26 @@ export default {
     // filename: 'bundle.js',
   },
   resolve:{
-    extensions:['.js','.jsx']
+    extensions:['.js','.jsx','.png'],
+    alias:{
+      "@":path.resolve(__dirname,"./src/img/")
+    }
   },
   module: {
+    rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options:{
+              publicPath:'./src/img/',
+              outputPath:'img/',
+            }
+          },
+        ]
+      }
+    ],
     rules: [
       {
         test: /\.(js|jsx)$/,
