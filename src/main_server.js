@@ -1,6 +1,5 @@
 import http from "http";
 import fs from "fs";
-
 // const html=fs.readFileSync("../dist/index.html");
 // const js=fs.readFileSync("../dist/main.js")
 const server = http.createServer(function (req, res) {
@@ -11,15 +10,16 @@ const server = http.createServer(function (req, res) {
     res.writeHead(200, { "Content-Type": "text/html" });
     res.end(html);
   }
-
   if (req.url === "/main.js" && req.method === "GET") {
-    console.log("main.js if문 실행");
     const js = fs.readFileSync("../dist/main.js");
     res.writeHead(200, { "Content-Type": "text/javascript" });
     res.end(js);
   }
+  if (req.url === "/src/img/star.png" && req.method === "GET") {
+    const starImg = fs.readFileSync("./img/star.png");
+    res.end(starImg);
+  }
 });
-
 server.listen(3000, () => {
   console.log("서버 열림");
 });

@@ -1,32 +1,43 @@
-<<<<<<< HEAD
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { createRoot } from 'react-dom/client';
-import StartPage from './startScreen';
-import LoginPage from './loginPage';
-// import SignUpPage from './signUp';
-// import Router from '../components/router';
-// import MainFeed from './mainFeed';
-// import NavBar from '../components/NavBar';
-// import MainFeedReviewForm from '../components/mainFeedReviewForm';
-// import ButtonCancle from '../components/ButtonCancle';
-// import FollowerFollowing from '../components/FollowerFollowing';
-import './index.css';
-=======
 import React from "react";
-
 import { createRoot } from "react-dom/client";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-import NavBar from "../components/NavBar";
+
+import NavBar from "./NavBar";
+import Logo from "./startScreen"
+import LoginPage from "./loginPage";
+import SignUp from "./signUp";
+import AccountSetting from "./AccountSetting";
+import BlockedUser from "./BlockedUser";
+import FollowerFollowing from "./FollowerFollowing";
+import ReviewPage from "./ReviewPage";
+import MainFeed from "./mainFeed";
+
+
 import "./index.css";
->>>>>>> 0bbcf6781f68dc5a7e1be06cf83286d30776fc68
+
+
+
 
 
 const App = () => {
   return (
-    <div>
-      <NavBar/>
-    </div>
+
+    <Router>
+      <Routes>
+        <Route path="/" element={<Logo/>} />
+        <Route path="/login" element={<LoginPage/>} />
+        <Route path="/signUp" element={<SignUp/>} />
+        <Route path="/accountSetting" element={<AccountSetting/>} />
+        <Route path="/lockedUser" element={<BlockedUser/>} />
+        <Route path="/mainFeed" element={<NavBar/>} />
+        <Route path="/followerSetting" element={<FollowerFollowing/>}/>
+        <Route path="/review" element={<ReviewPage/>}/>
+
+      </Routes>
+    
+    </Router>   
+
   );
 };
 createRoot(document.getElementById("root")).render(<App />);

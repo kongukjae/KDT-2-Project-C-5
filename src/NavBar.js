@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import MainFeedContents from "./MainFeedContents";
-import ReviewPage from "../src/ReviewPage";
-import TopMenu from "../src/TopMenu";
+import MainFeedContents from "../components/MainFeedContents";
+import ReviewPage from "./ReviewPage";
+import TopMenu from "./TopMenu";
 
 const navBarStyle = {
   display: "flex",
@@ -72,7 +72,7 @@ const NavBar = () => {
 const App = () => {
   return (
     <div>
-      <Router>
+      
       <TopMenu/>
         <Routes>
           <Route path="/" element={<MainFeedContents />} />
@@ -84,7 +84,7 @@ const App = () => {
         <div>
           <NavBar />
         </div>
-      </Router>
+      
     </div>
   );
 };
