@@ -1,4 +1,4 @@
-import mariaDB from "mariaDB";
+import mariaDB from "mariadb";
 import http, { createServer } from "http";
 
 async function main() {
