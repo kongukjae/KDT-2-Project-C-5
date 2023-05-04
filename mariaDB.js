@@ -11,9 +11,8 @@ async function main() {
       database: "bookstagram",
     });
     const userinfo = await conn.query("SELECT * FROM userinfo");
-    const bookreview = await conn.query("SELECT * FROM bookreview");
 
-    return userinfo, bookreview;
+    return userinfo;
   } catch (err) {
     throw err;
   } finally {
