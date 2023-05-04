@@ -1,6 +1,6 @@
 import React from 'react';
 import TopMenu from './TopMenu';
-import InputEmail from '../components/InputEmail';
+import InputEmail from '../components/InputEmail.js';
 import InputPwdCheck from '../components/InputPwdCheck';
 import ButtonSubmit from '../components/ButtonSubmit';
 

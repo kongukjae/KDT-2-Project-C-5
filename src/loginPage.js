@@ -58,7 +58,9 @@ const loginPage = () => {
           <InputId value={id} onChange={(e)=> setId(e.target.value)}/>
           <p><b>password</b></p>
           <InputPwd value={pwd} onChange={(e)=> setPwd(e.target.value)}/>
+
           <ButtonLogin/>
+          
         </form>
       </div>
       
