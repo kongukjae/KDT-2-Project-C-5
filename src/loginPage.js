@@ -8,8 +8,13 @@ import ButtonSignUpWithGoogle from '../components/ButtonSignUpWithGoogle';
 import ButtonSignUpWithAppleAccount from '../components/ButtonSignUpWithAppleAccount';
 import ButtonSignUp from '../components/ButtonSignUp';
 import ForgotAccount from '../components/ForgotAccount';
+<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import SignUp from './signUp';
+=======
+import { BrowserRouter as  Router, Routes, Route, Link } from "react-router-dom";
+
+>>>>>>> nowkwon97/issuetest
 const loginPage = () => {
   const [id, setId] = useState('');
   const [pwd, setPwd] = useState('');
@@ -49,6 +54,7 @@ const loginPage = () => {
   };
   return (
     <div>
+<<<<<<< HEAD
         <BookStagramTopLogo/>
         <div>
           <form onSubmit={handleLogin}>
@@ -69,6 +75,30 @@ const loginPage = () => {
           </Link>
           <ForgotAccount/>
         </div>
+=======
+      <BookStagramTopLogo/>
+      <div>
+        <form onSubmit={handleLogin}>
+          <InputId value={id} onChange={(e)=> setId(e.target.value)}/>
+          <p><b>password</b></p>
+          <InputPwd value={pwd} onChange={(e)=> setPwd(e.target.value)}/>
+          <Link to='/mainFeed'>
+              <ButtonLogin/>
+          </Link>
+        </form>
+      </div>
+      
+      
+      <div></div>
+      <div>
+        <ButtonSignUpWithGoogle/>
+        <ButtonSignUpWithAppleAccount/>
+        <Link to ='/signUp'>
+            <ButtonSignUp/>
+          </Link>
+        <ForgotAccount/>
+      </div>
+>>>>>>> nowkwon97/issuetest
     </div>
   );
 };

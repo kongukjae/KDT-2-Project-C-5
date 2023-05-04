@@ -1,5 +1,5 @@
 import React from 'react';
-import TopMenu from './TopMenu';
+import TopMenu from '../components/TopMenu';
 import BlockedList from '../components/BlockedList';
 
 const conStyle = {
@@ -10,7 +10,7 @@ const conStyle = {
 const BlockedUser = () => {
   return (
     <div style={conStyle}>
-      <header><TopMenu/></header>
+      {/* <header><TopMenu/></header> */}
       <div><BlockedList/></div>
     </div>
   );

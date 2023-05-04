@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TopMenu from '../src/TopMenu';
+import TopMenu from './TopMenu';
 import ImgUserPicture from './ImgUserPicture';
 import UserName from './UserName';
 import AlarmOnPicture from './AlarmOnPicture';
@@ -35,9 +35,9 @@ const AlarmSetting = () => {
 
   return (
     <div style={conStyle}>
-      <header style={headerStyle}>
+      {/* <header style={headerStyle}>
         <TopMenu/>
-      </header>
+      </header> */}
       <nav>
         알림 설정
       </nav>

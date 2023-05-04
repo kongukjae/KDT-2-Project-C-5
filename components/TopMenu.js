@@ -1,15 +1,15 @@
 import React from "react";
-import BookStagramTopLogo from "../components/BookStagramTopLogo";
-import HambergerMenu from "../components/HambergerMenu";
+import BookStagramTopLogo from "./BookStagramTopLogo";
+import HambergerMenu from "./HambergerMenu";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 // 계정설정 컴포넌트
-import AccountSetting from "./AccountSetting";
+import AccountSetting from "../src/AccountSetting";
 // 알림설정 컴포넌트
-import AlarmSetting from "../components/AlarmSetting";
+import AlarmSetting from "./AlarmSetting";
 // 관심친구 컴포넌트
-import FollowerFollowing from "./FollowerFollowing";
+import FollowerFollowing from "../src/FollowerFollowing";
 // 차단목록 컴포넌트
-import BlockedUser from "./BlockedUser";
+import BlockedUser from "../src/BlockedUser";
 
 
 const headerStyle = {
@@ -36,27 +36,28 @@ const TopMenu = () => {
 
   return (
     <div>
-      {/* <Router>
         <div style={headerStyle}>
           <div>📃</div>
           <BookStagramTopLogo />
           <HambergerMenu items={menuItems} />
         </div>
-        <Routes>
-          <Route path="/accountsetting" element={<AccountSetting/>}/>
-          <Route path="/alarmsetting" element={<AlarmSetting/>}/>
-          <Route path="/followerfollowing" element={<FollowerFollowing/>}/>
-          <Route path="/tagsetting" element={<Page1/>}/>
-          <Route path="/blockedusers" element={<BlockedUser/>}/>
-          <Route path="/purchase" element={<Page2/>}/>
-          <Route path="/logout" element={<Page3/>}/>
-        </Routes>
-      </Router> */}
-      <div style={headerStyle}>
+        
+          <Routes>
+            <Route path="/accountsetting" element={<AccountSetting/>}/>
+            <Route path="/alarmsetting" element={<AlarmSetting/>}/>
+            <Route path="/followerfollowing" element={<FollowerFollowing/>}/>
+            <Route path="/tagsetting" element={<Page1/>}/>
+            <Route path="/blockedusers" element={<BlockedUser/>}/>
+            <Route path="/purchase" element={<Page2/>}/>
+            <Route path="/logout" element={<Page3/>}/>
+          </Routes>
+        
+        
+      {/* <div style={headerStyle}>
           <div>📃</div>
           <BookStagramTopLogo />
           <HambergerMenu items={menuItems} />
-        </div>
+        </div> */}
     </div>
     
   );
