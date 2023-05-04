@@ -1,3 +1,4 @@
+:55
 import React, { useState } from 'react';
 import BookStagramTopLogo from '../components/BookStagramTopLogo';
 import InputId from '../components/InputId';
@@ -8,20 +9,15 @@ import ButtonSignUpWithAppleAccount from '../components/ButtonSignUpWithAppleAcc
 import ButtonSignUp from '../components/ButtonSignUp';
 import ForgotAccount from '../components/ForgotAccount';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
-
+import SignUp from './signUp';
 const loginPage = () => {
-
   const [id, setId] = useState('');
   const [pwd, setPwd] = useState('');
-
   const handleLogin = (event) => {
     // 기본 제출 이벤트 방지
     event.preventDefault();
-    
     const requestBody = { id, pwd };
     console.log(requestBody);
-    
     // const form = event.target;
     // const formData = new FormData(form);
     // console.log(formData);
@@ -51,32 +47,29 @@ const loginPage = () => {
         // 로그인 실패 처리
       });
   };
-
   return (
     <div>
-      <BookStagramTopLogo/>
-      <div>
-        <form onSubmit={handleLogin}>
-          <InputId value={id} onChange={(e)=> setId(e.target.value)}/>
-          <p><b>password</b></p>
-          <InputPwd value={pwd} onChange={(e)=> setPwd(e.target.value)}/>
-
+        <BookStagramTopLogo/>
+        <div>
+          <form onSubmit={handleLogin}>
+            <InputId value={id} onChange={(e)=> setId(e.target.value)}/>
+            <p><b>password</b></p>
+            <InputPwd value={pwd} onChange={(e)=> setPwd(e.target.value)}/>
+            <Link to='/mainFeed'>
+              <ButtonLogin/>
+            </Link>
+          </form>
+        </div>
+        <div></div>
+        <div>
+          <ButtonSignUpWithGoogle/>
+          <ButtonSignUpWithAppleAccount/>
           <Link to ='/signUp'>
             <ButtonSignUp/>
           </Link>
-        </form>
-      </div>
-      
-      
-      <div></div>
-      <div>
-        <ButtonSignUpWithGoogle/>
-        <ButtonSignUpWithAppleAccount/>
-        <ButtonSignUp/>
-        <ForgotAccount/>
-      </div>
+          <ForgotAccount/>
+        </div>
     </div>
   );
 };
-
-export default loginPage;
+export default loginPage
