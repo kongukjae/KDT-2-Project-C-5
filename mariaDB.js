@@ -10,9 +10,10 @@ async function main() {
       password: "xxia1215@@",
       database: "bookstagram",
     });
-    const data = await conn.query("SELECT * FROM userinfo");
-    // console.log(rows);
-    return data;
+    const userinfo = await conn.query("SELECT * FROM userinfo");
+    const bookreview = await conn.query("SELECT * FROM bookreview");
+
+    return userinfo, bookreview;
   } catch (err) {
     throw err;
   } finally {
