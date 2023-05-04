@@ -14,7 +14,7 @@ const rootPath = path.join(currentPath, "\\..")
 /**
  * 마리아DB 모듈을 사용하여 쿼리를 보내는 모듈. 호출시 설정한 데이터베이스에 pool을 연결하고 DB에 query문을 한번 보내고 res에 그 응답을 받고 Promise 객체로 반환한다.. 이후 release()및 end()로 연결을 종료한다.
  * @param {*} query DB로 보낼 쿼리문, 문자열.
- * @returns 응답 내용을 담은 Promise 객체. `.then(res=>{})`을 써서 사용 위치에서 해당 내용을 다루면 되나, 지역변수로 끝나기에 응답내용을 다루려면 해당 res=>{} 안에서 작성해야한다.
+ * @returns 응답 내용을 담은 Promise 객체. `.then(res=>{})`을 써서 사용 위치에서 해당 내용을 다루거나, 변수를 선언하고 =  await sendQuery()로 결과값을 할당 되나, then의 경우 지역변수로 끝나기에 응답내용을 다루려면 해당 res=>{} 안에서 작성해야한다.
  */
 export default async function sendQuery(query) {
   let res;
