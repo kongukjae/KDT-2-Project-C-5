@@ -12,7 +12,7 @@ import BlockedUser from "./BlockedUser";
 import FollowerFollowing from "./FollowerFollowing";
 import ReviewPage from "./ReviewPage";
 import MainFeed from "./mainFeed";
-
+import MainFeedReviewForm from "../components/mainFeedReviewForm";
 
 import "./index.css";
 
@@ -27,7 +27,6 @@ const Page5 = () => <h1>내 정보 피드</h1>;
 
 const App = () => {
   return (
-
     <Router>
       <Routes>
         <Route path="/" element={<Logo/>} />
@@ -38,7 +37,7 @@ const App = () => {
         <Route path="/mainFeed" element={<NavBar/>} />
         <Route path="/followerSetting" element={<FollowerFollowing/>}/>
         <Route path="/review" element={<ReviewPage/>}/>
-        
+
         
         
       </Routes>
