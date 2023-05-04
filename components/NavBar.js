@@ -72,8 +72,6 @@ const NavBar = () => {
 const App = () => {
   return (
     <div>
-      <Router>
-      <TopMenu/>
         <Routes>
           <Route path="/" element={<MainFeedContents />} />
           <Route path="/page2" element={<Page2 />} />
@@ -84,7 +82,7 @@ const App = () => {
         <div>
           <NavBar />
         </div>
-      </Router>
+      
     </div>
   );
 };

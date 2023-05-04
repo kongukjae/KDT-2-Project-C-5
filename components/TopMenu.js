@@ -41,15 +41,18 @@ const TopMenu = () => {
           <BookStagramTopLogo />
           <HambergerMenu items={menuItems} />
         </div>
-        <Routes>
-          <Route path="/accountsetting" element={<AccountSetting/>}/>
-          <Route path="/alarmsetting" element={<AlarmSetting/>}/>
-          <Route path="/followerfollowing" element={<FollowerFollowing/>}/>
-          <Route path="/tagsetting" element={<Page1/>}/>
-          <Route path="/blockedusers" element={<BlockedUser/>}/>
-          <Route path="/purchase" element={<Page2/>}/>
-          <Route path="/logout" element={<Page3/>}/>
-        </Routes>
+        
+          <Routes>
+            <Route path="/accountsetting" element={<AccountSetting/>}/>
+            <Route path="/alarmsetting" element={<AlarmSetting/>}/>
+            <Route path="/followerfollowing" element={<FollowerFollowing/>}/>
+            <Route path="/tagsetting" element={<Page1/>}/>
+            <Route path="/blockedusers" element={<BlockedUser/>}/>
+            <Route path="/purchase" element={<Page2/>}/>
+            <Route path="/logout" element={<Page3/>}/>
+          </Routes>
+        
+        
       {/* <div style={headerStyle}>
           <div>📃</div>
           <BookStagramTopLogo />
