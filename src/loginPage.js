@@ -7,6 +7,8 @@ import ButtonSignUpWithGoogle from '../components/ButtonSignUpWithGoogle';
 import ButtonSignUpWithAppleAccount from '../components/ButtonSignUpWithAppleAccount';
 import ButtonSignUp from '../components/ButtonSignUp';
 import ForgotAccount from '../components/ForgotAccount';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 
 const loginPage = () => {
 
@@ -59,8 +61,9 @@ const loginPage = () => {
           <p><b>password</b></p>
           <InputPwd value={pwd} onChange={(e)=> setPwd(e.target.value)}/>
 
-          <ButtonLogin/>
-          
+          <Link to ='/signUp'>
+            <ButtonSignUp/>
+          </Link>
         </form>
       </div>
       
