@@ -1,4 +1,4 @@
-:55
+
 import React, { useState } from 'react';
 import BookStagramTopLogo from '../components/BookStagramTopLogo';
 import InputId from '../components/InputId';
