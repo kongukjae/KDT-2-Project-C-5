@@ -79,7 +79,7 @@ const mainFeedReviewForm = (props) => {
       <div style={reviewBox}>
 
         <div>
-          {/* <img>{profilePic}</img> */}
+          <img></img>
           <div>{name}</div>
         </div>
 
