@@ -37,7 +37,7 @@ const App = () => {
         <Route path="/mainFeed" element={<MainFeed/>} />
         <Route path="/followerSetting" element={<FollowerFollowing/>}/>
         <Route path="/review" element={<ReviewPage/>}/>
-
+        
         
         
       </Routes>
