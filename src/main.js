@@ -2,9 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-
-import Introduce from "../components/Introduce";
-import NavBar from "./NavBar";
+import Mypage from "./Mypage";
 import Logo from "./startScreen"
 import LoginPage from "./loginPage";
 import SignUp from "./signUp";
@@ -44,7 +42,7 @@ const App = () => {
     //   </Routes>
     
     // </Router>   
-    <Introduce></Introduce>
+    <Mypage></Mypage>
   );
 };
 createRoot(document.getElementById("root")).render(<App />);
