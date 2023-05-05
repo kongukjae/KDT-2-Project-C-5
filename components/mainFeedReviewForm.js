@@ -37,13 +37,14 @@ const reviewBox={
 const infoBox={
   display:"flex",
   flexDirection:"row",
-  justifyContent:"flex-end"
+  justifyContent:"space-around"
 }
 
 
 
 //책 사진, 프로필 사진,이름 , 리뷰 내용, 시간, 좋아요 수, 좋아요 상태
 const mainFeedReviewForm = (props) => {
+
   const[bookPic,setBookPic]=useState(props.bookPic);
   const[profilePic,setProfilePic]=useState(props.profilePic);
   const[name,setName]=useState(props.name);
@@ -76,7 +77,11 @@ const mainFeedReviewForm = (props) => {
         <div style={infoBox}>
           <div>{time}</div>
           <div>{like}</div>
-          {likeState ? <img src='../src/img/heart.png'></img> : <img></img>}
+          <div>
+            {likeState ?
+              <img src='../src/img/heart.png'></img> 
+            : <img src='../src/img/heart.png'></img> }
+          </div>
         </div>
       </div>
     </div>

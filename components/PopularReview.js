@@ -9,10 +9,12 @@ const PopularReview = () => {
     profilePic:"ppp",
     name:"김동주",
     review:"asdasdasdasd",
-    time:"10:10",
+    time:"1h ago",
     like:"199",
     likeState:true,
   }
+
+
   return (
     <div >
         <MainFeedReviewForm
