@@ -11,7 +11,8 @@ const conStyle = {
   justifyContent: 'space-around',
   border: '1px solid black',
   borderRadius: '10px',
-  alignItems:"center"
+  alignItems:"center",
+  
 }
 
 
@@ -86,10 +87,10 @@ const mainFeedReviewForm = (props) => {
         
         <div>{review}</div>
 
-        <div style={infoBox}>
-          <div>{time}</div>
-          <div>{like}</div>
-          <img src={heartImg} onClick={()=>setLikeState(!likeState)}></img> 
+          <div style={infoBox}>
+            <div>{time}</div>
+            <div>{like}</div>
+            <img src={heartImg} onClick={()=>setLikeState(!likeState)}></img> 
           </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBar from './NavBar';
 import TopMenu from './TopMenu';
+import MainFeedContents from '../components/MainFeedContents';
 
 const headerStyle = {
   display: 'flex',
@@ -13,7 +14,7 @@ const mainFeed = () => {
         <TopMenu/>
       </header>
 
-      {/* main 컨텐츠 부분은 NavBar 컴포넌트에서 담당한다. */}
+      <MainFeedContents />
 
       <footer>
         <NavBar/>

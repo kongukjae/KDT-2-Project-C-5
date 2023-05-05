@@ -68,18 +68,9 @@ const NavBar = () => {
 
 
 const App = () => {
-  return (
-    <div>
-      
-      <TopMenu/>
-
-      
-      <MainFeedContents></MainFeedContents>
-      <div>
-        <NavBar />
-      </div>
-      
-    </div>
+  return ( 
+    <NavBar></NavBar>
+    
   );
 };
 

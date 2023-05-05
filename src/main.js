@@ -34,7 +34,7 @@ const App = () => {
         <Route path="/signUp" element={<SignUp/>} />
         <Route path="/accountSetting" element={<AccountSetting/>} />
         <Route path="/lockedUser" element={<BlockedUser/>} />
-        <Route path="/mainFeed" element={<NavBar/>} />
+        <Route path="/mainFeed" element={<MainFeed/>} />
         <Route path="/followerSetting" element={<FollowerFollowing/>}/>
         <Route path="/review" element={<ReviewPage/>}/>
 
