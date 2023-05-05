@@ -23,6 +23,7 @@ const feed={
 
 
 //마이페이지에서 사용하는 나의글,프로필 설정,내 서재 bar와 나의 글 컨텐츠를 담당하는 컴포넌트
+//김동주
 const MypageContent=()=>{
   const[contentArea,setContentArea]=useState(<MyPost/>)
 

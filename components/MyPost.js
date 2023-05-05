@@ -14,6 +14,7 @@ const feedContainer={
 
 
 //나의 글 내부 컨텐츠를 담당하는 컴포넌트, 스크롤 영역부터 시작
+//김동주
 const myPost=()=>{
   const data2=[
     {

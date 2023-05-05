@@ -44,6 +44,7 @@ const infoBox={
 
 
 //책 사진, 프로필 사진,이름 , 리뷰 내용, 시간, 좋아요 수, 좋아요 상태
+//수정 : 김동주
 const mainFeedReviewForm = (props) => {
 
   const[bookPic,setBookPic]=useState(props.bookPic);

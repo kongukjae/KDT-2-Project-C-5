@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
+import SearchPage from "./SearchPage";
 import Mypage from "./Mypage";
 import Logo from "./startScreen"
 import LoginPage from "./loginPage";
@@ -37,12 +38,12 @@ const App = () => {
         <Route path="/followerSetting" element={<FollowerFollowing/>}/>
         <Route path="/review" element={<ReviewPage/>}/>
         <Route path="/mypage" element={<Mypage/>}/>
-        
+        <Route path="/searchPage" element={<SearchPage/>}/>
         
       </Routes>
       
     </Router>   
-    // <Mypage></Mypage>
+
   );
 };
 createRoot(document.getElementById("root")).render(<App />);

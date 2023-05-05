@@ -26,6 +26,7 @@ const numContainer={
 }
 
 //마이페이지 프로필 이름과 게시글,구독자,구독인 수를 담당하는 컴포넌트
+//김동주
 const profileName=(props)=>{
   const[name,setName]=useState(props.name);
 

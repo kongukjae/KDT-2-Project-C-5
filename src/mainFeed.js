@@ -7,6 +7,9 @@ const headerStyle = {
   display: 'flex',
 }
 
+
+//메인 피드 페이지를 담당하는 컴포넌트
+//수정 : 김동주
 const mainFeed = () => {
   return (
     <div>

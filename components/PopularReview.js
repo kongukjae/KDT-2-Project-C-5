@@ -11,6 +11,7 @@ const scroll={
 
 
 //인기 리뷰를 담당하는 컴포넌트
+//수정 : 김동주
 const PopularReview = () => {
   const data=[
     {
