@@ -76,7 +76,7 @@ const mainFeedReviewForm = (props) => {
         <div style={infoBox}>
           <div>{time}</div>
           <div>{like}</div>
-          {/* {likeState ? <img>하트1</img> : <img>하트2</img>} */}
+          {likeState ? <img src='../src/img/heart.png'></img> : <img></img>}
         </div>
       </div>
     </div>
