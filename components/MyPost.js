@@ -1,18 +1,21 @@
-import React from 'react';
+import React,{useState} from 'react'
+
 import MainFeedReviewForm from './mainFeedReviewForm';
 
-const scroll={
+const feedContainer={
+  display:"flex",
+  flexDirection:"column",
   width:"100%",
-  height:"500px",
-  maxHeight:"500px",
-  overflow: "scroll",
+  Height:"100%",
+  maxHeight:"100%",
+  overflow:"scroll"
 
 }
 
 
-//인기 리뷰를 담당하는 컴포넌트
-const PopularReview = () => {
-  const data=[
+//나의 글 내부 컨텐츠를 담당하는 컴포넌트, 스크롤 영역부터 시작
+const myPost=()=>{
+  const data2=[
     {
       bookPic:"pic",
       profilePic:"ppp",
@@ -25,7 +28,7 @@ const PopularReview = () => {
     {
       bookPic:"pic",
       profilePic:"ppp",
-      name:"김동주",
+      name:"제인",
       review:"asdasdasdasd",
       time:"1h ago",
       like:"199",
@@ -34,7 +37,7 @@ const PopularReview = () => {
     {
       bookPic:"pic",
       profilePic:"ppp",
-      name:"김동주",
+      name:"제인",
       review:"asdasdasdasd",
       time:"1h ago",
       like:"199",
@@ -43,19 +46,17 @@ const PopularReview = () => {
     {
       bookPic:"pic",
       profilePic:"ppp",
-      name:"김동주",
+      name:"제인",
       review:"asdasdasdasd",
       time:"1h ago",
       like:"199",
       likeState:true,
-    }
-    
+    }   
   ]
 
-
-  return (
-    <div style={scroll}>
-      {data.map((item,index)=>(
+  return(
+    <div style={feedContainer}>
+      {data2.map((item,index)=>(
         <MainFeedReviewForm
         key={index}
         bookPic={item.bookPic}
@@ -65,23 +66,12 @@ const PopularReview = () => {
         time={item.time}
         like={item.like}
         likeState={item.likeState}
-        />    
+        />
       ))}
-        <MainFeedReviewForm
-          bookPic={data.bookPic}
-          profilePic={data.profilePic}
-          name={data.name}
-          review={data.review}
-          time={data.time}
-          like={data.like}
-          likeState={data.likeState}
-          />
     </div>
+
   );
-};
-
-export default PopularReview;
+}
 
 
-
-
+export default myPost;

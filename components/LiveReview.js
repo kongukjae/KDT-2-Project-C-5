@@ -64,15 +64,6 @@ const LiveReview = () => {
         likeState={item.likeState}
         />    
       ))}
-        <MainFeedReviewForm
-          bookPic={data.bookPic}
-          profilePic={data.profilePic}
-          name={data.name}
-          review={data.review}
-          time={data.time}
-          like={data.like}
-          likeState={data.likeState}
-          />
     </div>
   );
 };
