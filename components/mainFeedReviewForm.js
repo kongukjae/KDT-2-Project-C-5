@@ -1,4 +1,4 @@
-import React, { useState }from 'react';
+import React, { useState , useEffect}from 'react';
 
 // 임시 css 속성의 크기는 figma 목업 사이즈를 참조하였다.
 // 전체 리뷰 container 박스 임시 css
@@ -51,9 +51,21 @@ const mainFeedReviewForm = (props) => {
   const[review,setReview]=useState(props.review);
   const[time,setTime]=useState(props.time);
   const[like,setLike]=useState(props.like);
-  const[likeState,setLikeState]=useState(props.likeState);
+  const[likeState,setLikeState]=useState(props.likeState)
+  const[heartImg,setHeart]=useState("../src/img/heart.png")
 
 
+
+
+  //좋아요 버튼 클릭시 이미지 변환
+  useEffect(()=>{
+    if(likeState){
+      setHeart("../src/img/heart_color.png");
+    }else{
+      setHeart("../src/img/heart.png");
+    }
+
+  },[likeState])
 
 
 
@@ -77,14 +89,10 @@ const mainFeedReviewForm = (props) => {
         <div style={infoBox}>
           <div>{time}</div>
           <div>{like}</div>
-          <div>
-            {likeState ?
-              <img src='../src/img/heart.png'></img> 
-            : <img src='../src/img/heart.png'></img> }
+          <img src={heartImg} onClick={()=>setLikeState(!likeState)}></img> 
           </div>
         </div>
       </div>
-    </div>
   );
 };
 
