@@ -16,7 +16,12 @@ const Bookinfo = () => {
   return (
     <div className="container" style={conStyle}>
       <div
-        style={{ width: "100px", height: "150px", backgroundColor: "gray" }}
+        style={{
+          width: "100px",
+          height: "150px",
+          backgroundColor: "gray",
+          margin: "10px",
+        }}
       ></div>
       <div className="Info" style={InfoStyle}>
         <div style={InfoStyle}>책 이름:우주와 달</div>

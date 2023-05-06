@@ -6,7 +6,7 @@ import UploadTime from "../components/UploadTime";
 
 const BookReviewFeed = () => {
   return (
-    <div>
+    <div style={{ backgroundColor: "#DCDCDC" }}>
       <FeedTopBar />
       <Bookinfo />
       <UploadTime />

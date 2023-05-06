@@ -1,6 +1,6 @@
 import React from "react";
 import AlarmPicture from "./AlarmOffPicture";
-import userImeage from "../public/img.jpg";
+import userImage from "../public/img.jpg";
 
 const Styles = {
   display: "flex",
@@ -9,18 +9,25 @@ const Styles = {
   width: "100%",
   height: "50px",
   backgroundColor: "#CDB7B5",
-  justifyContent: "center",
+  justifyContent: "space-between",
 };
 const subStyles = {
   backgroundColor: "white",
   borderRadius: "10px",
+};
+const imageStyles = {
+  width: "40px",
+  height: "40px",
+  objectFit: "cover",
+  borderRadius: "100%",
+  border: "1px solid black",
 };
 
 const FeedTopBar = () => {
   return (
     <div style={Styles}>
       <div>
-        <img src={userImeage} alt="img" />
+        <img src={userImage} alt="img" style={imageStyles} />
       </div>
       <div>jiny2735</div>
       <div id="subscribe" style={subStyles}>
