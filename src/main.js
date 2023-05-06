@@ -18,8 +18,8 @@ import BookReviewFeed from "./bookReviewFeed";
 const App = () => {
   return (
     <div>
-      {/* <BookReviewFeed /> */}
-      <ReviewPage />
+      <BookReviewFeed />
+      {/* <ReviewPage /> */}
     </div>
     // <Router>
     //   <Routes>

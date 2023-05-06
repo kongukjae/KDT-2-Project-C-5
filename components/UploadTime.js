@@ -17,8 +17,14 @@ function UploadTime() {
   }, []); // useEffect hook에서 두번째 매개변수로 빈 배열([])을 전달하면, componentDidMount와 동일한 효과가 있어서 처음 한번만 실행됨.
 
   return (
-    <div>
-      <h1>{time.toLocaleTimeString()}전</h1>{" "}
+    <div
+      style={{
+        display: "flex",
+        alignItems: "flex-end",
+        justifyContent: "flex-end",
+      }}
+    >
+      <p>{time.toLocaleTimeString()}전</p>{" "}
       {/* 시간 정보를 문자열로 변환하여 출력 */}
     </div>
   );
