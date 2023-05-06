@@ -21,9 +21,6 @@ function PostInput({ onSave }) {
   };
 
   const styles = {
-    root: {
-      backgroundColor: "gray",
-    },
     container: {
       display: "flex",
       flexDirection: "column",
@@ -72,6 +69,7 @@ function PostInput({ onSave }) {
           value={title}
           onChange={handleTitleChange}
           style={styles.input}
+          placeholder="간단한 리뷰를 작성해주세요"
         />
       </div>
       <div>
@@ -83,6 +81,7 @@ function PostInput({ onSave }) {
           value={content}
           onChange={handleContentChange}
           style={styles.textarea}
+          placeholder="리뷰를 작성해주세요"
         ></textarea>
       </div>
       <button type="submit" style={styles.button}>

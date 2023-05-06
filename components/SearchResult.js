@@ -1,11 +1,17 @@
 import React from "react";
 
 function SearchResult(props) {
-  const { result } = props;
+  const { result, onSelect } = props;
 
-  return <div>{result}</div>;
+  const handleSelect = () => {
+    onSelect(result);
+  };
+
+  return (
+    <div onClick={handleSelect}>
+      <p>{result}</p>
+    </div>
+  );
 }
 
 export default SearchResult;
-
-//SearchResult 컴포넌트는 자동완성 결과를 렌더링
