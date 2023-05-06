@@ -21,6 +21,9 @@ function PostInput({ onSave }) {
   };
 
   const styles = {
+    root: {
+      backgroundColor: "gray",
+    },
     container: {
       display: "flex",
       flexDirection: "column",
@@ -28,7 +31,8 @@ function PostInput({ onSave }) {
       margin: "20px",
     },
     input: {
-      width: "100%",
+      width: "290px",
+      height: "100px",
       fontSize: "16px",
       padding: "10px",
       border: "1px solid #ccc",
@@ -36,8 +40,8 @@ function PostInput({ onSave }) {
       marginTop: "10px",
     },
     textarea: {
-      width: "100%",
-      height: "150px",
+      width: "290px",
+      height: "200px",
       fontSize: "16px",
       padding: "10px",
       border: "1px solid #ccc",
