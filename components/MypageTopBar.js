@@ -5,7 +5,8 @@ import HambergerMenu from './HambergerMenu';
 const topBox={
   display:"flex",
   flexDirection:"row",
-  justifyContent:"space-between"
+  justifyContent:"space-between",
+  width:"100%"
 
 }
 //마이페이지 상단 알림,햄버거 메뉴 바

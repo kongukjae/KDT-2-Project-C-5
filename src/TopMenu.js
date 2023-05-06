@@ -14,7 +14,8 @@ import BlockedUser from "./BlockedUser";
 
 const headerStyle = {
   display: 'flex',
-  justifyContent: 'space-around'
+  justifyContent: 'space-between',
+  width:"100%"
 }
 // 임시 태그 설정 컴포넌트
 const Page1 = () => <h1>태그설정</h1>;

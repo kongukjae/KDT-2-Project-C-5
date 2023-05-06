@@ -15,7 +15,7 @@ const contentBox={
 
 const container={
   display:"flex",
-  width:"300px",
+  width:"98%",
   height:"500px",
   backgroundColor:"#B0A7A7",
   borderRadius:"7px",
@@ -24,6 +24,9 @@ const container={
 
 
 }
+
+
+//도서 검색 페이지의 컨텐츠 표시부에 위치한 태그를 담는 컨테이너
 const TagContentBox=()=>{
   const tags=["공포","로맨스","사랑","멜로","호러","수사","모순","비극","역사","실화","감동"]
 

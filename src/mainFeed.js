@@ -5,6 +5,8 @@ import MainFeedContents from '../components/MainFeedContents';
 
 const headerStyle = {
   display: 'flex',
+  justifyContent:"center",
+  width:"100%"
 }
 
 

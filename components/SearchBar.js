@@ -2,8 +2,8 @@ import React,{useState} from 'react';
 
 const container={
   display:"flex",
-  widht:"100%",
-  height:"40px",
+  width:"80%",
+  height:"50px",
   justifyContent:"center",
   alignItems:"center",
 }
@@ -11,9 +11,9 @@ const container={
 const box={
   display:"flex",
   flexDirection:"row",
-  width:"300px",
+  width:"100%",
   height:"80%",
-  borderRadius:"5px",
+  borderRadius:"10px",
   backgroundColor:"#B0A7A7",
   justifyContent:"space-around",
   alignItems:"center",
@@ -23,14 +23,16 @@ const inputSt={
   backgroundColor:"#D9D9D9",
   border:"none",
   borderRadius:"5px",
-  width:"250px"
+  width:"85%",
+  height:"70%"
 }
 
 const imgBox={
   display:"flex",
-  width:"20px",
-  height:"20px",
-  backgroundColor:"#D9D9D9"
+  width:"10%",
+  height:"70%",
+  backgroundColor:"#D9D9D9",
+  borderRadius:"5px"
 }
 
 

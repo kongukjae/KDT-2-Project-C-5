@@ -15,12 +15,13 @@ const box={
 
 
 
-
+//태그를 담는 컨테이너 및 스타일링 담당
 const TagBox=(props)=>{
   const[tagName,setTagName]=useState(props.tagName);
   return(
     <div style={box}>
       <div>{tagName}</div>
+
     </div>
 
   );

@@ -16,11 +16,13 @@ const navBarStyle = {
 };
 
 
-
+const container={
+  width:"100%"
+}
 const NavBar = () => {
 
   return (
-    <nav>
+    <nav style={container}>
       <ul style={navBarStyle}>
         <li >
           <Link to="/mainFeed">
