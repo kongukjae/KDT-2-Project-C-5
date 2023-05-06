@@ -1,5 +1,6 @@
 import React from "react";
 import AlarmPicture from "./AlarmOffPicture";
+import userImeage from "../public/img.jpg";
 
 const Styles = {
   display: "flex",
@@ -18,8 +19,10 @@ const subStyles = {
 const FeedTopBar = () => {
   return (
     <div style={Styles}>
-      <div>사진</div>
-      <div>이름</div>
+      <div>
+        <img src={userImeage} alt="img" />
+      </div>
+      <div>jiny2735</div>
       <div id="subscribe" style={subStyles}>
         구독중
       </div>
