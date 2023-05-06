@@ -20,11 +20,46 @@ function PostInput({ onSave }) {
     setContent("");
   };
 
+  const styles = {
+    container: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      margin: "20px",
+    },
+    input: {
+      width: "100%",
+      fontSize: "16px",
+      padding: "10px",
+      border: "1px solid #ccc",
+      borderRadius: "4px",
+      marginTop: "10px",
+    },
+    textarea: {
+      width: "100%",
+      height: "150px",
+      fontSize: "16px",
+      padding: "10px",
+      border: "1px solid #ccc",
+      borderRadius: "4px",
+      marginTop: "10px",
+    },
+    button: {
+      padding: "10px 20px",
+      backgroundColor: "#007bff",
+      color: "#fff",
+      fontSize: "16px",
+      border: "none",
+      borderRadius: "4px",
+      marginTop: "10px",
+      cursor: "pointer",
+    },
+  };
+
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={styles.container}>
       <div>
         <label htmlFor="title">
-          3줄리뷰
           <br />
         </label>
         <input
@@ -32,20 +67,23 @@ function PostInput({ onSave }) {
           type="text"
           value={title}
           onChange={handleTitleChange}
+          style={styles.input}
         />
       </div>
       <div>
         <label htmlFor="content">
-          긴글리뷰
           <br />
         </label>
         <textarea
           id="content"
           value={content}
           onChange={handleContentChange}
+          style={styles.textarea}
         ></textarea>
       </div>
-      <button type="submit">등록</button>
+      <button type="submit" style={styles.button}>
+        등록
+      </button>
     </form>
   );
 }

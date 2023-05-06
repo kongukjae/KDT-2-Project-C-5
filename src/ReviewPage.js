@@ -4,14 +4,17 @@ import Search from "../components/Search";
 
 function ReviewPage() {
   return (
-    <div className="container">
+    <div
+      className="container"
+      style={{
+        backgroundColor: "#D8BFD8",
+        width: "300px",
+        height: "700px",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <Search />
-      <div>
-        <p>책제목:</p>
-      </div>
-      <div>
-        <p>저자:</p>
-      </div>
       <PostInput />
     </div>
   );

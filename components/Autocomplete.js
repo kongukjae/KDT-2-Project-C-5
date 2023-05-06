@@ -110,6 +110,47 @@ function AutoComplete(props) {
       {filteredResults.map((result) => (
         <SearchResult key={result} result={result} />
       ))}
+      <style>
+        {`
+          .autocomplete-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 200px;
+          }
+
+          .autocomplete-wrapper input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+          }
+
+          .autocomplete-wrapper ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            position: absolute;
+            z-index: 1;
+          }
+
+          .autocomplete-wrapper li {
+            padding: 10px;
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+          }
+
+          .autocomplete-wrapper li:hover {
+            background-color: #f2f2f2;
+          }
+
+          .autocomplete-wrapper li:last-child {
+            border-bottom: none;
+          }
+        `}
+      </style>
     </div>
   );
 }
