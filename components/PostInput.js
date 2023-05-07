@@ -28,7 +28,8 @@ function PostInput({ onSave }) {
       margin: "20px",
     },
     input: {
-      width: "100%",
+      width: "290px",
+      height: "100px",
       fontSize: "16px",
       padding: "10px",
       border: "1px solid #ccc",
@@ -36,8 +37,8 @@ function PostInput({ onSave }) {
       marginTop: "10px",
     },
     textarea: {
-      width: "100%",
-      height: "150px",
+      width: "290px",
+      height: "200px",
       fontSize: "16px",
       padding: "10px",
       border: "1px solid #ccc",
@@ -68,6 +69,7 @@ function PostInput({ onSave }) {
           value={title}
           onChange={handleTitleChange}
           style={styles.input}
+          placeholder="간단한 리뷰를 작성해주세요"
         />
       </div>
       <div>
@@ -79,6 +81,7 @@ function PostInput({ onSave }) {
           value={content}
           onChange={handleContentChange}
           style={styles.textarea}
+          placeholder="리뷰를 작성해주세요"
         ></textarea>
       </div>
       <button type="submit" style={styles.button}>
