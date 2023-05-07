@@ -15,7 +15,7 @@ function PostInput({ onSave }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const post = { title, content };
-    onSave(post);
+    onSave(post, false); // isEditing = false
     setTitle("");
     setContent("");
   };

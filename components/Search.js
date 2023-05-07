@@ -44,6 +44,7 @@ function Search(props) {
   const [suggestions, setSuggestions] = useState(["소설/시/희곡", "자기계발"]);
   const [modalOpen, setModalOpen] = useState(false);
   const [bookSearchValue, setBookSearchValue] = useState("");
+  const [isBookSearchSubmitted, setIsBookSearchSubmitted] = useState(false);
 
   const handleInputChange = (value) => {
     setInputValue(value);
@@ -60,15 +61,17 @@ function Search(props) {
 
   const handleCloseModal = () => {
     setModalOpen(false);
+    setIsBookSearchSubmitted(false);
+    setBookSearchValue("");
   };
 
-  const handleBookSearchInputChange = (e) => {
-    setBookSearchValue(e.target.value);
+  const handleBookSearchInputChange = (event) => {
+    setBookSearchValue(event.target.value);
   };
 
-  const handleBookSearchSubmit = (e) => {
-    e.preventDefault();
-    console.log("Book search submitted:", bookSearchValue);
+  const handleBookSearchSubmit = (event) => {
+    event.preventDefault();
+    setIsBookSearchSubmitted(true);
   };
 
   return (
@@ -103,6 +106,9 @@ function Search(props) {
           />
           <button type="submit">검색</button>
         </form>
+        {isBookSearchSubmitted && (
+          <div>Book search submitted: {bookSearchValue}</div>
+        )}
       </Modal>
     </form>
   );
