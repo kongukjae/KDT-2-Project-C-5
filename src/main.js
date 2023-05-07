@@ -11,17 +11,18 @@ import BlockedUser from "./BlockedUser";
 import FollowerFollowing from "./FollowerFollowing";
 import ReviewPage from "./ReviewPage";
 import MainFeed from "./mainFeed";
-import API from "../components/bookcover";
+import API from "../components/Bookcover";
 
 import "./index.css";
 import BookReviewFeed from "./bookReviewFeed";
+import Bookcover from "../components/Bookcover";
 
 const App = () => {
   return (
     <div>
       {/* <BookReviewFeed /> */}
       {/* <ReviewPage /> */}
-      <API />
+      {/* <Bookcover /> */}
     </div>
     // <Router>
     //   <Routes>

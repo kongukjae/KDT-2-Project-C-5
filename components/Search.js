@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AutoComplete from "./AutoComplete";
 import Modal from "./Modal";
+import Bookcover from "./Bookcover";
 
 const styles = {
   header: {
@@ -76,7 +77,9 @@ function Search(props) {
 
   return (
     <form onSubmit={handleSubmit} style={styles.form}>
-      <div style={styles.header}></div>
+      <div style={styles.header}>
+        <Bookcover />
+      </div>
       <div style={styles.wrapper}>
         <div className="autocomplete-wrapper">
           <AutoComplete
