@@ -53,14 +53,15 @@ const loginPage = () => {
     display:"flex",
     flexDirection:"column",
     justifyContent:"space-around",
-    height:"80%"
+    height:"80%",
 
   }
 
   const btnBox={
     display:"flex",
     flexDirection:"column",
-    justifyContent:"space-around"
+    justifyContent:"space-around",
+    height:"40%"
   }
 
   return (
@@ -71,13 +72,13 @@ const loginPage = () => {
             <InputId value={id} onChange={(e)=> setId(e.target.value)}/>
             <p><b>password</b></p>
             <InputPwd value={pwd} onChange={(e)=> setPwd(e.target.value)}/>
-            
+            <Link to='/mainFeed'>
+              <ButtonLogin/>
+            </Link>
           </form>
         </div>
         <div style={btnBox}>
-          <Link to='/mainFeed'>
-            <ButtonLogin/>
-          </Link>
+          
           <ButtonSignUpWithGoogle/>
           <ButtonSignUpWithAppleAccount/>
           <Link to ='/signUp'>
