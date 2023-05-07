@@ -47,21 +47,37 @@ const loginPage = () => {
         // 로그인 실패 처리
       });
   };
+
+
+  const container={
+    display:"flex",
+    flexDirection:"column",
+    justifyContent:"space-around",
+    height:"80%"
+
+  }
+
+  const btnBox={
+    display:"flex",
+    flexDirection:"column",
+    justifyContent:"space-around"
+  }
+
   return (
-    <div>
+    <div style={container}>
         <BookStagramTopLogo/>
         <div>
           <form onSubmit={handleLogin}>
             <InputId value={id} onChange={(e)=> setId(e.target.value)}/>
             <p><b>password</b></p>
             <InputPwd value={pwd} onChange={(e)=> setPwd(e.target.value)}/>
-            <Link to='/mainFeed'>
-              <ButtonLogin/>
-            </Link>
+            
           </form>
         </div>
-        <div></div>
-        <div>
+        <div style={btnBox}>
+          <Link to='/mainFeed'>
+            <ButtonLogin/>
+          </Link>
           <ButtonSignUpWithGoogle/>
           <ButtonSignUpWithAppleAccount/>
           <Link to ='/signUp'>
