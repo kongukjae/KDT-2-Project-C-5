@@ -1,7 +1,7 @@
 import React from "react";
 
 const NotificationList = () => {
-  return <div>알림 목록</div>;
+  return <div>'jiny273588'님이 당신을 팔로우 하셨습니다.</div>;
 };
 
 export default NotificationList;
