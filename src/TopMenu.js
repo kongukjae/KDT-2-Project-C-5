@@ -1,7 +1,11 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 import BookStagramTopLogo from "../components/BookStagramTopLogo";
 import HambergerMenu from "../components/HambergerMenu";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import NotificationTab from "../components/NotificationTab";
+import NotificationList from "../components/NotificationList";
+
 // 계정설정 컴포넌트
 import AccountSetting from "./AccountSetting";
 // 알림설정 컴포넌트
@@ -11,17 +15,10 @@ import FollowerFollowing from "./FollowerFollowing";
 // 차단목록 컴포넌트
 import BlockedUser from "./BlockedUser";
 
-
 const headerStyle = {
-  display: 'flex',
-  justifyContent: 'space-around'
-}
-// 임시 태그 설정 컴포넌트
-const Page1 = () => <h1>태그설정</h1>;
-// 임시 구매하기 컴포넌트
-const Page2 = () => <h1>구매하기</h1>;
-// 임시 로그아웃 컴포넌트
-const Page3 = () => <h1>로그아웃</h1>;
+  display: "flex",
+  justifyContent: "space-around",
+};
 
 const TopMenu = () => {
   const menuItems = [
@@ -35,30 +32,27 @@ const TopMenu = () => {
   ];
 
   return (
-    <div>
-      {/* <Router>
+    <Router>
+      <div>
         <div style={headerStyle}>
-          <div>📃</div>
+          <Link to="/notificationlist">
+            <NotificationTab />
+          </Link>
           <BookStagramTopLogo />
           <HambergerMenu items={menuItems} />
         </div>
         <Routes>
-          <Route path="/accountsetting" element={<AccountSetting/>}/>
-          <Route path="/alarmsetting" element={<AlarmSetting/>}/>
-          <Route path="/followerfollowing" element={<FollowerFollowing/>}/>
-          <Route path="/tagsetting" element={<Page1/>}/>
-          <Route path="/blockedusers" element={<BlockedUser/>}/>
-          <Route path="/purchase" element={<Page2/>}/>
-          <Route path="/logout" element={<Page3/>}/>
+          <Route path="/accountsetting" element={<AccountSetting />} />
+          <Route path="/alarmsetting" element={<AlarmSetting />} />
+          <Route path="/followerfollowing" element={<FollowerFollowing />} />
+          <Route path="/tagsetting" element={<h1>태그설정</h1>} />
+          <Route path="/blockedusers" element={<BlockedUser />} />
+          <Route path="/purchase" element={<h1>구매하기</h1>} />
+          <Route path="/logout" element={<h1>로그아웃</h1>} />
+          <Route path="/notificationlist" element={<NotificationList />} />
         </Routes>
-      </Router> */}
-      <div style={headerStyle}>
-          <div>📃</div>
-          <BookStagramTopLogo />
-          <HambergerMenu items={menuItems} />
-        </div>
-    </div>
-    
+      </div>
+    </Router>
   );
 };
 
