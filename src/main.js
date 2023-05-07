@@ -14,7 +14,7 @@ import FollowerFollowing from "./FollowerFollowing";
 import AlarmSetting from "../components/AlarmSetting";
 import BlockedUser from "./BlockedUser";
 import AccountSetting from "./AccountSetting";
-import TopMenu from "../components/TopMenu";
+import TopMenu from "./TopMenu";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import PopularReview from "../components/PopularReview";
 import LiveReview from "../components/LiveReview";
@@ -23,7 +23,8 @@ import Bookcover from "../components/bookcover";
 const App = () => {
   return (
     <div>
-      <Bookcover />
+      f{/* <Bookcover /> */}
+      <TopMenu />
       {/* <Router>
         <Routes>
           <Route path="/" element={<Logo/>} />
