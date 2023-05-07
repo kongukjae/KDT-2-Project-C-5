@@ -16,6 +16,7 @@ import MainFeedReviewForm from "../components/mainFeedReviewForm";
 import NavBar from "./NavBar"
 import "./index.css";
 import ChallengePage from "./challengePage";
+import MainFeedContents from "../components/MainFeedContents";
 
 
 // 테스트를 위한 임시 코드

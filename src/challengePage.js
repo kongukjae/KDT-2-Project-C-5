@@ -1,21 +1,25 @@
 import React, { useState } from 'react';
 import TopMenu from './TopMenu';
+import Timer from '../components/Timer';
+import DailyCheck from '../components/DailyCheck';
 import NavBar from './NavBar'
 
 const challengePage = () => {
 
-  const [timer, setTimer] = useState('');
+  const [timer, setTimer] = useState(<Timer/>);
   const [dailyCheck, setDailyCheck] = useState('');
 
   const onClickTimer = () => {
-    setTimer('타이머 화면');
+    setTimer(<Timer/>);
     setDailyCheck('');
   };
 
   const onClickDailyCheck = () => {
-    setDailyCheck('출석체크 화면');
+    setDailyCheck(<DailyCheck/>);
     setTimer('');
   };
+
+  
 
   const navStyle = {
     display: 'flex',
@@ -36,7 +40,8 @@ const challengePage = () => {
         <div style={tabStyle} onClick={onClickDailyCheck}><b>출석 체크</b></div>
       </nav>
       <main>
-
+        {timer}
+        {dailyCheck}
       </main>
       <footer>
         {/* <NavBar/> */}
