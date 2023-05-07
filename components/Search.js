@@ -43,6 +43,7 @@ function Search(props) {
   const [inputValue, setInputValue] = useState("");
   const [suggestions, setSuggestions] = useState(["소설/시/희곡", "자기계발"]);
   const [modalOpen, setModalOpen] = useState(false);
+  const [bookSearchValue, setBookSearchValue] = useState("");
 
   const handleInputChange = (value) => {
     setInputValue(value);
@@ -59,6 +60,15 @@ function Search(props) {
 
   const handleCloseModal = () => {
     setModalOpen(false);
+  };
+
+  const handleBookSearchInputChange = (e) => {
+    setBookSearchValue(e.target.value);
+  };
+
+  const handleBookSearchSubmit = (e) => {
+    e.preventDefault();
+    console.log("Book search submitted:", bookSearchValue);
   };
 
   return (
@@ -84,7 +94,15 @@ function Search(props) {
         </button>
       </div>
       <Modal isOpen={modalOpen} onClose={handleCloseModal}>
-        <h1>책사진+제목</h1>
+        <form onSubmit={handleBookSearchSubmit}>
+          <input
+            type="text"
+            value={bookSearchValue}
+            onChange={handleBookSearchInputChange}
+            placeholder="검색어를 입력하세요."
+          />
+          <button type="submit">검색</button>
+        </form>
       </Modal>
     </form>
   );
