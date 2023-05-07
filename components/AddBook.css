@@ -1,0 +1,19 @@
+/* AddBook 컴포넌트에 사용되는 십자가 스타일링 */
+
+#cross {
+  background: white;
+  height: 80px;
+  position: relative;
+  width: 10px;
+  border-radius: 4px;
+}
+#cross:after {
+  background: white;
+  content: "";
+  height: 10px;
+  left: -35px;
+  position: absolute;
+  top: 35px;
+  width: 80px;
+  border-radius: 4px;
+}

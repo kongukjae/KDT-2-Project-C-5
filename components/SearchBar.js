@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 
 const container={
   display:"flex",
-  width:"80%",
+  width:"100%",
   height:"50px",
   justifyContent:"center",
   alignItems:"center",
