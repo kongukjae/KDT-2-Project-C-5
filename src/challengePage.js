@@ -32,8 +32,8 @@ const challengePage = () => {
         <TopMenu/>
       </header>
       <nav style={navStyle}>
-        <div style={tabStyle}><b>독서 타이머</b></div>
-        <div style={tabStyle}><b>출석 체크</b></div>
+        <div style={tabStyle} onClick={onClickTimer}><b>독서 타이머</b></div>
+        <div style={tabStyle} onClick={onClickDailyCheck}><b>출석 체크</b></div>
       </nav>
       <main>
 
