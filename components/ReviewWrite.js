@@ -19,7 +19,8 @@ const box={
   flexDirection:"column",
   alignItems:"center",
   width:"100%",
-  height:"100%"
+  height:"100%",
+  justifyContent:"space-around"
 }
 
 //리뷰 작성 페이지 내부 리뷰 작성 기능 및 레이아웃 담당 컴포넌트
@@ -32,6 +33,7 @@ const ReviewWrite=()=>{
     <div style={container}>
       <div style={box}>
         <WriteBox></WriteBox>
+        
       </div>
 
     </div>
