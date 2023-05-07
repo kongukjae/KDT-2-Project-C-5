@@ -11,6 +11,7 @@ import BlockedUser from "./BlockedUser";
 import FollowerFollowing from "./FollowerFollowing";
 import ReviewPage from "./ReviewPage";
 import MainFeed from "./mainFeed";
+import API from "../components/bookcover";
 
 import "./index.css";
 import BookReviewFeed from "./bookReviewFeed";
@@ -19,7 +20,8 @@ const App = () => {
   return (
     <div>
       {/* <BookReviewFeed /> */}
-      <ReviewPage />
+      {/* <ReviewPage /> */}
+      <API />
     </div>
     // <Router>
     //   <Routes>

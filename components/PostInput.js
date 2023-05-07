@@ -47,7 +47,7 @@ function PostInput({ onSave }) {
     },
     button: {
       padding: "10px 20px",
-      backgroundColor: "#007bff",
+      backgroundColor: "#696969",
       color: "#fff",
       fontSize: "16px",
       border: "none",
