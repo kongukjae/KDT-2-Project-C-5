@@ -1,6 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 
@@ -41,6 +42,9 @@ const App = () => {
 
 =======
 import Logo from "./startScreen"
+=======
+import Logo from "./startScreen";
+>>>>>>> origin/0507
 import Login from "./login";
 import LoginPage from "./loginPage";
 import SignUp from "./signUp";
@@ -49,19 +53,22 @@ import NavBar from "../components/NavBar";
 import "./index.css";
 import ReviewPage from "./ReviewPage";
 import BookReviewFeed from "./BookReviewFeed";
-import FollowerFollowing from './FollowerFollowing';
+import FollowerFollowing from "./FollowerFollowing";
 import AlarmSetting from "../components/AlarmSetting";
 import BlockedUser from "./BlockedUser";
 import AccountSetting from "./AccountSetting";
-import TopMenu from "../components/TopMenu";
-import { BrowserRouter as  Router, Routes, Route, Link } from "react-router-dom";
+import TopMenu from "./TopMenu";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import PopularReview from "../components/PopularReview";
 import LiveReview from "../components/LiveReview";
+import Bookcover from "../components/bookcover";
 
 const App = () => {
   return (
     <div>
-      <Router>
+      f{/* <Bookcover /> */}
+      <TopMenu />
+      {/* <Router>
         <Routes>
           <Route path="/" element={<Logo/>} />
           <Route path="/login" element={<LoginPage/>} />
@@ -72,7 +79,7 @@ const App = () => {
           <Route path="/followerSetting" element={<FollowerFollowing/>}/>
           <Route path="/review" element={<ReviewPage/>}/>
       </Routes>
-    </Router>
+    </Router> */}
     </div>
 >>>>>>> nowkwon97/issuetest
   );

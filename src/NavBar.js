@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+<<<<<<< HEAD
 <<<<<<< HEAD:src/NavBar.js
 import MainFeedContents from "../components/MainFeedContents";
 import ReviewPage from "./ReviewPage";
@@ -8,6 +9,10 @@ import ReviewPage from "./ReviewPage";
 import MainFeedContents from "./MainFeedContents";
 import ReviewPage from "../src/ReviewPage";
 >>>>>>> nowkwon97/issuetest:components/NavBar.js
+=======
+import MainFeedContents from "../components/MainFeedContents";
+import ReviewPage from "./ReviewPage";
+>>>>>>> origin/0507
 import TopMenu from "./TopMenu";
 
 const navBarStyle = {
@@ -77,11 +82,16 @@ const NavBar = () => {
 const App = () => {
   return (
     <div>
+<<<<<<< HEAD
 <<<<<<< HEAD:src/NavBar.js
       
       <TopMenu/>
 =======
 >>>>>>> nowkwon97/issuetest:components/NavBar.js
+=======
+      
+      <TopMenu/>
+>>>>>>> origin/0507
         <Routes>
           <Route path="/" element={<MainFeedContents />} />
           <Route path="/page2" element={<Page2 />} />
