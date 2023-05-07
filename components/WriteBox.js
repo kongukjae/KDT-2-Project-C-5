@@ -5,11 +5,12 @@ import AddBook from './AddBook';
 const container={
   display:"flex",
   flexDirection:"column",
-  width:"70%",
+  width:"80%",
   height:"70%",
   borderRadius:"5px",
   justifyContent:"space-around",
-  alignItems:""
+  alignItems:"center",
+  backgroundColor:"white"
 }
 
 //리뷰 작성 페이지 내 도서 검색,리뷰 작성,태그,등록 등을 담당하는 컴포넌트
