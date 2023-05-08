@@ -1,6 +1,6 @@
 import http from "http"
 import fs from "fs"
-import sendQuery from "./mariadb.js"
+import sendQuery from "./mariadb-DG.js"
 
 
 // const html=fs.readFileSync("../dist/index.html");
@@ -43,12 +43,14 @@ const server = http.createServer(function (req, res) {
         }
     }
 
-    }
+    
     if(req.url==="/src/img/star.png"&&req.method==="GET"){
         const starImg=fs.readFileSync("./img/star.png");
         res.end(starImg);
     }
+
 })
+
 
 server.listen(3000, () => {
     console.log("서버 열림");
