@@ -1,6 +1,6 @@
 import React from "react";
 import Bookinfo from "../components/Bookinfo-JE";
-import BookDescription from "../components/BookDescription";
+import BookDescription from "../components/BookDescription-JE";
 import FeedTopBar from "../components/FeedTopBar";
 import UploadTime from "../components/UploadTime-JE";
 
