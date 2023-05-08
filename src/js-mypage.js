@@ -8,7 +8,7 @@ import ProfileStatus from '../components/mypage-component/ProfileStatus';
 import MyPosts from '../components/mypage-component/MyPosts';
 import ProfileSettings from '../components/mypage-component/ProfileSettings';
 import ProfileName from '../components/mypage-component/ProfileName';
-import MyLibrary from './mylibrary';
+import MyLibrary from './js-MyLibrary';
 
 
 function MyPage() {
@@ -24,7 +24,7 @@ function MyPage() {
         <ProfileSettings />
         <MyStories/>
         <li>
-          <Link to="/MyLibrary">내서재</Link>
+          <Link to="/js-MyLibrary">내서재</Link>
         </li>
 
     </div>
@@ -36,7 +36,7 @@ const App = () => {
     <div>
       <Router>
         <Routes>
-          <Route path="/MyLibrary" element={<MyLibrary/>} />
+          <Route path="/js-MyLibrary" element={<js-MyLibrary/>} />
         </Routes>
         <div>
           <NavBar />
