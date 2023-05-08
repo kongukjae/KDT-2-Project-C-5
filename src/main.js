@@ -2,21 +2,21 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-import SearchPage from "./SearchPage";
-import Mypage from "./Mypage";
-import Logo from "./startScreen"
-import LoginPage from "./loginPage";
-import SignUp from "./signUp";
-import AccountSetting from "./AccountSetting";
-import BlockedUser from "./BlockedUser";
-import FollowerFollowing from "./FollowerFollowing";
-import ReviewPage from "./ReviewPage";
-import MainFeed from "./mainFeed";
-import MainFeedReviewForm from "../components/mainFeedReviewForm";
-import NavBar from "./NavBar"
+import SearchPage from "./JK-SearchPage";
+import Mypage from "./JK-Mypage";
+import Logo from "./JK-startScreen"
+import LoginPage from "./JK-loginPage";
+import SignUp from "./JK-signUp";
+import AccountSetting from "./JK-AccountSetting";
+import BlockedUser from "./JK-BlockedUser";
+import FollowerFollowing from "./JK-FollowerFollowing";
+import ReviewPage from "./JK-ReviewPage";
+import MainFeed from "./JK-mainFeed";
+import MainFeedReviewForm from "../components/JK-mainFeedReviewForm";
+import NavBar from "./JK-NavBar"
 import "./index.css";
-import ChallengePage from "./challengePage";
-import MainFeedContents from "../components/MainFeedContents";
+import ChallengePage from "./JK-challengePage";
+import MainFeedContents from "../components/JK-MainFeedContents";
 
 
 // 테스트를 위한 임시 코드
