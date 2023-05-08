@@ -1,10 +1,10 @@
 // 알람 설정 컴포넌트
 import React, { useState } from 'react';
-import TopMenu from '../src/JK-TopMenu';
-import ImgUserPicture from './JK-ImgUserPicture';
-import UserName from './JK-UserName';
-import AlarmOnPicture from './JK-AlarmOnPicture';
-import AlarmOffPicture from './JK-AlarmOffPicture';
+import TopMenu from '../src/TopMenu';
+import ImgUserPicture from './ImgUserPicture';
+import UserName from './UserName';
+import AlarmOnPicture from './AlarmOnPicture';
+import AlarmOffPicture from './AlarmOffPicture';
 
 const conStyle = {
   display: 'flex',
