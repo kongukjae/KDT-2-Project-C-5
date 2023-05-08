@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import PostInput from "../components/PostInput";
 import Search from "../components/Search";
-import NavBar from "./NavBar";
+import NavBar from "./DJ_NavBar";
 
-import MypageTopBar from "../components/MypageTopBar";
-import ReviewWrite from "../components/ReviewWrite";
+import MypageTopBar from "../components/DJ_MypageTopBar";
+import ReviewWrite from "../components/DJ_ReviewWrite";
 
 
 const container={

@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import BookStagramTopLogo from '../components/BookStagramTopLogo';
+import BookStagramTopLogo from '../components/DJ_BookStagramTopLogo';
 import InputId from '../components/InputId';
 import InputPwd from '../components/InputPwd';
 import ButtonLogin from '../components/ButtonLogin';

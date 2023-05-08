@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-import NumberBox from './NumberBox';
+import NumberBox from './DJ_NumberBox';
 
 const container={
   display:"flex",

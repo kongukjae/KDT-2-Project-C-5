@@ -1,6 +1,6 @@
 import React from 'react';
-import AddBook from './AddBook';
-import ReviewInput from './ReviewInput';
+import AddBook from './DJ_AddBook';
+import ReviewInput from './DJ_ReviewInput';
 
 
 const container={

@@ -1,8 +1,8 @@
 import React from 'react';
 
-import AutoComplete from './AutoComplete';
-import SearchBar from './SearchBar'
-import './AddBook.css'
+import AutoComplete from './Autocomplete';
+import SearchBar from './DJ_SearchBar'
+import './DJ_AddBook.css'
 
 
 

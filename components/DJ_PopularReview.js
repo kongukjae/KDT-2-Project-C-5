@@ -1,5 +1,5 @@
 import React from 'react';
-import MainFeedReviewForm from './mainFeedReviewForm';
+import MainFeedReviewForm from './DJ_mainFeedReviewForm';
 
 const scroll={
   width:"100%",
@@ -9,7 +9,10 @@ const scroll={
 
 }
 
-const LiveReview = () => {
+
+//인기 리뷰를 담당하는 컴포넌트
+//수정 : 김동주
+const PopularReview = () => {
   const data=[
     {
       bookPic:"pic",
@@ -46,7 +49,8 @@ const LiveReview = () => {
       time:"1h ago",
       like:"199",
       likeState:true,
-    }   
+    }
+    
   ]
 
 
@@ -64,8 +68,21 @@ const LiveReview = () => {
         likeState={item.likeState}
         />    
       ))}
+        <MainFeedReviewForm
+          bookPic={data.bookPic}
+          profilePic={data.profilePic}
+          name={data.name}
+          review={data.review}
+          time={data.time}
+          like={data.like}
+          likeState={data.likeState}
+          />
     </div>
   );
 };
 
-export default LiveReview;
+export default PopularReview;
+
+
+
+

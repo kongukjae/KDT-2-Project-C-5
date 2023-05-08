@@ -2,10 +2,10 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-import SearchPage from "./SearchPage";
+import SearchPage from "./DJ_SearchPage";
 import Mypage from "./Mypage";
-import Logo from "./startScreen"
-import LoginPage from "./loginPage";
+import Logo from "./DJ_startScreen"
+import LoginPage from "./DJ_loginPage";
 import SignUp from "./signUp";
 import AccountSetting from "./AccountSetting";
 import BlockedUser from "./BlockedUser";

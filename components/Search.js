@@ -18,7 +18,7 @@
 //2.자동완성 기능 추가하기
 
 import React, { useState } from "react";
-import AutoComplete from "./AutoComplete";
+import AutoComplete from "./Autocomplete";
 
 function Search(props) {
   const { value, onChange, onSubmit } = props;

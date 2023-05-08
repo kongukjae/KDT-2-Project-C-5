@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import TopMenu from './TopMenu';
+import TopMenu from './DJ_TopMenu';
 import FollowerList from '../components/FollowerList';
 import FollowingList from '../components/FollowingList';
 

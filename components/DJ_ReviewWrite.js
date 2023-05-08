@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import WriteBox from "./WriteBox";
+import WriteBox from "./DJ_WriteBox";
 
 const container={
   display:"flex",

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import PopularReview from './PopularReview';
-import LiveReview from './LiveReview';
-import BookStagramTopLogo from './BookStagramTopLogo';
+import PopularReview from './DJ_PopularReview';
+import LiveReview from './DJ_LiveReview';
+import BookStagramTopLogo from './DJ_BookStagramTopLogo';
 import AlarmForm from './AlarmForm';
 import Hamburger from './Hamburger';
 

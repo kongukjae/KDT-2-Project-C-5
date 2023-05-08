@@ -1,5 +1,5 @@
 import React from 'react';
-import TopMenu from './TopMenu';
+import TopMenu from './DJ_TopMenu';
 import BlockedList from '../components/BlockedList';
 
 const conStyle = {
