@@ -1,0 +1,4 @@
+#node_modules 파일 절대 깃 리모트에 푸시하지 말것
+/node_modules
+# 배포 파일
+/dist
