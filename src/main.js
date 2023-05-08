@@ -14,7 +14,7 @@ import FollowerFollowing from "./FollowerFollowing";
 import AlarmSetting from "../components/AlarmSetting";
 import BlockedUser from "./BlockedUser";
 import AccountSetting from "./AccountSetting";
-import TopMenu from "./TopMenu";
+import TopMenu from "./TopMenu-JE";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import PopularReview from "../components/PopularReview";
 import LiveReview from "../components/LiveReview";
