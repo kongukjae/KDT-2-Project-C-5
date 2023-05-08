@@ -1,7 +1,7 @@
 // Pwd 확인 컴포넌트이다.
 import React, { useState } from 'react';
 // 비밀번호 확인을 위해 비밀번호 입력 컴포넌트를 import
-import InputPwd from './JK-InputPwd';
+import InputPwd from './InputPwd';
 const InputPwdCheck = () => {
   const [password, setPassword] = useState('');
   const [passwordCheck, setPasswordCheck] = useState('');
