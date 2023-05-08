@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AutoComplete from "./AutoComplete";
 import Modal from "./Modal";
-import Bookcover from "./Bookcover";
+import Bookcover from "./bookcover-JE";
 
 const styles = {
   header: {

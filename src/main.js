@@ -9,13 +9,13 @@ import SignUp from "./signUp";
 import AccountSetting from "./AccountSetting";
 import BlockedUser from "./BlockedUser";
 import FollowerFollowing from "./FollowerFollowing";
-import ReviewPage from "./ReviewPage";
+import ReviewPage from "./ReviewPage-JE";
 import MainFeed from "./mainFeed";
-import API from "../components/Bookcover";
+import API from "../components/bookcover-JE";
 
 import "./index.css";
-import BookReviewFeed from "./bookReviewFeed";
-import Bookcover from "../components/Bookcover";
+import BookReviewFeed from "./bookReviewFeed-JE";
+import Bookcover from "../components/bookcover-JE";
 
 const App = () => {
   return (
