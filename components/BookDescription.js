@@ -10,6 +10,7 @@ const conStyle = {
   justifyContent: "space-around",
   border: "1px solid black",
   borderRadius: "10px",
+  backgroundColor: "#CDB7B5",
 };
 
 // 책 오른쪽 사진, 닉네임, 리뷰글 부분 임시 css
