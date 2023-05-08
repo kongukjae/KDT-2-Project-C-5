@@ -1,6 +1,6 @@
 import http from "http"
 import fs from "fs"
-import sendQuery from "./mariadb-DG-asyncTest.js"
+import sendQuery from "./mariadb.js"
 
 
 // const html=fs.readFileSync("../dist/index.html");
