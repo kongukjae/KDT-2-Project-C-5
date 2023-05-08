@@ -1,5 +1,5 @@
 import React from 'react';
-import HambergerMenu from './JK-HambergerMenu';
+import HambergerMenu from './HambergerMenu';
 
 
 const topBox={

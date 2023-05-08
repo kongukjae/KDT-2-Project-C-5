@@ -92,7 +92,9 @@ function HambergerMenu(props) {
   return (
     <div>
       <button onClick={toggleMenu}>🍔</button>
-      {isOpen && <Menu items={props.items} onClick={toggleMenu} />}
+      {isOpen && <Menu 
+                  items={props.items} 
+                  onClick={toggleMenu} />}
     </div>
   );
 }

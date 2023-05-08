@@ -1,10 +1,10 @@
 import React from "react";
 
 
-import MypageTopBar from "../components/DJ_MypageTopBar";
-import SearchBar from "../components/DJ_SearchBar"
-import TagContentBox from "../components/DJ_TagContentBox";
-import NavBar from "./DJ_NavBar"
+import MypageTopBar from "../components/MypageTopBar";
+import SearchBar from "../components/SearchBar"
+import TagContentBox from "../components/TagContentBox";
+import NavBar from "./NavBar"
 
 
 

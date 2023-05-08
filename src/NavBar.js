@@ -1,10 +1,9 @@
-// 화면 하단의 네비게이션 바 컴폰너트이다.
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
-import MainFeedContents from "../components/JK-MainFeedContents";
-import ReviewPage from "./JK-ReviewPage";
-import TopMenu from "./JK-TopMenu";
+import MainFeedContents from "../components/MainFeedContents";
+import ReviewPage from "./ReviewPage";
+import TopMenu from "./TopMenu";
 
 const navBarStyle = {
   display: "flex",

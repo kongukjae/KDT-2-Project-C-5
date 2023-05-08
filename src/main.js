@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 import SearchPage from "./SearchPage";
 import Mypage from "./Mypage";
-import Logo from "./DJ_startScreen"
+import Logo from "./startScreen"
 import LoginPage from "./loginPage";
 import SignUp from "./signUp";
 import AccountSetting from "./AccountSetting";

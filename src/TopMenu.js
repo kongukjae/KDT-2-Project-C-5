@@ -1,6 +1,6 @@
 import React from "react";
 import BookStagramTopLogo from "../components/BookStagramTopLogo";
-import HambergerMenu from "../components/DJ_HambergerMenu";
+import HambergerMenu from "../components/HambergerMenu";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 // 계정설정 컴포넌트
 import AccountSetting from "./AccountSetting";

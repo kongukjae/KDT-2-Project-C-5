@@ -1,6 +1,6 @@
 import React from 'react';
-import NavBar from './DJ_NavBar';
-import TopMenu from './DJ_TopMenu';
+import NavBar from './NavBar';
+import TopMenu from './TopMenu';
 import MainFeedContents from '../components/MainFeedContents';
 
 const headerStyle = {

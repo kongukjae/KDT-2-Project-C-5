@@ -1,6 +1,6 @@
 import React , {useState}from "react"
 
-import MyPost from "./DJ_MyPost"
+import MyPost from "./MyPost"
 
 const barContainer={
   display:"flex",
