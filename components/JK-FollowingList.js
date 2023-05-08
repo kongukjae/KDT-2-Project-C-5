@@ -2,7 +2,7 @@
 import React from 'react';
 import ImgUserPicture from './JK-ImgUserPicture'
 import UserName from './JK-UserName'
-import ButtonCancle from './JK-ButtonCancle';
+import ButtonCancle from './ButtonCancle';
 const conStyle = {
   height: '631px'
 }

@@ -1,8 +1,8 @@
 // ! 팔로워(구독인) 리스트 컴포넌트
 import React from 'react';
-import ImgUserPicture from './JK-ImgUserPicture'
-import UserName from './JK-UserName'
-import ButtonCancle from './JK-ButtonCancle';
+import ImgUserPicture from './ImgUserPicture'
+import UserName from './UserName'
+import ButtonCancle from './ButtonCancle';
 const conStyle = {
   height: '631px'
 }
