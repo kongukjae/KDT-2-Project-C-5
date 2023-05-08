@@ -1,6 +1,6 @@
 // 햄버거메뉴 관심 친구 컴폰넌트이다.
 import React, { useState } from 'react';
-import TopMenu from './JK-TopMenu';
+import TopMenu from './TopMenu';
 import FollowerList from '../components/JK-FollowerList';
 import FollowingList from '../components/JK-FollowingList';
 
