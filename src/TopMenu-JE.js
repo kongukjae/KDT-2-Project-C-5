@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
-import BookStagramTopLogo from "../components/BookStagramTopLogo";
-import HambergerMenu from "../components/HambergerMenu";
-import NotificationTab from "../components/NotificationTab";
-import NotificationList from "../components/NotificationList";
+import BookStagramTopLogo from "../components/BookStagramTopLogo-JE";
+import HambergerMenu from "../components/HambergerMenu-JE";
+import NotificationTab from "../components/NotificationTab-JE";
+import NotificationList from "../components/NotificationList-JE";
 
 // 계정설정 컴포넌트
 import AccountSetting from "./AccountSetting";
