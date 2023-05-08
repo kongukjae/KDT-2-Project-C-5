@@ -1,3 +1,4 @@
+// ! NavBar 컴포넌트 사용 시 <Router></Router> 태그로 감싸주지 않을 시 오류 발생 유의
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Routes, Route, Link} from "react-router-dom";
@@ -33,7 +34,7 @@ const NavBar = () => {
         </li>
 
         <li>
-          <Link to="">
+          <Link to="/challenge">
             <svg width="40" height="39" viewBox="0 0 40 39" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M9.65 22.0513L5 28.535L10.05 29.9975L13.1833 34.125L17.8833 27.5925" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               <path d="M30.35 22.0513L35 28.535L29.95 29.9975L26.8166 34.125L22.1166 27.5925" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>

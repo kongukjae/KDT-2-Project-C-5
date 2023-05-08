@@ -1,8 +1,10 @@
 // 챌린지 페이지 컴포넌트이다.
+// ! navbar 컴포넌트를 사용하는 과정에서 <Router></Router>태그로 감싸주지 않으면 오류 발생
 import React, { useState } from 'react';
 import TopMenu from './TopMenu';
 import Timer from '../components/Timer';
 import DailyCheck from '../components/DailyCheck';
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import NavBar from './NavBar'
 
 const challengePage = () => {
@@ -60,7 +62,7 @@ const challengePage = () => {
         {dailyCheck}
       </main>
       <footer>
-        {/* <NavBar/> */}
+        <NavBar/>
       </footer>
     </div>
   );
