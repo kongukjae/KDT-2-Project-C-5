@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 
-import MainFeedReviewForm from './DJ_mainFeedReviewForm';
+import MainFeedReviewForm from './mainFeedReviewForm';
 
 const feedContainer={
   display:"flex",

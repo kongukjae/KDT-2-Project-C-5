@@ -1,6 +1,5 @@
-// 메인 피드에서 인기 리뷰를 담당하는 컴포넌트이다.
 import React from 'react';
-import MainFeedReviewForm from './JK-mainFeedReviewForm';
+import MainFeedReviewForm from './mainFeedReviewForm';
 
 const scroll={
   width:"100%",

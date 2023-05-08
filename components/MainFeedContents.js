@@ -1,9 +1,8 @@
-// 메인 피드에서 실시간 리뷰, 인기 리뷰를 클릭으로 구분하는 컴포넌트이다.
 import React, { useState } from 'react';
-import PopularReview from './JK-PopularReview';
-import LiveReview from './JK-LiveReview';
-import BookStagramTopLogo from './JK-BookStagramTopLogo';
-import AlarmForm from './JK-AlarmForm';
+import PopularReview from './PopularReview';
+import LiveReview from './LiveReview';
+import BookStagramTopLogo from './BookStagramTopLogo';
+import AlarmForm from './AlarmForm';
 import Hamburger from './Hamburger';
 
 const headerStyle = {
