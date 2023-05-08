@@ -1,6 +1,9 @@
 import React from "react";
 import BookStagramTopLogo from "../components/BookStagramTopLogo";
 import HambergerMenu from "../components/HambergerMenu";
+import NotificationTab from "../components/NotificationTab";
+import NotificationList from "../components/NotificationList";
+
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 // 계정설정 컴포넌트
 import AccountSetting from "./AccountSetting";
@@ -11,12 +14,11 @@ import FollowerFollowing from "./FollowerFollowing";
 // 차단목록 컴포넌트
 import BlockedUser from "./BlockedUser";
 
-
 const headerStyle = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  width:"100%"
-}
+  display: "flex",
+  justifyContent: "space-between",
+  width: "100%",
+};
 // 임시 태그 설정 컴포넌트
 const Page1 = () => <h1>태그설정</h1>;
 // 임시 구매하기 컴포넌트
@@ -54,12 +56,11 @@ const TopMenu = () => {
         </Routes>
       </Router> */}
       <div style={headerStyle}>
-          <div>📃</div>
-          <BookStagramTopLogo />
-          <HambergerMenu items={menuItems} />
-        </div>
+        <NotificationTab />
+        <BookStagramTopLogo />
+        <HambergerMenu items={menuItems} />
+      </div>
     </div>
-    
   );
 };
 
