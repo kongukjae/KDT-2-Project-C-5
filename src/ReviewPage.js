@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import PostInput from "../components/PostInput-JE";
-import Search from "../components/Search-JE";
-import Post from "../components/Post-JE";
+import PostInput from "../components/PostInput";
+import Search from "../components/Search";
+import Post from "../components/Post";
 
 function ReviewPage() {
   const [posts, setPosts] = useState([]);

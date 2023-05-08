@@ -1,5 +1,5 @@
 import React from 'react';
-import MainFeedReviewForm from './DJ_mainFeedReviewForm';
+import MainFeedReviewForm from './mainFeedReviewForm';
 
 const scroll={
   width:"100%",
