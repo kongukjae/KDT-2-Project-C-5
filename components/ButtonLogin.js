@@ -12,7 +12,9 @@ const login={
 
 const container={
   display:"flex",
-  justifyContent:"center"
+  justifyContent:"center",
+  borderBottom:"1px solid black",
+  height:"50px"
 }
 
 const ButtonLogin = () => {

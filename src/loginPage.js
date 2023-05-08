@@ -61,14 +61,21 @@ const loginPage = () => {
     display:"flex",
     flexDirection:"column",
     justifyContent:"space-around",
-    height:"40%"
+    height:"125px"
+  }
+
+  const flex={
+    display:"flex",
+    justifyContent:"space-around",
+    flexDirection:"column",
+    height:"300px"
   }
 
   return (
     <div style={container}>
         <BookStagramTopLogo/>
         <div>
-          <form onSubmit={handleLogin}>
+          <form onSubmit={handleLogin} style={flex}>
             <InputId value={id} onChange={(e)=> setId(e.target.value)}/>
             <p><b>password</b></p>
             <InputPwd value={pwd} onChange={(e)=> setPwd(e.target.value)}/>
