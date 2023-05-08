@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import TagBox from './DJ_TagBox';
+import TagBox from './TagBox';
 
 const contentBox={
   display:"flex",
