@@ -1,5 +1,5 @@
 import React from "react";
-import TagCheckBox from "../components/tagCheckbox.js"
+import TagCheckBox from "../components/TagCheckbox.js"
 export default function FavorTag() {
 
   return (
