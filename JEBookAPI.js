@@ -64,7 +64,7 @@ https
 
     res.on("end", () => {
       //이미지를 파일로
-      fs.writeFile("book-cover.jpg", imageData, "binary", (err) => {
+      fs.writeFile("src/img/book-cover.jpg", imageData, "binary", (err) => {
         if (err) throw err;
         console.log("파일 저장");
       });
