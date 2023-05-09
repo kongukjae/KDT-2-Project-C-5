@@ -22,6 +22,12 @@ const server = http.createServer(function (req, res) {
             res.writeHead(200, { "Content-Type": "text/javascript" });
             res.end(js);
         }
+        if (req.url === "/picture"){
+            fetch("http://books.google.com/books/content?id=d_oeDgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api", {"Content:type":"image/jpeg"})
+            .then(result=>{
+                console.log(result.body)
+            })
+        }
     }
     if (req.method === "POST"){
         if (req.url === "/login"){
