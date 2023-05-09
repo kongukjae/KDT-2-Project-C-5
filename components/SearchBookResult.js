@@ -35,4 +35,4 @@ const SearchBookResult = () => {
   );
 };
 
-export default SearchResult;
+export default SearchBookResult;
