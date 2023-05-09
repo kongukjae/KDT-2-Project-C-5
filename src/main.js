@@ -17,6 +17,7 @@ import NavBar from "./NavBar";
 import ChallengePage from "./challengePage";
 import "./index.css";
 import NotificationList from "../components/NotificationList";
+import FavorTag from "./favortag";
 
 // 테스트를 위한 임시 코드
 const Page1 = () => <h1>실시간, 인기 리뷰 피드</h1>;
@@ -41,6 +42,7 @@ const App = () => {
         <Route path="/mypage" element={<Mypage />} />
         <Route path="/searchPage" element={<SearchPage />} />
         <Route path="/NotifictionList" element={<NotificationList />} />
+        <Route path="/favortag" element={<FavorTag />} />
       </Routes>
     </Router>
   );
