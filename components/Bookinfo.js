@@ -1,4 +1,5 @@
 import React from "react";
+import BookCoverImage from "../src/img/book-cover.jpg";
 
 const conStyle = {
   display: "flex",
@@ -22,7 +23,9 @@ const Bookinfo = () => {
           backgroundColor: "gray",
           margin: "10px",
         }}
-      ></div>
+      >
+        <img src={BookCoverImage} alt="img" />
+      </div>
       <div className="Info" style={InfoStyle}>
         <div style={InfoStyle}>책 이름:우주와 달</div>
         <div style={InfoStyle}>지은이:정지은</div>
