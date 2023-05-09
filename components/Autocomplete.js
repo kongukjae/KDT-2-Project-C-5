@@ -1,5 +1,5 @@
 import React from "react";
-import SearchResult from "./SearchBookResult";
+import SearchResult from "./SearchResult";
 
 const styles = {
   input: {
