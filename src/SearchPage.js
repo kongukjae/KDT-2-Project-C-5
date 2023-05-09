@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 
 import MypageTopBar from "../components/MypageTopBar";
@@ -19,13 +19,20 @@ const container={
 //태그 및 도서 검색 페이지 담당 컴폰넌트
 //김동주
 const searchPage=()=>{
+  const[tag,setTag]=useState([])
+
+  function getTag(tag){
+    console.log(tag);
+    return tag;
+  }
 
 
   return(
     <div style={container}>
       <MypageTopBar></MypageTopBar>
       <SearchBar></SearchBar>
-      <TagContentBox></TagContentBox>
+      <TagContentBox
+      onDataUpdate={getTag}></TagContentBox>
       <NavBar></NavBar>
     </div>
 
