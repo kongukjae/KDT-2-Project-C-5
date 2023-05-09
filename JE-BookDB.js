@@ -1,8 +1,10 @@
-// import https from "https";
+import https from "https";
+const url = "https://www.googleapis.com/books/v1/volumes";
+
 import mysql from "mysql";
 
 const connection = mysql.createConnection({
-  host: "localhost",
+  host: "127.0.0.1",
   user: "root",
   password: "Xxia1215@@",
   database: "bookstagram",
@@ -11,6 +13,7 @@ const connection = mysql.createConnection({
 connection.connect();
 // 데이터베이스 연결
 
+const userinfo = "SELECT * FROM userinfo";
 const books = "SELECT * FROM books";
 
 connection.query(books, (error, results, fields) => {
@@ -19,6 +22,5 @@ connection.query(books, (error, results, fields) => {
     return;
   }
   console.log(results);
+  connection.end();
 });
-
-// const url = `https://www.googleapis.com/books/v1/volumes?q=${title}`; // API URL
