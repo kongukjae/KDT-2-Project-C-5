@@ -3,8 +3,8 @@ import TagCheckBox from "../components/TagCheckbox.js"
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 const FavorTag = () => {
-  const {signUpForm} = useLocation();
-  console.log(signUpForm);
+  const {state} = useLocation();
+  const signUpForm = state;
   function addFavorTag(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -66,7 +66,7 @@ const FavorTag = () => {
         </table>
         {/* <h4>회원님이 선택하신 태그의 정보를 알려드릴게요</h4> */}
         <Link to="/mainFeed">
-          <button>지금은 건너y뛸래요</button>
+          <button>지금은 건너뛸래요</button>
         </Link>
           <button type="submit">등록</button>
         
