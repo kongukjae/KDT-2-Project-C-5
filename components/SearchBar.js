@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import sendQuery from '../src/mariadb';
+// import sendQuery from '../src/mariadb';
 
 const container={
   display:"flex",
