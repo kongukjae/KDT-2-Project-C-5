@@ -1,7 +1,5 @@
 import React from "react";
-
-
-import MypageTopBar from "../components/MypageTopBar";
+import TopMenu from "./TopMenu";
 import SearchBar from "../components/SearchBar"
 import TagContentBox from "../components/TagContentBox";
 import NavBar from "./NavBar"
@@ -23,7 +21,7 @@ const searchPage=()=>{
 
   return(
     <div style={container}>
-      <MypageTopBar></MypageTopBar>
+      <TopMenu></TopMenu>
       <SearchBar></SearchBar>
       <TagContentBox></TagContentBox>
       <NavBar></NavBar>
