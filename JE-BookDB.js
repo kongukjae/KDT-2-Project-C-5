@@ -21,5 +21,4 @@ connection.query(books, (error, results, fields) => {
   console.log(results);
 });
 
-connection.end();
 // const url = `https://www.googleapis.com/books/v1/volumes?q=${title}`; // API URL
