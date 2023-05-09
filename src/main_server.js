@@ -54,6 +54,10 @@ const server = http.createServer(function (req, res) {
                 })
             })
 
+        } else {
+            req.on("data", chunk=>{
+                console.log(JSON.parse(chunk))
+            })
         }
     }
 
