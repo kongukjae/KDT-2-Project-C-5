@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 7e892d12868865f525e7fd7a05003bb1bf6f2e17
 import https from "https";
 import mysql from "mysql";
 const url = "https://www.googleapis.com/books/v1/volumes";
@@ -21,6 +24,7 @@ xhr.onload = function () {
 
 const connection = mysql.createConnection({
   host: "127.0.0.1",
+<<<<<<< HEAD
 =======
 // import https from "https";
 import mysql from "mysql";
@@ -37,6 +41,8 @@ import mysql from "mysql";
 const connection = mysql.createConnection({
   host: "127.0.0.1",
 >>>>>>> f87864c7 (N오타수정)
+=======
+>>>>>>> 7e892d12868865f525e7fd7a05003bb1bf6f2e17
   user: "root",
   password: "Xxia1215@@",
   database: "bookstagram",
@@ -47,12 +53,16 @@ connection.connect();
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const userinfo = "SELECT * FROM userinfo";
 =======
 >>>>>>> bc3f73c8 (books 테이블 생성)
 =======
 const userinfo = "SELECT * FROM userinfo";
 >>>>>>> f87864c7 (N오타수정)
+=======
+const userinfo = "SELECT * FROM userinfo";
+>>>>>>> 7e892d12868865f525e7fd7a05003bb1bf6f2e17
 const books = "SELECT * FROM books";
 
 connection.query(books, (error, results, fields) => {
@@ -61,6 +71,7 @@ connection.query(books, (error, results, fields) => {
     return;
   }
   console.log(results);
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   connection.end();
@@ -74,3 +85,7 @@ connection.query(books, (error, results, fields) => {
   connection.end();
 });
 >>>>>>> f87864c7 (N오타수정)
+=======
+  connection.end();
+});
+>>>>>>> 7e892d12868865f525e7fd7a05003bb1bf6f2e17
