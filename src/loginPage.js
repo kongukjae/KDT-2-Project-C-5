@@ -79,9 +79,9 @@ const loginPage = () => {
             <InputId value={id} onChange={(e)=> setId(e.target.value)}/>
             <p><b>password</b></p>
             <InputPwd value={pwd} onChange={(e)=> setPwd(e.target.value)}/>
-            <Link to='/mainFeed'>
+            {/* <Link to='/mainFeed'> */}
               <ButtonLogin/>
-            </Link>
+            {/* </Link> */}
           </form>
         </div>
         <div style={btnBox}>
