@@ -1,6 +1,6 @@
 // 회원 가입 컴포넌트이다.
 import React from 'react';
-import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import {BrowserRouter as Routes,Route, Link} from 'react-router-dom'
 import BookStagramTopLogo from '../components/BookStagramTopLogo';
 import InputId from '../components/InputId';
 import InputPwd from '../components/InputPwd';
@@ -23,7 +23,9 @@ const signUp = () => {
       <InputUserName/>
       {/* <InputPwd/> */}
       <InputPwdCheck/>
+      <Link to="/favortag">
       <ButtonSubmit/>
+      </Link>
     </div>
   );
 };
