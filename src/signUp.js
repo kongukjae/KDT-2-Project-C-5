@@ -24,8 +24,9 @@ const signUp = () => {
     for (let [name, value] of formData.entries()) {
       signUpForm[name] = value;
     }
+    navigate("/favortag", signUpForm);
   }
-  navigate("/favortag", signUpForm)
+  
 
 
   return (
