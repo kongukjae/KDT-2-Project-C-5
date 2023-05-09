@@ -55,12 +55,13 @@ const server = http.createServer(function (req, res) {
             })
 
         } else {
-            req.on("data", chunk=>{
-                console.log(JSON.parse(chunk))
-            })
-            res.writeHead(200,{"Content-Type":"application/json"});
-            const sender = {result : true}
-            res.end(JSON.stringify(sender));
+            // 회원가입폼 테스트 구문 주석 처리
+            // req.on("data", chunk=>{
+            //     console.log(JSON.parse(chunk))
+            // })
+            // res.writeHead(200,{"Content-Type":"application/json"});
+            // const sender = {result : true}
+            // res.end(JSON.stringify(sender));
         }
     }
 
