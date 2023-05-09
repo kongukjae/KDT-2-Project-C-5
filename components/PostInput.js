@@ -29,7 +29,7 @@ function PostInput({ onSave }) {
     },
     input: {
       width: "290px",
-      height: "100px",
+      height: "70px",
       fontSize: "16px",
       padding: "10px",
       border: "1px solid #ccc",
@@ -38,7 +38,7 @@ function PostInput({ onSave }) {
     },
     textarea: {
       width: "290px",
-      height: "200px",
+      height: "150px",
       fontSize: "16px",
       padding: "10px",
       border: "1px solid #ccc",
@@ -59,7 +59,7 @@ function PostInput({ onSave }) {
 
   return (
     <form onSubmit={handleSubmit} style={styles.container}>
-      <div>
+      <div style={{ height: "80px" }}>
         <label htmlFor="title">
           <br />
         </label>

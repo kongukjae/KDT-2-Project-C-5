@@ -1,23 +1,19 @@
 import React from "react";
-import BookStagramTopLogo from "../components/BookStagramTopLogo";
-import HambergerMenu from "../components/HambergerMenu";
-import NotificationTab from "../components/NotificationTab";
-import NotificationList from "../components/NotificationList";
-
+import BookStagramTopLogo from "./BookStagramTopLogo-JE";
+import HambergerMenu from "./HambergerMenu-JE";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 // 계정설정 컴포넌트
-import AccountSetting from "./AccountSetting";
+import AccountSetting from "../src/AccountSetting";
 // 알림설정 컴포넌트
-import AlarmSetting from "../components/AlarmSetting";
+import AlarmSetting from "./AlarmSetting";
 // 관심친구 컴포넌트
-import FollowerFollowing from "./FollowerFollowing";
+import FollowerFollowing from "../src/FollowerFollowing";
 // 차단목록 컴포넌트
-import BlockedUser from "./BlockedUser";
+import BlockedUser from "../src/BlockedUser";
 
 const headerStyle = {
   display: "flex",
-  justifyContent: "space-between",
-  width: "100%",
+  justifyContent: "space-around",
 };
 // 임시 태그 설정 컴포넌트
 const Page1 = () => <h1>태그설정</h1>;
@@ -40,10 +36,26 @@ const TopMenu = () => {
   return (
     <div>
       <div style={headerStyle}>
-        <NotificationTab />
+        <div>📃</div>
         <BookStagramTopLogo />
         <HambergerMenu items={menuItems} />
       </div>
+
+      <Routes>
+        <Route path="/accountsetting" element={<AccountSetting />} />
+        <Route path="/alarmsetting" element={<AlarmSetting />} />
+        <Route path="/followerfollowing" element={<FollowerFollowing />} />
+        <Route path="/tagsetting" element={<Page1 />} />
+        <Route path="/blockedusers" element={<BlockedUser />} />
+        <Route path="/purchase" element={<Page2 />} />
+        <Route path="/logout" element={<Page3 />} />
+      </Routes>
+
+      {/* <div style={headerStyle}>
+          <div>📃</div>
+          <BookStagramTopLogo />
+          <HambergerMenu items={menuItems} />
+        </div> */}
     </div>
   );
 };
