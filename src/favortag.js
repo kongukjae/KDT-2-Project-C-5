@@ -5,11 +5,10 @@ const FavorTag = () => {
   function addFavorTag(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
-    const checkedTags = {};
+    const checkedTags = {tag:[]};
     for (let [name, value] of formData.entries()) {
-      console.log(name + ":" + value);
-      if (name.startsWith('tag') && value === 'on') {
-        checkedTags[name] = true;
+      if (name.startsWith('tag')) {
+        checkedTags.tag.push(value);
       }
     }
     const jsonTags = JSON.stringify(checkedTags);
