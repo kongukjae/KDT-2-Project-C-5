@@ -43,11 +43,10 @@ const loginPage = () => {
       })
       .then(data => {
         // 로그인 성공 처리
-        const res = JSON.parse(data)
-        console.log(res);
+        console.log(data);
         
-        if(res.result === true){ // 결과값이 true일 경우
-          console.log('login succeeded', res);
+        if(data.result === true){ // 결과값이 true일 경우
+          console.log('login succeeded', data);
           navigate("/mainFeed"); // navigate를 사용해 컴포넌트 이동
         }
       })
