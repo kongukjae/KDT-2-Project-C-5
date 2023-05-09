@@ -16,10 +16,10 @@ const box={
 
 
 //태그를 담는 컨테이너 및 스타일링 담당
-const TagBox=(props,onData)=>{
+const TagBox=(props)=>{
   const[tagName,setTagName]=useState(props.tagName);
   function tagClicked(){
-    onData(tagName);
+    props.onData(tagName);
   }
   return(
     <div style={box} onClick={tagClicked}>

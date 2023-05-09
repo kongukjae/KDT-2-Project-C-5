@@ -26,10 +26,10 @@ const container={
 //김동주
 const searchPage=()=>{
   const[tag,setTag]=useState([])
+  
 
-  function getTag(tag){
-    console.log(tag);
-    return tag;
+  function getTag(t){
+    console.log(t)
   }
 
 
