@@ -67,5 +67,7 @@ connection.query(books, (error, results, fields) => {
     return;
   }
   console.log(results);
+
+  // connection.query(INSERT INTO books ())
   connection.end();
 });
