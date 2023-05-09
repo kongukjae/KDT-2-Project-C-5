@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import TagCheckBox from "../components/TagCheckbox.js"
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 const FavorTag = () => {
+  // signUp에서 useNavigate로 보낼 때 같이 보낸 객체를 그대로 가져오는 구문.
+  // 여기서 주의해야 할 것은 보내는 객체의 키값은 동일해야 한다는 것이다. 만일 객체의 키를 state로 했을 경우, 받는 Location도 state로 해야한다. 그렇지 않았을 경우 키값이 일치하지 않아 에러가 난다.
   const {state} = useLocation();
+  const navigate = useNavigate();
+  //state를 전송용 객체 signUpForm으로 변환하는 구문.
   const signUpForm = state;
   function addFavorTag(event) {
     event.preventDefault();
@@ -16,19 +20,20 @@ const FavorTag = () => {
     }
     const finalForm = JSON.stringify(signUpForm);
     console.log(finalForm);
-    // fetch('/signUp/tags', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: jsonTags
-    // }).then(response => {
-    //   if (response.ok) {
-    //     // handle success
-    //   } else {
-    //     // handle error
-    //   }
-    // }).catch(error => {
-    //   // handle network error
-    // });
+    fetch('/signUp/tags', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: jsonTags
+    }).then(response => {
+      if (response.ok) {
+        // handle success
+        navigate("/mainFeed");
+      } else {
+        // handle error
+      }
+    }).catch(error => {
+      // handle network error
+    });
   }
 
   return (
