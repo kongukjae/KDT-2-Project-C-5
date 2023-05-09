@@ -58,6 +58,9 @@ const server = http.createServer(function (req, res) {
             req.on("data", chunk=>{
                 console.log(JSON.parse(chunk))
             })
+            res.writeHead(200,{"Content-Type":"application/json"});
+            const sender = {result : true}
+            res.end(JSON.stringify(sender));
         }
     }
 
