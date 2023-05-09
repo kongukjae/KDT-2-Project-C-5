@@ -1,8 +1,9 @@
 import React from "react";
 import TagCheckBox from "../components/TagCheckbox.js"
-export default function FavorTag() {
+const FavorTag = () => {
 
   return (
+    <div>
     <form id="favorTag">
       <h4>관심이 가는 태그를 선택해주세요!</h4>
       <table>
@@ -13,59 +14,33 @@ export default function FavorTag() {
         </thead>
         <tbody>
           <tr>
-            <td><TagCheckBox name="#시"></TagCheckBox></td>
-            <td><TagCheckBox name="#소설"></TagCheckBox></td>
-            <td><TagCheckBox name="#희곡"></TagCheckBox></td>
+            <td><TagCheckBox name="공포"></TagCheckBox></td>
+            <td><TagCheckBox name="로맨스"></TagCheckBox></td>
+            <td><TagCheckBox name="사랑"></TagCheckBox></td>
           </tr>
           <tr>
-            <td><TagCheckBox name="#시"></TagCheckBox></td>
-            <td><TagCheckBox name="#소설"></TagCheckBox></td>
-            <td><TagCheckBox name="#희곡"></TagCheckBox></td>
+            <td><TagCheckBox name="멜로"></TagCheckBox></td>
+            <td><TagCheckBox name="호러"></TagCheckBox></td>
+            <td><TagCheckBox name="수사"></TagCheckBox></td>
           </tr>
           <tr>
-            <td><TagCheckBox name="#시"></TagCheckBox></td>
-            <td><TagCheckBox name="#소설"></TagCheckBox></td>
-            <td><TagCheckBox name="#희곡"></TagCheckBox></td>
+            <td><TagCheckBox name="모순"></TagCheckBox></td>
+            <td><TagCheckBox name="비극"></TagCheckBox></td>
+            <td><TagCheckBox name="역사"></TagCheckBox></td>
           </tr>
           <tr>
-            <td><TagCheckBox name="#시"></TagCheckBox></td>
-            <td><TagCheckBox name="#소설"></TagCheckBox></td>
-            <td><TagCheckBox name="#희곡"></TagCheckBox></td>
+            <td><TagCheckBox name="실화"></TagCheckBox></td>
+            <td><TagCheckBox name="감동"></TagCheckBox></td>
+            <td></td>
           </tr>
         </tbody>
       </table>
-      <table>
-        <thead>
-          <tr>
-            <th colSpan={3}>회원님의 관심사는 무엇인가요?</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><TagCheckBox name="#여행"></TagCheckBox></td>
-            <td><TagCheckBox name="#운동"></TagCheckBox></td>
-            <td><TagCheckBox name="#예술"></TagCheckBox></td>
-          </tr>
-          <tr>
-            <td><TagCheckBox name="#여행"></TagCheckBox></td>
-            <td><TagCheckBox name="#운동"></TagCheckBox></td>
-            <td><TagCheckBox name="#예술"></TagCheckBox></td>
-          </tr>
-          <tr>
-            <td><TagCheckBox name="#여행"></TagCheckBox></td>
-            <td><TagCheckBox name="#운동"></TagCheckBox></td>
-            <td><TagCheckBox name="#예술"></TagCheckBox></td>
-          </tr>
-          <tr>
-            <td><TagCheckBox name="#여행"></TagCheckBox></td>
-            <td><TagCheckBox name="#운동"></TagCheckBox></td>
-            <td><TagCheckBox name="#예술"></TagCheckBox></td>
-          </tr>
-        </tbody>
-      </table>
-      <h4>회원님이 선택하신 태그의 정보를 알려드릴게요</h4>
-      <button>지금은 건너뛸래요</button>
-      <button>등록</button>
+      {/* <h4>회원님이 선택하신 태그의 정보를 알려드릴게요</h4> */}
+      <button type="submit">지금은 건너뛸래요</button>
+      <button type="submit">등록</button>
     </form>
+    </div>
   )
 }
+
+export default FavorTag;
