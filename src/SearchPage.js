@@ -24,6 +24,8 @@ const searchPage=()=>{
   let tagAry=[]
   
   function checkAry(t,ary){
+    console.log("함수 호출")
+
     for(let i=0;i<ary.length;i++){
       console.log("함수 호출")
       if(ary[i]===t){
