@@ -19,11 +19,13 @@ const signUp = () => {
   //submit이 눌렸을 경우 실행하는 함수
   function submitSignUpForm(event) {
     event.preventDefault();
+    //console.log(event.target);
     const formData = new FormData(event.target);
     const signUpForm = {};
     for (let [name, value] of formData.entries()) {
       signUpForm[name] = value;
     }
+    //console.log(signUpForm);
     navigate("/favortag", {state: signUpForm});
   }
   
