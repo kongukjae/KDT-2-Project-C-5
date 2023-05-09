@@ -96,7 +96,7 @@ const loginPage = () => {
           
           <ButtonSignUpWithGoogle/>
           <ButtonSignUpWithAppleAccount/>
-          <Link to ='/signUp'>
+          <Link to='/signUp'>
             <ButtonSignUp/>
           </Link>
           <ForgotAccount/>
