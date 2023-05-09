@@ -57,7 +57,7 @@ const server = http.createServer(function (req, res) {
         }
     }
 
-    
+
     if(req.url==="/src/img/star.png"&&req.method==="GET"){
         const starImg=fs.readFileSync("./img/star.png");
         res.end(starImg);
