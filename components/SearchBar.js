@@ -40,12 +40,21 @@ const imgBox={
 //김동주
 const searchBar=()=>{
 
+  const [searchQuery, setSearchQuery] = useState('');
+
+  const handleSearch = async () => {
+    const response = await fetch('경로');
+    const data = response.json();
+    
+    //(검색 결과를 처리하는 부분)
+  };
+
   return(
     <div style={container}>
       <div style={box}>
-          <input style={inputSt}></input>
+          <input style={inputSt}type='text' value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}></input>
           <div style={imgBox}>
-            <img></img>
+            <button onClick={handleSearch}>검색</button>
           </div>
       </div>
     </div>
