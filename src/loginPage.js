@@ -9,10 +9,13 @@ import ButtonSignUpWithAppleAccount from '../components/ButtonSignUpWithAppleAcc
 import ButtonSignUp from '../components/ButtonSignUp';
 import ForgotAccount from '../components/ForgotAccount';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom'; // useHistory가 업데이트되어 useNavigate로 변경됨.
 import SignUp from './signUp';
+
 const loginPage = () => {
   const [id, setId] = useState('');
   const [pwd, setPwd] = useState('');
+  const navigate = useNavigate(); 
   const handleLogin = (event) => {
     // 기본 제출 이벤트 방지
     event.preventDefault();
@@ -40,7 +43,13 @@ const loginPage = () => {
       })
       .then(data => {
         // 로그인 성공 처리
-        console.log('login succeeded', data);
+        const res = JSON.parse(data)
+        console.log(res);
+        
+        if(res.result === true){ // 결과값이 true일 경우
+          console.log('login succeeded', res);
+          navigate("/mainFeed"); // navigate를 사용해 컴포넌트 이동
+        }
       })
       .catch(error => {
         console.error(error);
