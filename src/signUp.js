@@ -24,7 +24,7 @@ const signUp = () => {
     for (let [name, value] of formData.entries()) {
       signUpForm[name] = value;
     }
-    navigate("/favortag", signUpForm);
+    navigate("/favortag", {state: signUpForm});
   }
   
 
@@ -39,9 +39,7 @@ const signUp = () => {
       <InputUserName />
       {/* <InputPwd/> */}
       <InputPwdCheck />
-      <Link to="/favortag">
         <ButtonSubmit />
-      </Link>
     </form>
   );
 };
