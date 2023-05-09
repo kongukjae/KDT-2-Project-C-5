@@ -1,8 +1,8 @@
-import React,{useState} from 'react';
+import React,{useEffect, useState} from 'react';
 
 const container={
   display:"flex",
-  width:"100%",
+  width:"90%",
   height:"50px",
   justifyContent:"center",
   alignItems:"center",
@@ -38,12 +38,18 @@ const imgBox={
 
 //도서,태그 검색 페이지의 검색바를 담당하는 컴포넌트
 //김동주
-const searchBar=()=>{
+const searchBar=(props)=>{
+  const[tags,setTags]=useState("");
+  
+  useEffect(()=>{
+    setTags(props.tags);
+    console.log(props.tags);
+  },[props])
 
   return(
     <div style={container}>
       <div style={box}>
-          <input style={inputSt}></input>
+          <input style={inputSt} type="text" value={tags}></input>
           <div style={imgBox}>
             <img></img>
           </div>
