@@ -87,5 +87,4 @@ connection.query(books, (error, results, fields) => {
 //   connection.end();
 // });
 
-connection.end();
 // const url = `https://www.googleapis.com/books/v1/volumes?q=${title}`; // API URL
