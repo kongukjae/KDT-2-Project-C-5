@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-import React from "react";
-import TopMenu from "./TopMenu";
-=======
 import React, { useState } from "react";
 
 
 import MypageTopBar from "../components/MypageTopBar";
->>>>>>> 0f7ded72 (review page tag moves)
+import TopMenu from "./TopMenu";
 import SearchBar from "../components/SearchBar"
 import TagContentBox from "../components/TagContentBox";
 import SearchResult from "../components/SearchResult";
@@ -25,19 +21,32 @@ const container={
 //태그 및 도서 검색 페이지 담당 컴폰넌트
 //김동주
 const searchPage=()=>{
-  const[tagList,setTagList]=useState([])
+  let tagAry=[]
   
+  function checkAry(t,ary){
+    for(let i=0;i<ary.length;i++){
+      console.log("함수 호출")
+      if(ary[i]===t){
+        console.log("중복된 태그 선택");
+      }else{
+        ary=[...ary,tag];
+        console.log(ary);
+      }
+    }
+  }
+
   //리액트 전역관리
-  function getTag(t){
-    console.log(t);
-    setTagList();
+  function getTag(tag){
+    console.log(tag);
+    checkAry(tag,tagAry);
+    
   }
 
 
   return(
     <div style={container}>
       <TopMenu></TopMenu>
-      <SearchBar></SearchBar>
+      <SearchBar tagAry={tagAry}></SearchBar>
       <TagContentBox
       onDataUpdate={getTag}></TagContentBox>
       <NavBar></NavBar>
