@@ -1,4 +1,3 @@
-
 import https from "https";
 
 import mysql from "mysql";
@@ -56,7 +55,6 @@ function getBookInfo(title) {
 getBookInfo("The Hitchhiker's Guide to the Galaxy");
 getBookInfo("Sustainable Development and Planning VIII");
 
-
 import https from "https";
 import mysql from "mysql";
 const url = "https://www.googleapis.com/books/v1/volumes";
@@ -87,9 +85,6 @@ const connection = mysql.createConnection({
 connection.connect();
 // 데이터베이스 연결
 
-
-
-
 const books = "SELECT * FROM books";
 
 connection.query(books, (error, results, fields) => {
@@ -98,13 +93,7 @@ connection.query(books, (error, results, fields) => {
     return;
   }
   console.log(results);
-<<<<<<< HEAD
 
-  // connection.query(INSERT INTO books ())
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 77caa065 (N오타수정)
   connection.end();
 });
 // connection.query(books, (error, results, fields) => {
