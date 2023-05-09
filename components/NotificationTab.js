@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const NotificationTab = () => {
   return (
     <div>
-      <Link to="/notificationList">
+      <Link to="/NotificationList">
         <button>💭</button>
       </Link>
     </div>
