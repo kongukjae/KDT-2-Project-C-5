@@ -2,6 +2,7 @@ import React from "react";
 import TopMenu from "./TopMenu";
 import SearchBar from "../components/SearchBar"
 import TagContentBox from "../components/TagContentBox";
+import SearchResult from "../components/SearchResult";
 import NavBar from "./NavBar"
 
 
