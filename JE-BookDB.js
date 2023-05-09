@@ -39,6 +39,5 @@ connection.query(books, (error, results, fields) => {
 =======
 });
 
-connection.end();
 // const url = `https://www.googleapis.com/books/v1/volumes?q=${title}`; // API URL
 >>>>>>> bc3f73c8 (books 테이블 생성)
