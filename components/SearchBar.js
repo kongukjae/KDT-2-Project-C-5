@@ -35,13 +35,19 @@ const imgBox={
   borderRadius:"5px"
 }
 
+const imgStyle = {
+  width: '20px',
+  height: '20px',
+  marginLeft: '3px'
+}
+
 
 //도서,태그 검색 페이지의 검색바를 담당하는 컴포넌트
 //김동주
 const searchBar=()=>{
 
   const [searchQuery, setSearchQuery] = useState('');
-
+// 돋보기 버튼 클릭 시 처리할 로직
   const handleSearch = async () => {
     const response = await fetch('경로');
     const data = response.json();
@@ -54,7 +60,7 @@ const searchBar=()=>{
       <div style={box}>
           <input style={inputSt}type='text' value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)}></input>
           <div style={imgBox}>
-            <button onClick={handleSearch}>검색</button>
+            <button onClick={handleSearch}><img style={imgStyle} src="/img/reading_glasses.png"></img></button>
           </div>
       </div>
     </div>
