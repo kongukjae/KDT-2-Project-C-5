@@ -1,19 +1,22 @@
 import React, { useState } from "react";
 import TagCheckBox from "../components/TagCheckbox.js"
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 const FavorTag = () => {
+  const {signUpForm} = useLocation();
+  console.log(signUpForm);
   function addFavorTag(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
-    const checkedTags = {tag:[]};
+    signUpForm.tag = [];
     for (let [name, value] of formData.entries()) {
       if (name.startsWith('tag')) {
-        checkedTags.tag.push(value);
+        signUpForm.tag.push(value);
       }
     }
-    const jsonTags = JSON.stringify(checkedTags);
-    console.log(jsonTags);
-    // fetch('/api/tags', {
+    const finalForm = JSON.stringify(signUpForm);
+    console.log(finalForm);
+    // fetch('/signUp/tags', {
     //   method: 'POST',
     //   headers: { 'Content-Type': 'application/json' },
     //   body: jsonTags
