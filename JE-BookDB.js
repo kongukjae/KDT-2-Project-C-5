@@ -1,6 +1,6 @@
 import https from "https";
 
-import mysql from "mysql";
+// import mysql from "mysql";
 // const url = "https://jsonplaceholder.typicode.com/todos";
 // // JSON 데이터를 반환하는 외부 API URL
 // const xhr = new XMLHttpRequest();
@@ -55,18 +55,18 @@ function getBookInfo(title) {
 getBookInfo("The Hitchhiker's Guide to the Galaxy");
 getBookInfo("Sustainable Development and Planning VIII");
 
-const connection = mysql.createConnection({
-  host: "127.0.0.1",
-  user: "root",
-  password: "Xxia1215@@",
-  database: "bookstagram",
-});
+// const connection = mysql.createConnection({
+//   host: "127.0.0.1",
+//   user: "root",
+//   password: "Xxia1215@@",
+//   database: "bookstagram",
+// });
 
-connection.connect();
-// 데이터베이스 연결
+// connection.connect();
+// // 데이터베이스 연결
 
-const userinfo = "SELECT * FROM userinfo";
-const books = "SELECT * FROM books";
+// const userinfo = "SELECT * FROM userinfo";
+// const books = "SELECT * FROM books";
 
 connection.query(books, (error, results, fields) => {
   if (error) {
