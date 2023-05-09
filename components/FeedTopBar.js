@@ -1,6 +1,6 @@
 import React from "react";
 import AlarmPicture from "./AlarmOffPicture";
-import userImage from "../public/img.jpg";
+import userImage from "../src/img/goose.jpg";
 
 const Styles = {
   display: "flex",
