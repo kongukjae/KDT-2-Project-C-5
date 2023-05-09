@@ -40,7 +40,7 @@ const App = () => {
         <Route path="/review" element={<ReviewPage />} />
         <Route path="/mypage" element={<Mypage />} />
         <Route path="/searchPage" element={<SearchPage />} />
-        <Route path="/NotifictionList" element={<NotificationList />} />
+        <Route path="/NotificationList" element={<NotificationList />} />
       </Routes>
     </Router>
   );
