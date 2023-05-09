@@ -5,7 +5,7 @@ import MypageTopBar from "../components/MypageTopBar";
 import TopMenu from "./TopMenu";
 import DJ_SearchBar from "./DJ_SearchBar"
 import TagContentBox from "../components/TagContentBox";
-import SearchResult from "../components/SearchResult";
+import SearchResult from "../components/SearchBookResult";
 import NavBar from "./NavBar"
 
 
@@ -59,7 +59,7 @@ const searchPage=()=>{
       <TopMenu></TopMenu>
       <DJ_SearchBar></DJ_SearchBar>
       <TagContentBox onDataUpdate={getTag}></TagContentBox>
-      {/* <SearchResult></SearchResult> */}
+      {/* <SearchBookResult></SearchResult> */}
       <NavBar></NavBar>
     </div>
 

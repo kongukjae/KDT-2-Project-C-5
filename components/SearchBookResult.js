@@ -25,11 +25,11 @@ const container={
 }
 //검색 결과를 담는 컨테이너 컴포넌트
 //김동주
-const SearchResult = () => {
+const SearchBookResult = () => {
   return (
     <div style={container}>
       <div style={contentBox}>
-
+        
       </div>
     </div>
   );

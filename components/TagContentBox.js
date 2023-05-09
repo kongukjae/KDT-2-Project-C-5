@@ -37,7 +37,7 @@ const TagContentBox=(props)=>{
     <div style={container}>
       <div style={contentBox}>
         {tags.map((item,index)=>(
-          <TagBox 
+          <TagBox
           key={index} 
           tagName={item}
           onData={getTag}></TagBox>
