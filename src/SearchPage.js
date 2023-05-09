@@ -23,24 +23,27 @@ const container={
 const searchPage=()=>{
   let tagAry=[]
   
-  function checkAry(t,ary){
-    console.log("함수 호출")
 
-    for(let i=0;i<ary.length;i++){
-      console.log("함수 호출")
-      if(ary[i]===t){
-        console.log("중복된 태그 선택");
-      }else{
-        ary=[...ary,tag];
-        console.log(ary);
-      }
-    }
-  }
+  
 
   //리액트 전역관리
   function getTag(tag){
     console.log(tag);
-    checkAry(tag,tagAry);
+    tagAry=[...tagAry,tag];
+
+    if(tagAry.length>1){
+
+      for(let i=0;i<tagAry.length-1;i++){
+        console.log("for문 실행")
+        if(tag==tagAry[i]){
+          console.log(i)
+          tagAry.pop();  
+        }
+      }
+    }
+    
+    console.log(tagAry);
+    
     
   }
 
