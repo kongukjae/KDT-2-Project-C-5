@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import sendQuery from '../mariadb';
 
 const container={
   display:"flex",
@@ -49,10 +50,13 @@ const searchBar=()=>{
   const [searchQuery, setSearchQuery] = useState('');
 // 돋보기 버튼 클릭 시 처리할 로직
   const handleSearch = async () => {
-    const response = await fetch('경로');
+    const response = await sendQuery(`SELECT * FROM books WHERE title LIKE '%${searchQuery}%' OR author LIKE '%${searchQuery}%'`)
+    // response.json()는 JSON형식을 Javascript 객체로 변환시켜주는 메서드이다.
+    // data = 객체
     const data = response.json();
     
     //(검색 결과를 처리하는 부분)
+    
   };
 
   return(
