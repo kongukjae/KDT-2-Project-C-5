@@ -2,17 +2,22 @@ import React, { useState } from "react";
 import TagCheckBox from "../components/TagCheckbox.js"
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useLocation, useNavigate } from "react-router-dom";
+
 const FavorTag = () => {
   // signUp에서 useNavigate로 보낼 때 같이 보낸 객체를 그대로 가져오는 구문.
   // 여기서 주의해야 할 것은 보내는 객체의 키값은 동일해야 한다는 것이다. 만일 객체의 키를 state로 했을 경우, 받는 Location도 state로 해야한다. 그렇지 않았을 경우 키값이 일치하지 않아 에러가 난다.
   const {state} = useLocation();
   const navigate = useNavigate();
-  //state를 전송용 객체 signUpForm으로 변환하는 구문.
+  // state를 전송용 객체 signUpForm으로 변환하는 구문.
   const signUpForm = state;
+  // FormData를 사용하여 정제하고, 이를 또다시 정제하여 객체로 만드는 구문
   function addFavorTag(event) {
     event.preventDefault();
+    // 받은 Submit, 이벤트 타겟을 FormData형식으로 저장하는 구문.
     const formData = new FormData(event.target);
+    // 전송용 객체 signUpForm에 tag라는 키를 추가하고 value를 빈 배열로 할당함.
     signUpForm.tag = [];
+    // formData에 설정된 내장함수 entries를 통해 해당 form의 name과 value에 접근하는 구문. 이를 통해 데이터를 추출할 수 있다.
     for (let [name, value] of formData.entries()) {
       if (name.startsWith('tag')) {
         signUpForm.tag.push(value);
@@ -30,9 +35,11 @@ const FavorTag = () => {
         navigate("/mainFeed");
       } else {
         // handle error
+        console.log("에러가 발생하였습니다.")
       }
     }).catch(error => {
       // handle network error
+      console.log("네트워크 에러가 발생하였습니다.")
     });
   }
 
