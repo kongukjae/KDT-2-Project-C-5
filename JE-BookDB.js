@@ -76,7 +76,6 @@ xhr.onload = function () {
 
 const connection = mysql.createConnection({
   host: "127.0.0.1",
-
   user: "root",
   password: "Xxia1215@@",
   database: "bookstagram",
@@ -85,6 +84,7 @@ const connection = mysql.createConnection({
 connection.connect();
 // 데이터베이스 연결
 
+const userinfo = "SELECT * FROM userinfo";
 const books = "SELECT * FROM books";
 
 connection.query(books, (error, results, fields) => {
