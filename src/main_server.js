@@ -42,11 +42,14 @@ const server = http.createServer(function (req, res) {
                         }
                     }
                 })
+                //로그인이 성공했을 때만 메인피드 페이지로 이동함.
                 .then(result =>{
                     console.log(result);
                     if(result){
+                        const sender = {result : result}
+                        console.log(sender);
                         res.writeHead(200,{"Content-Type":"application/json"});
-                        res.end(JSON.stringify(`"result":${result}`));
+                        res.end(JSON.stringify(sender));
                     }
                 })
             })
