@@ -15,6 +15,7 @@ import fs from "fs";
 const imageUrl =
   "https://books.google.com/books/content?id=DmUr6q1EDYMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api";
 
+//이미지 다운로드
 https
   .get(imageUrl, (res) => {
     let imageData = "";
@@ -22,10 +23,11 @@ https
     // 이미지 데이터의 인코딩 방식을 binary로 설정함. node.js에서는 blob 인코딩 방식을 지원하지않는다?
     res.on("data", (chunk) => {
       imageData += chunk;
+      //이미지 저장
     });
 
     res.on("end", () => {
-      //이미지를 파일로 저장
+      //이미지를 파일로
       fs.writeFile("book-cover.jpg", imageData, "binary", (err) => {
         if (err) throw err;
         console.log("파일 저장");
