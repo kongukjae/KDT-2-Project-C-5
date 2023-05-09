@@ -28,7 +28,7 @@ const FavorTag = () => {
     fetch('/signUp/tags', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: jsonTags
+      body: finalForm
     }).then(response => {
       if (response.ok) {
         // handle success
