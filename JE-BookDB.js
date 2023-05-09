@@ -1,4 +1,5 @@
 import https from "https";
+
 import mysql from "mysql";
 const url = "https://jsonplaceholder.typicode.com/todos";
 // // JSON 데이터를 반환하는 외부 API URL
@@ -25,6 +26,11 @@ fetch(url)
       console.log(item);
     });
   });
+// Google Books API에서 책 정보와 표지 이미지를 가져오는 함수
+  function getBookInfo(title) {
+    const url = `https://www.googleapis.com/books/v1/volumes?q=${title}`; // API URL
+    https.get(url, (response) => {
+      let data = "";
 
 const connection = mysql.createConnection({
   host: "127.0.0.1",
