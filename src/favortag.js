@@ -77,11 +77,11 @@ const FavorTag = () => {
           </tbody>
         </table>
         {/* <h4>회원님이 선택하신 태그의 정보를 알려드릴게요</h4> */}
-        <Link to="/mainFeed">
-          <button>지금은 건너뛸래요</button>
-        </Link>
-          <button type="submit">등록</button>
         
+          {/* <button>지금은 건너뛸래요</button> */}
+        <Link to="/mainFeed">
+          <button type="submit">등록</button>
+        </Link>
       </form>
     </div>
   )
