@@ -67,13 +67,16 @@ const server = http.createServer(function (req, res) {
     if (req.method === "POST") {
         if (req.url === "/reviewadd") {
           let body = "";
+            // 이벤트 헨들러에서 받은 데이터를 문자열 데이터로 저장
           req.on("data", (chunk) => {
             // chunk가 여러 개 있을 수 있으므로 하나로 합쳐준다.
             body += chunk.toString();
           });
+            // body 변수를 JSON형태로 변환
+            // 변환한 객체를 이용하여 쿼리문 작성
           req.on("end", () => {
             const { title, content } = JSON.parse(body);
-            // 받아온 정보를 처리하는 코드를 작성합니다.
+            // 받아온 정보를 처리하는 부분 -> 대건님이 작성하신 쿼리문 적용 예정
           });
         }
       }
