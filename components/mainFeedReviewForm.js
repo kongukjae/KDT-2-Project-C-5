@@ -12,6 +12,7 @@ const conStyle = {
   border: '1px solid black',
   borderRadius: '10px',
   alignItems:"center",
+  marginTop: '10px'
   
 }
 
@@ -32,7 +33,6 @@ const reviewBox={
   justifyContent:"space-between",
   width:"250px",
   height:"90%",
-  
 }
 
 const infoBox={

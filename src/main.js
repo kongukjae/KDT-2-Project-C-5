@@ -47,4 +47,6 @@ const App = () => {
     </Router>
   );
 };
-createRoot(document.getElementById("root")).render(<App />);
+
+const root =document.getElementById("root")
+createRoot(root).render(<App />);

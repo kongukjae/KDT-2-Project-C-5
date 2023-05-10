@@ -21,8 +21,7 @@ const container={
   height: '50px',
   position: 'absolute', */
   position: 'fixed',
-  bottom: '793',
-  left: '0',
+  top: '793',
   width: '390px',
   overflow: 'auto'
 
