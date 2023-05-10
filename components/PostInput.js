@@ -111,5 +111,4 @@ function PostInput({ onSave }) {
     </form>
   );
 }
-
 export default PostInput;
