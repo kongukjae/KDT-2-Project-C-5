@@ -17,6 +17,7 @@ import BlockedUser from "./BlockedUser";
 const headerStyle = {
   display: "flex",
   justifyContent: "space-between",
+  alignItems:"center",
   width: "100%",
 };
 // 임시 태그 설정 컴포넌트
@@ -38,7 +39,7 @@ const TopMenu = () => {
   ];
 
   return (
-    <div>
+    <div style={headerStyle}>
       <div style={headerStyle}>
         <NotificationTab />
         <BookStagramTopLogo />

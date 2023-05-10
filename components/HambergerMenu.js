@@ -78,6 +78,22 @@ function Menu(props) {
   );
 }
 
+
+const container={
+  display:"flex",
+  flexDirection:"column",
+  justifyContent:"center",
+  alignItems:"center",
+  height:"15px"
+}
+
+const container2={
+  display:"flex",
+  flexDirection:"column",
+  justifyContent:"center",
+  alignItems:"center"
+}
+
 // 드롭다운 메뉴바 컴포넌트
 // useState 훅을 이용하여 isOpen 이라는 상태값을 관리한다.
 // 드롭다운 메뉴의 열림/닫힘 상태를 결정한다.
@@ -89,9 +105,21 @@ function HambergerMenu(props) {
     setIsOpen(!isOpen);
   }
 
+  const line={
+    borderBottom:"black",
+    borderBottomStyle: "solid",
+    width: "15px",
+    height: "5px"
+  }
+  
+
   return (
-    <div>
-      <button onClick={toggleMenu}>🍔</button>
+    <div style={container}>
+      <button onClick={toggleMenu} style={container2}>
+        <div style={line}></div>
+        <div style={line}></div>
+        <div style={line}></div>
+      </button>
       {isOpen && <Menu 
                   items={props.items} 
                   onClick={toggleMenu} />}
