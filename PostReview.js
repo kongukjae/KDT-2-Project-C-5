@@ -9,17 +9,19 @@ function PostReview() {
     input4: "",
   });
 
+  //input value가 변경될 때 호출되는 이벤트 핸들러
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setFormData({ ...formData, [name]: value });
   };
 
+  //from 제출 이벤트 핸들러
   const handleSubmit = (e) => {
     e.preventDefault();
     const { input1, input2, input3, input4 } = formData;
     const data = { input1, input2, input3, input4 };
     console.log(data);
-    fetch("/addreview", {
+    fetch("/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
