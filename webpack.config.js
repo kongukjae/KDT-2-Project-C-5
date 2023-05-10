@@ -1,23 +1,22 @@
-import { fileURLToPath } from 'url';
-import path from 'path';
-import HtmlWebpackPlugin from "html-webpack-plugin"
+import { fileURLToPath } from "url";
+import path from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 // const __dirname = path.resolve();
 
 export default {
-  mode: 'development',
-  entry: './src/main.js',
+  mode: "development",
+  entry: "./src/main.js",
   output: {
     path: `${__dirname}/dist`,
-    filename: 'main.js',
+    filename: "main.js",
     // path: path.resolve(__dirname, 'dist'),
     // filename: 'bundle.js',
   },
-  resolve:{
-
-    extensions:['.js','.jsx']
+  resolve: {
+    extensions: [".js", ".jsx"],
   },
   module: {
     rules: [
@@ -25,32 +24,35 @@ export default {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
             babelrc: true,
           },
-          
         },
       },
       {
         test: /\.m?js$/,
-        type: "javascript/auto"
+        type: "javascript/auto",
       },
       {
         test: /\.m?js$/,
         resolve: {
-          fullySpecified: false
-        }
+          fullySpecified: false,
+        },
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }
+        use: ["style-loader", "css-loader"],
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html'
-    })
-  ]
+      template: "./src/index.html",
+    }),
+  ],
 };
