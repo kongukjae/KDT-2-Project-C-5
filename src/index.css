@@ -9,13 +9,19 @@ body {
   display: flex;
 }
 
+body{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+
+}
+
 #root {
   background-color: #fff;
   width: 390px;
   height: 843px;
   display: flex;
   justify-content: center;
-  align-items: center;
   align-items: center;
 }
 /*! 시작 페이지 */
