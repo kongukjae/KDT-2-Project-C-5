@@ -4,9 +4,16 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(3, 63, 21);
+  background-color: #CAC2C2;
 
   display: flex;
+}
+
+body{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+
 }
 
 #root {

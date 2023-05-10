@@ -86,7 +86,7 @@ const mainFeedReviewForm = (props) => {
         </div>
 
         
-        <div>{review}</div>
+        <div onClick={props.handle}>{review}</div>
 
           <div style={infoBox}>
             <div>{time}</div>
