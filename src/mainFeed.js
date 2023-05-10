@@ -14,7 +14,6 @@ const headerStyle = {
 const divStyle = {
   width:"100%",
   height: '100%'
-
 }
 
 const footSt={
@@ -28,7 +27,7 @@ const footSt={
 const mainFeed = () => {
   return (
     <div style={divStyle}>
-      <header style={headerStyle}>
+      <header >
         <TopMenu/>
       </header>
 

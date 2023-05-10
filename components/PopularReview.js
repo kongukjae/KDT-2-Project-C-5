@@ -2,6 +2,7 @@ import React from "react";
 import MainFeedReviewForm from "./mainFeedReviewForm";
 
 const scroll = {
+  display: 'flex',
   width: "100%",
   height: "100%",
   maxHeight:"100%",
