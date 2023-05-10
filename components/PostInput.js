@@ -12,10 +12,31 @@ function PostInput({ onSave }) {
     setContent(e.target.value);
   };
 
+  //submit 수정
   const handleSubmit = (e) => {
     e.preventDefault();
     const post = { title, content };
-    onSave(post, false); // isEditing = false
+    //fetch를 통해서 "/"에 요청을 보냄
+    fetch("/", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(post),
+      //post객체 전달
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("서버 에러");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error("에러입니다.", error);
+      });
     setTitle("");
     setContent("");
   };
