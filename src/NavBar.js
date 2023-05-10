@@ -9,16 +9,23 @@ import TopMenu from "./TopMenu";
 const navBarStyle = {
   display: "flex",
   flexDirection: "row",
-  justifyContent: "space-between",
+  justifyContent: "space-evenly",
   listStyleType: "none",
   padding: "0",
   margin: '0',
-  marginTop: '50px'
 };
 
 
 const container={
-  width:"100%"
+/*   ,
+  height: '50px',
+  position: 'absolute', */
+  position: 'fixed',
+  bottom: '793',
+  left: '0',
+  width: '390px',
+  overflow: 'auto'
+
 }
 const NavBar = () => {
 

@@ -43,7 +43,7 @@ const MainFeedContents = () => {
   };
 
   return (
-    <div style={conStyle}>
+    <div>
       {/* <header style={headerStyle}>
         <AlarmForm/>
         <BookStagramTopLogo/>
@@ -56,7 +56,7 @@ const MainFeedContents = () => {
       </nav>
 
       <main>
-        <div>
+        <div style={conStyle}>
           {popularReview}
           {liveReview}
         </div>

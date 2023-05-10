@@ -5,6 +5,12 @@ import NavBar from "../src/NavBar";
 import Post from "../components/Post";
 import TopMenu from "./TopMenu";
 
+const divStyle = {
+  width:"100%",
+  height: '100%'
+
+}
+
 function ReviewPage() {
   const [posts, setPosts] = useState([]);
 
@@ -23,17 +29,17 @@ function ReviewPage() {
   };
 
   return (
-    <div>
+    <div style={divStyle}>
       <TopMenu />
       <div
-        className="container"
+        /* className="container"
         style={{
           backgroundColor: "#f5f5f5",
           width: "100%",
           height: "100%",
           display: "flex",
           flexDirection: "column",
-        }}
+        }} */
       >
         <Search />
         <PostInput onSave={handleSave} />

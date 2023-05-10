@@ -18,6 +18,13 @@ const container={
   width:"100%"
 }
 
+const divStyle = {
+  width:"100%",
+  height: '100%'
+
+}
+
+
 //태그 및 도서 검색 페이지 담당 컴폰넌트
 //김동주
 const searchPage=()=>{
@@ -55,7 +62,7 @@ const searchPage=()=>{
 
 
   return(
-    <div style={container}>
+    <div style={divStyle}>
       <TopMenu></TopMenu>
       <DJ_SearchBar></DJ_SearchBar>
       <TagContentBox onDataUpdate={getTag}></TagContentBox>

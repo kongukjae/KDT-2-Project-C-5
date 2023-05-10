@@ -4,7 +4,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(3, 63, 21);
+  background-color: #CAC2C2;
 
   display: flex;
 }
@@ -124,7 +124,7 @@ li {
   justify-content: space-around;
 }
 
-/* 라뷰 페이지 */
+/* 리뷰 페이지 */
 
 .form-group {
   margin-bottom: 20px;

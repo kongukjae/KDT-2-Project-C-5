@@ -48,8 +48,14 @@ const challengePage = () => {
     justifyContent: 'space-around',
   }
 
+  const divStyle = {
+    width:"100%",
+    height: '100%'
+  
+  }
+  
   return (
-    <div>
+    <div style={divStyle}>
       <header>
         <TopMenu/>
       </header>
