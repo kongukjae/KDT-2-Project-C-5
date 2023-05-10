@@ -18,6 +18,7 @@ import ChallengePage from "./challengePage";
 import "./index.css";
 import NotificationList from "../components/NotificationList";
 import FavorTag from "./favortag";
+import ReviewPage2 from "../ReviewPage2";
 
 // 테스트를 위한 임시 코드
 const Page1 = () => <h1>실시간, 인기 리뷰 피드</h1>;
@@ -38,7 +39,7 @@ const App = () => {
         <Route path="/mainFeed" element={<MainFeed />} />
         <Route path="/challenge" element={<ChallengePage />} />
         <Route path="/followerSetting" element={<FollowerFollowing />} />
-        <Route path="/review" element={<ReviewPage />} />
+        <Route path="/review" element={<ReviewPage2 />} />
         <Route path="/mypage" element={<Mypage />} />
         <Route path="/searchPage" element={<SearchPage />} />
         <Route path="/NotifictionList" element={<NotificationList />} />
