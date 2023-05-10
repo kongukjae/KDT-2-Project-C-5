@@ -8,11 +8,16 @@ body {
 
   display: flex;
 }
+body{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
 
 #root {
   background-color: #fff;
   width: 390px;
-  height: 843px;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
