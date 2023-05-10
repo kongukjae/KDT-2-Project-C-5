@@ -20,7 +20,6 @@ const tabStyle = {
 }
 
 const conStyle = {
-  backgroundColor: '#D9D9D9',
   display: 'flex',
   justifyContent:"space-around",
 }

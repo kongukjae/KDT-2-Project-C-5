@@ -9,7 +9,6 @@ const feedContainer={
   Height:"100%",
   maxHeight:"100%",
   overflow:"scroll"
-
 }
 
 

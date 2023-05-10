@@ -12,7 +12,8 @@ const conStyle = {
   border: '1px solid black',
   borderRadius: '10px',
   alignItems:"center",
-  marginTop: '10px'
+  marginTop: '10px',
+  backgroundColor: 'rgb(217, 217, 217)',
 }
 
 
