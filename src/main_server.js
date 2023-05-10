@@ -64,6 +64,20 @@ const server = http.createServer(function (req, res) {
             // res.end(JSON.stringify(sender));
         }
     }
+    if (req.method === "POST") {
+        if (req.url === "/reviewadd") {
+          let body = "";
+          req.on("data", (chunk) => {
+            // chunk가 여러 개 있을 수 있으므로 하나로 합쳐준다.
+            body += chunk.toString();
+          });
+          req.on("end", () => {
+            const { title, content } = JSON.parse(body);
+            // 받아온 정보를 처리하는 코드를 작성합니다.
+          });
+        }
+      }
+      
 
 
     if(req.url==="/src/img/star.png"&&req.method==="GET"){
