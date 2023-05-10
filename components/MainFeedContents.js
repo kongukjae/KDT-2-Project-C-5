@@ -25,21 +25,16 @@ const conStyle = {
 
 const MainFeedContents = () => {
 
-  const [popularReview, setPopularReview] = useState(<PopularReview Handle={handle}/>);
-  const [liveReview, setLiveReview] = useState('');
+  const [isLive,setIsLive]=useState("true");
   const [state,setState]=useState(false);
   // 인기 리뷰 클릭시 상태 변환 함수 setPopularReview를 이용하여 변화시킬 내용
   const onClickPopular = () => {
-    setPopularReview(<PopularReview Handle={handle}/>);
-    // 인기 리뷰 클릭 시 실시간 리뷰는 안보이게 처리
-    setLiveReview('');
+    setIsLive(false);
   };
 
   // 실시간 리뷰 클릭시 상태 변환 함수 setLiveReview를 이용하여 변화시킬 내용
   const onClickLive = () => {
-    setLiveReview(<LiveReview Handle={handle}/>);
-    // 실시간 리뷰 클릭 시 인기 리뷰는 안보이게 처리
-    setPopularReview('');
+    setIsLive(true);
   };
 
   const handle=()=>{
@@ -63,7 +58,14 @@ const MainFeedContents = () => {
       <main>
         <div>
           {
-            state ? (<BookReviewFeed/>):<PopularReview Handle={handle}/>
+            isLive? (
+            state? <BookReviewFeed/>:<PopularReview Handle={handle}/>
+
+            ) : (
+
+              state?  <BookReviewFeed/>:<LiveReview Handle={handle}/>
+            )
+
           }
           
         </div>

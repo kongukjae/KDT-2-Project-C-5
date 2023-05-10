@@ -60,7 +60,6 @@ const PopularReview = ({Handle}) => {
 
   return (
     <div>
-    <div onClick={Handle}>hello</div>
     <div style={scroll}>
       {bookreview.map((item, index) => (
         <MainFeedReviewForm
@@ -72,6 +71,7 @@ const PopularReview = ({Handle}) => {
           time={item['modifiedtime']}
           like={item['likecount']}
           likeState={false}
+          handle={Handle}
         />
       ))}
       
