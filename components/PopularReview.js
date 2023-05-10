@@ -18,7 +18,7 @@ let bookreview = getBookReview();
 
 //인기 리뷰를 담당하는 컴포넌트
 //수정 : 김동주
-const PopularReview = () => {
+const PopularReview = ({Handle}) => {
   const data = [
     {
       bookPic: 'pic',
@@ -59,6 +59,7 @@ const PopularReview = () => {
   ];
 
   return (
+    <div>
     <div style={scroll}>
       {bookreview.map((item, index) => (
         <MainFeedReviewForm
@@ -70,8 +71,11 @@ const PopularReview = () => {
           time={item['modifiedtime']}
           like={item['likecount']}
           likeState={false}
+          handle={Handle}
         />
       ))}
+      
+    </div>
     </div>
   );
 };

@@ -18,7 +18,7 @@ const mainFeed = () => {
       <header style={headerStyle}>
         <TopMenu/>
       </header>
-
+    
       <MainFeedContents />
 
       <footer>
