@@ -12,12 +12,12 @@ const scroll={
 const LiveReview = () => {
   const data=[
     {
-      bookPic:"pic",
+      bookPic:"./src/img/book-cover2.jpg",
       profilePic:"ppp",
-      name:"김동주",
+      name:"jain",
       review:"asdasdasdasd",
       time:"1h ago",
-      like:"199",
+      like:"9",
       likeState:true,
     },
     {

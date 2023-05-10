@@ -76,7 +76,7 @@ const mainFeedReviewForm = (props) => {
 
     <div style={conStyle}>
       <div style={picBox}>
-        <div>사진</div>
+        <img src={bookPic} alt="책 이미지"/>
       </div>
       <div style={reviewBox}>
 
