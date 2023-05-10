@@ -12,41 +12,41 @@ const scroll={
 const LiveReview = () => {
   const data=[
     {
-      bookPic:"pic",
+      bookPic:"../src/img/book-cover2.jpg",
       profilePic:"ppp",
-      name:"김동주",
-      review:"asdasdasdasd",
+      name:"jain",
+      review:"총균쇠에 대한 나의 고견",
       time:"1h ago",
-      like:"199",
+      like:"9",
       likeState:true,
     },
     {
-      bookPic:"pic",
+      bookPic:"../src/img/book-cover3.jpg",
       profilePic:"ppp",
-      name:"김동주",
-      review:"asdasdasdasd",
-      time:"1h ago",
-      like:"199",
+      name:"Roy",
+      review:"AI 인류의 미래는?",
+      time:"2h ago",
+      like:"3",
       likeState:true,
     },
     {
-      bookPic:"pic",
+      bookPic:"../src/img/book-cover4.jpg",
       profilePic:"ppp",
-      name:"김동주",
-      review:"asdasdasdasd",
-      time:"1h ago",
-      like:"199",
+      name:"쥬씨",
+      review:"내 집중력 어디갔나",
+      time:"2h ago",
+      like:"5",
       likeState:true,
     },
     {
-      bookPic:"pic",
+      bookPic:"../src/img/book-cover5.jpg",
       profilePic:"ppp",
-      name:"김동주",
-      review:"asdasdasdasd",
-      time:"1h ago",
-      like:"199",
+      name:"Jeremy",
+      review:"부를 위한 기초",
+      time:"3h ago",
+      like:"22",
       likeState:true,
-    }   
+    }
   ]
 
 
