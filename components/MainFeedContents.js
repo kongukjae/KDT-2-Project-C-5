@@ -20,7 +20,9 @@ const tabStyle = {
 }
 
 const conStyle = {
-  backgroundColor: '#D9D9D9'
+  backgroundColor: '#D9D9D9',
+  display: 'flex',
+  justifyContent:"space-around",
 }
 
 const MainFeedContents = () => {
@@ -43,7 +45,7 @@ const MainFeedContents = () => {
   };
 
   return (
-    <div style={conStyle}>
+    <div>
       {/* <header style={headerStyle}>
         <AlarmForm/>
         <BookStagramTopLogo/>
@@ -56,7 +58,7 @@ const MainFeedContents = () => {
       </nav>
 
       <main>
-        <div>
+        <div style={conStyle}>
           {popularReview}
           {liveReview}
         </div>

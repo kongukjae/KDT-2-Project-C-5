@@ -2,11 +2,12 @@ import React from 'react';
 import MainFeedReviewForm from './mainFeedReviewForm';
 
 const scroll={
+  gap : '10px',
   width:"100%",
   height:"500px",
   maxHeight:"500px",
   overflow: "scroll",
-
+  
 }
 
 const LiveReview = () => {
