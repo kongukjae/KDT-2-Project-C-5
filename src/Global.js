@@ -156,6 +156,14 @@ export let globalState = {
         "user-pic": "jieun.jpg",
         "user-tag": null,
       },
+      {
+        "user-id": "nowkwon97",
+        "user-pwd": "0000",
+        "user-email": "nowkwon97@email.com",
+        "user-name": "nowkwon",
+        "user-pic": "laon.jpeg",
+        "user-tag": null,
+      }
     ],
   },
 };
