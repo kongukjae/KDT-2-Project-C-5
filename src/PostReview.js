@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   getUserInfo,
   setUserInfo,
@@ -32,26 +33,26 @@ function PostReview() {
   //formData 초기화
   const reviewForm = {
     index: 0,
-    userid: '',
-    username: '',
+    userid: 'admin',
+    username: '관리자',
     userpic: null,
     booktitle: '',
     bookcover: null,
     isbn: null,
-    createdtime: '',
-    modifiedtime: '',
+    createdtime: '2023년5월10일',
+    modifiedtime: '2023년5월10일',
     summery: '짧은 리뷰 내용',
     body: '리뷰 내용',
     tag: '',
     viewcount: 0,
     likecount: 0,
   };
-
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     title: '',
     img: '',
     summery: '',
-    reivew: '',
+    review: '',
   });
 
   //input value가 변경될 때 호출되는 이벤트 핸들러
@@ -63,20 +64,24 @@ function PostReview() {
   //from 제출 이벤트 핸들러
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { title, img, summery, reivew } = formData;
-    const data = { title, img, summery, reivew };
+    const { title, img, summery, review } = formData;
+    const data = { title, img, summery, review };
     console.log(data);
     reviewForm.booktitle = data.title;
-    reviewForm.bookcover = URL.createObjectURL(data.img);
+    reviewForm.bookcover = data.img;
     reviewForm.summery = data.summery;
     reviewForm.body = data.review;
     console.log(reviewForm);
+    bookReview.push(reviewForm);
+    setBookReview(bookReview);
+
+    navigate('/mainFeed');
     // fetch('/', {
     //   method: 'POST',
     //   headers: {
     //     'Content-Type': 'application/json',
     //   },
-    //   body: JSON.stringify(data),
+    //   body: JSON.stringify(reviewForm),
     // })
     //   .then((response) => {
     //     if (!response.ok) {
@@ -90,7 +95,7 @@ function PostReview() {
     //   .catch((error) => {
     //     console.error('에러입니다.', error);
     //   });
-    //setFormData({ title: '', img: '', summery: '', reivew: '' });
+    // setFormData({ title: '', img: '', summery: '', reivew: '' });
   };
 
   return (
@@ -108,7 +113,7 @@ function PostReview() {
       <label htmlFor='img'>
         책 이미지:
         <input
-          type='file'
+          type='text'
           name='img'
           value={formData.img}
           onChange={handleInputChange}
@@ -129,8 +134,8 @@ function PostReview() {
         긴글 리뷰:
         <input
           type='text'
-          name='reivew'
-          value={formData.reivew}
+          name='review'
+          value={formData.review}
           onChange={handleInputChange}
         />
       </label>
