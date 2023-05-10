@@ -3,10 +3,10 @@ import React, { useState } from "react";
 function PostReview() {
   //formData 초기화
   const [formData, setFormData] = useState({
-    input1: "",
-    input2: "",
-    input3: "",
-    input4: "",
+    title: "",
+    img: "",
+    summery: "",
+    reivew: "",
   });
 
   //input value가 변경될 때 호출되는 이벤트 핸들러
@@ -18,8 +18,8 @@ function PostReview() {
   //from 제출 이벤트 핸들러
   const handleSubmit = (e) => {
     e.preventDefault();
-    const { input1, input2, input3, input4 } = formData;
-    const data = { input1, input2, input3, input4 };
+    const { title, img, summery, reivew } = formData;
+    const data = { title, img, summery, reivew };
     console.log(data);
     fetch("/", {
       method: "POST",
@@ -40,51 +40,47 @@ function PostReview() {
       .catch((error) => {
         console.error("에러입니다.", error);
       });
-    setFormData({ input1: "", input2: "", input3: "", input4: "" });
+    setFormData({ title: "", img: "", summery: "", reivew: "" });
   };
 
   return (
     <form onSubmit={handleSubmit}>
-      <label htmlFor="input1">
+      <label htmlFor="title">
         책 제목:
         <input
           type="text"
-          id="input1"
-          name="input1"
-          value={formData.input1}
+          name="title"
+          value={formData.title}
           onChange={handleInputChange}
         />
       </label>
       <br />
-      <label htmlFor="input2">
+      <label htmlFor="img">
         책 이미지:
         <input
           type="file"
-          id="input2"
-          name="input2"
-          value={formData.input2}
+          name="img"
+          value={formData.img}
           onChange={handleInputChange}
         />
       </label>
       <br />
-      <label htmlFor="input3">
+      <label htmlFor="summery">
         요약 리뷰:
         <input
           type="text"
-          id="input3"
-          name="input3"
-          value={formData.input3}
+          name="summery"
+          value={formData.summery}
           onChange={handleInputChange}
         />
       </label>
       <br />
-      <label htmlFor="input4">
+      <label htmlFor="reivew">
         긴글 리뷰:
         <input
           type="text"
-          id="input4"
-          name="input4"
-          value={formData.input4}
+          name="reivew"
+          value={formData.reivew}
           onChange={handleInputChange}
         />
       </label>
