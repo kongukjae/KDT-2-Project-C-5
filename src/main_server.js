@@ -78,9 +78,12 @@ const server = http.createServer(function (req, res) {
             const { booktitle, bookcover, isbn, summery, bookbody, userid } = JSON.parse(body);
             // 받아온 정보를 처리하는 부분 -> 대건님이 작성하신 쿼리문 적용 예정
 
+            // DB 작업 완료된 후에 생성된 데이터가 있는지 여부를 sender 객체에 담아서 전달
+            const sender = { result: true, data: { booktitle, bookcover, isbn, summery, bookbody, userid } };
+
+
             // DB에 작업을 완료 한 후, 클라이언트에게 응답
             res.writeHead(200, { "Content-Type": "application/json" });
-            const sender = { result: result };
             res.end(JSON.stringify(sender));
           });
         }
