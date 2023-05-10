@@ -44,7 +44,7 @@ const App = () => {
         <Route path="/review" element={<PostReview />} />
         <Route path="/mypage" element={<Mypage />} />
         <Route path="/searchPage" element={<SearchPage />} />
-        <Route path="/NotifictionList" element={<NotificationList />} />
+        <Route path="/NotificationList" element={<NotificationList />} />
         <Route path="/favortag" element={<FavorTag />} />
       </Routes>
     </Router>
