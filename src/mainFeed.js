@@ -8,12 +8,19 @@ const headerStyle = {
   display: 'flex',
   justifyContent:"center",
   width:"100%",
+  height:"15%"
 }
 
 const divStyle = {
   width:"100%",
   height: '100%'
 
+}
+
+const footSt={
+  display:"flex",
+  height:"10%",
+  width:"100%"
 }
 
 //메인 피드 페이지를 담당하는 컴포넌트
@@ -27,7 +34,7 @@ const mainFeed = () => {
 
       <MainFeedContents />
 
-      <footer>
+      <footer style={footSt}>
         <NavBar/>
       </footer>
     </div>

@@ -19,7 +19,18 @@ const headerStyle = {
   justifyContent: "space-between",
   alignItems:"center",
   width: "100%",
+  height:"100%"
 };
+
+
+const headerStyle2 = {
+  display: "flex",
+  justifyContent: "space-around",
+  alignItems:"center",
+  width: "100%",
+  height:"100%"
+};
+
 // 임시 태그 설정 컴포넌트
 const Page1 = () => <h1>태그설정</h1>;
 // 임시 구매하기 컴포넌트
@@ -40,7 +51,7 @@ const TopMenu = () => {
 
   return (
     <div style={headerStyle}>
-      <div style={headerStyle}>
+      <div style={headerStyle2}>
         <NotificationTab />
         <BookStagramTopLogo />
         <HambergerMenu items={menuItems} />

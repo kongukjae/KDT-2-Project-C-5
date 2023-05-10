@@ -13,6 +13,7 @@ const headerStyle = {
 const navStyle = {
   display: 'flex',
   justifyContent: 'space-around',
+  height:"5%"
 }
 
 const tabStyle = {
@@ -20,8 +21,18 @@ const tabStyle = {
 }
 
 const conStyle = {
-  backgroundColor: '#D9D9D9'
+  backgroundColor: '#D9D9D9',
+  height:"100%"
 }
+
+const container={
+  display:"flex",
+  flexDirection:"column",
+  width:"100%",
+  height:"75%"
+}
+
+
 
 const MainFeedContents = () => {
 
@@ -41,9 +52,11 @@ const MainFeedContents = () => {
     // 실시간 리뷰 클릭 시 인기 리뷰는 안보이게 처리
     setPopularReview('');
   };
-
+  const box={
+    height:"95%"
+  }
   return (
-    <div>
+    <div style={container}>
       {/* <header style={headerStyle}>
         <AlarmForm/>
         <BookStagramTopLogo/>
@@ -55,7 +68,7 @@ const MainFeedContents = () => {
         <div style={tabStyle} onClick={onClickLive}><b>실시간 리뷰</b></div>
       </nav>
 
-      <main>
+      <main style={box}>
         <div style={conStyle}>
           {popularReview}
           {liveReview}

@@ -12,7 +12,6 @@ const navBarStyle = {
   justifyContent: "space-evenly",
   listStyleType: "none",
   padding: "0",
-  margin: '0',
 };
 
 
@@ -20,9 +19,9 @@ const container={
 /*   ,
   height: '50px',
   position: 'absolute', */
-  position: 'fixed',
   top: '793',
-  width: '390px',
+  width: '100%',
+  height:"100%",
   overflow: 'auto'
 
 }
