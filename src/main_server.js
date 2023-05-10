@@ -56,13 +56,20 @@ const server = http.createServer(function (req, res) {
 
         } else {
             // 회원가입폼 테스트 구문 주석 처리
-            req.on("data", chunk=>{
-                console.log(JSON.parse(chunk))
-            })
-            res.writeHead(200,{"Content-Type":"application/json"});
-            const sender = {result : true}
-            res.end(JSON.stringify(sender));
+            // req.on("data", chunk=>{
+            //     console.log(JSON.parse(chunk))
+            // })
+            // res.writeHead(200,{"Content-Type":"application/json"});
+            // const sender = {result : true}
+            // res.end(JSON.stringify(sender));
         }
+        // 서버에서 데이터를 수신했고, 이것이 정제되었다는 가정하에 이를 쿼리문으로 작성한 구문.
+        sendQuery(`INSERT INTO \`bookreview\`(\`userid\`,\`username\`,\`userpic\`,\`booktitle\`,\`bookcover\`,\`isbn\`,\`summery\`,\`body\`,\`tag\`) SELECT \`userinfo\`.\`user-id\`,\`userinfo\`.\`user-name\`,\`userinfo\`.\`user-pic\`,'${bookreview.booktitle}', '${bookreview.bookcover}','${bookreview.isbn}',${bookreview.summery}','${bookreview.body}','$
+        {bookreview.tag}' WHERE \`userinfo\`.\`user-id\`='${bookreview.userid}`)
+        //이것은 테이블에 INSERT하는 쿼리문이기 때문에 반환값이 없다.
+        .then(result=>{
+            console.log(result);
+        });
     }
 
 
