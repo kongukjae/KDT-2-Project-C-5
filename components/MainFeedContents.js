@@ -13,6 +13,7 @@ const headerStyle = {
 const navStyle = {
   display: 'flex',
   justifyContent: 'space-around',
+  textDecorationLine: 'underline'
 }
 
 const tabStyle = {
@@ -55,7 +56,7 @@ const MainFeedContents = () => {
         <div style={tabStyle} onClick={onClickPopular}><b>인기 리뷰</b></div>
         <div style={tabStyle} onClick={onClickLive}><b>실시간 리뷰</b></div>
       </nav>
-
+      <hr />
       <main>
         <div style={conStyle}>
           {popularReview}
