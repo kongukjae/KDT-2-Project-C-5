@@ -75,8 +75,13 @@ const server = http.createServer(function (req, res) {
             // body 변수를 JSON형태로 변환
             // 변환한 객체를 이용하여 쿼리문 작성
           req.on("end", () => {
-            const { title, content } = JSON.parse(body);
+            const { booktitle, bookcover, isbn, summery, bookbody, userid } = JSON.parse(body);
             // 받아온 정보를 처리하는 부분 -> 대건님이 작성하신 쿼리문 적용 예정
+
+            // DB에 작업을 완료 한 후, 클라이언트에게 응답
+            res.writeHead(200, { "Content-Type": "application/json" });
+            const sender = { result: result };
+            res.end(JSON.stringify(sender));
           });
         }
       }
