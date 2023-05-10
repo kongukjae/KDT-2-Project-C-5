@@ -27,7 +27,7 @@ const imgBox={
   width:"80px",
   height:"80px",
   borderRadius:"50%",
-  backgroundColor:"blue"
+  backgroundColor:"#D9D9D9"
 }
 
 //마이페이지의 프로필사진과 자기소개를 담당하는 컴포넌트

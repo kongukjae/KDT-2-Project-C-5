@@ -13,6 +13,7 @@ const headerStyle = {
 const navStyle = {
   display: 'flex',
   justifyContent: 'space-around',
+  textDecorationLine: 'underline'
 }
 
 const tabStyle = {
@@ -20,7 +21,8 @@ const tabStyle = {
 }
 
 const conStyle = {
-  backgroundColor: '#D9D9D9'
+  display: 'flex',
+  justifyContent:"space-around",
 }
 
 const MainFeedContents = () => {
@@ -43,7 +45,7 @@ const MainFeedContents = () => {
   }
 
   return (
-    <div style={conStyle}>
+    <div>
       {/* <header style={headerStyle}>
         <AlarmForm/>
         <BookStagramTopLogo/>
@@ -54,9 +56,9 @@ const MainFeedContents = () => {
         <div style={tabStyle} onClick={onClickLive}><b>실시간 리뷰</b></div>
         <div style={tabStyle} onClick={onClickPopular}><b>인기 리뷰</b></div>
       </nav>
-
+      <hr />
       <main>
-        <div>
+        <div style={conStyle}>
           {
             isLive? (
             state? <BookReviewFeed/>:<PopularReview Handle={handle}/>
