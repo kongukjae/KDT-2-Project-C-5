@@ -33,7 +33,7 @@ const searchPage=()=>{
   //문자열의 구분은 스페이스바
   function getTag(tag){
     tag="#"+tag;
-    console.log(tag);
+    // console.log(tag);
     tagAry=[...tagAry,tag];
     //전역관리 -> 클로저,전역변수,지역변수,지역함수
     //리액트 핵심은 전역관리
@@ -50,7 +50,7 @@ const searchPage=()=>{
     
     str=tagAry.join(" ");
     setTagString(str);
-    console.log(getTagString());
+    // console.log(getTagString());
   }
 
 

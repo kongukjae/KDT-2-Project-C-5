@@ -38,6 +38,18 @@ const imgBox={
   borderRadius:"5px"
 }
 
+function callTags(){
+  const formData = new FormData();
+  formData.append("tags",globalState.tags);
+  fetch('/tags_save', {
+  method: 'POST',
+  body: formData
+})
+
+  .then(response => {
+    return true;
+  })
+}
 
 //도서,태그 검색 페이지의 검색바를 담당하는 컴포넌트
 //김동주
@@ -45,10 +57,10 @@ const searchBar=(props)=>{
   const[tags,setTags]=useState("");
   
   useEffect(()=>{
-    setTags(getTagString())
-    console.log(tags);
-  },[globalState.tags])
+    
 
+  },[globalState.tags]);
+  
   
 
   return(
