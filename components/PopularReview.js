@@ -21,41 +21,6 @@ let bookreview = getBookReview();
 const PopularReview = ({Handle}) => {
   const data = [
     {
-<<<<<<< HEAD
-      bookPic: 'pic',
-      profilePic: 'ppp',
-      name: '김동주',
-      review: 'asdasdasdasd',
-      time: '1h ago',
-      like: '199',
-      likeState: true,
-    },
-    {
-      bookPic: 'pic',
-      profilePic: 'ppp',
-      name: '김동주',
-      review: 'asdasdasdasd',
-      time: '1h ago',
-      like: '199',
-      likeState: true,
-    },
-    {
-      bookPic: 'pic',
-      profilePic: 'ppp',
-      name: '김동주',
-      review: 'asdasdasdasd',
-      time: '1h ago',
-      like: '199',
-      likeState: true,
-    },
-    {
-      bookPic: 'pic',
-      profilePic: 'ppp',
-      name: '김동주',
-      review: 'asdasdasdasd',
-      time: '1h ago',
-      like: '199',
-=======
       bookPic: "pic",
       profilePic: "ppp",
       name: "jain",
@@ -89,7 +54,6 @@ const PopularReview = ({Handle}) => {
       review: "SF는 최고야",
       time: "20h ago",
       like: "41",
->>>>>>> WJKK21/issue87
       likeState: true,
     },
   ];
