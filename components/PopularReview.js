@@ -33,7 +33,7 @@ const PopularReview = ({ Handle }) => {
       bookPic: "pic",
       profilePic: "ppp",
       name: "DITA",
-      review: "'왜 내 인생은 이모양이지? 생각하는 사람에게 힘이 되어줄 책",
+      review: "왜 내 인생은 이모양이지? 생각하는 사람에게 힘이 되어줄 책",
       time: "23h ago",
       like: "152",
       likeState: true,
