@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 import {
   getBookReview,
   setBookReview,
   getUserInfo,
   setUserInfo,
-} from '../src/Global';
-import MainFeedReviewForm from './mainFeedReviewForm';
+} from "../src/Global";
+import MainFeedReviewForm from "./mainFeedReviewForm";
 
 const scroll = {
   //width: '100%',
@@ -18,7 +18,7 @@ let bookreview = getBookReview();
 
 //인기 리뷰를 담당하는 컴포넌트
 //수정 : 김동주
-const PopularReview = ({Handle}) => {
+const PopularReview = ({ Handle }) => {
   const data = [
     {
       bookPic: "pic",
@@ -60,22 +60,21 @@ const PopularReview = ({Handle}) => {
 
   return (
     <div>
-    <div style={scroll}>
-      {bookreview.map((item, index) => (
-        <MainFeedReviewForm
-          key={index}
-          bookPic={item['bookcover']}
-          profilePic={item['profilePic']}
-          name={item['username']}
-          review={item['body']}
-          time={item['modifiedtime']}
-          like={item['likecount']}
-          likeState={false}
-          handle={Handle}
-        />
-      ))}
-      
-    </div>
+      <div style={scroll}>
+        {bookreview.map((item, index) => (
+          <MainFeedReviewForm
+            key={index}
+            bookPic={item["bookcover"]}
+            profilePic={item["profilePic"]}
+            name={item["booktitle"]}
+            review={item["summery"]}
+            time={item["modifiedtime"]}
+            like={item["likecount"]}
+            likeState={false}
+            handle={Handle}
+          />
+        ))}
+      </div>
     </div>
   );
 };
