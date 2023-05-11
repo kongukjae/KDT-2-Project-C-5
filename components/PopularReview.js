@@ -8,7 +8,7 @@ import {
 import MainFeedReviewForm from './mainFeedReviewForm';
 
 const scroll = {
-  width: '100%',
+  //width: '100%',
   height: '500px',
   maxHeight: '500px',
   overflow: 'scroll',

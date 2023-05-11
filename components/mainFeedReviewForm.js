@@ -22,7 +22,7 @@ const picBox={
   display:"flex",
   width:"70px",
   height:"90%",
-  backgroundColor:"red",
+  backgroundColor:"grey",
   justifyContent:"center",
 
 }
