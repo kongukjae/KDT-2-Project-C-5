@@ -12,7 +12,8 @@ const conStyle = {
   border: '1px solid black',
   borderRadius: '10px',
   alignItems:"center",
-  
+  marginTop: '10px',
+  backgroundColor: 'rgb(217, 217, 217)',
 }
 
 
@@ -21,7 +22,7 @@ const picBox={
   display:"flex",
   width:"70px",
   height:"90%",
-  backgroundColor:"red",
+  backgroundColor:"grey",
   justifyContent:"center",
 
 }
@@ -32,7 +33,6 @@ const reviewBox={
   justifyContent:"space-between",
   width:"250px",
   height:"90%",
-  
 }
 
 const infoBox={
@@ -76,7 +76,7 @@ const mainFeedReviewForm = (props) => {
 
     <div style={conStyle}>
       <div style={picBox}>
-        <div>사진</div>
+        <img src={bookPic} alt="책 이미지"/>
       </div>
       <div style={reviewBox}>
 

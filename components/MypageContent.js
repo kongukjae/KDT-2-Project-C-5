@@ -16,8 +16,7 @@ const feed={
   width:"100%",
   hegith:"500px",
   maxHeight:"500px",
-  backgroundColor:"grey"
-
+  
 }
 
 
@@ -33,8 +32,9 @@ const MypageContent=()=>{
         <div>나의 글</div>
         <div>프로필 설정</div>
         <div>내 서재</div>
+        
       </div>
-
+      <hr />
       <div style={feed}>
         {contentArea}
       </div>
