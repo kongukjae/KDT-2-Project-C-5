@@ -1,81 +1,80 @@
-import React from 'react';
+import React from "react";
 import {
   getBookReview,
   setBookReview,
   getUserInfo,
   setUserInfo,
-} from '../src/Global';
-import MainFeedReviewForm from './mainFeedReviewForm';
+} from "../src/Global";
+import MainFeedReviewForm from "./mainFeedReviewForm";
 
 const scroll = {
-  width: '100%',
-  height: '500px',
-  maxHeight: '500px',
-  overflow: 'scroll',
+  width: "100%",
+  height: "500px",
+  maxHeight: "500px",
+  overflow: "scroll",
 };
 
 let bookreview = getBookReview();
 
 //인기 리뷰를 담당하는 컴포넌트
 //수정 : 김동주
-const PopularReview = ({Handle}) => {
+const PopularReview = ({ Handle }) => {
   const data = [
     {
-      bookPic: 'pic',
-      profilePic: 'ppp',
-      name: '김동주',
-      review: 'asdasdasdasd',
-      time: '1h ago',
-      like: '199',
+      bookPic: "pic",
+      profilePic: "ppp",
+      name: "김동주",
+      review: "asdasdasdasd",
+      time: "1h ago",
+      like: "199",
       likeState: true,
     },
     {
-      bookPic: 'pic',
-      profilePic: 'ppp',
-      name: '김동주',
-      review: 'asdasdasdasd',
-      time: '1h ago',
-      like: '199',
+      bookPic: "pic",
+      profilePic: "ppp",
+      name: "김동주",
+      review: "asdasdasdasd",
+      time: "1h ago",
+      like: "199",
       likeState: true,
     },
     {
-      bookPic: 'pic',
-      profilePic: 'ppp',
-      name: '김동주',
-      review: 'asdasdasdasd',
-      time: '1h ago',
-      like: '199',
+      bookPic: "pic",
+      profilePic: "ppp",
+      name: "김동주",
+      review: "asdasdasdasd",
+      time: "1h ago",
+      like: "199",
       likeState: true,
     },
     {
-      bookPic: 'pic',
-      profilePic: 'ppp',
-      name: '김동주',
-      review: 'asdasdasdasd',
-      time: '1h ago',
-      like: '199',
+      bookPic: "pic",
+      profilePic: "ppp",
+      name: "김동주",
+      review: "asdasdasdasd",
+      time: "1h ago",
+      like: "199",
       likeState: true,
     },
   ];
 
   return (
     <div>
-    <div style={scroll}>
-      {bookreview.map((item, index) => (
-        <MainFeedReviewForm
-          key={index}
-          bookPic={item['bookcover']}
-          profilePic={item['profilePic']}
-          name={item['username']}
-          review={item['body']}
-          time={item['modifiedtime']}
-          like={item['likecount']}
-          likeState={false}
-          handle={Handle}
-        />
-      ))}
-      
-    </div>
+      <div style={scroll}>
+        {bookreview.map((item, index) => (
+          <MainFeedReviewForm
+            key={index}
+            bookPic={item["bookcover"]}
+            profilePic={item["profilePic"]}
+            name={item["booktitle"]}
+            review={item["summery"]}
+            time={item["modifiedtime"]}
+            like={item["likecount"]}
+            likeState={false}
+            handle={Handle}
+          />
+        ))}
+      </div>
     </div>
   );
 };
