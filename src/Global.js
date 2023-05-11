@@ -7,7 +7,7 @@ export let globalState = {
         userid: "dgchoi3904",
         username: "대건씌",
         userpic: null,
-        booktitle: "모든 삶은 흐른다.",
+        booktitle: "우주와 달",
         bookcover: null,
         createdtime: "2023-05-04T06:40:54.000Z",
         modifiedtime: "2023-05-08T08:16:20.000Z",
