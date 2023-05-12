@@ -39,8 +39,8 @@ function PostReview() {
     booktitle: '',
     bookcover: null,
     isbn: null,
-    createdtime: '2023년5월10일',
-    modifiedtime: '2023년5월10일',
+    createdtime: null,
+    modifiedtime: null,
     summery: '짧은 리뷰 내용',
     body: '리뷰 내용',
     tag: '',
@@ -71,6 +71,8 @@ function PostReview() {
     reviewForm.bookcover = data.img;
     reviewForm.summery = data.summery;
     reviewForm.body = data.review;
+    reviewForm.createdtime = new Date().toISOString(); // 현재 시간 저장
+    reviewForm.modifiedtime = new Date().toISOString(); // 현재 시간 저장
     console.log(reviewForm);
     bookReview.push(reviewForm);
     setBookReview(bookReview);
