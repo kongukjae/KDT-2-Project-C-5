@@ -14,11 +14,16 @@ const scroll = {
   overflow: "scroll",
 };
 
-let bookreview = getBookReview();
-
 //인기 리뷰를 담당하는 컴포넌트
 //수정 : 김동주
 const PopularReview = ({ Handle }) => {
+  let bookreview = getBookReview();
+  function compareByModifiedTime(a, b) {
+    const timeA = new Date(a.modifiedtime);
+    const timeB = new Date(b.modifiedtime);
+    return timeB - timeA; // 내림차순 정렬
+  }
+  bookreview.sort(compareByModifiedTime);
   const data = [
     {
       bookPic: "pic",
