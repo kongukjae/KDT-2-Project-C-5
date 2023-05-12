@@ -62,9 +62,9 @@ const mainFeedReviewForm = (props) => {
   //좋아요 버튼 클릭시 이미지 변환
   useEffect(()=>{
     if(likeState){
-      setHeart("../src/img/heart_color.png");
+      setHeart("♥︎");
     }else{
-      setHeart("../src/img/heart.png");
+      setHeart("♡");
     }
 
   },[likeState])
@@ -91,7 +91,7 @@ const mainFeedReviewForm = (props) => {
           <div style={infoBox}>
             <div>{time}</div>
             <div>{like}</div>
-            <img src={heartImg} onClick={()=>setLikeState(!likeState)}></img> 
+            <div onClick={()=>setLikeState(!likeState)}>{heartImg}</div> 
           </div>
         </div>
       </div>
