@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   getBookReview,
   setBookReview,
@@ -17,13 +17,18 @@ const scroll = {
 //인기 리뷰를 담당하는 컴포넌트
 //수정 : 김동주
 const PopularReview = ({ Handle }) => {
-  let bookreview = getBookReview();
+  const [bookReview, setBookReview] = useState([]);
+  useEffect(() => {
+    const sortedReviews = [...getBookReview()].sort(compareByModifiedTime);
+    setBookReview(sortedReviews);
+  }, []);
+
   function compareByModifiedTime(a, b) {
     const timeA = new Date(a.modifiedtime);
     const timeB = new Date(b.modifiedtime);
     return timeB - timeA; // 내림차순 정렬
   }
-  bookreview.sort(compareByModifiedTime);
+
   const data = [
     {
       bookPic: "pic",
@@ -66,7 +71,7 @@ const PopularReview = ({ Handle }) => {
   return (
     <div>
       <div style={scroll}>
-        {bookreview.map((item, index) => (
+        {bookReview.map((item, index) => (
           <MainFeedReviewForm
             key={index}
             bookPic={item["bookcover"]}

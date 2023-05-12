@@ -17,13 +17,16 @@ const scroll={
 }
 
 const LiveReview = () => {
-  let bookreview = getBookReview();
+  const [bookReview, setBookReview] = useState([]);
+  useEffect(() => {
+    const sortedReviews = [...getBookReview()].sort(compareByLikeCount);
+    setBookReview(sortedReviews);
+  }, []);
   function compareByLikeCount(a, b) {
     const likeA = a.likecount;
     const likeB = b.likecount;
     return likeB - likeA; // 내림차순 정렬
   }
-  bookreview.sort(compareByLikeCount);
   const data=[
     {
       bookPic:"../src/img/book-cover2.jpg",
@@ -66,7 +69,7 @@ const LiveReview = () => {
 
   return (
     <div style={scroll}>
-      {bookreview.map((item,index)=>(
+      {bookReview.map((item,index)=>(
         <MainFeedReviewForm
         key={index}
         bookPic={item["bookcover"]}
