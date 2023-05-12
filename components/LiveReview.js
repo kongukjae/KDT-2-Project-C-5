@@ -1,5 +1,11 @@
 import React from 'react';
 import MainFeedReviewForm from './mainFeedReviewForm';
+import {
+  getBookReview,
+  setBookReview,
+  getUserInfo,
+  setUserInfo,
+} from "../src/Global";
 
 const scroll={
   gap : '10px',
@@ -11,6 +17,13 @@ const scroll={
 }
 
 const LiveReview = () => {
+  let bookreview = getBookReview();
+  function compareByLikeCount(a, b) {
+    const likeA = a.likecount;
+    const likeB = b.likecount;
+    return likeB - likeA; // 내림차순 정렬
+  }
+  bookreview.sort(compareByLikeCount);
   const data=[
     {
       bookPic:"../src/img/book-cover2.jpg",
@@ -53,16 +66,16 @@ const LiveReview = () => {
 
   return (
     <div style={scroll}>
-      {data.map((item,index)=>(
+      {bookreview.map((item,index)=>(
         <MainFeedReviewForm
         key={index}
-        bookPic={item.bookPic}
-        profilePic={item.profilePic}
-        name={item.name}
-        review={item.review}
-        time={item.time}
-        like={item.like}
-        likeState={item.likeState}
+        bookPic={item["bookcover"]}
+        profilePic={item["profilePic"]}
+        name={item["booktitle"]}
+        review={item["summery"]}
+        time={item["modifiedtime"]}
+        like={item["likecount"]}
+        likeState={true}
         />    
       ))}
     </div>
