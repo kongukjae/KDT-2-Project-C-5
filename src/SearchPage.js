@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import {setTagString,getTagString} from "./Global";
 import MypageTopBar from "../components/MypageTopBar";
 import TopMenu from "./TopMenu";
-import DJ_SearchBar from "./DJ_SearchBar"
+import SearchBar from "../components/DJ-SearchBar"
 import TagContentBox from "../components/TagContentBox";
 import SearchBookResult from "../components/SearchBookResult";
 import NavBar from "./NavBar"
@@ -57,7 +57,7 @@ const searchPage=()=>{
   return(
     <div style={container}>
       <TopMenu></TopMenu>
-      <DJ_SearchBar></DJ_SearchBar>
+      <SearchBar></SearchBar>
       <TagContentBox onDataUpdate={getTag}></TagContentBox>
       {/* <SearchBookResult></SearchBookResult> */}
       <NavBar></NavBar>

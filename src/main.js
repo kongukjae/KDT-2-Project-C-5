@@ -10,7 +10,7 @@ import SignUp from "./signUp";
 import AccountSetting from "./AccountSetting";
 import BlockedUser from "./BlockedUser";
 import FollowerFollowing from "./FollowerFollowing";
-import ReviewPage from "./ReviewPage";
+import ReviewPage from "./DJ-ReviewPage";
 import MainFeed from "./mainFeed";
 import MainFeedReviewForm from "../components/mainFeedReviewForm";
 import NavBar from "./NavBar";
@@ -41,7 +41,7 @@ const App = () => {
         <Route path="/challenge" element={<ChallengePage />} />
         <Route path="/followerSetting" element={<FollowerFollowing />} />
         {/* 포스트 리뷰용 라우터 링크 */}
-        <Route path="/review" element={<PostReview />} />
+        <Route path="/review" element={<ReviewPage />} />
         <Route path="/mypage" element={<Mypage />} />
         <Route path="/searchPage" element={<SearchPage />} />
         <Route path="/NotificationList" element={<NotificationList />} />
