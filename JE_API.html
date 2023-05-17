@@ -10,15 +10,23 @@
   <h1>책 검색</h1>
   <input type="text" id="keyword" placeholder="검색어를 입력하세요" />
   <button onclick="searchBooks()">검색</button>
+  <!-- searchBooks는 검색어를 찾아주는 함수 -->
   <script>
     const URL = `https://www.nl.go.kr/seoji/SearchApi.do?cert_key=1c81199b2a9a2305bc71bb993c45e032794d810adae4c92544bd3d8ac9c2a574&result_style=json&page_no=1&page_size=10&start_publish_date=20220509&end_start_publish=20220509`
+
+function searchBooks() {
+  
+}
+
     fetch(URL)
   .then((response) => response.json())
   .then((data) => {
+    //data 확인용
     console.log(data);
+    //data>docs>title 만 문자열로 변환
+    //todo 검색한 책 title이 titles와 일치할 경우 구현
     const titles = data.docs.map((item)=>item.TITLE);
     const dataString = JSON.stringify(titles);
-    //JSON데이터를 문자열로 변환
     console.log(dataString);
   })
   .catch((error) => {
