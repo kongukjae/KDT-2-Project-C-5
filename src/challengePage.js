@@ -42,7 +42,9 @@ const challengePage = () => {
   };
 
   
-
+  const mainCss = {
+    backgoundColor: '#D6E8E4'
+  }
   const navStyle = {
     display: 'flex',
     justifyContent: 'space-around',
