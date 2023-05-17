@@ -7,16 +7,21 @@ const timerStyle = {
   display: 'flex',
   justifyContent: 'center',
   flexDirection: 'column',
-  alignItems: 'center'
+  alignItems: 'center',
+  backgroundColor: '#D6E8E4',
+  color: '#00C2FF'
 }
 
 const buttonStyle = {
   width: '100px',
   display: 'flex',
-  justifyContent: 'space-between',
+  justifyContent: 'space-around',
   alignItems: 'center'
 }
 
+const h1style = {
+  color: 'black'
+}
 const Timer = () => {
   // 타이머 시간 상태 관리
   const [timer, setTimer] = useState(0);
@@ -54,12 +59,18 @@ const Timer = () => {
 
   return (
     <div style={timerStyle}>
-      <h1>독서 타이머</h1>
+      <h1 style={h1style}>독서 타이머</h1>
       <h2>{formatTime()}</h2>
       <div style={buttonStyle}>
-        {!isRunning && <button onClick={startTimer}>Start</button>}
-        {isRunning && <button onClick={stopTimer}>Stop</button>}
-        <button onClick={resetTimer}>Reset</button>
+        {!isRunning && <button onClick={startTimer}>
+        <img src={require('../src/img/start.png')} alt="Start" />
+        </button>}
+        {isRunning && <button onClick={stopTimer}>
+        <img src={require('../src/img/stop.png')} alt="stop" />
+        </button>}
+        <button onClick={resetTimer}>
+          <img src={require('../src/img/reset.png')} alt="reset" />
+        </button>
       </div>
       
     </div>
