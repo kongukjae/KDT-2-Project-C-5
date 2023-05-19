@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const container={
   display:"flex",
@@ -26,17 +26,47 @@ const inputContext={
 
 
 const ReviewInput=()=>{
+  const[review,setReview]=useState({
+    shortReview:'',
+    longReview:'',
+  });
 
+  const handleChange = (e) => {
+    setReview({...review,[e.target.name]: e.target.value});
+  };
+
+  
+  const handleSubmit=(e)=>{
+    e.preventDefault();
+    console.log(review);
+  }
 
   return(
-    <div style={container}>
-      <div>
-        <input style={inputThree}></input>
+    <form onSubmit={handleSubmit}>
+      <div style={container}>
+        <div>
+          <input 
+          style={inputThree}
+          type='text'
+          id='shortReview'
+          name='shortReview'
+          value={review.shortReview}
+          onChange={handleChange}
+          ></input>
+        </div>
+
+        <div>
+          <input 
+          style={inputContext}
+          type='text'
+          id='longReview'
+          name='longReview'
+          value={review.longReview}
+          onChange={handleChange}
+          ></input>
+        </div>
       </div>
-      <div>
-        <input style={inputContext}></input>
-      </div>
-    </div>
+    </form>
   );
 }
 
