@@ -1,13 +1,15 @@
 -- --------------------------------------------------------
 -- 호스트:                          127.0.0.1
--- 서버 버전:                        10.11.2-MariaDB - mariadb.org binary distribution
+-- 서버 버전:                        10.11.3-MariaDB - mariadb.org binary distribution
 -- 서버 OS:                        Win64
--- HeidiSQL 버전:                  11.3.0.6295
+-- HeidiSQL 버전:                  12.3.0.6589
 -- --------------------------------------------------------
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET NAMES utf8 */;
 /*!50503 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
@@ -25,6 +27,9 @@ CREATE TABLE IF NOT EXISTS `bookreview` (
   `userpic` varbinary(100) DEFAULT NULL COMMENT '작성자 프로필 이미지',
   `booktitle` varchar(50) NOT NULL DEFAULT '책 이름' COMMENT '책 타이틀',
   `bookcover` varbinary(50) DEFAULT NULL COMMENT '책 커버',
+  `bookauthor` varchar(50) DEFAULT NULL COMMENT '책 작성자',
+  `bookpublisher` varchar(50) DEFAULT NULL COMMENT '책 발행처',
+  `bookrelease` varchar(50) DEFAULT NULL COMMENT '책 발행일',
   `isbn` varchar(13) DEFAULT NULL COMMENT '책 ISBN',
   `createdtime` timestamp NOT NULL DEFAULT current_timestamp() COMMENT '작성 시간',
   `modifiedtime` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp() COMMENT '작성 시간',
@@ -41,16 +46,14 @@ CREATE TABLE IF NOT EXISTS `bookreview` (
 
 -- 테이블 데이터 bookstargram.bookreview:~7 rows (대략적) 내보내기
 DELETE FROM `bookreview`;
-/*!40000 ALTER TABLE `bookreview` DISABLE KEYS */;
-INSERT INTO `bookreview` (`index`, `userid`, `username`, `userpic`, `booktitle`, `bookcover`, `isbn`, `createdtime`, `modifiedtime`, `summery`, `body`, `tag`, `viewcount`, `likecount`) VALUES
-	(1, 'dgchoi3904', '대건씌', NULL, '개리포터와 개법사의 뼈', NULL, NULL, '2023-05-04 15:40:54', '2023-05-10 10:25:24', '짧은 리뷰 내용', '리뷰 내용', '#없어!', 0, 0),
-	(2, 'dongju97', '동주팀장', NULL, '쟤와벌', NULL, NULL, '2023-05-04 15:41:17', '2023-05-08 17:16:57', '짧은 리뷰 내용', '리뷰 내용', '#태그', 0, 0),
-	(3, 'dgchoi3904', '대거니', NULL, '책 이름', NULL, NULL, '2023-05-08 17:43:57', '2023-05-08 17:43:57', '짧은 리뷰 내용', '리뷰 내용', NULL, 0, 0),
-	(4, 'admin', '관리자01', NULL, '이건 책이란다', NULL, NULL, '2023-05-08 17:43:57', '2023-05-08 17:43:57', '짧은 리뷰 내용', '리뷰 내용', NULL, 0, 0),
-	(5, 'test01', 'test01', NULL, '바보도 이해하는 책쓰기', NULL, NULL, '2023-05-09 16:29:02', '2023-05-09 16:29:02', '바보도 이해할수 있었다!', '이 책은 바보도 이해할 수 있는 언어로 작성되어 있어 원숭이라도 이해할 수 있는 내용을 담고 있습니다.', NULL, 0, 0),
-	(6, 'test01', 'test01', NULL, '깃이제일쉬웠어요', NULL, NULL, '2023-05-09 16:38:51', '2023-05-09 16:38:51', '깃은 참 쉽구나!', '이것은 깃이라는 것을 깨달았습니다!', NULL, 0, 0),
-	(7, 'test01', 'test01', NULL, '그래서 지금 뭘했지?', NULL, NULL, '2023-05-10 09:29:33', '2023-05-10 09:29:33', '넌 대체 무엇을 했느냐?', '뭐 했는지 모르겠는데이글을 쓰게 됬습니다.', NULL, 0, 0);
-/*!40000 ALTER TABLE `bookreview` ENABLE KEYS */;
+INSERT INTO `bookreview` (`index`, `userid`, `username`, `userpic`, `booktitle`, `bookcover`, `bookauthor`, `bookpublisher`, `bookrelease`, `isbn`, `createdtime`, `modifiedtime`, `summery`, `body`, `tag`, `viewcount`, `likecount`) VALUES
+	(1, 'dgchoi3904', '대건씌', NULL, '개리포터와 개법사의 뼈', NULL, '롤링스파이더', '문학쇼츠', '20230518', '9781234567890', '2023-05-04 06:40:54', '2023-05-19 02:31:57', '짧은 리뷰 내용', '리뷰 내용', '#없어!', 0, 0),
+	(2, 'dongju97', '동주팀장', NULL, '쟤와벌', NULL, NULL, NULL, NULL, NULL, '2023-05-04 06:41:17', '2023-05-08 08:16:57', '짧은 리뷰 내용', '리뷰 내용', '#태그', 0, 0),
+	(3, 'dgchoi3904', '대거니', NULL, '책 이름', NULL, NULL, NULL, NULL, NULL, '2023-05-08 08:43:57', '2023-05-08 08:43:57', '짧은 리뷰 내용', '리뷰 내용', NULL, 0, 0),
+	(4, 'admin', '관리자01', NULL, '이건 책이란다', NULL, NULL, NULL, NULL, NULL, '2023-05-08 08:43:57', '2023-05-08 08:43:57', '짧은 리뷰 내용', '리뷰 내용', NULL, 0, 0),
+	(5, 'test01', 'test01', NULL, '바보도 이해하는 책쓰기', NULL, NULL, NULL, NULL, NULL, '2023-05-09 07:29:02', '2023-05-09 07:29:02', '바보도 이해할수 있었다!', '이 책은 바보도 이해할 수 있는 언어로 작성되어 있어 원숭이라도 이해할 수 있는 내용을 담고 있습니다.', NULL, 0, 0),
+	(6, 'test01', 'test01', NULL, '깃이제일쉬웠어요', NULL, NULL, NULL, NULL, NULL, '2023-05-09 07:38:51', '2023-05-09 07:38:51', '깃은 참 쉽구나!', '이것은 깃이라는 것을 깨달았습니다!', NULL, 0, 0),
+	(7, 'test01', 'test01', NULL, '그래서 지금 뭘했지?', NULL, NULL, NULL, NULL, NULL, '2023-05-10 00:29:33', '2023-05-10 00:29:33', '넌 대체 무엇을 했느냐?', '뭐 했는지 모르겠는데이글을 쓰게 됬습니다.', NULL, 0, 0);
 
 -- 테이블 bookstargram.userinfo 구조 내보내기
 CREATE TABLE IF NOT EXISTS `userinfo` (
@@ -65,15 +68,14 @@ CREATE TABLE IF NOT EXISTS `userinfo` (
 
 -- 테이블 데이터 bookstargram.userinfo:~5 rows (대략적) 내보내기
 DELETE FROM `userinfo`;
-/*!40000 ALTER TABLE `userinfo` DISABLE KEYS */;
 INSERT INTO `userinfo` (`user-id`, `user-pwd`, `user-email`, `user-name`, `user-pic`) VALUES
 	('admin', 'qwe123', 'admin@email.com', '관리자01', NULL),
 	('dgchoi3904', 'qweasd123', 'dgchoi3904@gmail.com', '대거니', NULL),
 	('dongju97', 'qwe123', 'dongju97@email.com', '동주팀장', NULL),
 	('test', 'qwe123', 'tester@email.com', 'tester', NULL),
 	('test01', 'qwe123', 'test01@email.com', 'test01', NULL);
-/*!40000 ALTER TABLE `userinfo` ENABLE KEYS */;
 
+/*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
