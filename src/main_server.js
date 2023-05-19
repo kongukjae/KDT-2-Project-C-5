@@ -54,6 +54,13 @@ const server = http.createServer(function (req, res) {
                 })
             })
 
+            if(req.url === "/reivew"){
+                req.on("data", chunk=>{
+                    // post로 받은 데이터(JSON)을 parse하여 객체로 변환
+                    const data = JSON.parse(chunk);
+                    //sendQuery("")
+            })
+
         } else {
             // 회원가입폼 테스트 구문 주석 처리
             // req.on("data", chunk=>{
