@@ -19,7 +19,7 @@ const container={
   display:"flex",
   flexDirection:"column",
   width:"100%",
-  height:"50%",
+  height:"40%",
   justifyContent:"space-around",
   alignItems:"center"
 }

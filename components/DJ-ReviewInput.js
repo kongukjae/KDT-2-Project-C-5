@@ -42,7 +42,7 @@ const ReviewInput=()=>{
   }
 
   return(
-    <form onSubmit={handleSubmit}>
+    
       <div style={container}>
         <div>
           <input 
@@ -66,7 +66,6 @@ const ReviewInput=()=>{
           ></input>
         </div>
       </div>
-    </form>
   );
 }
 
