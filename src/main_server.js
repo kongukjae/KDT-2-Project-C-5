@@ -226,6 +226,6 @@ const server = http.createServer(function (req, res) {
     console.log("서버 열림");
   });
   
-  // 세션 인증 미들웨어 추가
-  server.use(sessionAuthMiddleware);
+  // // 세션 인증 미들웨어 추가
+  // server.use(sessionAuthMiddleware);
   
