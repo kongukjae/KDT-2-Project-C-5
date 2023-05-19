@@ -92,6 +92,8 @@
 // server.listen(3000, () => {
 //     console.log("서버 열림");
 // })
+
+// 작업 중
 import http from 'http';
 import fs from 'fs';
 import sendQuery from './mariadb.js';
@@ -175,49 +177,47 @@ const server = http.createServer(function (req, res) {
                 res.writeHead(200, { 'Content-Type': 'application/json' });
                 res.end(JSON.stringify({ sessionId }));
                 return true;
-              }else {
-            console.log('Login Failed!');
-            res.writeHead(401, { 'Content-Type': 'application/json' });
-            res.end(JSON.stringify({ error: 'Login failed' }));
-            return false;
-          }
-        });
+              } else {
+                console.log('Login Failed!');
+                res.writeHead(401, { 'Content-Type': 'application/json' });
+                res.end(JSON.stringify({ error: 'Login failed' }));
+                return false;
+              }
+            }
+          })
 
         // 로그인이 성공했을 때만 메인피드 페이지로 이동함.
-        .then(result => {
-          console.log(result);
-          if (result) {
-            const sender = { result: result }
-            console.log(sender);
-            res.writeHead(200, { 'Content-Type': 'application/json' });
-            res.end(JSON.stringify(sender));
-          }
-        });
-
-      } else {
-        // 회원가입폼 테스트 구문 주석 처리
-        // req.on("data", chunk => {
-        //   console.log(JSON.parse(chunk))
-        // })
-        // res.writeHead(200, { 'Content-Type': 'application/json' });
-        // const sender = { result: true }
-        // res.end(JSON.stringify(sender));
-      }
+          .then(result => {
+            console.log(result);
+            if (result) {
+              const sender = { result: result };
+              console.log(sender);
+              res.writeHead(200, { 'Content-Type': 'application/json' });
+              res.end(JSON.stringify(sender));
+            }
+          });
+      });
+    } else {
+      // 회원가입폼 테스트 구문 주석 처리
+      // req.on("data", chunk => {
+      //   console.log(JSON.parse(chunk))
+      // })
+      // res.writeHead(200, { 'Content-Type': 'application/json' });
+      // const sender = { result: true }
+      // res.end(JSON.stringify(sender));
     }
-
-
-    if (req.url == "/src/img/star.png" && req.method == "GET") {
-      const starImg = fs.readFileSync("./img/star.png");
-      res.end(starImg);
-    }
-
-  })
-
-
+  }
+  if (req.url == "/src/img/star.png" && req.method == "GET") {
+    const starImg = fs.readFileSync("./img/star.png");
+    res.end(starImg);
+  }
+  
+  });
+  
   server.listen(3000, () => {
     console.log("서버 열림");
-  })
-
-
+  });
+  
   // 세션 인증 미들웨어 추가
   server.use(sessionAuthMiddleware);
+  

@@ -19,8 +19,8 @@ const loginPage = () => {
   const handleLogin = (event) => {
     // 기본 제출 이벤트 방지
     event.preventDefault();
-    const requestBody = { id, pwd };
-    console.log(requestBody);
+    const data = { id, pwd };
+    console.log(data);
     // const form = event.target;
     // const formData = new FormData(form);
     // console.log(formData);
@@ -32,7 +32,7 @@ const loginPage = () => {
       headers: { 'Content-Type': 'application/json' },
       // HTTP 요청 본문에 담을 데이터를 지정
       // id, pwd를 JSON 형태의 문자열로 변환하여 본문에 보냄
-      body: JSON.stringify(requestBody),
+      body: JSON.stringify(data),
     })
       .then(response => {
         if (!response.ok) {
@@ -41,12 +41,12 @@ const loginPage = () => {
         // 서버 응답 데이터를 JSON 형태로 파싱하여 변환
         return response.json();
       })
-      .then(data => {
+      .then(result => {
         // 로그인 성공 처리
-        console.log(data);
+        console.log(result);
         
-        if(data.result === true){ // 결과값이 true일 경우
-          console.log('login succeeded', data);
+        if(result.result === true){ // 결과값이 true일 경우
+          console.log('login succeeded', result);
           navigate("/mainFeed"); // navigate를 사용해 컴포넌트 이동
         }
       })
