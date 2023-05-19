@@ -22,7 +22,7 @@ export default async function sendQuery(query) {
   const poolSet = {
     "host" :"localhost",
     // 계정명, 자신의 DB 내 계정으로 변경할 것.
-    "user": "bookstargram", 
+    "user": "root", 
     // 패스워드, 자신의 DB 계정 패스워드로 변경할 것.
     "password":"qwe123", 
     //포트, 자신이 쓰는 DB서버에 설정된 포트번호를 쓸 것.
