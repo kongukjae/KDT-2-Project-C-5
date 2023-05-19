@@ -211,7 +211,15 @@ const server = http.createServer(function (req, res) {
     const starImg = fs.readFileSync("./img/star.png");
     res.end(starImg);
   }
-  
+  // 요청에 인증을 적용합니다.
+  if (!req.headers['x-session-id']) {
+    res.writeHead(401, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ error: 'Unauthorized' }));
+    return;
+  }
+
+  // 다음 미들웨어로 이동합니다.
+  next();
   });
   
   server.listen(3000, () => {
