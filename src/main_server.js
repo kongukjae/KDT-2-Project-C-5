@@ -94,6 +94,7 @@
 // })
 
 // 작업 중
+// ! end 후 write 오류 검출 중..
 import http from 'http';
 import fs from 'fs';
 import sendQuery from './mariadb.js';
@@ -207,10 +208,17 @@ const server = http.createServer(function (req, res) {
       // res.end(JSON.stringify(sender));
     }
   }
-  if (req.url == "/src/img/star.png" && req.method == "GET") {
-    const starImg = fs.readFileSync("./img/star.png");
-    res.end(starImg);
-  }
+  // if (req.url == "/src/img/star.png" && req.method == "GET") {
+  //   const starImg = fs.readFileSync("./img/star.png");
+  //   res.writeHead(200, { "Content-Type": "image/png" });
+  //   res.write(starImg);
+  //   res.end();
+  // } else {
+  //   res.writeHead(404, { "Content-Type": "text/plain" });
+  //   res.write("404 Not Found");
+  //   res.end();
+  // }
+  
   // 요청에 인증을 적용합니다.
   if (!req.headers['x-session-id']) {
     res.writeHead(401, { 'Content-Type': 'application/json' });
