@@ -19,12 +19,20 @@ function searchBooks() {
   const Keyword = document.getElementById('keyword').value;
   //input 값을 할당
   const searchURL = `${URL}&title=${encodeURIComponent(keyword)}`;
-    fetch(searchURL)
+
+
+    fetch(URL)
   .then((response) => response.json())
   .then((data) => {
     //data 확인용
     console.log(data);
    
+ //fetch(URL)
+//.then((response)=> response.json())
+//.then((data)=> {
+  //console.log(data);
+//})
+
     const titles = data.docs.map((item)=>item.TITLE);
     const dataString = JSON.stringify(titles);
     console.log(dataString);
@@ -40,11 +48,7 @@ function searchBooks() {
     console.error('실패:', error);
   });
 }
-fetch(URL)
-.then((response)=> response.json())
-.then((data)=> {
-  console.log(data);
-})
+
   </script>
 </body>
 </html>
