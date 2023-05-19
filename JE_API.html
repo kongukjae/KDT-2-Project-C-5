@@ -8,7 +8,7 @@
 </head>
 <body>
   <h1>책 검색</h1>
-  <input type="text" id="keyword" placeholder="검색어를 입력하세요" />
+  <input type="text" id="Keyword" placeholder="검색어를 입력하세요" />
   <button onclick="searchBooks()">검색</button>
   <!-- searchBooks는 검색어를 찾아주는 함수 -->
   <div id = 'result'></div>
@@ -33,8 +33,16 @@ function searchBooks() {
   //console.log(data);
 //})
 
-    const titles = data.docs.map((item)=>item.TITLE);
-    const dataString = JSON.stringify(titles);
+    //const titles = data.docs.map((item)=>item.TITLE);
+    const books = data.docs.map((item)=>{
+      return {
+        title: item.TITLE,
+        publisher: item.PUBLISHER,
+        author: item.AUTHOR
+
+      };
+    });
+    const dataString = JSON.stringify();
     console.log(dataString);
     document.getElementById('result').textContent = dataString;
     //const dataString = JSON.stringify(data);
