@@ -26,11 +26,37 @@ const inputContext={
 
 
 const ReviewInput=(props)=>{
-  const[review,setReview]=useState({
-    shortReview:'',
-    longReview:'',
-  });
+  const[shortReview,setShortReview]=useState("");
+  const[longReview,setLongReview]=useState("");
 
+  
+
+  const fetchFomr=(e)=>{
+    e.preventDefault();
+
+    const formData={
+      short:shortReview,
+      long:longReview
+    }
+    fetch('/submit-url',{
+      method:'POST',
+      headers:{
+        'Content-Type':'application/json'
+      },
+      body:JSON.stringify(formData)
+    })
+    .then(response => response.json())
+    .then(data => {
+      // 서버 응답 처리
+      console.log(data);
+    })
+    .catch(error => {
+      // 에러 처리
+      console.error(error);
+    });
+
+
+  };
   
 
   
@@ -45,8 +71,8 @@ const ReviewInput=(props)=>{
           type='text'
           id='shortReview'
           name='shortReview'
-          value={review.shortReview}
-          onChange={handleChange}
+          value={shortReview}
+          onChange={(e)=>{setShortReview(e.target.value)}}
           ></input>
         </div>
 
@@ -56,12 +82,12 @@ const ReviewInput=(props)=>{
           type='text'
           id='longReview'
           name='longReview'
-          value={review.longReview}
-          onChange={handleChange}
+          value={longReview}
+          onChange={(e)=>{setLoingReview(e.target.value)}}
           ></input>
         </div>
       </div>
-      <button type="submit">Submit</button>
+      <button type="submit" >Submit</button>
     </form>
   );
 }
