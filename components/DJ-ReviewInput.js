@@ -38,6 +38,7 @@ const ReviewInput=(props)=>{
       short:shortReview,
       long:longReview
     }
+    console.log(formData);
     fetch('/submit-url',{
       method:'POST',
       headers:{
@@ -83,7 +84,7 @@ const ReviewInput=(props)=>{
           id='longReview'
           name='longReview'
           value={longReview}
-          onChange={(e)=>{setLoingReview(e.target.value)}}
+          onChange={(e)=>{setLongReview(e.target.value)}}
           ></input>
         </div>
       </div>
