@@ -20,7 +20,8 @@ import NotificationList from "../components/NotificationList";
 import FavorTag from "./favortag";
 //테스트용 PostReview추가
 import PostReview from "./PostReview";
-import SearchBooks from "../JE_SearchBooks";
+import SearchBooks from "../JE_SelectBooks";
+
 
 // 테스트를 위한 임시 코드
 const Page1 = () => <h1>실시간, 인기 리뷰 피드</h1>;
