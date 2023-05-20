@@ -25,24 +25,19 @@ const inputContext={
 }
 
 
-const ReviewInput=()=>{
+const ReviewInput=(props)=>{
   const[review,setReview]=useState({
     shortReview:'',
     longReview:'',
   });
 
-  const handleChange = (e) => {
-    setReview({...review,[e.target.name]: e.target.value});
-  };
+  
 
   
-  const handleSubmit=(e)=>{
-    e.preventDefault();
-    console.log(review);
-  }
+
 
   return(
-    
+    <form action="/submit-url" method="post">
       <div style={container}>
         <div>
           <input 
@@ -66,6 +61,8 @@ const ReviewInput=()=>{
           ></input>
         </div>
       </div>
+      <button type="submit">Submit</button>
+    </form>
   );
 }
 
