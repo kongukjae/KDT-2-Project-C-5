@@ -20,6 +20,8 @@ import NotificationList from "../components/NotificationList";
 import FavorTag from "./favortag";
 //테스트용 PostReview추가
 import PostReview from "./PostReview";
+import SearchBooks from "../JE_SelectBooks";
+
 
 // 테스트를 위한 임시 코드
 const Page1 = () => <h1>실시간, 인기 리뷰 피드</h1>;
@@ -30,24 +32,25 @@ const Page5 = () => <h1>내 정보 피드</h1>;
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Logo />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/signUp" element={<SignUp />} />
-        <Route path="/accountSetting" element={<AccountSetting />} />
-        <Route path="/lockedUser" element={<BlockedUser />} />
-        <Route path="/mainFeed" element={<MainFeed />} />
-        <Route path="/challenge" element={<ChallengePage />} />
-        <Route path="/followerSetting" element={<FollowerFollowing />} />
-        {/* 포스트 리뷰용 라우터 링크 */}
-        <Route path="/review" element={<ReviewPage />} />
-        <Route path="/mypage" element={<Mypage />} />
-        <Route path="/searchPage" element={<SearchPage />} />
-        <Route path="/NotificationList" element={<NotificationList />} />
-        <Route path="/favortag" element={<FavorTag />} />
-      </Routes>
-    </Router>
+    // <Router>
+    //   <Routes>
+    // //     <Route path="/" element={<Logo />} />
+    // //     <Route path="/login" element={<LoginPage />} />
+    // //     <Route path="/signUp" element={<SignUp />} />
+    // //     <Route path="/accountSetting" element={<AccountSetting />} />
+    // //     <Route path="/lockedUser" element={<BlockedUser />} />
+    // //     <Route path="/mainFeed" element={<MainFeed />} />
+    // //     <Route path="/challenge" element={<ChallengePage />} />
+    // //     <Route path="/followerSetting" element={<FollowerFollowing />} />
+    // //     {/* 포스트 리뷰용 라우터 링크 */}
+    // //     <Route path="/review" element={<ReviewPage />} />
+    // //     <Route path="/mypage" element={<Mypage />} />
+    // //     <Route path="/searchPage" element={<SearchPage />} />
+    // //     <Route path="/NotificationList" element={<NotificationList />} />
+    // //     <Route path="/favortag" element={<FavorTag />} />
+    //   </Routes>
+    // </Router>
+    <SearchBooks/>
   );
 };
 createRoot(document.getElementById("root")).render(<App />);
