@@ -10,6 +10,7 @@ const sessions = {};
 // 요청 헤더의 쿠키
 // 옳바른 세션을 갖고 있을 시 true 반환
 // 그렇지 않을 시 false 반환
+// ! 로그인 과정에서 행해져야 하는 로직을 isSessionChecker로 감싸면 된다.
 function isSessionChcker(req) {
     // 해당 요청에서 전달된 쿠키 문자열을 cookies라는 변수에 저장
   const cookies = req.headers.cookie;
@@ -53,6 +54,8 @@ const server = http.createServer(function (req, res) {
                 .then(result=>{
                     if(result){
                         //query문의 반환값이 있을 경우, 하나의 인덱스마다 객체를 받는 배열이 result에 할당된다. 위의 Query는 1행만 반환하기에 인덱스를0,키값을 DB테이블에서 정의된 값으로 했다.
+                        // DB에 있는 사용자의 pwd 정보로 검증
+                        // 입력한 비밀번호(data.pwd)와 비교한다.
                         if(result[0][`user-pwd`] === data.pwd){
                             console.log("Login Success!")
                             // 세션ID 생성
@@ -77,7 +80,9 @@ const server = http.createServer(function (req, res) {
                 //로그인이 성공했을 때만 메인피드 페이지로 이동함.
                 .then(result =>{
                     console.log(result);
+                    // result 값이 존재하는 경우 (로그인이 성공한 경우)
                     if(result){
+                      // result 값을 sender객체의 result 속성에 할당한다.
                         const sender = {result : result}
                         console.log(sender);
                         res.writeHead(200,{"Content-Type":"application/json"});
