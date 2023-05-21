@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>책 검색</h1>
+  <input type="text" id="Keyword" placeholder="검색어를 입력하세요" />
+  <button onclick="searchBooks()">검색</button>
+  <!-- searchBooks는 검색어를 찾아주는 함수 -->
+  <div id = 'result'></div>
+  <script>
+    const URL = `https://www.nl.go.kr/seoji/SearchApi.do?cert_key=1c81199b2a9a2305bc71bb993c45e032794d810adae4c92544bd3d8ac9c2a574&result_style=json&page_no=1&page_size=10&start_publish_date=20220509&end_start_publish=20220509`
+
+function searchBooks() {
+  const Keyword = document.getElementById('Keyword').value;
+  //input 값을 할당
+  const searchURL = `${URL}&title=${encodeURIComponent(Keyword)}`;
+
+
+    fetch(searchURL)
+  .then((response) => response.json())
+  .then((data) => {
+    //data 확인
+    console.log(data);
+   
+ //fetch(URL)
+//.then((response)=> response.json())
+//.then((data)=> {
+  //console.log(data);
+//})
+
+    //const titles = data.docs.map((item)=>item.TITLE);
+    const books = data.docs.map((item)=>{
+      return {
+        title: item.TITLE,
+        publisher: item.PUBLISHER,
+        author: item.AUTHOR
+
+      };
+    });
+    const dataString = JSON.stringify(books);
+    console.log(dataString);
+    document.getElementById('result').textContent = dataString;
+    //const dataString = JSON.stringify(data);
+    //document.getElementById('result').textContent = dataString;
+//const docs = data.docs;
+    //const dataString = JSON.stringify(docs);
+    //console.log(dataString);
+    //[]
+  })
+  .catch((error) => {
+    console.error('실패:', error);
+  });
+}
+
+  </script>
+</body>
+</html>

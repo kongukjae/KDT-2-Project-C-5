@@ -19,9 +19,19 @@ const rootPath = path.join(currentPath, "\\..")
 export default async function sendQuery(query) {
   let res;
   // dist의 SQL에서 mariadb용 pool 세팅을 가져옴.
-  const poolSet = JSON.parse(fs.readFileSync(path.join(rootPath,"../dist/SQL.json"), "utf8"));
+  const poolSet = {
+    "host" :"localhost",
+    // 계정명, 자신의 DB 내 계정으로 변경할 것.
+    "user": "root", 
+    // 패스워드, 자신의 DB 계정 패스워드로 변경할 것.
+    "password":"qwe123", 
+    //포트, 자신이 쓰는 DB서버에 설정된 포트번호를 쓸 것.
+    "port":"3306",  
+    "database":"bookstargram",
+    "connectionLimit": 5
+  }
   // createPool - 서버연동, 이것이 없으면 DB에 접근이 불가능하다.
-  const pool = mariadb.createPool(poolSet.mariadb);
+  const pool = mariadb.createPool(poolSet);
   let conn;
   try {
     conn = await pool.getConnection();
