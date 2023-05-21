@@ -11,7 +11,7 @@ const sessions = {};
 // 옳바른 세션을 갖고 있을 시 true 반환
 // 그렇지 않을 시 false 반환
 // ! 로그인 과정에서 행해져야 하는 로직을 isSessionChecker로 감싸면 된다.
-function isSessionChcker(req) {
+function isSessionChecker(req) {
     // 해당 요청에서 전달된 쿠키 문자열을 cookies라는 변수에 저장
   const cookies = req.headers.cookie;
     // 쿠키 문자열이 존재하고, 해당 쿠키 값에 대응하는 세션 데이터가 있는지를 동시에 검사
