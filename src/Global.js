@@ -174,8 +174,8 @@ export let globalState = {
       }
     ]
   }
-  },
-};
+}
+
 export function getUserInfo() {
   return globalState.DB.userinfo;
 }
