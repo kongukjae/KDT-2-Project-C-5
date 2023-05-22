@@ -1,6 +1,8 @@
 import React from 'react';
+
 import AddBook from './DJ-AddBook';
 import ReviewInput from './DJ-ReviewInput';
+import Tag from './Tag';
 
 
 const container={
@@ -32,6 +34,10 @@ const WriteBox=()=>{
       <div style={box}>
         <AddBook></AddBook>
         <ReviewInput></ReviewInput>
+      </div>
+      
+      <div>
+        <Tag></Tag>
       </div>
     </div>
 
