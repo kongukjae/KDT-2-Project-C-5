@@ -16,7 +16,7 @@ const feed={
   width:"100%",
   hegith:"500px",
   maxHeight:"500px",
-  
+  marginLeft : '10px'
 }
 
 
