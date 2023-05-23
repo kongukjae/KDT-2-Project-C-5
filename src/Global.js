@@ -1,4 +1,4 @@
-export let globalState = {
+let globalState = {
   tags: "",
   DB: {
     "bookreview": [
@@ -146,54 +146,91 @@ export let globalState = {
       },
       {
         "user-id": "dgchoi3904",
-        "user-pwd": "qweasd123",
+        "user-pwd": "1234",
         "user-email": "dgchoi3904@gmail.com",
-        "user-name": "대거니",
+        "user-name": "대건씌",
         "user-pic": null
       },
       {
         "user-id": "dongju97",
-        "user-pwd": "qwe123",
-        "user-email": "dongju97@email.com",
+        "user-pwd": "5678",
+        "user-email": "dongju97@gmail.com",
         "user-name": "동주팀장",
         "user-pic": null
       },
       {
-        "user-id": "test",
-        "user-pwd": "qwe123",
-        "user-email": "tester@email.com",
-        "user-name": "tester",
-        "user-pic": null
-      },
-      {
         "user-id": "test01",
-        "user-pwd": "qwe123",
-        "user-email": "test01@email.com",
+        "user-pwd": "abcd",
+        "user-email": "test01@gmail.com",
         "user-name": "test01",
         "user-pic": null
       }
     ]
-  }
+  },
+  functions: {
+    isValidUser: (id, pwd) => {
+      const userInfo = globalState.DB["userinfo"];
+      for (let i = 0; i < userInfo.length; i++) {
+        if (userInfo[i]["user-id"] === id && userInfo[i]["user-pwd"] === pwd) {
+          return true;
+        }
+      }
+      return false;
+    },
+    getUserInfo: (id) => {
+      const userInfo = globalState.DB["userinfo"];
+      for (let i = 0; i < userInfo.length; i++) {
+        if (userInfo[i]["user-id"] === id) {
+          return userInfo[i];
+        }
+      }
+      return null;
+    },
+    getBookReviews: () => {
+      return globalState.DB["bookreview"];
+    },
+    getBookReviewByIndex: (index) => {
+      const bookReviews = globalState.DB["bookreview"];
+      for (let i = 0; i < bookReviews.length; i++) {
+        if (bookReviews[i]["index"] === index) {
+          return bookReviews[i];
+        }
+      }
+      return null;
+    },
+    createBookReview: (review) => {
+      const bookReviews = globalState.DB["bookreview"];
+      const lastIndex = bookReviews[bookReviews.length - 1]["index"];
+      const newReview = {
+        index: lastIndex + 1,
+        ...review,
+      };
+      bookReviews.push(newReview);
+      return newReview;
+    },
+    updateBookReview: (index, updatedReview) => {
+      const bookReviews = globalState.DB["bookreview"];
+      for (let i = 0; i < bookReviews.length; i++) {
+        if (bookReviews[i]["index"] === index) {
+          bookReviews[i] = {
+            ...bookReviews[i],
+            ...updatedReview,
+          };
+          return bookReviews[i];
+        }
+      }
+      return null;
+    },
+    deleteBookReview: (index) => {
+      const bookReviews = globalState.DB["bookreview"];
+      for (let i = 0; i < bookReviews.length; i++) {
+        if (bookReviews[i]["index"] === index) {
+          return bookReviews.splice(i, 1)[0];
+        }
+      }
+      return null;
+    },
   },
 };
-export function getUserInfo() {
-  return globalState.DB.userinfo;
-}
-export function setUserInfo(arr) {
-  globalState.DB.userinfo = arr;
-}
 
-export function getBookReview() {
-  return globalState.DB.bookreview;
-}
-export function setBookReview(arr) {
-  globalState.DB.bookreview = arr;
-}
-
-export function setTagString(str) {
-  globalState.tags = str;
-}
-
-export function getTagString() {
-  return globalState.tags;
-}
+console.log(globalState.functions.isValidUser("admin", "qwe123"));  // 예시 사용법
