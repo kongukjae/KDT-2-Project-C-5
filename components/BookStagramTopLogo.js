@@ -7,7 +7,6 @@ const BookStagramTopLogo = () => {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    marginBottom: '50px'
   }
   return (
     <div style={LogoStyle}>

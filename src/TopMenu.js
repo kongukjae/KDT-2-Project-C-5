@@ -15,6 +15,7 @@ import FollowerFollowing from "./FollowerFollowing";
 import BlockedUser from "./BlockedUser";
 
 const headerStyle = {
+  marginTop : '5%',
   display: "flex",
   justifyContent: "space-between",
   width: "100%",
