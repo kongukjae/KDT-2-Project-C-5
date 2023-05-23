@@ -4,7 +4,7 @@ import React from 'react';
 const DailyCheck = () => {
 
   const dailyCheckStyle = {
-    width: '',
+    width: '100%',
     height: '500px',
     display: 'flex',
     justifyContent: 'center',

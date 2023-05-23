@@ -2,7 +2,7 @@
 import React, { useState, useRef } from "react";
 
 const timerStyle = {
-  width: '',
+  width: '100%',
   height: '500px',
   display: 'flex',
   justifyContent: 'center',
