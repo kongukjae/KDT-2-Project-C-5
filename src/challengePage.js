@@ -59,6 +59,7 @@ const challengePage = () => {
         <div style={textStyle('독서 타이머')} onClick={onClickTimer}><b>독서 타이머</b></div>
         <div style={textStyle('출석 체크')} onClick={onClickDailyCheck}><b>출석 체크</b></div>
       </nav>
+      <hr/>
       <main>
         {timer}
         {dailyCheck}
