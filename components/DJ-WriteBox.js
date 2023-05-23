@@ -6,8 +6,8 @@ import ReviewInput from './DJ-ReviewInput';
 const container={
   display:"flex",
   flexDirection:"column",
-  width:"85%",
-  height:"90%",
+  width:"90%",
+  height:"95%",
   borderRadius:"5px",
   justifyContent:"space-around",
   alignItems:"center",
