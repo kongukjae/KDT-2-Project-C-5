@@ -1,5 +1,11 @@
 export let globalState = {
   tags: "",
+  reviewData:{
+    bookTitle:"",
+    review1:"",
+    review2:"",
+    tag:""
+  },
   DB: {
     bookreview: [
       {
