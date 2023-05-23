@@ -54,7 +54,7 @@ const server = http.createServer(function (req, res) {
                         }
                     })
             })
-
+            //method가 POST이고 url이 /review 일시 실행되는 조건문, body에는 책리뷰 form이 저장되있어야 한다.
             if (req.url === "/reivew") {
                 req.on("data", chunk => {
                     // post로 받은 데이터(JSON)을 parse하여 객체로 변환
