@@ -42,9 +42,12 @@ const challengePage = () => {
   };
 
   
-  const mainCss = {
-    backgoundColor: '#D6E8E4'
+  const headerStyle = {
+    display: 'flex',
+    justifyContent:"center",
+    width:"100%"
   }
+
   const navStyle = {
     display: 'flex',
     justifyContent: 'space-around',
@@ -52,8 +55,8 @@ const challengePage = () => {
 
   return (
     <div>
-      <header>
-        <TopMenu/>
+      <header style={headerStyle}>
+        <TopMenu />
       </header>
       <nav style={navStyle}>
         <div style={textStyle('독서 타이머')} onClick={onClickTimer}><b>독서 타이머</b></div>
