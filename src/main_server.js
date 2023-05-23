@@ -52,11 +52,12 @@ const server = http.createServer(function (req, res) {
                 // 쿼리문을 보낼 때, 열은 백틱(``)으로 하고, 비교할 데이터는 작은따옴표('')를 써서 문자열이라 표기했다. 만일 전부 백틱으로 할 경우, data.id를 열중 하나로 인식하는 문제가 있었다.
                 sendQuery(`SELECT * FROM \`bookstargram\`.\`userinfo\` WHERE \`user-id\`= '${data.id}'`)
                 .then(result=>{
-                    if(result){
+                    if(result.length > 0){
+                        const user= result[0];
                         //query문의 반환값이 있을 경우, 하나의 인덱스마다 객체를 받는 배열이 result에 할당된다. 위의 Query는 1행만 반환하기에 인덱스를0,키값을 DB테이블에서 정의된 값으로 했다.
                         // DB에 있는 사용자의 pwd 정보로 검증
                         // 입력한 비밀번호(data.pwd)와 비교한다.
-                        if(result[0][`user-pwd`] === data.pwd){
+                        if(user[`user-pwd`] === data.pwd){
                             console.log("Login Success!")
                             // 세션ID 생성
                             const sessionId= uuidv4();
@@ -67,26 +68,33 @@ const server = http.createServer(function (req, res) {
                             };
                             // 응답에 세션 ID 전송
                             res.writeHead(200, { 'Content-Type': 'application/json' });
-                            res.end(JSON.stringify({ sessionId }));
-                            return true;
+                            res.end(JSON.stringify({ sessionId, result: true }));
+                            // return true;
                         } else {
                             console.log("Login Failed!")
                             res.writeHead(401, { 'Content-Type': 'application/json' });
-                            res.end(JSON.stringify({ error: 'Login failed' }));
-                            return false;
+                            res.end(JSON.stringify({ error: 'Login failed', result: false }));
+                            // return false;
                         }
-                    }
+                    }else {
+                        console.log("Login Failed! User not found!"); // DB에서 조회된 결과가 없을 때 처리
+                        res.writeHead(401, { 'Content-Type': 'application/json' });
+                        res.end(JSON.stringify({ error: 'Login failed. User not found.', result: false }));
+                      }
+                  
                 })
                 //로그인이 성공했을 때만 메인피드 페이지로 이동함.
                 .then(result =>{
                     console.log(result);
                     // result 값이 존재하는 경우 (로그인이 성공한 경우)
-                    if(result){
-                      // result 값을 sender객체의 result 속성에 할당한다.
-                        const sender = {result : result}
-                        console.log(sender);
-                        res.writeHead(200,{"Content-Type":"application/json"});
-                        res.end(JSON.stringify(sender));
+                    if(result.result === true){
+                      console.log('Login suceeded', result);
+                    // 세션 ID 저장
+                    sessionStorage.setItem('sessionID', result.sessionId);
+                    // navigate를 이용해 컴포넌트 이동
+                    navigate('/mainFeed');
+                    } else{
+                        console.log('Login failed');
                     }
                 });
             });

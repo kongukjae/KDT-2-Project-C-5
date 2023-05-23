@@ -16,6 +16,7 @@ const loginPage = () => {
   const [id, setId] = useState('');
   const [pwd, setPwd] = useState('');
   const navigate = useNavigate(); 
+
   const handleLogin = (event) => {
     // 기본 제출 이벤트 방지
     event.preventDefault();
@@ -47,7 +48,10 @@ const loginPage = () => {
         
         if(result.result === true){ // 결과값이 true일 경우
           console.log('login succeeded', result);
+          sessionStorage.setItem('sessionID', result.sessionId);
           navigate("/mainFeed"); // navigate를 사용해 컴포넌트 이동
+        } else {
+          console.log('Login failed');
         }
       })
       .catch(error => {
@@ -81,26 +85,23 @@ const loginPage = () => {
 
   return (
     <div style={container}>
-        <BookStagramTopLogo/>
-        <div>
-          <form onSubmit={handleLogin} style={flex}>
-            <InputId value={id} onChange={(e)=> setId(e.target.value)}/>
-            <p><b>password</b></p>
-            <InputPwd value={pwd} onChange={(e)=> setPwd(e.target.value)}/>
-            <Link to='/mainFeed'>
-              <ButtonLogin/>
-            </Link>
-          </form>
-        </div>
-        <div style={btnBox}>
-          
-          <ButtonSignUpWithGoogle/>
-          <ButtonSignUpWithAppleAccount/>
-          <Link to ='/signUp'>
-            <ButtonSignUp/>
-          </Link>
-          <ForgotAccount/>
-        </div>
+      <BookStagramTopLogo />
+      <div>
+        <form onSubmit={handleLogin} style={flex}>
+          <InputId value={id} onChange={(e) => setId(e.target.value)} />
+          <p><b>password</b></p>
+          <InputPwd value={pwd} onChange={(e) => setPwd(e.target.value)} />
+          <ButtonLogin />
+        </form>
+      </div>
+      <div style={btnBox}>
+        <ButtonSignUpWithGoogle />
+        <ButtonSignUpWithAppleAccount />
+        <Link to="/signUp">
+          <ButtonSignUp />
+        </Link>
+        <ForgotAccount />
+      </div>
     </div>
   );
 };
