@@ -30,16 +30,13 @@ const WriteBox=()=>{
   
 
   return(
-    <div style={container}>
+    <form style={container} action="/submit" method="post">
       <div style={box}>
         <AddBook></AddBook>
         <ReviewInput></ReviewInput>
       </div>
-      
-      <div>
-        <Tag></Tag>
-      </div>
-    </div>
+      <Tag></Tag>
+    </form>
 
   );
 }
