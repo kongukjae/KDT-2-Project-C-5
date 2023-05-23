@@ -17,7 +17,7 @@ import BlockedUser from "./BlockedUser";
 const headerStyle = {
   marginTop : '5%',
   display: "flex",
-  justifyContent: "space-between",
+  alignItems: 'center',
   width: "100%",
 };
 // 임시 태그 설정 컴포넌트
