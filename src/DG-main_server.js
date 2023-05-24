@@ -76,21 +76,21 @@ const server = http.createServer(function (req, res) {
                     SELECT u.\`user-id\`, u.\`user-name\`, u.\`user-pic\`, ${data.booktitle}, ${data.bookcover}, ${data.bookauthor},${data.bookpublisher}, ${data.isbn},${data.summery},  ${data.body}, ${data.tag}
                     FROM userinfo u
                     WHERE u.\`user - id\` = ${data.userid}`)
-                    .then(()=>{
-                        // 등록한 책리뷰의 ID, index 요청 쿼리문(바로 전 단계에 추가된 하나의 행의 id값만을 가져오는 구문이니 주의할 것.(2행 이상일 결우 그전 행의 값만 가져올 수 있다.))
-                        const yourReviewIndex = sendQuery(`SELECT LAST_INSERT_ID()`)
-                        return yourReviewIndex;
-                    })
-                    .then(result=>{
-                        const body = {};
-                        // 받은 index 값을 토대로 작성한 행에 조회
-                        body.yourReview = sendQuery(`SELECT * FROM \`bookstargram\`.\`bookreview\` WHERE \`index\` = ${result}`)
-                        res.writeHead(200,{"Content-Type":"application/json"});
-                        res.write(JSON.stringify(body));
-                        res.end();
-                    })
+                        .then(() => {
+                            // 등록한 책리뷰의 ID, index 요청 쿼리문(바로 전 단계에 추가된 하나의 행의 id값만을 가져오는 구문이니 주의할 것.(2행 이상일 결우 그전 행의 값만 가져올 수 있다.))
+                            const yourReviewIndex = sendQuery(`SELECT LAST_INSERT_ID()`)
+                            return yourReviewIndex;
+                        })
+                        .then(result => {
+                            const body = {};
+                            // 받은 index 값을 토대로 작성한 행에 조회
+                            body.yourReview = sendQuery(`SELECT * FROM \`bookstargram\`.\`bookreview\` WHERE \`index\` = ${result}`)
+                            res.writeHead(200, { "Content-Type": "application/json" });
+                            res.write(JSON.stringify(body));
+                            res.end();
+                        })
                     // 등록된 리뷰의 ID, index를 가져오는 쿼리문
-                    
+
                 })
 
             } else {
@@ -109,8 +109,8 @@ const server = http.createServer(function (req, res) {
             const starImg = fs.readFileSync("./img/star.png");
             res.end(starImg);
         }
-
-    })
+    }
+})
 
 
 server.listen(3000, () => {
