@@ -1,5 +1,6 @@
 async function formFetch(reqMethod, formData, url) {
   try {
+    console.log("formFetch 시작합니다.")
     const response = await fetch(url, {
       // HTTP 요청 메서드 지정
       method: reqMethod,
@@ -11,8 +12,10 @@ async function formFetch(reqMethod, formData, url) {
       body: JSON.stringify(formData),
     });
     // 응답이 성공적이었을 경우
+    console.log("form이 보내지면 실행될 부분입니다.")
     if (response.ok) {
       const data = await response.json();
+      console.log("return 준비 완료되었습니다.")
       return data;
     } else {
       throw new Error("전송에 실패하였습니다.");
