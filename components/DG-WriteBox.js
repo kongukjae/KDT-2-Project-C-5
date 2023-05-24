@@ -60,8 +60,7 @@ const WriteBox = () => {
       console.log("form이 보내지면 실행될 부분입니다.")
       if (response.ok) {
         const data =  response.json();
-        console.log("return 준비 완료되었습니다.")
-        return data;
+        console.log(data);
       } else {
         throw new Error("전송에 실패하였습니다.");
       }
