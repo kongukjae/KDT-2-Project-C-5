@@ -1,8 +1,8 @@
 {
   "mariadb" : {
-    "host" :"192.168.100.67",
-    "user": "bookstargram",
-    "password":"qwe123",
+    "host" :"localhost",
+    "user": "root",
+    "password":"0000",
     "port":"3306",
     "database":"bookstargram",
     "connectionLimit": 5
