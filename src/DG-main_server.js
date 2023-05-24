@@ -1,7 +1,7 @@
 import http from "http"
 import fs from "fs"
 import sendQuery from "./mariadb.js"
-import { send } from "process";
+
 
 
 // const html=fs.readFileSync("../dist/index.html");
@@ -54,56 +54,56 @@ const server = http.createServer(function (req, res) {
                         }
                     })
             })
-            //method가 POST이고 url이 /review 일시 실행되는 조건문, body에는 책리뷰 form이 저장되있어야 한다.
-            if (req.url === "/reivew") {
-                req.on("data", chunk => {
-                    // post로 받은 데이터(JSON)을 parse하여 객체로 변환
-                    // const sample = {
-                    //     "userid": "dgchoi3904",
-                    //     "booktitle": "개리포터와 개법사의 뼈",
-                    //     "bookcover": null,
-                    //     "bookauthor": "롤링스파이더",
-                    //     "bookpublisher": "문학쇼츠",
-                    //     "bookrelease": "20230518",
-                    //     "isbn": "9781234567890",
-                    //     "summery": "짧은 리뷰 내용",
-                    //     "body": "리뷰 내용",
-                    //     "tag": "#없어!",
-                    // }
-                    const bookreviewForm = JSON.parse(chunk);
-                    // 책리뷰 등록 쿼리문
-                    sendQuery(`INSERT INTO bookreview (userid, username, userpic, booktitle, bookcover, bookauthor, bookpublisher, isbn, summery, body, tag)
-                    SELECT u.\`user-id\`, u.\`user-name\`, u.\`user-pic\`, ${data.booktitle}, ${data.bookcover}, ${data.bookauthor},${data.bookpublisher}, ${data.isbn},${data.summery},  ${data.body}, ${data.tag}
-                    FROM userinfo u
-                    WHERE u.\`user - id\` = ${data.userid}`)
-                        .then(() => {
-                            // 등록한 책리뷰의 ID, index 요청 쿼리문(바로 전 단계에 추가된 하나의 행의 id값만을 가져오는 구문이니 주의할 것.(2행 이상일 결우 그전 행의 값만 가져올 수 있다.))
-                            const yourReviewIndex = sendQuery(`SELECT LAST_INSERT_ID()`)
-                            return yourReviewIndex;
-                        })
+            
+        }
+        //method가 POST이고 url이 /review 일시 실행되는 조건문, body에는 책리뷰 form이 저장되있어야 한다.
+        if (req.url === "/review") {
+            console.log("여기 실행됨.")
+            req.on("data", chunk => {
+                // post로 받은 데이터(JSON)을 parse하여 객체로 변환
+                // const sample = {
+                //     "userid": "dgchoi3904",
+                //     "booktitle": "개리포터와 개법사의 뼈",
+                //     "bookcover": null,
+                //     "bookauthor": "롤링스파이더",
+                //     "bookpublisher": "문학쇼츠",
+                //     "bookrelease": "20230518",
+                //     "isbn": "9781234567890",
+                //     "summery": "짧은 리뷰 내용",
+                //     "body": "리뷰 내용",
+                //     "tag": "#없어!",
+                // }
+                const bookreviewForm = JSON.parse(chunk);
+                // 책리뷰 등록 쿼리문
+                console.log(bookreviewForm);
+                sendQuery(`INSERT INTO bookreview (userid, username, userpic, booktitle, bookcover, bookauthor, bookpublisher, isbn, summery, body, tag) SELECT \`userinfo\`.\`user-id\`, \`userinfo\`.\`user-name\`, \`userinfo\`.\`user-pic\`, "${bookreviewForm.booktitle}", "${bookreviewForm.bookcover}", "${bookreviewForm.bookauthor}","${bookreviewForm.bookpublisher}", "${bookreviewForm.isbn}","${bookreviewForm.summery}",  "${bookreviewForm.body}", "${bookreviewForm.tag}" FROM userinfo WHERE \`userinfo\`.\`user-id\` = "${bookreviewForm.userid}"`)
+                    .then(() => {
+                        // 등록한 책리뷰의 ID, index 요청 쿼리문(바로 전 단계에 추가된 하나의 행의 id값만을 가져오는 구문이니 주의할 것.(2행 이상일 결우 그전 행의 값만 가져올 수 있다.))
+                        sendQuery(`SELECT * FROM bookreview ORDER BY \`index\` DESC LIMIT 1`)
                         .then(result => {
                             const body = {};
+                            console.log(result[0]);
                             // 받은 index 값을 토대로 작성한 행에 조회
-                            body.yourReview = sendQuery(`SELECT * FROM \`bookstargram\`.\`bookreview\` WHERE \`index\` = ${result}`)
-                            res.writeHead(200, { "Content-Type": "application/json" });
-                            res.write(JSON.stringify(body));
-                            res.end();
+                            // body.yourReview = sendQuery(`SELECT * FROM \`bookstargram\`.\`bookreview\` WHERE \`index\` = ${result}`)
+                            // res.writeHead(200, { "Content-Type": "application/json" });
+                            // res.write(JSON.stringify(body));
+                            // res.end();
                         })
-                    // 등록된 리뷰의 ID, index를 가져오는 쿼리문
+                    })
+                    
+                // 등록된 리뷰의 ID, index를 가져오는 쿼리문
 
-                })
+            })
 
-            } else {
-                // 회원가입폼 테스트 구문 주석 처리
-                // req.on("data", chunk=>{
-                //     console.log(JSON.parse(chunk))
-                // })
-                // res.writeHead(200,{"Content-Type":"application/json"});
-                // const sender = {result : true}
-                // res.end(JSON.stringify(sender));
-            }
+        } else {
+            // 회원가입폼 테스트 구문 주석 처리
+            // req.on("data", chunk=>{
+            //     console.log(JSON.parse(chunk))
+            // })
+            // res.writeHead(200,{"Content-Type":"application/json"});
+            // const sender = {result : true}
+            // res.end(JSON.stringify(sender));
         }
-
 
         if (req.url === "/src/img/star.png" && req.method === "GET") {
             const starImg = fs.readFileSync("./img/star.png");
