@@ -81,13 +81,13 @@ const server = http.createServer(function (req, res) {
                         // 등록한 책리뷰의 ID, index 요청 쿼리문(바로 전 단계에 추가된 하나의 행의 id값만을 가져오는 구문이니 주의할 것.(2행 이상일 결우 그전 행의 값만 가져올 수 있다.))
                         sendQuery(`SELECT * FROM bookreview ORDER BY \`index\` DESC LIMIT 1`)
                         .then(result => {
-                            const body = {};
+                            // 테이블에 등록된 최신 글(자신이 등록한 글) 콘솔에 출력
                             console.log(result[0]);
-                            // 받은 index 값을 토대로 작성한 행에 조회
-                            // body.yourReview = sendQuery(`SELECT * FROM \`bookstargram\`.\`bookreview\` WHERE \`index\` = ${result}`)
-                            // res.writeHead(200, { "Content-Type": "application/json" });
-                            // res.write(JSON.stringify(body));
-                            // res.end();
+                            // response.body로 담아 보낼 데이터를 body에 할당.
+                            const body = result[0];
+                            res.writeHead(200, { "Content-Type": "application/json" });
+                            res.write(JSON.stringify(body));
+                            res.end();
                         })
                     })
                     
