@@ -15,7 +15,7 @@ const box={
   height:"80%",
   borderRadius:"10px",
   backgroundColor:"#B0A7A7",
-  justifyContent:"space-around",
+  justifyContent:"space-evenly",
   alignItems:"center",
 }
 
