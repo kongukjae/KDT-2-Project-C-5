@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 
 const introSt={
   display:"flex",
-  width:"300px",
-  height:"90%",
+  width:"70%",
+  height:"80%",
   justifyContent:"center",
   alignItems:"center",
   border:"1px solid black",
