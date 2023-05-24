@@ -17,7 +17,7 @@ const LogoStyle = {
 
 
 const NotificationListstyle ={
-  backgroundColor: "#CAC2C2"
+  backgroundColor: "rgb(217, 217, 217)"
 }
 
 const NotificationList = () => {
