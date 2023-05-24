@@ -15,7 +15,7 @@ const contentBox={
 
 const container={
   display:"flex",
-  width:"98%",
+  width:"100%",
   height:"500px",
   backgroundColor:"#B0A7A7",
   borderRadius:"7px",
