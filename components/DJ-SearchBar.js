@@ -29,7 +29,7 @@ const inputSt={
 
 const imgBox={
   display:"flex",
-  width:"10%",
+  width:"7%",
   height:"70%",
   backgroundColor:"#D9D9D9",
   borderRadius:"5px"
