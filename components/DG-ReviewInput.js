@@ -30,12 +30,14 @@ const ReviewInput=()=>{
 
   return(
     <div style={container}>
-      <div>
-        <input style={inputThree}></input>
-      </div>
-      <div>
-        <input style={inputContext}></input>
-      </div>
+      <label htmlFor="summary">
+        Summary:
+        <input type="text" id="summary" name="summery" style={inputThree} />
+      </label>
+      <label htmlFor="body">
+        Body:
+        <input type="text" id="body" name="body" style={inputContext} />
+      </label>
     </div>
   );
 }
