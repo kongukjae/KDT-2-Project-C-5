@@ -44,12 +44,14 @@ const ReviewInput=()=>{
 
   return(
     <div style={container}>
-      <div>
-        <input style={inputThree} type='text' name='review1' placeholder='3줄 리뷰' onChange={reviewInput1}></input>
-      </div>
-      <div>
-        <input style={inputContext} type='text' name='review2' placeholder='리뷰' onChange={reviewInput2}></input>
-      </div>
+      <label htmlFor="summary">
+        Summary:
+        <input type="text" id="summary" name="summery" style={inputThree} placeholder='3줄 리뷰' onChange={reviewInput1} />
+      </label>
+      <label htmlFor="body">
+        Body:
+        <input type="text" id="body" name="body" style={inputContext} placeholder='리뷰' onChange={reviewInput2} />
+      </label>
     </div>
   );
 }
