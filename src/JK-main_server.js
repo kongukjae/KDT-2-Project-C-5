@@ -50,7 +50,7 @@ const server = http.createServer(function (req, res) {
                 // post로 받은 데이터(JSON)을 parse하여 객체로 변환
                 const data = JSON.parse(chunk);
                 // 쿼리문을 보낼 때, 열은 백틱(``)으로 하고, 비교할 데이터는 작은따옴표('')를 써서 문자열이라 표기했다. 만일 전부 백틱으로 할 경우, data.id를 열중 하나로 인식하는 문제가 있었다.
-                sendQuery(`SELECT * FROM \`bookstargram\`.\`userinfo\` WHERE \`user-id\`= \`${data.id}\``)
+                sendQuery(`SELECT * FROM \`bookstargram\`.\`userinfo\` WHERE \`user-id\`= '${data.id}'`)
 
                 .then(result=>{
                     if(result.length > 0){
@@ -88,8 +88,8 @@ const server = http.createServer(function (req, res) {
                 .then(result =>{
                     console.log(result);
                     // result 값이 존재하는 경우 (로그인이 성공한 경우)
-                    if(result.result === true){
-                      console.log('Login suceeded', result);
+                    if(result === true){
+                      console.log('Login suceeded');
                     // 세션 ID 저장
                     sessionStorage.setItem('sessionID', result.sessionId);
                     // navigate를 이용해 컴포넌트 이동
