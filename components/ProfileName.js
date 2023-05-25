@@ -14,14 +14,14 @@ const container={
 const nameBox={
   display:"flex",
   flexDirection:"column",
-  fontSize:"30px"
+  fontSize:"25px"
 
 }
 
 const numContainer={
   display:"flex",
   flexDirection:"row",
-  justifyContent:"space-around",
+  justifyContent:"space-evenly",
   width:"280px"
 }
 

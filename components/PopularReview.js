@@ -90,8 +90,7 @@ const PopularReview = ({ Handle }) => {
               handle={Handle}
             />
           ))}
-
-        Div {index + 1}
+          {/* Div {index + 1} */}
       </div>
     ))}
         

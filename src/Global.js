@@ -1,3 +1,12 @@
+
+import bookcover1 from '../src/img/book-cover3.jpg';
+import bookcover2 from '../src/img/book-cover4.jpg';
+import bookcover3 from '../src/img/book-cover5.jpg';
+import bookcover4 from '../src/img/book-cover6.jpg';
+import bookcover5 from '../src/img/book-cover.jpg';
+import bookcover6 from '../src/img/book-cover2.jpg';
+
+
 export let globalState = {
   tags: "",
   DB: {
@@ -8,7 +17,7 @@ export let globalState = {
         username: "대건씌",
         userpic: null,
         booktitle: "우주와 달",
-        bookcover: null,
+        bookcover: bookcover1,
         createdtime: "2023-05-04T06:40:54.000Z",
         modifiedtime: "2023-05-08T08:16:20.000Z",
         summery:
@@ -24,7 +33,7 @@ export let globalState = {
         username: "동주팀장",
         userpic: null,
         booktitle: "시장학개론",
-        bookcover: null,
+        bookcover: bookcover2,
         createdtime: "2023-05-04T06:41:17.000Z",
         modifiedtime: "2023-05-08T08:16:57.000Z",
         summery: "이 책은 과거와 현재, 미래의 모든 시장을 위한 실무 지침서다.",
@@ -39,7 +48,7 @@ export let globalState = {
         username: "대거니",
         userpic: null,
         booktitle: "메리골드 마음 세탁소",
-        bookcover: null,
+        bookcover: bookcover3,
         createdtime: "2023-05-08T08:43:57.000Z",
         modifiedtime: "2023-05-08T08:43:57.000Z",
         summery:
@@ -55,7 +64,7 @@ export let globalState = {
         username: "관리자01",
         userpic: null,
         booktitle: "아버지의 해방일지",
-        bookcover: null,
+        bookcover: bookcover4,
         createdtime: "2023-05-08T08:43:57.000Z",
         modifiedtime: "2023-05-08T08:43:57.000Z",
         summery:
@@ -71,7 +80,7 @@ export let globalState = {
         username: "test01",
         userpic: null,
         booktitle: "도둑맞은 집중력",
-        bookcover: null,
+        bookcover: bookcover5,
         isbn: null,
         createdtime: "2023-05-09T07:29:02.000Z",
         modifiedtime: "2023-05-09T07:29:02.000Z",
@@ -87,7 +96,7 @@ export let globalState = {
         username: "test01",
         userpic: null,
         booktitle: "이끼숲",
-        bookcover: null,
+        bookcover: bookcover6,
         isbn: null,
         createdtime: "2023-05-09T07:38:51.000Z",
         modifiedtime: "2023-05-09T07:38:51.000Z",
@@ -103,7 +112,7 @@ export let globalState = {
         username: "test01",
         userpic: null,
         booktitle: "그래서 지금 뭘했지?",
-        bookcover: null,
+        bookcover: bookcover2,
         isbn: null,
         createdtime: "2023-05-10T00:29:33.000Z",
         modifiedtime: "2023-05-10T00:29:33.000Z",
