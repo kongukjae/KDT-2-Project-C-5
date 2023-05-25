@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import SearchBar from './DJ-SearchBar'
 import './AddBook.css'
@@ -33,6 +33,12 @@ const searchBox={
 //리뷰 작성 페이지 기능 내에서 십자가 버튼과 검색바를 담당하는 컴포넌트
 const AddBook=()=>{
 
+  const [selectedFile, setSelectedFile] = useState(null);
+
+  const handleFileChange = (event) => {
+    setSelectedFile(event.target.files[0]);
+  };
+
   return(
     <div style={container}>
     <div style={crossBox}>
@@ -44,7 +50,7 @@ const AddBook=()=>{
     </label>
     <label htmlFor="bookcover">
       Book Cover:
-      <input type="text" id="bookcover" name="bookcover"/>
+      <input type="file" id="bookcover" name="bookcover" onChange={handleFileChange}/>
     </label>
     <label htmlFor="bookauthor">
       Book Author:
