@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
+import profilePic from '../src/img/laon-modified.png'
 
 const introSt={
   display:"flex",
-  width:"300px",
-  height:"90%",
+  width:"70%",
+  height:"80%",
   justifyContent:"center",
   alignItems:"center",
   border:"1px solid black",
@@ -17,7 +18,7 @@ const container={
   display:"flex",
   flexDirection:"row",
   width:"100%",
-  height:"120px",
+  height:"100px",
   justifyContent:"space-around",
   alignItems:"center"
 
@@ -32,13 +33,13 @@ const imgBox={
 
 //마이페이지의 프로필사진과 자기소개를 담당하는 컴포넌트
 const introduce=()=>{
-  const[intro,setIntro]=useState("안녕하세요.");
+  const[intro,setIntro]=useState("안녕하세요. 제인입니다");
 
 
   return(
     <div style={container}>
       <div style={imgBox}>
-        <img></img>
+      <img src={profilePic} alt="Profile" />
       </div>
 
       <div style={introSt}>

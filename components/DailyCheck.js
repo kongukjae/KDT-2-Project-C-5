@@ -4,16 +4,21 @@ import React from 'react';
 const DailyCheck = () => {
 
   const dailyCheckStyle = {
-    width: '',
+    width: '100%',
     height: '500px',
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+    backgroundColor: '#D6E8E4'
+    
+  }
+  const h1style = {
+    color: '#00C2FF'
   }
 
   return (
     <div style={dailyCheckStyle}>
-      <h1>
+      <h1 style= {h1style}>
         출석체크
       </h1>
     </div>

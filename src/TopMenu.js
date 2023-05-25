@@ -15,8 +15,9 @@ import FollowerFollowing from "./FollowerFollowing";
 import BlockedUser from "./BlockedUser";
 
 const headerStyle = {
+  marginTop : '1%',
   display: "flex",
-  justifyContent: "space-between",
+  alignItems: 'center',
   width: "100%",
 };
 // 임시 태그 설정 컴포넌트

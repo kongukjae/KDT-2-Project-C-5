@@ -10,12 +10,13 @@ import NavBar from "./NavBar"
 
 
 
-const container={
-  display:"flex",
-  justifyContent:"center",
-  alignItems:"center",
-  flexDirection:"column",
-  width:"100%"
+const mainbox = {
+  width:"100%",
+  height: "100%",
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent : 'space-between',
+  alignItems: 'center'
 }
 
 //태그 및 도서 검색 페이지 담당 컴폰넌트
@@ -55,10 +56,12 @@ const searchPage=()=>{
 
 
   return(
-    <div style={container}>
+    <div style={mainbox}>
       <TopMenu></TopMenu>
+      <div>
       <SearchBar></SearchBar>
       <TagContentBox onDataUpdate={getTag}></TagContentBox>
+      </div>
       {/* <SearchBookResult></SearchBookResult> */}
       <NavBar></NavBar>
     </div>

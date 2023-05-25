@@ -41,26 +41,49 @@ const challengePage = () => {
     handleMouseClick('출석 체크')
   };
 
-  
+  const mainbox = {
+    width:"100%",
+    height: "100%",
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent : 'space-between',
+    alignItems: 'center'
+  }
+
+  const headerStyle = {
+    display: 'flex',
+    justifyContent:"center",
+    width:"100%"
+  }
 
   const navStyle = {
     display: 'flex',
+    width:"100%",
     justifyContent: 'space-around',
+  }
+  
+  const divstyle = {
+    width:"100%",
   }
 
   return (
-    <div>
-      <header>
-        <TopMenu/>
+    <div style={mainbox}>
+      <header style={headerStyle}>
+        <TopMenu />
       </header>
+
+      <div style={divstyle}>
       <nav style={navStyle}>
         <div style={textStyle('독서 타이머')} onClick={onClickTimer}><b>독서 타이머</b></div>
         <div style={textStyle('출석 체크')} onClick={onClickDailyCheck}><b>출석 체크</b></div>
       </nav>
+      <hr/>
       <main>
         {timer}
         {dailyCheck}
       </main>
+      </div>
+
       <footer>
         <NavBar/>
       </footer>

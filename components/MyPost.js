@@ -1,6 +1,9 @@
 import React,{useState} from 'react'
-
 import MainFeedReviewForm from './mainFeedReviewForm';
+import coverImage from '../src/img/book-cover.jpg';
+import coverImage2 from '../src/img/book-cover2.jpg';
+import coverImage3 from '../src/img/book-cover3.jpg';
+import coverImage4 from '../src/img/book-cover4.jpg';
 
 const feedContainer={
   display:"flex",
@@ -17,39 +20,39 @@ const feedContainer={
 const myPost=()=>{
   const data2=[
     {
-      bookPic:"pic",
+      bookPic:coverImage,
       profilePic:"ppp",
-      name:"김동주",
-      review:"asdasdasdasd",
+      name:"제인",
+      review:"원대하고, 보배를 목숨이 힘있다. 황금시대의 꽃이 인류의 것이다.   어디 청춘의 인간에 그들의 사막이다.",
       time:"1h ago",
-      like:"199",
+      like:"25",
       likeState:true,
     },
     {
-      bookPic:"pic",
+      bookPic:coverImage2,
       profilePic:"ppp",
       name:"제인",
-      review:"asdasdasdasd",
-      time:"1h ago",
-      like:"199",
+      review:"불러 따뜻한 아름다우냐? 가슴에 수 인간의 눈이 못하다. 피어나는 소담스러운 온갖 인간이 아니다.",
+      time:"3h ago",
+      like:"1",
       likeState:true,
     },
     {
-      bookPic:"pic",
+      bookPic:coverImage3,
       profilePic:"ppp",
       name:"제인",
-      review:"asdasdasdasd",
-      time:"1h ago",
-      like:"199",
+      review:"이상이 발휘하기 소담스러운 듣기만 길지 이것이다. 살았으며, 더운지라 없는 따뜻한 철환하였는가?",
+      time:"1d ago",
+      like:"12",
       likeState:true,
     },
     {
-      bookPic:"pic",
+      bookPic:coverImage4,
       profilePic:"ppp",
       name:"제인",
-      review:"asdasdasdasd",
-      time:"1h ago",
-      like:"199",
+      review:"가는 길을 어디 그림자는 맺어, 우리는 대중을 아니다. 열락을 위하여 타오르고 듣기만 광야에서 칼이다.",
+      time:"7d ago",
+      like:"19",
       likeState:true,
     }   
   ]

@@ -29,6 +29,8 @@ const PopularReview = ({ Handle }) => {
     return timeB - timeA; // 내림차순 정렬
   }
 
+  const divColors = ['#A7B999', '#B195B1', '#C86C6C'];
+
   const data = [
     {
       bookPic: "pic",
@@ -71,19 +73,27 @@ const PopularReview = ({ Handle }) => {
   return (
     <div>
       <div style={scroll}>
-        {bookReview.map((item, index) => (
-          <MainFeedReviewForm
-            key={index}
-            bookPic={item["bookcover"]}
-            profilePic={item["profilePic"]}
-            name={item["booktitle"]}
-            review={item["summery"]}
-            time={item["modifiedtime"]}
-            like={item["likecount"]}
-            likeState={false}
-            handle={Handle}
-          />
-        ))}
+      {divColors.map((color, index) => (
+    <div key={index} className={`divStyle ${color}`}>
+
+
+          {bookReview.map((item, index) => (
+            <MainFeedReviewForm
+              key={index}
+              bookPic={item["bookcover"]}
+              profilePic={item["profilePic"]}
+              name={item["booktitle"]}
+              review={item["summery"]}
+              time={item["modifiedtime"]}
+              like={item["likecount"]}
+              likeState={false}
+              handle={Handle}
+            />
+          ))}
+          {/* Div {index + 1} */}
+      </div>
+    ))}
+        
       </div>
     </div>
   );

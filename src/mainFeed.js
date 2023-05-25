@@ -3,6 +3,15 @@ import NavBar from './NavBar';
 import TopMenu from './TopMenu';
 import MainFeedContents from '../components/MainFeedContents';
 
+const mainbox = {
+  width:"100%",
+  height: "100%",
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent : 'space-between',
+  alignItems: 'center'
+}
+
 const headerStyle = {
   display: 'flex',
   justifyContent:"center",
@@ -14,7 +23,7 @@ const headerStyle = {
 //수정 : 김동주
 const mainFeed = () => {
   return (
-    <div>
+    <div style={mainbox}>
       <header style={headerStyle}>
         <TopMenu/>
       </header>
