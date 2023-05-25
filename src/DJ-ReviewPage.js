@@ -4,7 +4,7 @@ import Search from "../components/Search";
 import NavBar from "./NavBar";
 
 import MypageTopBar from "../components/DJ-MypageTopBar";
-import ReviewWrite from "../components/DJ-ReviewWrite";
+import ReviewWrite from "../components/DG-ReviewWrite";
 
 
 const container={
