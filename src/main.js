@@ -32,25 +32,24 @@ const Page5 = () => <h1>내 정보 피드</h1>;
 
 const App = () => {
   return (
-    // <Router>
-    //   <Routes>
-    // //     <Route path="/" element={<Logo />} />
-    // //     <Route path="/login" element={<LoginPage />} />
-    // //     <Route path="/signUp" element={<SignUp />} />
-    // //     <Route path="/accountSetting" element={<AccountSetting />} />
-    // //     <Route path="/lockedUser" element={<BlockedUser />} />
-    // //     <Route path="/mainFeed" element={<MainFeed />} />
-    // //     <Route path="/challenge" element={<ChallengePage />} />
-    // //     <Route path="/followerSetting" element={<FollowerFollowing />} />
-    // //     {/* 포스트 리뷰용 라우터 링크 */}
-    // //     <Route path="/review" element={<ReviewPage />} />
-    // //     <Route path="/mypage" element={<Mypage />} />
-    // //     <Route path="/searchPage" element={<SearchPage />} />
-    // //     <Route path="/NotificationList" element={<NotificationList />} />
-    // //     <Route path="/favortag" element={<FavorTag />} />
-    //   </Routes>
-    // </Router>
-    <SearchBooks/>
+    <Router>
+      <Routes>
+    //     <Route path="/" element={<Logo />} />
+    //     <Route path="/login" element={<LoginPage />} />
+    //     <Route path="/signUp" element={<SignUp />} />
+    //     <Route path="/accountSetting" element={<AccountSetting />} />
+    //     <Route path="/lockedUser" element={<BlockedUser />} />
+    //     <Route path="/mainFeed" element={<MainFeed />} />
+    //     <Route path="/challenge" element={<ChallengePage />} />
+    //     <Route path="/followerSetting" element={<FollowerFollowing />} />
+    //     {/* 포스트 리뷰용 라우터 링크 */}
+    //     <Route path="/review" element={<ReviewPage />} />
+    //     <Route path="/mypage" element={<Mypage />} />
+    //     <Route path="/searchPage" element={<SearchPage />} />
+    //     <Route path="/NotificationList" element={<NotificationList />} />
+    //     <Route path="/favortag" element={<FavorTag />} />
+      </Routes>
+    </Router>
   );
 };
 createRoot(document.getElementById("root")).render(<App />);
