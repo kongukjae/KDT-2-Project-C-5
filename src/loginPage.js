@@ -44,9 +44,9 @@ const loginPage = () => {
       })
       .then(result => {
         // 로그인 성공 처리
-        console.log(result);
+        // console.log(result);
         
-        if(result.result === true){ // 결과값이 true일 경우
+        if(result === true){ // 결과값이 true일 경우
           console.log('login succeeded', result);
           sessionStorage.setItem('sessionID', result.sessionId);
           navigate("/mainFeed"); // navigate를 사용해 컴포넌트 이동
