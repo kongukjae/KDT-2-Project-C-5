@@ -163,8 +163,26 @@ export let globalState = {
         "user-pic": null
       }
     ]
+  },
+  bookinfo: {
+    title: null,
+    author: null,
+    publisher: null,
+    isbn: null
+  },
+  reviewdata: {
+    "userid": "dgchoi3904",
+    "booktitle": "개리포터와 개법사의 뼈",
+    "bookcover": null,
+    "bookauthor": "롤링스파이더",
+    "bookpublisher": "문학쇼츠",
+    "bookrelease": "20230518",
+    "isbn": "9781234567890",
+    "summery": "짧은 리뷰 내용",
+    "body": "리뷰 내용",
+    "tag": "#없어!",
   }
-  }
+}
 export function getUserInfo() {
   return globalState.DB.userinfo;
 }
@@ -185,4 +203,17 @@ export function setTagString(str) {
 
 export function getTagString() {
   return globalState.tags;
+}
+
+export function getBookInfo() {
+  return globalState.bookinfo;
+}
+export function setBookInfo(obj) {
+  globalState.bookinfo.title = obj.title;
+  globalState.bookinfo.author = obj.author;
+  globalState.bookinfo.publisher = obj.publisher;
+  globalState.bookinfo.isbn = obj.isbn;
+}
+const reviewData = {
+
 }
