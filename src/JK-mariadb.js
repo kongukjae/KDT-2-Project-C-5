@@ -26,8 +26,6 @@ export default async function sendQuery(query) {
     connectionLimit: 5
   };
   // createPool - 서버연동, 이것이 없으면 DB에 접근이 불가능하다.
-  // ! 오류 발생 부분
-  // ! poolSet에는 mariadb가 없는데 수정없이 그대로 사용하여 pool 설정이 없는채로 Connection을 시작해서 생긴 문제였습니다.
   const pool = mariadb.createPool(poolSet);
   let conn;
   try {

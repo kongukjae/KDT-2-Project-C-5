@@ -102,8 +102,8 @@ const server = http.createServer(function (req, res) {
                 .then(result =>{
                     console.log(result);
                     // result 값이 존재하는 경우 (로그인이 성공한 경우)
-                    if(result === true){
-                      console.log('Login suceeded');
+                    if(result && result.result === true){
+                      console.log('Login suceeded', result);
                     // 세션 ID 저장
                     sessionStorage.setItem('sessionID', result.sessionId);
                     // navigate를 이용해 컴포넌트 이동
