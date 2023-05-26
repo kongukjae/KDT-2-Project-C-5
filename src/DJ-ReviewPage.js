@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PostInput from "../components/PostInput";
 import Search from "../components/Search";
 import NavBar from "./NavBar";
-
+import Topmenu from './TopMenu'
 import MypageTopBar from "../components/DJ-MypageTopBar";
 import ReviewWrite from "../components/DG-ReviewWrite";
 
@@ -29,9 +29,8 @@ const container = {
 function ReviewPage() {
   return (
     <div style={mainbox}>
-
+      <Topmenu></Topmenu>
       <div style={container}>
-      <MypageTopBar></MypageTopBar>
       <ReviewWrite></ReviewWrite>
       </div>
       <NavBar></NavBar>
