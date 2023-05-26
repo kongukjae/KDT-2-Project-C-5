@@ -7,8 +7,8 @@ async function main() {
     conn = await mariaDB.createConnection({
       host: "localhost",
       user: "root",
-      password: "xxia1215@@",
-      database: "bookstagram",
+      password: "1234",
+      database: "bookstargram",
     });
     const userinfo = await conn.query("SELECT * FROM userinfo");
 

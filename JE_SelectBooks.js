@@ -42,7 +42,6 @@ const SearchBooks = () => {
 
   return (
     <div>
-      <h1>책 검색</h1>
       <input
         type="text"
         value={keyword}
@@ -55,8 +54,7 @@ const SearchBooks = () => {
       {selectedBook ? (
         <div>
           {/* 선택된 책은 모든 정보를 */}
-          <h2>선택된 책</h2>
-          <h3>{selectedBook.title}</h3>
+          <p>{selectedBook.title}</p>
           <p>{selectedBook.publisher}</p>
           <p>{selectedBook.author}</p>
         </div>
@@ -65,7 +63,7 @@ const SearchBooks = () => {
           {/* 검색 결과에는 책의 타이틀만 */}
           {result.map((book, index) => (
             <div key={index} onClick={() => handleBookSelect(book)}>
-              <h3>{book.title}</h3>
+              <p>{book.title}</p>
               
             </div>
           ))}
