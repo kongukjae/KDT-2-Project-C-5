@@ -29,9 +29,9 @@ const container = {
 function ReviewPage() {
   return (
     <div style={mainbox}>
-
+<TopMenu></TopMenu>
       <div style={container}>
-      <TopMenu></TopMenu>
+    
       <ReviewWrite></ReviewWrite>
       </div>
       <NavBar></NavBar>
