@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
 import SearchBar from './DJ-SearchBar'
+import SearchBooks from '../JE_SelectBooks'
 import './AddBook.css'
 
 
@@ -44,7 +45,7 @@ const AddBook=()=>{
     <div style={crossBox}>
       <div id="cross"></div>
     </div>
-    <label htmlFor="booktitle">
+    {/* <label htmlFor="booktitle">
       Book Title:
       <input type="text" id="booktitle" name="booktitle"/>
     </label>
@@ -67,11 +68,12 @@ const AddBook=()=>{
     <label htmlFor="isbn">
       ISBN:
       <input type="text" id="isbn" name="isbn" />
-    </label>
+    </label> */}
 
     <div style={searchBox}>
-      {/* 자동완성 기능이 담겨있는 도서 검색 바를 여기에 넣어야함 */}
-      <SearchBar />
+      <SearchBooks />
+      {/* <SearchBar /> */}
+      
     </div>
   </div>
   );
