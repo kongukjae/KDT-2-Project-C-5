@@ -18,11 +18,15 @@ const SearchBooks = () => {
     fetch(searchURL)
       .then((response) => response.json())
       .then((data) => {
-        const books = data.docs.map((item) => ({
+        const books = data.docs.map((item) => {
+        const ISBN = item.SET_ISBN || item.EA_ISBN || "No ISBN"
+        
+        return {
           title: item.TITLE,
           publisher: item.PUBLISHER,
-          author: item.AUTHOR
-        }));
+          author: item.AUTHOR,
+          isbn : ISBN
+        }});
 
         setResult(books);
        //setresult 로 검색 결과를 업데이트함 
@@ -54,16 +58,17 @@ const SearchBooks = () => {
       {selectedBook ? (
         <div>
           {/* 선택된 책은 모든 정보를 */}
-          <p>{selectedBook.title}</p>
-          <p>{selectedBook.publisher}</p>
-          <p>{selectedBook.author}</p>
+          <div>{selectedBook.title}</div>
+          <div>{selectedBook.publisher}</div>
+          <div>{selectedBook.author}</div>
+          <div>{selectedBook.isbn}</div>
         </div>
       ) : (
         <div id="result">
           {/* 검색 결과에는 책의 타이틀만 */}
           {result.map((book, index) => (
             <div key={index} onClick={() => handleBookSelect(book)}>
-              <p>{book.title}</p>
+              <div>{book.title}</div>
               
             </div>
           ))}
