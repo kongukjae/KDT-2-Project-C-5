@@ -43,6 +43,19 @@ const server = http.createServer(function (req, res) {
             res.writeHead(200, { "Content-Type": "text/javascript" });
             res.end(js);
         }
+        // mainFeed요청에서 세션확인
+        if (req.url === "/mainFeed") {
+            if (isSessionChecker(req)) {
+                // 세션이 인증된 사용자의 경우
+                const mainFeed = fs.readFileSync('./mainFeed.js');
+                res.writeHead(200, { "Content-Type": "text/html" });
+                res.end(mainFeed);
+            } else {
+                // 세션이 인증되지 않은 사용자의 경우 로그인으로 리디렉션
+                res.writeHead(302, { "Location": "/login" });
+                res.end();
+            }
+        }
     }
     if (req.method === "POST"){
         if (req.url === "/login"){
@@ -67,6 +80,7 @@ const server = http.createServer(function (req, res) {
                                 userId: data.id,
                                 userPwd: data.pwd,
                             };
+                            console.log(sessions);
                             // 응답에 세션 ID 전송
                             res.writeHead(200, { 'Content-Type': 'application/json' });
                             res.end(JSON.stringify({ sessionId, result: true }));
