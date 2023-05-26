@@ -27,18 +27,18 @@ const inputContext={
 
 //2가지 리뷰 작성 인풋을 담당하는 컴포넌트
 const ReviewInput=()=>{
-  const[r1,setR1]=useState('');
-  const[r2,setR2]=useState('');
+  // const[r1,setR1]=useState('');
+  // const[r2,setR2]=useState('');
   
   const reviewInput1=(e)=>{
-    setR1(e.target.value);
-    globalState.reviewData.review1=e.target.value;
-    console.log(globalState.reviewData.review1);
+    // setR1(e.target.value);
+    // globalState.reviewData.summery=e.target.value;
+    // console.log(globalState.reviewData.summery);
   }
 
   const reviewInput2=(e)=>{
-    setR2(e.target.value);
-    globalState.reviewData.review2=e.target.value;
+    // setR2(e.target.value);
+    // globalState.reviewData.body=e.target.value;
     
   }
 

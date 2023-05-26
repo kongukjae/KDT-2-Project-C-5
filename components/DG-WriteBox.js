@@ -2,6 +2,7 @@ import React from 'react';
 import AddBook from './DG-AddBook';
 import ReviewInput from './DG-ReviewInput';
 import formFetch from '../src/reviewFetch'
+import { getBookInfo } from '../src/Global';
 
 
 const container = {
@@ -29,14 +30,15 @@ const WriteBox = () => {
 
   const handleSubmit = (event) => {
     // 기본 제출 이벤트 방지
+    const bookinfo = getBookInfo();
     event.preventDefault();
     const data = {
       userid : "dgchoi3904",
-      booktitle : event.target.booktitle.value,
-      bookauthor : event.target.bookauthor.value,
-      bookpublisher : event.target.bookpublisher.value,
-      bookrelease : event.target.bookrelease.value,
-      isbn : event.target.isbn.value,
+      booktitle : bookinfo.title,
+      bookauthor : bookinfo.author,
+      bookpublisher : bookinfo.publisher,
+      bookrelease : null,
+      isbn : bookinfo.isbn,
       summery : event.target.summery.value,
       body  :event.target.body.value,
       tag : "#원피스"
@@ -60,11 +62,25 @@ const WriteBox = () => {
       console.log("form이 보내지면 실행될 부분입니다.")
       if (response.ok) {
         const data =  response.json();
-        console.log(data);
+        return data;
       } else {
         throw new Error("전송에 실패하였습니다.");
       }
       })  
+      .then(data=>{
+        alert(`글이 무사히 작성되었습니다.
+        글번호\t : ${data.index}
+        작성자\t : ${data.userid}, ${data.username}
+        책 이름\t : ${data.booktitle}
+        책 저자\t : ${data.bookauthor}
+        책 발행처\t : ${data.bookpublisher}
+        책 isbn\t : ${data.isbn}
+        생성일 : ${data.createdtime}
+        갱신일 : ${data.modifiedtime}
+        3줄 리뷰 : ${data.summery}
+        본문 : ${data.body}
+        태그 : ${data.tag}`);
+      })
     } catch (err) {
       console.log(err);
       throw err; // 오류를 호출자에게 전달.
@@ -75,11 +91,13 @@ const WriteBox = () => {
 
   return (
     <div style={container}>
-      <form method="POST" style={box} onSubmit={handleSubmit}>
+      <div style={box}>
         <AddBook></AddBook>
+        <form method="POST" style={box} onSubmit={handleSubmit}>
         <ReviewInput></ReviewInput>
         <button type="submit">등록</button>
       </form>
+      </div>
     </div>
 
   );

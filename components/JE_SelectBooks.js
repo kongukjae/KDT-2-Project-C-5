@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import { getBookInfo, setBookInfo } from '../src/Global';
 const SearchBooks = () => {
   const [keyword, setKeyword] = useState('');
   //검색어
@@ -38,6 +38,7 @@ const SearchBooks = () => {
 
   const handleBookSelect = (book) => {
     setSelectedBook(book);
+    setBookInfo(book);
     //선택된 책의 정보를 화면에 보여주기 위해서 만듦
     //밑의 onclick으로 클릭할 때 호출됨 그리고 selectedbook 상태를 업데이트 해줌-> 선택된 책만 보여줌
     
