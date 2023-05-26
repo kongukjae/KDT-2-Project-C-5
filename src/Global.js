@@ -9,6 +9,12 @@ import bookcover6 from '../src/img/book-cover2.jpg';
 
 export let globalState = {
   tags: "",
+  reviewData:{
+    bookTitle:"",
+    review1:"",
+    review2:"",
+    tag:""
+  },
   DB: {
     "bookreview": [
       {
@@ -165,6 +171,7 @@ export let globalState = {
     ]
   }
 };
+  
 export function getUserInfo() {
   return globalState.DB.userinfo;
 }

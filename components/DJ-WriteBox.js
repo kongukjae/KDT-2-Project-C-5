@@ -1,6 +1,8 @@
 import React from 'react';
+
 import AddBook from './DJ-AddBook';
 import ReviewInput from './DJ-ReviewInput';
+import Tag from './Tag';
 
 
 const container={
@@ -28,12 +30,13 @@ const WriteBox=()=>{
   
 
   return(
-    <div style={container}>
+    <form style={container} action="/submit" method="post">
       <div style={box}>
         <AddBook></AddBook>
         <ReviewInput></ReviewInput>
       </div>
-    </div>
+      <Tag></Tag>
+    </form>
 
   );
 }
