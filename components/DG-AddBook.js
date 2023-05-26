@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 // import SearchBar from './DJ-SearchBar'
-import SelectBooks from '../JE_SelectBooks'
+import SearchBooks from '../DG_SelectBooks'
 import './AddBook.css'
 
 
@@ -42,9 +42,9 @@ const AddBook=()=>{
 
   return(
     <div style={container}>
-    <div style={crossBox}>
+    {/* <div style={crossBox}>
       <div id="cross"></div>
-    </div>
+    </div> */}
     {/* <label htmlFor="booktitle">
       Book Title:
       <input type="text" id="booktitle" name="booktitle"/>
@@ -72,7 +72,7 @@ const AddBook=()=>{
 
     <div style={searchBox}>
       {/* 지은씨의 SelectBook 가져옴  */}
-      <SelectBooks />
+      <SearchBooks />
       {/* <SearchBar /> */}
       
     </div>
