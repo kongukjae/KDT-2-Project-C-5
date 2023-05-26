@@ -92,10 +92,10 @@ function HambergerMenu(props) {
   const LinkStyle ={
     textDecorationLine: 'none'
   }
-  
+
   return (
     <div>
-      <div style={LinkStyle} onClick={toggleMenu}>🍔</div>
+      <div style={LinkStyle} onClick={toggleMenu}>📑</div>
       {isOpen && <Menu 
                   items={props.items} 
                   onClick={toggleMenu} />}
