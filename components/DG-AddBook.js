@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 // import SearchBar from './DJ-SearchBar'
-import SearchBooks from '../JE_SelectBooks'
+import SelectBooks from '../JE_SelectBooks'
 import './AddBook.css'
 
 
@@ -72,7 +72,7 @@ const AddBook=()=>{
 
     <div style={searchBox}>
       {/* 지은씨의 SelectBook 가져옴  */}
-      <SearchBooks />
+      <SelectBooks />
       {/* <SearchBar /> */}
       
     </div>
