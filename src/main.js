@@ -20,7 +20,7 @@ import NotificationList from "../components/NotificationList";
 import FavorTag from "./favortag";
 //테스트용 PostReview추가
 import PostReview from "./PostReview";
-import SearchBooks from "../JE_SelectBooks";
+import SearchBooks from "../DG_SelectBooks";
 
 
 // 테스트를 위한 임시 코드
