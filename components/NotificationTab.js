@@ -1,19 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const NotificationListstyle ={
-  display:"flex",
-  flexDirection:"row",
-  justifyContent:"space-between",
-  width:"100%"
-
+const LinkStyle ={
+  textDecorationLine: 'none'
 }
 
 const NotificationTab = () => {
   return (
-    <div>
-      <Link to="/NotificationList">
-        <button>💭</button>
+    <div >
+      <Link style={LinkStyle} to="/NotificationList">
+        <div>💭</div>
       </Link>
     </div>
   );
