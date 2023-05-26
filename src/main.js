@@ -10,7 +10,7 @@ import SignUp from "./signUp";
 import AccountSetting from "./AccountSetting";
 import BlockedUser from "./BlockedUser";
 import FollowerFollowing from "./FollowerFollowing";
-import ReviewPage from "./DJ-ReviewPage";
+import ReviewPage from "./JE_ReviewPage";
 import MainFeed from "./mainFeed";
 import MainFeedReviewForm from "../components/mainFeedReviewForm";
 import NavBar from "./NavBar";

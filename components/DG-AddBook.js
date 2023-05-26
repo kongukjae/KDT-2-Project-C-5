@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 
 // import SearchBar from './DJ-SearchBar'
-import SearchBooks from '../DG_SelectBooks'
+import SearchBooks from './JE_SelectBooks'
 import './AddBook.css'
 
 
