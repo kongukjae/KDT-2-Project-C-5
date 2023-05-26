@@ -45,11 +45,9 @@ const ReviewInput=()=>{
   return(
     <div style={container}>
       <label htmlFor="summary">
-        Summary:
         <input type="text" id="summary" name="summery" style={inputThree} placeholder='3줄 리뷰' onChange={reviewInput1} />
       </label>
       <label htmlFor="body">
-        Body:
         <input type="text" id="body" name="body" style={inputContext} placeholder='리뷰' onChange={reviewInput2} />
       </label>
     </div>
