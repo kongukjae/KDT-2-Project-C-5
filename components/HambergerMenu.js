@@ -89,9 +89,13 @@ function HambergerMenu(props) {
     setIsOpen(!isOpen);
   }
 
+  const LinkStyle ={
+    textDecorationLine: 'none'
+  }
+
   return (
     <div>
-      <button onClick={toggleMenu}>🍔</button>
+      <div style={LinkStyle} onClick={toggleMenu}>📑</div>
       {isOpen && <Menu 
                   items={props.items} 
                   onClick={toggleMenu} />}

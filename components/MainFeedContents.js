@@ -30,7 +30,7 @@ const MainFeedContents = () => {
   const [isLive,setIsLive]=useState("true");
   const [state,setState]=useState(false);
   // 인기 리뷰 클릭시 상태 변환 함수 setPopularReview를 이용하여 변화시킬 내용
-  const onClickPopular = () => {
+/*   const onClickPopular = () => {
     setIsLive(false);
   };
 
@@ -43,6 +43,33 @@ const MainFeedContents = () => {
     console.log("handle clicked");
     setState(!state);
   }
+ */
+
+  
+  const textStyle = (tab) => {
+    return {
+      color: isLive === tab ? 'grey' : 'black',
+      cursor: 'pointer'
+    };
+  };
+
+  const onClickPopular = () => {
+    setIsLive(false);
+  };
+
+  const onClickLive = () => {
+    setIsLive(true);
+  };
+  
+  useState(() => {
+    setIsLive(true); 
+    //기본 선택 "실시간 리뷰"
+  }, []);
+
+  const handle = () => {
+    console.log("handle clicked");
+    setState(!state);
+  };
 
   return (
     <div>
@@ -51,11 +78,17 @@ const MainFeedContents = () => {
         <BookStagramTopLogo/>
         <Hamburger/>
       </header> */}
-      <nav style={navStyle}>
-        {/* 인기 리뷰, 실시간 리뷰 클릭 시 상태 변환 */}
+      {/* <nav style={navStyle}>
+        {/* 인기 리뷰, 실시간 리뷰 클릭 시 상태 변환
         <div style={tabStyle} onClick={onClickLive}><b>실시간 리뷰</b></div>
         <div style={tabStyle} onClick={onClickPopular}><b>인기 리뷰</b></div>
+      </nav> 
+    */}
+          <nav style={navStyle}>
+        <div style={textStyle(true)} onClick={onClickLive}><b>실시간 리뷰</b></div>
+        <div style={textStyle(false)} onClick={onClickPopular}><b>인기 리뷰</b></div>
       </nav>
+
       <hr />
       <main>
         <div style={conStyle}>

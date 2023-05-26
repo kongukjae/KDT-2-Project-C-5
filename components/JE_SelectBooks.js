@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { getBookInfo, setBookInfo } from '../src/Global';
+const inputStyles = {
+  width : "240px" 
+};
+
 const SearchBooks = () => {
   const [keyword, setKeyword] = useState('');
   //검색어
@@ -47,7 +51,7 @@ const SearchBooks = () => {
 
   return (
     <div>
-      <input
+      <input style={inputStyles}
         type="text"
         value={keyword}
         onChange={(e) => setKeyword(e.target.value)}

@@ -11,7 +11,7 @@ const container={
 
 const inputThree={
   width:"100%",
-  height:"70px",
+  height:"100px",
   border:"none",
   borderRadius:"5px",
 
@@ -19,7 +19,7 @@ const inputThree={
 
 const inputContext={
   width:"100%",
-  height:"150px",
+  height:"250px",
   border:"none",
   borderRadius:"5px"
 
