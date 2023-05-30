@@ -30,10 +30,11 @@ const WriteBox = () => {
 
   const handleSubmit = (event) => {
     // 기본 제출 이벤트 방지
-    const bookinfo = getBookInfo();
     event.preventDefault();
+    const bookinfo = getBookInfo();
+    const userId = sessionStorage.getItem('userID'); // 세션에서 userId 가져오기
     const data = {
-      userid : "dgchoi3904",
+      userid : userId,
       booktitle : bookinfo.title,
       bookauthor : bookinfo.author,
       bookpublisher : bookinfo.publisher,
