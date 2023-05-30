@@ -35,28 +35,20 @@ const loginPage = () => {
       // id, pwd를 JSON 형태의 문자열로 변환하여 본문에 보냄
       body: JSON.stringify(data),
     })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Login failed');
-        }
-        // 서버 응답 데이터를 JSON 형태로 파싱하여 변환
-        return response.json();
-      })
+      .then(response => response.json())
       .then(result => {
-        // 로그인 성공 처리
-        // console.log(result);
-        
-        if(result.result === true){ // 결과값이 true일 경우
+        if (result.success) {
           console.log('login succeeded', result);
           sessionStorage.setItem('sessionID', result.sessionId);
-          navigate("/mainFeed"); // navigate를 사용해 컴포넌트 이동
+          sessionStorage.setItem('userID', result.userId); // 사용자 ID 저장
+          navigate("/mainFeed");
         } else {
           console.log('Login failed');
         }
       })
       .catch(error => {
-        console.error(error);
-        // 로그인 실패 처리
+        console.error('Error:', error);
+        // 에러 처리 로직 추가
       });
   };
 
