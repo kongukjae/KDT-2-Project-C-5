@@ -56,109 +56,97 @@ const server = http.createServer(function (req, res) {
                 res.end();
             }
         }
-        if (req.url === "/39f0a76ba480d609d512.jpg"){
+        if (req.url === "/39f0a76ba480d609d512.jpg") {
             let imgfile = fs.readFileSync("../dist/39f0a76ba480d609d512.jpg")
-            res.writeHead(200, {"Content-Type":"image/jpg"})
+            res.writeHead(200, { "Content-Type": "image/jpg" })
             res.end(imgfile);
         }
-        if (req.url === "/8813653f0ed105951c0d.jpg"){
+        if (req.url === "/8813653f0ed105951c0d.jpg") {
             let imgfile = fs.readFileSync("../dist/8813653f0ed105951c0d.jpg")
-            res.writeHead(200, {"Content-Type":"image/jpg"})
+            res.writeHead(200, { "Content-Type": "image/jpg" })
             res.end(imgfile);
         }
-        if (req.url === "/1914788ea6dfd61813b9.jpg"){
+        if (req.url === "/1914788ea6dfd61813b9.jpg") {
             let imgfile = fs.readFileSync("../dist/1914788ea6dfd61813b9.jpg")
-            res.writeHead(200, {"Content-Type":"image/jpg"})
+            res.writeHead(200, { "Content-Type": "image/jpg" })
             res.end(imgfile);
         }
-        if (req.url === "/ff996ea7c61e440abbe9.jpg"){
+        if (req.url === "/ff996ea7c61e440abbe9.jpg") {
             let imgfile = fs.readFileSync("../dist/ff996ea7c61e440abbe9.jpg")
-            res.writeHead(200, {"Content-Type":"image/jpg"})
+            res.writeHead(200, { "Content-Type": "image/jpg" })
             res.end(imgfile);
         }
-        if (req.url === "/47f6150da6b3e4b3c073.jpg"){
+        if (req.url === "/47f6150da6b3e4b3c073.jpg") {
             let imgfile = fs.readFileSync("../dist/47f6150da6b3e4b3c073.jpg")
-            res.writeHead(200, {"Content-Type":"image/jpg"})
+            res.writeHead(200, { "Content-Type": "image/jpg" })
             res.end(imgfile);
         }
-        if (req.url === "/8ac05eca1cd54b571960.jpg"){
+        if (req.url === "/8ac05eca1cd54b571960.jpg") {
             let imgfile = fs.readFileSync("../dist/8ac05eca1cd54b571960.jpg")
-            res.writeHead(200, {"Content-Type":"image/jpg"})
+            res.writeHead(200, { "Content-Type": "image/jpg" })
             res.end(imgfile);
         }
-        if (req.url === "/7d1c0363b1ef7e507d87.png"){
+        if (req.url === "/7d1c0363b1ef7e507d87.png") {
             let imgfile = fs.readFileSync("../dist/7d1c0363b1ef7e507d87.png")
-            res.writeHead(200, {"Content-Type":"image/png"})
+            res.writeHead(200, { "Content-Type": "image/png" })
             res.end(imgfile);
         }
-        if (req.url === "/69f95ec70c687226cb73.png"){
+        if (req.url === "/69f95ec70c687226cb73.png") {
             let imgfile = fs.readFileSync("../dist/69f95ec70c687226cb73.png")
-            res.writeHead(200, {"Content-Type":"image/png"})
+            res.writeHead(200, { "Content-Type": "image/png" })
             res.end(imgfile);
         }
     }
     if (req.method === "POST") {
         if (req.url === "/login") {
+            let body = "";
             req.on("data", chunk => {
+                body += chunk;
+            });
+            req.on("end", () => {
                 // post로 받은 데이터(JSON)을 parse하여 객체로 변환
-                const data = JSON.parse(chunk);
+                const data = JSON.parse(body);
                 // 쿼리문을 보낼 때, 열은 백틱(``)으로 하고, 비교할 데이터는 작은따옴표('')를 써서 문자열이라 표기했다. 만일 전부 백틱으로 할 경우, data.id를 열중 하나로 인식하는 문제가 있었다.
                 sendQuery(`SELECT * FROM \`bookstargram\`.\`userinfo\` WHERE \`user-id\`= '${data.id}'`)
-
-                    .then(result => {
-                        if (result.length > 0) {
-                            const user = result[0];
-                            //query문의 반환값이 있을 경우, 하나의 인덱스마다 객체를 받는 배열이 result에 할당된다. 위의 Query는 1행만 반환하기에 인덱스를0,키값을 DB테이블에서 정의된 값으로 했다.
-                            // DB에 있는 사용자의 pwd 정보로 검증
-                            // 입력한 비밀번호(data.pwd)와 비교한다.
-                            if (user[`user-pwd`] === data.pwd) {
-                                console.log("Login Success!")
-                                // 세션ID 생성
-                                const sessionId = uuidv4();
-                                // 세션 정보 저장
-                                sessions[sessionId] = {
-                                    userId: data.id,
-                                    userPwd: data.pwd,
-                                };
-                                console.log(sessions);
-                                // 응답에 세션 ID 전송
-                                res.writeHead(200, { 'Content-Type': 'application/json' });
-                                res.end(JSON.stringify({ sessionId, result: true }));
-                                // return true;
-                            } else {
-                                console.log("Login Failed!")
-                                res.writeHead(401, { 'Content-Type': 'application/json' });
-                                res.end(JSON.stringify({ error: 'Login failed', result: false }));
-                                // return false;
-                            }
-                        } else {
-                            console.log("Login Failed! User not found!"); // DB에서 조회된 결과가 없을 때 처리
-                            res.writeHead(401, { 'Content-Type': 'application/json' });
-                            res.end(JSON.stringify({ error: 'Login failed. User not found.', result: false }));
-                        }
-
-                    })
-                    //로그인이 성공했을 때만 메인피드 페이지로 이동함.
                     .then(result => {
                         console.log(result);
-                        // result 값이 존재하는 경우 (로그인이 성공한 경우)
-                        if (result && result.result === true) {
-                            console.log('Login suceeded', result);
-                            // 세션 ID 저장
-                            sessionStorage.setItem('sessionID', result.sessionId);
-                            // navigate를 이용해 컴포넌트 이동
-                            navigate('/mainFeed');
+                        const user = result[0];
+                        //query문의 반환값이 있을 경우, 하나의 인덱스마다 객체를 받는 배열이 result에 할당된다. 위의 Query는 1행만 반환하기에 인덱스를0,키값을 DB테이블에서 정의된 값으로 했다.
+                        // DB에 있는 사용자의 pwd 정보로 검증
+                        // 입력한 비밀번호(data.pwd)와 비교한다.
+                        if (user[`user-pwd`] === data.pwd) {
+                            console.log("Login Success!")
+                            // 세션ID 생성
+                            const sessionId = uuidv4();
+                            // 응답에 세션 ID 전송
+                            res.writeHead(200, { "Content-Type": "application/json" });
+                            res.end(JSON.stringify({ success: true, sessionId, userId: data.id }));
+                            // res.writeHead(200, { 'Content-Type': 'application/json' });
+                            // res.end(JSON.stringify({ sessionId, result: true }));
+                            // return true;
                         } else {
-                            // ! 해당 부분이 콘솔에 찍히고 있다.
-                            console.log('Login failed');
+                            console.log("Login Failed!");
+                            res.writeHead(200, { "Content-Type": "application/json" });
+                            res.end(JSON.stringify({ success: false }));
+                            // res.writeHead(401, { 'Content-Type': 'application/json' });
+                            // res.end(JSON.stringify({ error: 'Login failed', result: false }));
                         }
-                    });
+                    })
+                    .catch(error => {
+                        console.error(error);
+                        res.writeHead(500, { "Content-Type": "application/json" });
+                        res.end(JSON.stringify({ success: false, error: "Server error" }));
+                    })
             });
+
 
         }//method가 POST이고 url이 /review 일시 실행되는 조건문, body에는 책리뷰 form이 저장되있어야 한다.
         if (req.url === "/review") {
             console.log("여기 실행됨.")
+            let body = "";
             req.on("data", chunk => {
+                body += chunk;
+            })
                 // post로 받은 데이터(JSON)을 parse하여 객체로 변환
                 // const sample = {
                 //     "userid": "dgchoi3904",
@@ -172,7 +160,8 @@ const server = http.createServer(function (req, res) {
                 //     "body": "리뷰 내용",
                 //     "tag": "#없어!",
                 // }
-                const bookreviewForm = JSON.parse(chunk);
+            req.on("end", () => {
+                const bookreviewForm = JSON.parse(body);
                 // 책리뷰 등록 쿼리문
                 console.log(bookreviewForm);
                 sendQuery(`INSERT INTO bookreview (userid, username, userpic, booktitle, bookcover, bookauthor, bookpublisher, isbn, summery, body, tag) SELECT \`userinfo\`.\`user-id\`, \`userinfo\`.\`user-name\`, \`userinfo\`.\`user-pic\`, "${bookreviewForm.booktitle}", "${bookreviewForm.bookcover}", "${bookreviewForm.bookauthor}","${bookreviewForm.bookpublisher}", "${bookreviewForm.isbn}","${bookreviewForm.summery}",  "${bookreviewForm.body}", "${bookreviewForm.tag}" FROM userinfo WHERE \`userinfo\`.\`user-id\` = "${bookreviewForm.userid}"`)
@@ -196,16 +185,16 @@ const server = http.createServer(function (req, res) {
 
         } else {
             // 회원가입폼 테스트 구문
-            req.on("data", chunk => {
-                console.log(JSON.parse(chunk))
-                // 회원가입에 관련된 코드 부분
-                // 데이터를 파싱하여 회원가입에 필요한 정보 추출 후
-                // 데이터베이스에 저장하는 코드 필요
-            })
+            // req.on("data", chunk => {
+            //     console.log(JSON.parse(chunk))
+            //     // 회원가입에 관련된 코드 부분
+            //     // 데이터를 파싱하여 회원가입에 필요한 정보 추출 후
+            //     // 데이터베이스에 저장하는 코드 필요
+            // })
 
-            res.writeHead(200, { "Content-Type": "application/json" });
-            const sender = { result: true }
-            res.end(JSON.stringify(sender));
+            // res.writeHead(200, { "Content-Type": "application/json" });
+            // const sender = { result: true }
+            // res.end(JSON.stringify(sender));
         }
     }
 
